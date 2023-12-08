@@ -217,6 +217,7 @@
             btnLogin.StateTracking.Border.Width = 1;
             btnLogin.TabIndex = 6;
             btnLogin.Values.Text = "Đăng Nhập";
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnQuenMatKhau
             // 
