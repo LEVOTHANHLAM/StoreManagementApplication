@@ -16,7 +16,7 @@ namespace PosManager.APIServices.User
         {
             try
             {
-                Log.Information($" Start: {nameof(AuthenticateController)}, params; {nameof(Login)},username; {username}, password; {password}");
+                Log.Information($"Start: {nameof(AuthenticateController)}, params; {nameof(Login)},username; {username}, password; {password}");
 
                 HttpClient httpClient = new HttpClient();
                 var requestData = new { username = username, password = password };
@@ -25,7 +25,7 @@ namespace PosManager.APIServices.User
                 var body = await response.Content.ReadAsStringAsync();
                 ApiResponse<UserLoginModel> data = JsonConvert.DeserializeObject<ApiResponse<UserLoginModel>>(body);
 
-                Log.Information($" Start: {nameof(AuthenticateController)}, params; {nameof(Login)},username; {username}, password; {password}, body; {body}");
+                Log.Information($"End: {nameof(AuthenticateController)}, params; {nameof(Login)},username; {username}, password; {password}, body; {body}");
                 return data;
             }
             catch (Exception ex)

@@ -4,21 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComponentFactory.Krypton.Toolkit;
 
-namespace PosManager.Forms
+namespace Krypton_toolKitDemo
 {
-    public partial class fMain : Form
+    public partial class fMain : KryptonForm
     {
-        public fMain()
-        {
-            InitializeComponent();
-        }
+        private fLogin _fLogin;
         bool khachHangCollapse = true;
         bool hangHoaCollapse = true;
         bool khoCollapse = true;
@@ -30,62 +25,56 @@ namespace PosManager.Forms
 
         private int startPosition = 0;
         private string displayText = "Cảm Ơn Quý Khách Đã Tin Tưởng Chúng Tôi!               ";
-        private void fMain_Load(object sender, EventArgs e)
+        public fMain()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
             HieuUngTimer.Start();
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            MenuTimer.Start();
+        }
+
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             KhachHangTimer.Start();
-        }
-
-        private void KhachHangTimer_Tick(object sender, EventArgs e)
-        {
-            if (khachHangCollapse)
-            {
-                KhachHangContainer.Height += 10;
-                if (KhachHangContainer.Height == KhachHangContainer.MaximumSize.Height)
-                {
-                    khachHangCollapse = false;
-                    KhachHangTimer.Stop();
-                }
-            }
-            else
-            {
-                KhachHangContainer.Height -= 10;
-                if (KhachHangContainer.Height == KhachHangContainer.MinimumSize.Height)
-                {
-                    khachHangCollapse = true;
-                    KhachHangTimer.Stop();
-                }
-            }
-        }
-        private void HangHoaTimer_Tick(object sender, EventArgs e)
-        {
-            if (hangHoaCollapse)
-            {
-                HangHoaContainer.Height += 10;
-                if (HangHoaContainer.Height == HangHoaContainer.MaximumSize.Height)
-                {
-                    hangHoaCollapse = false;
-                    HangHoaTimer.Stop();
-                }
-            }
-            else
-            {
-                HangHoaContainer.Height -= 10;
-                if (HangHoaContainer.Height == HangHoaContainer.MinimumSize.Height)
-                {
-                    hangHoaCollapse = true;
-                    HangHoaTimer.Stop();
-                }
-            }
         }
 
         private void btnHangHoa_Click(object sender, EventArgs e)
         {
             HangHoaTimer.Start();
         }
+
+        private void btnKho_Click(object sender, EventArgs e)
+        {
+            KhoTimer.Start();
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            BaoCaoTimer.Start();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            HoaDonTimer.Start();
+        }
+
+        private void btnCongNo_Click(object sender, EventArgs e)
+        {
+            CongNoTimer.Start();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            NhanVienTimer.Start();
+        }
+
         private void KhoTimer_Tick(object sender, EventArgs e)
         {
             if (khoCollapse)
@@ -108,9 +97,63 @@ namespace PosManager.Forms
             }
         }
 
-        private void btnKho_Click(object sender, EventArgs e)
+        private void HieuUngTimer_Tick(object sender, EventArgs e)
         {
-            KhoTimer.Start();
+            //// Di chuyển vị trí hiện tại của chuỗi sang phải
+            startPosition++;
+
+            if (startPosition < displayText.Length)
+            {
+                txtHieuUng.Text = displayText.Substring(startPosition) + displayText.Substring(0, startPosition);
+            }
+            else
+            {
+                startPosition = 0; // Nếu đã hiển thị hết chuỗi, bắt đầu lại từ đầu
+            }
+        }
+
+        private void HoaDonTimer_Tick(object sender, EventArgs e)
+        {
+            if (HoaDonCollapse)
+            {
+                HoaDonContainer.Height += 10;
+                if (HoaDonContainer.Height == HoaDonContainer.MaximumSize.Height)
+                {
+                    HoaDonCollapse = false;
+                    HoaDonTimer.Stop();
+                }
+            }
+            else
+            {
+                HoaDonContainer.Height -= 10;
+                if (HoaDonContainer.Height == HoaDonContainer.MinimumSize.Height)
+                {
+                    HoaDonCollapse = true;
+                    HoaDonTimer.Stop();
+                }
+            }
+        }
+
+        private void HangHoaTimer_Tick(object sender, EventArgs e)
+        {
+            if (hangHoaCollapse)
+            {
+                HangHoaContainer.Height += 10;
+                if (HangHoaContainer.Height == HangHoaContainer.MaximumSize.Height)
+                {
+                    hangHoaCollapse = false;
+                    HangHoaTimer.Stop();
+                }
+            }
+            else
+            {
+                HangHoaContainer.Height -= 10;
+                if (HangHoaContainer.Height == HangHoaContainer.MinimumSize.Height)
+                {
+                    hangHoaCollapse = true;
+                    HangHoaTimer.Stop();
+                }
+            }
         }
 
         private void MenuTimer_Tick(object sender, EventArgs e)
@@ -139,26 +182,6 @@ namespace PosManager.Forms
             }
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            MenuTimer.Start();
-        }
-
-        private void HieuUngTimer_Tick(object sender, EventArgs e)
-        {
-            //// Di chuyển vị trí hiện tại của chuỗi sang phải
-            startPosition++;
-
-            if (startPosition < displayText.Length)
-            {
-                txtHieuUng.Text = displayText.Substring(startPosition) + displayText.Substring(0, startPosition);
-            }
-            else
-            {
-                startPosition = 0; // Nếu đã hiển thị hết chuỗi, bắt đầu lại từ đầu
-            }
-        }
-
         private void NhanVienTimer_Tick(object sender, EventArgs e)
         {
             if (NhanVienCollapse)
@@ -179,38 +202,6 @@ namespace PosManager.Forms
                     NhanVienTimer.Stop();
                 }
             }
-        }
-
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            NhanVienTimer.Start();
-        }
-
-        private void HoaDonTimer_Tick(object sender, EventArgs e)
-        {
-            if (HoaDonCollapse)
-            {
-                HoaDonContainer.Height += 10;
-                if (HoaDonContainer.Height == HoaDonContainer.MaximumSize.Height)
-                {
-                    HoaDonCollapse = false;
-                    HoaDonTimer.Stop();
-                }
-            }
-            else
-            {
-                HoaDonContainer.Height -= 10;
-                if (HoaDonContainer.Height == HoaDonContainer.MinimumSize.Height)
-                {
-                    HoaDonCollapse = true;
-                    HoaDonTimer.Stop();
-                }
-            }
-        }
-
-        private void btnHoaDon_Click(object sender, EventArgs e)
-        {
-            HoaDonTimer.Start();
         }
 
         private void CongNoTimer_Tick(object sender, EventArgs e)
@@ -235,11 +226,6 @@ namespace PosManager.Forms
             }
         }
 
-        private void btnCongNo_Click(object sender, EventArgs e)
-        {
-            CongNoTimer.Start();
-        }
-
         private void BaoCaoTimer_Tick(object sender, EventArgs e)
         {
             if (BaoCaoCollapse)
@@ -262,9 +248,26 @@ namespace PosManager.Forms
             }
         }
 
-        private void btnBaoCao_Click(object sender, EventArgs e)
+        private void KhachHangTimer_Tick(object sender, EventArgs e)
         {
-            BaoCaoTimer.Start();
+            if (khachHangCollapse)
+            {
+                KhachHangContainer.Height += 10;
+                if (KhachHangContainer.Height == KhachHangContainer.MaximumSize.Height)
+                {
+                    khachHangCollapse = false;
+                    KhachHangTimer.Stop();
+                }
+            }
+            else
+            {
+                KhachHangContainer.Height -= 10;
+                if (KhachHangContainer.Height == KhachHangContainer.MinimumSize.Height)
+                {
+                    khachHangCollapse = true;
+                    KhachHangTimer.Stop();
+                }
+            }
         }
 
         private void pbProfile_Click(object sender, EventArgs e)
@@ -276,8 +279,24 @@ namespace PosManager.Forms
                 pProfile.Location = newLocation;
             }
             pProfile.Visible = !pProfile.Visible;
+        }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+
+            _fLogin = new fLogin();
+            _fLogin.Show();
+            Close();
+          
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(_fLogin == null)
+            {
+                Application.Exit();
+            }
+          
         }
     }
 }
-

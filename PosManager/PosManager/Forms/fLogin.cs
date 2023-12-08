@@ -20,6 +20,7 @@ namespace Krypton_toolKitDemo
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+        
             try
             {
                 string password = txtPassword.Text.Trim();
@@ -40,10 +41,12 @@ namespace Krypton_toolKitDemo
                 {
                     if (user.StatusCode == 200 && user.Message == "Success" && !string.IsNullOrEmpty(user.Data.Token))
                     {
-                        // login thanh cong
                         PosManager.Properties.Settings.Default["username"] = username;
                         PosManager.Properties.Settings.Default["password"] = password;
                         PosManager.Properties.Settings.Default.Save();
+                        fMain form1 = new fMain();
+                        form1.Show();
+                        this.Hide();
                     }
                     else
                     {

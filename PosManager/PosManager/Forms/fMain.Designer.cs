@@ -1,4 +1,4 @@
-﻿namespace PosManager.Forms
+﻿namespace Krypton_toolKitDemo
 {
     partial class fMain
     {
@@ -30,6 +30,17 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
+            kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
+            splitContainer1 = new SplitContainer();
+            txtHieuUng = new TextBox();
+            pbProfile = new PictureBox();
+            btnMenu = new PictureBox();
+            pMain = new Panel();
+            pProfile = new Panel();
+            panel67 = new Panel();
+            btnDoiMatKhau = new Button();
+            panel66 = new Panel();
+            btnDangXuat = new Button();
             flpMain = new FlowLayoutPanel();
             pbLogoMeXiu = new PictureBox();
             KhachHangContainer = new Panel();
@@ -175,16 +186,6 @@
             CaiDatContainer = new Panel();
             panel64 = new Panel();
             btnCaiDat = new Button();
-            splitContainer1 = new SplitContainer();
-            txtHieuUng = new TextBox();
-            pbProfile = new PictureBox();
-            btnMenu = new PictureBox();
-            pMain = new Panel();
-            pProfile = new Panel();
-            panel67 = new Panel();
-            btnDoiMatKhau = new Button();
-            panel66 = new Panel();
-            btnDangXuat = new Button();
             KhachHangTimer = new System.Windows.Forms.Timer(components);
             HangHoaTimer = new System.Windows.Forms.Timer(components);
             KhoTimer = new System.Windows.Forms.Timer(components);
@@ -194,7 +195,18 @@
             HoaDonTimer = new System.Windows.Forms.Timer(components);
             CongNoTimer = new System.Windows.Forms.Timer(components);
             BaoCaoTimer = new System.Windows.Forms.Timer(components);
-            kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
+            kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
+            timer1 = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
+            pMain.SuspendLayout();
+            pProfile.SuspendLayout();
+            panel67.SuspendLayout();
+            panel66.SuspendLayout();
             flpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogoMeXiu).BeginInit();
             KhachHangContainer.SuspendLayout();
@@ -274,16 +286,180 @@
             panel77.SuspendLayout();
             CaiDatContainer.SuspendLayout();
             panel64.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
-            pProfile.SuspendLayout();
-            panel67.SuspendLayout();
-            panel66.SuspendLayout();
             SuspendLayout();
+            // 
+            // kryptonPalette1
+            // 
+            kryptonPalette1.ButtonSpecs.FormClose.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormClose.Image");
+            kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImagePressed");
+            kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImageTracking");
+            kryptonPalette1.ButtonSpecs.FormMax.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMax.Image");
+            kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImagePressed");
+            kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageTracking");
+            kryptonPalette1.ButtonSpecs.FormMin.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMin.Image");
+            kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImagePressed");
+            kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImageTracking");
+            kryptonPalette1.ButtonSpecs.FormRestore.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormRestore.Image");
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = Color.White;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = Color.White;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = Color.White;
+            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = Color.White;
+            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = Color.White;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = Color.White;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Back.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Border.Width = 0;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Border.Width = 0;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 252);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 252);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 252);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 252);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 12;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new Padding(10, -1, -1, -1);
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(290, 0);
+            splitContainer1.Name = "splitContainer1";
+            splitContainer1.Orientation = Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(txtHieuUng);
+            splitContainer1.Panel1.Controls.Add(pbProfile);
+            splitContainer1.Panel1.Controls.Add(btnMenu);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(pMain);
+            splitContainer1.Size = new Size(1334, 831);
+            splitContainer1.SplitterDistance = 59;
+            splitContainer1.TabIndex = 3;
+            // 
+            // txtHieuUng
+            // 
+            txtHieuUng.BackColor = SystemColors.Control;
+            txtHieuUng.Dock = DockStyle.Fill;
+            txtHieuUng.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtHieuUng.ForeColor = Color.DeepSkyBlue;
+            txtHieuUng.Location = new Point(42, 0);
+            txtHieuUng.MinimumSize = new Size(971, 56);
+            txtHieuUng.Multiline = true;
+            txtHieuUng.Name = "txtHieuUng";
+            txtHieuUng.Size = new Size(1180, 59);
+            txtHieuUng.TabIndex = 6;
+            txtHieuUng.TextAlign = HorizontalAlignment.Center;
+            // 
+            // pbProfile
+            // 
+            pbProfile.Dock = DockStyle.Right;
+            pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
+            pbProfile.Location = new Point(1222, 0);
+            pbProfile.Name = "pbProfile";
+            pbProfile.Size = new Size(112, 59);
+            pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
+            pbProfile.TabIndex = 6;
+            pbProfile.TabStop = false;
+            pbProfile.Click += pbProfile_Click;
+            // 
+            // btnMenu
+            // 
+            btnMenu.Dock = DockStyle.Left;
+            btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
+            btnMenu.Location = new Point(0, 0);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(42, 59);
+            btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMenu.TabIndex = 6;
+            btnMenu.TabStop = false;
+            btnMenu.Click += btnMenu_Click;
+            // 
+            // pMain
+            // 
+            pMain.Controls.Add(pProfile);
+            pMain.Dock = DockStyle.Fill;
+            pMain.Location = new Point(0, 0);
+            pMain.Name = "pMain";
+            pMain.Size = new Size(1334, 768);
+            pMain.TabIndex = 16;
+            // 
+            // pProfile
+            // 
+            pProfile.BackColor = Color.LightBlue;
+            pProfile.Controls.Add(panel67);
+            pProfile.Controls.Add(panel66);
+            pProfile.Location = new Point(1222, 4);
+            pProfile.MaximumSize = new Size(112, 71);
+            pProfile.MinimumSize = new Size(112, 71);
+            pProfile.Name = "pProfile";
+            pProfile.Size = new Size(112, 71);
+            pProfile.TabIndex = 15;
+            pProfile.Visible = false;
+            // 
+            // panel67
+            // 
+            panel67.Controls.Add(btnDoiMatKhau);
+            panel67.Location = new Point(0, 35);
+            panel67.Name = "panel67";
+            panel67.Size = new Size(112, 26);
+            panel67.TabIndex = 6;
+            // 
+            // btnDoiMatKhau
+            // 
+            btnDoiMatKhau.BackColor = Color.FromArgb(89, 149, 206);
+            btnDoiMatKhau.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDoiMatKhau.ForeColor = Color.White;
+            btnDoiMatKhau.Image = (Image)resources.GetObject("btnDoiMatKhau.Image");
+            btnDoiMatKhau.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDoiMatKhau.Location = new Point(-20, -4);
+            btnDoiMatKhau.Name = "btnDoiMatKhau";
+            btnDoiMatKhau.Padding = new Padding(30, 0, 0, 0);
+            btnDoiMatKhau.Size = new Size(143, 40);
+            btnDoiMatKhau.TabIndex = 3;
+            btnDoiMatKhau.Text = "       Đổi Mật Khẩu";
+            btnDoiMatKhau.TextAlign = ContentAlignment.MiddleLeft;
+            btnDoiMatKhau.UseVisualStyleBackColor = false;
+            // 
+            // panel66
+            // 
+            panel66.Controls.Add(btnDangXuat);
+            panel66.Dock = DockStyle.Top;
+            panel66.Location = new Point(0, 0);
+            panel66.Name = "panel66";
+            panel66.Size = new Size(112, 26);
+            panel66.TabIndex = 5;
+            // 
+            // btnDangXuat
+            // 
+            btnDangXuat.BackColor = Color.FromArgb(89, 149, 206);
+            btnDangXuat.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDangXuat.ForeColor = Color.White;
+            btnDangXuat.Image = (Image)resources.GetObject("btnDangXuat.Image");
+            btnDangXuat.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDangXuat.Location = new Point(-20, -4);
+            btnDangXuat.Name = "btnDangXuat";
+            btnDangXuat.Padding = new Padding(30, 0, 0, 0);
+            btnDangXuat.Size = new Size(143, 40);
+            btnDangXuat.TabIndex = 3;
+            btnDangXuat.Text = "       Đăng Xuất";
+            btnDangXuat.TextAlign = ContentAlignment.MiddleLeft;
+            btnDangXuat.UseVisualStyleBackColor = false;
+            btnDangXuat.Click += btnDangXuat_Click;
             // 
             // flpMain
             // 
@@ -306,12 +482,12 @@
             flpMain.MinimumSize = new Size(75, 0);
             flpMain.Name = "flpMain";
             flpMain.Size = new Size(290, 831);
-            flpMain.TabIndex = 0;
+            flpMain.TabIndex = 2;
             // 
             // pbLogoMeXiu
             // 
             pbLogoMeXiu.BackColor = Color.FromArgb(89, 149, 206);
-            pbLogoMeXiu.Image = Properties.Resources._326559583_468268058851274_8797007794984294310_n;
+            pbLogoMeXiu.Image = PosManager.Properties.Resources._326559583_468268058851274_8797007794984294310_n;
             pbLogoMeXiu.Location = new Point(3, 3);
             pbLogoMeXiu.MaximumSize = new Size(287, 80);
             pbLogoMeXiu.MinimumSize = new Size(75, 80);
@@ -352,7 +528,7 @@
             btnTiepNhanXuLyYeuCau.BackColor = Color.DeepSkyBlue;
             btnTiepNhanXuLyYeuCau.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnTiepNhanXuLyYeuCau.ForeColor = Color.White;
-            btnTiepNhanXuLyYeuCau.Image = Properties.Resources.icons8_circle_20;
+            btnTiepNhanXuLyYeuCau.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnTiepNhanXuLyYeuCau.ImageAlign = ContentAlignment.MiddleLeft;
             btnTiepNhanXuLyYeuCau.Location = new Point(-15, -4);
             btnTiepNhanXuLyYeuCau.Name = "btnTiepNhanXuLyYeuCau";
@@ -376,7 +552,7 @@
             btnSinhNhat.BackColor = Color.DeepSkyBlue;
             btnSinhNhat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSinhNhat.ForeColor = Color.White;
-            btnSinhNhat.Image = Properties.Resources.icons8_circle_20;
+            btnSinhNhat.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnSinhNhat.ImageAlign = ContentAlignment.MiddleLeft;
             btnSinhNhat.Location = new Point(-15, -4);
             btnSinhNhat.Name = "btnSinhNhat";
@@ -400,7 +576,7 @@
             btnCapBacKhachHang.BackColor = Color.DeepSkyBlue;
             btnCapBacKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCapBacKhachHang.ForeColor = Color.White;
-            btnCapBacKhachHang.Image = Properties.Resources.icons8_circle_20;
+            btnCapBacKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCapBacKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnCapBacKhachHang.Location = new Point(-15, -4);
             btnCapBacKhachHang.Name = "btnCapBacKhachHang";
@@ -424,7 +600,7 @@
             btnSMSZalo.BackColor = Color.DeepSkyBlue;
             btnSMSZalo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSMSZalo.ForeColor = Color.White;
-            btnSMSZalo.Image = Properties.Resources.icons8_circle_20;
+            btnSMSZalo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnSMSZalo.ImageAlign = ContentAlignment.MiddleLeft;
             btnSMSZalo.Location = new Point(-15, -4);
             btnSMSZalo.Name = "btnSMSZalo";
@@ -448,7 +624,7 @@
             btnNhaCungCap.BackColor = Color.DeepSkyBlue;
             btnNhaCungCap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnNhaCungCap.ForeColor = Color.White;
-            btnNhaCungCap.Image = Properties.Resources.icons8_circle_20;
+            btnNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
             btnNhaCungCap.Location = new Point(-15, -4);
             btnNhaCungCap.Name = "btnNhaCungCap";
@@ -498,7 +674,7 @@
             btnQLKhachHang.BackColor = Color.DeepSkyBlue;
             btnQLKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnQLKhachHang.ForeColor = Color.White;
-            btnQLKhachHang.Image = Properties.Resources.icons8_circle_20;
+            btnQLKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQLKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnQLKhachHang.Location = new Point(-15, -4);
             btnQLKhachHang.Name = "btnQLKhachHang";
@@ -540,7 +716,7 @@
             btnThongKeSanPhamDaBan.BackColor = Color.DeepSkyBlue;
             btnThongKeSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnThongKeSanPhamDaBan.ForeColor = Color.White;
-            btnThongKeSanPhamDaBan.Image = Properties.Resources.icons8_circle_20;
+            btnThongKeSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnThongKeSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
             btnThongKeSanPhamDaBan.Location = new Point(-15, -4);
             btnThongKeSanPhamDaBan.Name = "btnThongKeSanPhamDaBan";
@@ -564,7 +740,7 @@
             btnTangGiaTheoNhom.BackColor = Color.DeepSkyBlue;
             btnTangGiaTheoNhom.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnTangGiaTheoNhom.ForeColor = Color.White;
-            btnTangGiaTheoNhom.Image = Properties.Resources.icons8_circle_20;
+            btnTangGiaTheoNhom.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnTangGiaTheoNhom.ImageAlign = ContentAlignment.MiddleLeft;
             btnTangGiaTheoNhom.Location = new Point(-15, -4);
             btnTangGiaTheoNhom.Name = "btnTangGiaTheoNhom";
@@ -588,7 +764,7 @@
             btnBaoGiaHangHoa.BackColor = Color.DeepSkyBlue;
             btnBaoGiaHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoGiaHangHoa.ForeColor = Color.White;
-            btnBaoGiaHangHoa.Image = Properties.Resources.icons8_circle_20;
+            btnBaoGiaHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoGiaHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoGiaHangHoa.Location = new Point(-15, -4);
             btnBaoGiaHangHoa.Name = "btnBaoGiaHangHoa";
@@ -612,7 +788,7 @@
             btnLichSuSanPhamDaBan.BackColor = Color.DeepSkyBlue;
             btnLichSuSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnLichSuSanPhamDaBan.ForeColor = Color.White;
-            btnLichSuSanPhamDaBan.Image = Properties.Resources.icons8_circle_20;
+            btnLichSuSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
             btnLichSuSanPhamDaBan.Location = new Point(-15, -4);
             btnLichSuSanPhamDaBan.Name = "btnLichSuSanPhamDaBan";
@@ -636,7 +812,7 @@
             btnIntemMaVach.BackColor = Color.DeepSkyBlue;
             btnIntemMaVach.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnIntemMaVach.ForeColor = Color.White;
-            btnIntemMaVach.Image = Properties.Resources.icons8_circle_20;
+            btnIntemMaVach.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnIntemMaVach.ImageAlign = ContentAlignment.MiddleLeft;
             btnIntemMaVach.Location = new Point(-15, -4);
             btnIntemMaVach.Name = "btnIntemMaVach";
@@ -660,7 +836,7 @@
             btnDieuChinhGia.BackColor = Color.DeepSkyBlue;
             btnDieuChinhGia.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDieuChinhGia.ForeColor = Color.White;
-            btnDieuChinhGia.Image = Properties.Resources.icons8_circle_20;
+            btnDieuChinhGia.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDieuChinhGia.ImageAlign = ContentAlignment.MiddleLeft;
             btnDieuChinhGia.Location = new Point(-15, -4);
             btnDieuChinhGia.Name = "btnDieuChinhGia";
@@ -710,7 +886,7 @@
             btnDanhSachHangHoa.BackColor = Color.DeepSkyBlue;
             btnDanhSachHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDanhSachHangHoa.ForeColor = Color.White;
-            btnDanhSachHangHoa.Image = Properties.Resources.icons8_circle_20;
+            btnDanhSachHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDanhSachHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
             btnDanhSachHangHoa.Location = new Point(-15, -4);
             btnDanhSachHangHoa.Name = "btnDanhSachHangHoa";
@@ -757,7 +933,7 @@
             btnDonHangOnline.BackColor = Color.DeepSkyBlue;
             btnDonHangOnline.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDonHangOnline.ForeColor = Color.White;
-            btnDonHangOnline.Image = Properties.Resources.icons8_circle_20;
+            btnDonHangOnline.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonHangOnline.ImageAlign = ContentAlignment.MiddleLeft;
             btnDonHangOnline.Location = new Point(-15, -4);
             btnDonHangOnline.Name = "btnDonHangOnline";
@@ -781,7 +957,7 @@
             btnKiemTraHoaDonNhap.BackColor = Color.DeepSkyBlue;
             btnKiemTraHoaDonNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKiemTraHoaDonNhap.ForeColor = Color.White;
-            btnKiemTraHoaDonNhap.Image = Properties.Resources.icons8_circle_20;
+            btnKiemTraHoaDonNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraHoaDonNhap.ImageAlign = ContentAlignment.MiddleLeft;
             btnKiemTraHoaDonNhap.Location = new Point(-15, -4);
             btnKiemTraHoaDonNhap.Name = "btnKiemTraHoaDonNhap";
@@ -805,7 +981,7 @@
             button13.BackColor = Color.DeepSkyBlue;
             button13.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             button13.ForeColor = Color.White;
-            button13.Image = Properties.Resources.icons8_circle_20;
+            button13.Image = PosManager.Properties.Resources.icons8_circle_20;
             button13.ImageAlign = ContentAlignment.MiddleLeft;
             button13.Location = new Point(-15, -4);
             button13.Name = "button13";
@@ -829,7 +1005,7 @@
             btnLichSuPhieuNhap.BackColor = Color.DeepSkyBlue;
             btnLichSuPhieuNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnLichSuPhieuNhap.ForeColor = Color.White;
-            btnLichSuPhieuNhap.Image = Properties.Resources.icons8_circle_20;
+            btnLichSuPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
             btnLichSuPhieuNhap.Location = new Point(-15, -4);
             btnLichSuPhieuNhap.Name = "btnLichSuPhieuNhap";
@@ -853,7 +1029,7 @@
             btnDonDatHangNCC.BackColor = Color.DeepSkyBlue;
             btnDonDatHangNCC.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDonDatHangNCC.ForeColor = Color.White;
-            btnDonDatHangNCC.Image = Properties.Resources.icons8_circle_20;
+            btnDonDatHangNCC.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonDatHangNCC.ImageAlign = ContentAlignment.MiddleLeft;
             btnDonDatHangNCC.Location = new Point(-15, -4);
             btnDonDatHangNCC.Name = "btnDonDatHangNCC";
@@ -877,7 +1053,7 @@
             btnKiemPhieuNhap.BackColor = Color.DeepSkyBlue;
             btnKiemPhieuNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKiemPhieuNhap.ForeColor = Color.White;
-            btnKiemPhieuNhap.Image = Properties.Resources.icons8_circle_20;
+            btnKiemPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
             btnKiemPhieuNhap.Location = new Point(-15, -4);
             btnKiemPhieuNhap.Name = "btnKiemPhieuNhap";
@@ -901,7 +1077,7 @@
             btnChuyenKho.BackColor = Color.DeepSkyBlue;
             btnChuyenKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnChuyenKho.ForeColor = Color.White;
-            btnChuyenKho.Image = Properties.Resources.icons8_circle_20;
+            btnChuyenKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnChuyenKho.ImageAlign = ContentAlignment.MiddleLeft;
             btnChuyenKho.Location = new Point(-15, -4);
             btnChuyenKho.Name = "btnChuyenKho";
@@ -925,7 +1101,7 @@
             btnKiemKho.BackColor = Color.DeepSkyBlue;
             btnKiemKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKiemKho.ForeColor = Color.White;
-            btnKiemKho.Image = Properties.Resources.icons8_circle_20;
+            btnKiemKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemKho.ImageAlign = ContentAlignment.MiddleLeft;
             btnKiemKho.Location = new Point(-15, -4);
             btnKiemKho.Name = "btnKiemKho";
@@ -949,7 +1125,7 @@
             btnQuanLyDate.BackColor = Color.DeepSkyBlue;
             btnQuanLyDate.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnQuanLyDate.ForeColor = Color.White;
-            btnQuanLyDate.Image = Properties.Resources.icons8_circle_20;
+            btnQuanLyDate.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyDate.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuanLyDate.Location = new Point(-15, -4);
             btnQuanLyDate.Name = "btnQuanLyDate";
@@ -973,7 +1149,7 @@
             btnXuatKho.BackColor = Color.DeepSkyBlue;
             btnXuatKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnXuatKho.ForeColor = Color.White;
-            btnXuatKho.Image = Properties.Resources.icons8_circle_20;
+            btnXuatKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnXuatKho.ImageAlign = ContentAlignment.MiddleLeft;
             btnXuatKho.Location = new Point(-15, -4);
             btnXuatKho.Name = "btnXuatKho";
@@ -997,7 +1173,7 @@
             btnNhapKho.BackColor = Color.DeepSkyBlue;
             btnNhapKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnNhapKho.ForeColor = Color.White;
-            btnNhapKho.Image = Properties.Resources.icons8_circle_20;
+            btnNhapKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnNhapKho.ImageAlign = ContentAlignment.MiddleLeft;
             btnNhapKho.Location = new Point(-15, -4);
             btnNhapKho.Name = "btnNhapKho";
@@ -1047,7 +1223,7 @@
             btnTonKho.BackColor = Color.DeepSkyBlue;
             btnTonKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnTonKho.ForeColor = Color.White;
-            btnTonKho.Image = Properties.Resources.icons8_circle_20;
+            btnTonKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnTonKho.ImageAlign = ContentAlignment.MiddleLeft;
             btnTonKho.Location = new Point(-15, -4);
             btnTonKho.Name = "btnTonKho";
@@ -1094,7 +1270,7 @@
             btnBaoCaoMaDuThuong.BackColor = Color.DeepSkyBlue;
             btnBaoCaoMaDuThuong.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCaoMaDuThuong.ForeColor = Color.White;
-            btnBaoCaoMaDuThuong.Image = Properties.Resources.icons8_circle_20;
+            btnBaoCaoMaDuThuong.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoMaDuThuong.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoMaDuThuong.Location = new Point(-15, -4);
             btnBaoCaoMaDuThuong.Name = "btnBaoCaoMaDuThuong";
@@ -1118,7 +1294,7 @@
             btnBaoCaoTinNhanZalo.BackColor = Color.DeepSkyBlue;
             btnBaoCaoTinNhanZalo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCaoTinNhanZalo.ForeColor = Color.White;
-            btnBaoCaoTinNhanZalo.Image = Properties.Resources.icons8_circle_20;
+            btnBaoCaoTinNhanZalo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoTinNhanZalo.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoTinNhanZalo.Location = new Point(-15, -4);
             btnBaoCaoTinNhanZalo.Name = "btnBaoCaoTinNhanZalo";
@@ -1142,7 +1318,7 @@
             btnKHDatTopNam.BackColor = Color.DeepSkyBlue;
             btnKHDatTopNam.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKHDatTopNam.ForeColor = Color.White;
-            btnKHDatTopNam.Image = Properties.Resources.icons8_circle_20;
+            btnKHDatTopNam.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKHDatTopNam.ImageAlign = ContentAlignment.MiddleLeft;
             btnKHDatTopNam.Location = new Point(-15, -4);
             btnKHDatTopNam.Name = "btnKHDatTopNam";
@@ -1166,7 +1342,7 @@
             btnKHDatTopThang.BackColor = Color.DeepSkyBlue;
             btnKHDatTopThang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKHDatTopThang.ForeColor = Color.White;
-            btnKHDatTopThang.Image = Properties.Resources.icons8_circle_20;
+            btnKHDatTopThang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKHDatTopThang.ImageAlign = ContentAlignment.MiddleLeft;
             btnKHDatTopThang.Location = new Point(-15, -4);
             btnKHDatTopThang.Name = "btnKHDatTopThang";
@@ -1190,7 +1366,7 @@
             btnSoQuyTienMat.BackColor = Color.DeepSkyBlue;
             btnSoQuyTienMat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSoQuyTienMat.ForeColor = Color.White;
-            btnSoQuyTienMat.Image = Properties.Resources.icons8_circle_20;
+            btnSoQuyTienMat.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnSoQuyTienMat.ImageAlign = ContentAlignment.MiddleLeft;
             btnSoQuyTienMat.Location = new Point(-15, -4);
             btnSoQuyTienMat.Name = "btnSoQuyTienMat";
@@ -1214,7 +1390,7 @@
             btnKiemTraGiaBanThucTe.BackColor = Color.DeepSkyBlue;
             btnKiemTraGiaBanThucTe.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKiemTraGiaBanThucTe.ForeColor = Color.White;
-            btnKiemTraGiaBanThucTe.Image = Properties.Resources.icons8_circle_20;
+            btnKiemTraGiaBanThucTe.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraGiaBanThucTe.ImageAlign = ContentAlignment.MiddleLeft;
             btnKiemTraGiaBanThucTe.Location = new Point(-15, -4);
             btnKiemTraGiaBanThucTe.Name = "btnKiemTraGiaBanThucTe";
@@ -1238,7 +1414,7 @@
             btnLichSuSanPham.BackColor = Color.DeepSkyBlue;
             btnLichSuSanPham.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnLichSuSanPham.ForeColor = Color.White;
-            btnLichSuSanPham.Image = Properties.Resources.icons8_circle_20;
+            btnLichSuSanPham.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuSanPham.ImageAlign = ContentAlignment.MiddleLeft;
             btnLichSuSanPham.Location = new Point(-15, -4);
             btnLichSuSanPham.Name = "btnLichSuSanPham";
@@ -1262,7 +1438,7 @@
             btnLichSuKhachHang.BackColor = Color.DeepSkyBlue;
             btnLichSuKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnLichSuKhachHang.ForeColor = Color.White;
-            btnLichSuKhachHang.Image = Properties.Resources.icons8_circle_20;
+            btnLichSuKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnLichSuKhachHang.Location = new Point(-15, -4);
             btnLichSuKhachHang.Name = "btnLichSuKhachHang";
@@ -1286,7 +1462,7 @@
             btnBaoCaoTheoNhomHang.BackColor = Color.DeepSkyBlue;
             btnBaoCaoTheoNhomHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCaoTheoNhomHang.ForeColor = Color.White;
-            btnBaoCaoTheoNhomHang.Image = Properties.Resources.icons8_circle_20;
+            btnBaoCaoTheoNhomHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoTheoNhomHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoTheoNhomHang.Location = new Point(-15, -4);
             btnBaoCaoTheoNhomHang.Name = "btnBaoCaoTheoNhomHang";
@@ -1310,7 +1486,7 @@
             btnBaoCaoSoTienTang.BackColor = Color.DeepSkyBlue;
             btnBaoCaoSoTienTang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCaoSoTienTang.ForeColor = Color.White;
-            btnBaoCaoSoTienTang.Image = Properties.Resources.icons8_circle_20;
+            btnBaoCaoSoTienTang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoSoTienTang.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoSoTienTang.Location = new Point(-15, -4);
             btnBaoCaoSoTienTang.Name = "btnBaoCaoSoTienTang";
@@ -1334,7 +1510,7 @@
             btnBaoCaoDiem.BackColor = Color.DeepSkyBlue;
             btnBaoCaoDiem.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCaoDiem.ForeColor = Color.White;
-            btnBaoCaoDiem.Image = Properties.Resources.icons8_circle_20;
+            btnBaoCaoDiem.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoDiem.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoDiem.Location = new Point(-15, -4);
             btnBaoCaoDiem.Name = "btnBaoCaoDiem";
@@ -1384,7 +1560,7 @@
             btnBaoCaoBanHang.BackColor = Color.DeepSkyBlue;
             btnBaoCaoBanHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCaoBanHang.ForeColor = Color.White;
-            btnBaoCaoBanHang.Image = Properties.Resources.icons8_circle_20;
+            btnBaoCaoBanHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoBanHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoBanHang.Location = new Point(-15, -4);
             btnBaoCaoBanHang.Name = "btnBaoCaoBanHang";
@@ -1427,7 +1603,7 @@
             btnCaiDatHoaDon.BackColor = Color.DeepSkyBlue;
             btnCaiDatHoaDon.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCaiDatHoaDon.ForeColor = Color.White;
-            btnCaiDatHoaDon.Image = Properties.Resources.icons8_circle_20;
+            btnCaiDatHoaDon.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCaiDatHoaDon.ImageAlign = ContentAlignment.MiddleLeft;
             btnCaiDatHoaDon.Location = new Point(-15, -4);
             btnCaiDatHoaDon.Name = "btnCaiDatHoaDon";
@@ -1451,7 +1627,7 @@
             btnLichSuHoaDonTam.BackColor = Color.DeepSkyBlue;
             btnLichSuHoaDonTam.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnLichSuHoaDonTam.ForeColor = Color.White;
-            btnLichSuHoaDonTam.Image = Properties.Resources.icons8_circle_20;
+            btnLichSuHoaDonTam.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuHoaDonTam.ImageAlign = ContentAlignment.MiddleLeft;
             btnLichSuHoaDonTam.Location = new Point(-15, -4);
             btnLichSuHoaDonTam.Name = "btnLichSuHoaDonTam";
@@ -1475,7 +1651,7 @@
             btnKiemPhieuXuatHang.BackColor = Color.DeepSkyBlue;
             btnKiemPhieuXuatHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKiemPhieuXuatHang.ForeColor = Color.White;
-            btnKiemPhieuXuatHang.Image = Properties.Resources.icons8_circle_20;
+            btnKiemPhieuXuatHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemPhieuXuatHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnKiemPhieuXuatHang.Location = new Point(-15, -4);
             btnKiemPhieuXuatHang.Name = "btnKiemPhieuXuatHang";
@@ -1499,7 +1675,7 @@
             btnDonDatHangOnline.BackColor = Color.DeepSkyBlue;
             btnDonDatHangOnline.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDonDatHangOnline.ForeColor = Color.White;
-            btnDonDatHangOnline.Image = Properties.Resources.icons8_circle_20;
+            btnDonDatHangOnline.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonDatHangOnline.ImageAlign = ContentAlignment.MiddleLeft;
             btnDonDatHangOnline.Location = new Point(-15, -4);
             btnDonDatHangOnline.Name = "btnDonDatHangOnline";
@@ -1523,7 +1699,7 @@
             btnKiemTraHoaDonTrung.BackColor = Color.DeepSkyBlue;
             btnKiemTraHoaDonTrung.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKiemTraHoaDonTrung.ForeColor = Color.White;
-            btnKiemTraHoaDonTrung.Image = Properties.Resources.icons8_circle_20;
+            btnKiemTraHoaDonTrung.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraHoaDonTrung.ImageAlign = ContentAlignment.MiddleLeft;
             btnKiemTraHoaDonTrung.Location = new Point(-15, -4);
             btnKiemTraHoaDonTrung.Name = "btnKiemTraHoaDonTrung";
@@ -1547,7 +1723,7 @@
             btnThongKeDonDatHang.BackColor = Color.DeepSkyBlue;
             btnThongKeDonDatHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnThongKeDonDatHang.ForeColor = Color.White;
-            btnThongKeDonDatHang.Image = Properties.Resources.icons8_circle_20;
+            btnThongKeDonDatHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnThongKeDonDatHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnThongKeDonDatHang.Location = new Point(-15, -4);
             btnThongKeDonDatHang.Name = "btnThongKeDonDatHang";
@@ -1571,7 +1747,7 @@
             btnThongKeHoaDonVAT.BackColor = Color.DeepSkyBlue;
             btnThongKeHoaDonVAT.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnThongKeHoaDonVAT.ForeColor = Color.White;
-            btnThongKeHoaDonVAT.Image = Properties.Resources.icons8_circle_20;
+            btnThongKeHoaDonVAT.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnThongKeHoaDonVAT.ImageAlign = ContentAlignment.MiddleLeft;
             btnThongKeHoaDonVAT.Location = new Point(-15, -4);
             btnThongKeHoaDonVAT.Name = "btnThongKeHoaDonVAT";
@@ -1621,7 +1797,7 @@
             btnHoaDonVuaThanhToan.BackColor = Color.DeepSkyBlue;
             btnHoaDonVuaThanhToan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnHoaDonVuaThanhToan.ForeColor = Color.White;
-            btnHoaDonVuaThanhToan.Image = Properties.Resources.icons8_circle_20;
+            btnHoaDonVuaThanhToan.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnHoaDonVuaThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
             btnHoaDonVuaThanhToan.Location = new Point(-15, -4);
             btnHoaDonVuaThanhToan.Name = "btnHoaDonVuaThanhToan";
@@ -1663,7 +1839,7 @@
             btnDuyetPhieuChi.BackColor = Color.DeepSkyBlue;
             btnDuyetPhieuChi.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDuyetPhieuChi.ForeColor = Color.White;
-            btnDuyetPhieuChi.Image = Properties.Resources.icons8_circle_20;
+            btnDuyetPhieuChi.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDuyetPhieuChi.ImageAlign = ContentAlignment.MiddleLeft;
             btnDuyetPhieuChi.Location = new Point(-15, -4);
             btnDuyetPhieuChi.Name = "btnDuyetPhieuChi";
@@ -1687,7 +1863,7 @@
             btnGhiChuCongNo.BackColor = Color.DeepSkyBlue;
             btnGhiChuCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnGhiChuCongNo.ForeColor = Color.White;
-            btnGhiChuCongNo.Image = Properties.Resources.icons8_circle_20;
+            btnGhiChuCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnGhiChuCongNo.ImageAlign = ContentAlignment.MiddleLeft;
             btnGhiChuCongNo.Location = new Point(-15, -4);
             btnGhiChuCongNo.Name = "btnGhiChuCongNo";
@@ -1711,7 +1887,7 @@
             btnQuanLyMuonHang.BackColor = Color.DeepSkyBlue;
             btnQuanLyMuonHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnQuanLyMuonHang.ForeColor = Color.White;
-            btnQuanLyMuonHang.Image = Properties.Resources.icons8_circle_20;
+            btnQuanLyMuonHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyMuonHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuanLyMuonHang.Location = new Point(-15, -4);
             btnQuanLyMuonHang.Name = "btnQuanLyMuonHang";
@@ -1735,7 +1911,7 @@
             btnQuanLyDonHangNhapCongNo.BackColor = Color.DeepSkyBlue;
             btnQuanLyDonHangNhapCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnQuanLyDonHangNhapCongNo.ForeColor = Color.White;
-            btnQuanLyDonHangNhapCongNo.Image = Properties.Resources.icons8_circle_20;
+            btnQuanLyDonHangNhapCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyDonHangNhapCongNo.ImageAlign = ContentAlignment.MiddleLeft;
             btnQuanLyDonHangNhapCongNo.Location = new Point(-15, -4);
             btnQuanLyDonHangNhapCongNo.Name = "btnQuanLyDonHangNhapCongNo";
@@ -1759,7 +1935,7 @@
             btnCongNoDauKy.BackColor = Color.DeepSkyBlue;
             btnCongNoDauKy.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCongNoDauKy.ForeColor = Color.White;
-            btnCongNoDauKy.Image = Properties.Resources.icons8_circle_20;
+            btnCongNoDauKy.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCongNoDauKy.ImageAlign = ContentAlignment.MiddleLeft;
             btnCongNoDauKy.Location = new Point(-15, -4);
             btnCongNoDauKy.Name = "btnCongNoDauKy";
@@ -1783,7 +1959,7 @@
             btnCongNoPhaiTraChoNhaCungCap.BackColor = Color.DeepSkyBlue;
             btnCongNoPhaiTraChoNhaCungCap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCongNoPhaiTraChoNhaCungCap.ForeColor = Color.White;
-            btnCongNoPhaiTraChoNhaCungCap.Image = Properties.Resources.icons8_circle_20;
+            btnCongNoPhaiTraChoNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCongNoPhaiTraChoNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
             btnCongNoPhaiTraChoNhaCungCap.Location = new Point(-15, -4);
             btnCongNoPhaiTraChoNhaCungCap.Name = "btnCongNoPhaiTraChoNhaCungCap";
@@ -1833,7 +2009,7 @@
             btnCongNoPhaiThuCuaKhachHang.BackColor = Color.DeepSkyBlue;
             btnCongNoPhaiThuCuaKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCongNoPhaiThuCuaKhachHang.ForeColor = Color.White;
-            btnCongNoPhaiThuCuaKhachHang.Image = Properties.Resources.icons8_circle_20;
+            btnCongNoPhaiThuCuaKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCongNoPhaiThuCuaKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
             btnCongNoPhaiThuCuaKhachHang.Location = new Point(-15, -4);
             btnCongNoPhaiThuCuaKhachHang.Name = "btnCongNoPhaiThuCuaKhachHang";
@@ -1871,7 +2047,7 @@
             btnPhanQuyen.BackColor = Color.DeepSkyBlue;
             btnPhanQuyen.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnPhanQuyen.ForeColor = Color.White;
-            btnPhanQuyen.Image = Properties.Resources.icons8_circle_20;
+            btnPhanQuyen.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnPhanQuyen.ImageAlign = ContentAlignment.MiddleLeft;
             btnPhanQuyen.Location = new Point(-15, -4);
             btnPhanQuyen.Name = "btnPhanQuyen";
@@ -1895,7 +2071,7 @@
             btnChamCong.BackColor = Color.DeepSkyBlue;
             btnChamCong.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnChamCong.ForeColor = Color.White;
-            btnChamCong.Image = Properties.Resources.icons8_circle_20;
+            btnChamCong.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnChamCong.ImageAlign = ContentAlignment.MiddleLeft;
             btnChamCong.Location = new Point(-15, -4);
             btnChamCong.Name = "btnChamCong";
@@ -1945,7 +2121,7 @@
             btnDanhSachNhanVien.BackColor = Color.DeepSkyBlue;
             btnDanhSachNhanVien.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDanhSachNhanVien.ForeColor = Color.White;
-            btnDanhSachNhanVien.Image = Properties.Resources.icons8_circle_20;
+            btnDanhSachNhanVien.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDanhSachNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
             btnDanhSachNhanVien.Location = new Point(-15, -4);
             btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
@@ -2104,135 +2280,6 @@
             btnCaiDat.TextAlign = ContentAlignment.MiddleLeft;
             btnCaiDat.UseVisualStyleBackColor = false;
             // 
-            // splitContainer1
-            // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(290, 0);
-            splitContainer1.Name = "splitContainer1";
-            splitContainer1.Orientation = Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.Controls.Add(txtHieuUng);
-            splitContainer1.Panel1.Controls.Add(pbProfile);
-            splitContainer1.Panel1.Controls.Add(btnMenu);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(pMain);
-            splitContainer1.Panel2.Controls.Add(pProfile);
-            splitContainer1.Size = new Size(1334, 831);
-            splitContainer1.SplitterDistance = 59;
-            splitContainer1.TabIndex = 1;
-            // 
-            // txtHieuUng
-            // 
-            txtHieuUng.BackColor = SystemColors.Control;
-            txtHieuUng.Dock = DockStyle.Fill;
-            txtHieuUng.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtHieuUng.ForeColor = Color.DeepSkyBlue;
-            txtHieuUng.Location = new Point(42, 0);
-            txtHieuUng.MinimumSize = new Size(971, 56);
-            txtHieuUng.Multiline = true;
-            txtHieuUng.Name = "txtHieuUng";
-            txtHieuUng.Size = new Size(1180, 59);
-            txtHieuUng.TabIndex = 6;
-            txtHieuUng.TextAlign = HorizontalAlignment.Center;
-            // 
-            // pbProfile
-            // 
-            pbProfile.Dock = DockStyle.Right;
-            pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
-            pbProfile.Location = new Point(1222, 0);
-            pbProfile.Name = "pbProfile";
-            pbProfile.Size = new Size(112, 59);
-            pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
-            pbProfile.TabIndex = 6;
-            pbProfile.TabStop = false;
-            pbProfile.Click += pbProfile_Click;
-            // 
-            // btnMenu
-            // 
-            btnMenu.Dock = DockStyle.Left;
-            btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
-            btnMenu.Location = new Point(0, 0);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(42, 59);
-            btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
-            btnMenu.TabIndex = 6;
-            btnMenu.TabStop = false;
-            btnMenu.Click += btnMenu_Click;
-            // 
-            // pMain
-            // 
-            pMain.Dock = DockStyle.Fill;
-            pMain.Location = new Point(0, 0);
-            pMain.Name = "pMain";
-            pMain.Size = new Size(1334, 768);
-            pMain.TabIndex = 16;
-            // 
-            // pProfile
-            // 
-            pProfile.BackColor = Color.LightBlue;
-            pProfile.Controls.Add(panel67);
-            pProfile.Controls.Add(panel66);
-            pProfile.Location = new Point(1005, 4);
-            pProfile.MaximumSize = new Size(112, 71);
-            pProfile.MinimumSize = new Size(112, 71);
-            pProfile.Name = "pProfile";
-            pProfile.Size = new Size(112, 71);
-            pProfile.TabIndex = 15;
-            pProfile.Visible = false;
-            // 
-            // panel67
-            // 
-            panel67.Controls.Add(btnDoiMatKhau);
-            panel67.Location = new Point(0, 35);
-            panel67.Name = "panel67";
-            panel67.Size = new Size(112, 26);
-            panel67.TabIndex = 6;
-            // 
-            // btnDoiMatKhau
-            // 
-            btnDoiMatKhau.BackColor = Color.FromArgb(89, 149, 206);
-            btnDoiMatKhau.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoiMatKhau.ForeColor = Color.White;
-            btnDoiMatKhau.Image = (Image)resources.GetObject("btnDoiMatKhau.Image");
-            btnDoiMatKhau.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDoiMatKhau.Location = new Point(-20, -4);
-            btnDoiMatKhau.Name = "btnDoiMatKhau";
-            btnDoiMatKhau.Padding = new Padding(30, 0, 0, 0);
-            btnDoiMatKhau.Size = new Size(143, 40);
-            btnDoiMatKhau.TabIndex = 3;
-            btnDoiMatKhau.Text = "       Đổi Mật Khẩu";
-            btnDoiMatKhau.TextAlign = ContentAlignment.MiddleLeft;
-            btnDoiMatKhau.UseVisualStyleBackColor = false;
-            // 
-            // panel66
-            // 
-            panel66.Controls.Add(btnDangXuat);
-            panel66.Dock = DockStyle.Top;
-            panel66.Location = new Point(0, 0);
-            panel66.Name = "panel66";
-            panel66.Size = new Size(112, 26);
-            panel66.TabIndex = 5;
-            // 
-            // btnDangXuat
-            // 
-            btnDangXuat.BackColor = Color.FromArgb(89, 149, 206);
-            btnDangXuat.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDangXuat.ForeColor = Color.White;
-            btnDangXuat.Image = (Image)resources.GetObject("btnDangXuat.Image");
-            btnDangXuat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDangXuat.Location = new Point(-20, -4);
-            btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Padding = new Padding(30, 0, 0, 0);
-            btnDangXuat.Size = new Size(143, 40);
-            btnDangXuat.TabIndex = 3;
-            btnDangXuat.Text = "       Đăng Xuất";
-            btnDangXuat.TextAlign = ContentAlignment.MiddleLeft;
-            btnDangXuat.UseVisualStyleBackColor = false;
-            // 
             // KhachHangTimer
             // 
             KhachHangTimer.Interval = 10;
@@ -2278,59 +2325,82 @@
             BaoCaoTimer.Interval = 10;
             BaoCaoTimer.Tick += BaoCaoTimer_Tick;
             // 
-            // kryptonPalette1
+            // kryptonPalette2
             // 
-            kryptonPalette1.ButtonSpecs.FormClose.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormClose.Image");
-            kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImagePressed");
-            kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImageTracking");
-            kryptonPalette1.ButtonSpecs.FormMax.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMax.Image");
-            kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImagePressed");
-            kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageTracking");
-            kryptonPalette1.ButtonSpecs.FormMin.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMin.Image");
-            kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImagePressed");
-            kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormMin.ImageStates.ImageTracking");
-            kryptonPalette1.ButtonSpecs.FormRestore.Image = (Image)resources.GetObject("kryptonPalette1.ButtonSpecs.FormRestore.Image");
-            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = Color.White;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = Color.White;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
-            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = Color.White;
-            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = Color.White;
-            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = Color.White;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = Color.White;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Back.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Back.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StatePressed.Border.Width = 0;
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Back.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.ButtonStyles.ButtonFormClose.StateTracking.Border.Width = 0;
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 252);
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 252);
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
-            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 252);
-            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 252);
-            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 12;
-            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new Padding(10, -1, -1, -1);
+            kryptonPalette2.ButtonSpecs.FormClose.Image = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormClose.Image");
+            kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImagePressed");
+            kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormClose.ImageStates.ImageTracking");
+            kryptonPalette2.ButtonSpecs.FormMax.Image = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormMax.Image");
+            kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImagePressed");
+            kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormMax.ImageStates.ImageTracking");
+            kryptonPalette2.ButtonSpecs.FormMin.Image = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormMin.Image");
+            kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImagePressed = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImagePressed");
+            kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImageTracking = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormMin.ImageStates.ImageTracking");
+            kryptonPalette2.ButtonSpecs.FormRestore.Image = (Image)resources.GetObject("kryptonPalette2.ButtonSpecs.FormRestore.Image");
+            kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = Color.White;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = Color.White;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
+            kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Back.Color1 = Color.White;
+            kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Back.Color2 = Color.White;
+            kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette2.ButtonStyles.ButtonForm.StatePressed.Border.Width = 0;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Back.Color1 = Color.White;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Back.Color2 = Color.White;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette2.ButtonStyles.ButtonForm.StateTracking.Border.Width = 0;
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StatePressed.Back.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StatePressed.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StatePressed.Border.Width = 0;
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StateTracking.Back.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StateTracking.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette2.ButtonStyles.ButtonFormClose.StateTracking.Border.Width = 0;
+            kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 252);
+            kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 252);
+            kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color1 = Color.FromArgb(250, 252, 252);
+            kryptonPalette2.FormStyles.FormMain.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette2.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
+            kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 250, 252);
+            kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 250, 252);
+            kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 12;
+            kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new Padding(10, -1, -1, -1);
             // 
-            // fMain
+            // timer1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            timer1.Interval = 10;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1624, 831);
             Controls.Add(splitContainer1);
             Controls.Add(flpMain);
-            MinimumSize = new Size(1426, 870);
-            Name = "fMain";
-            Load += fMain_Load;
+            Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(6);
+            MinimumSize = new Size(1640, 870);
+            Name = "Form1";
+            Palette = kryptonPalette1;
+            PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();
+            pMain.ResumeLayout(false);
+            pProfile.ResumeLayout(false);
+            panel67.ResumeLayout(false);
+            panel66.ResumeLayout(false);
             flpMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbLogoMeXiu).EndInit();
             KhachHangContainer.ResumeLayout(false);
@@ -2410,41 +2480,42 @@
             panel77.ResumeLayout(false);
             CaiDatContainer.ResumeLayout(false);
             panel64.ResumeLayout(false);
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel1.PerformLayout();
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();
-            pProfile.ResumeLayout(false);
-            panel67.ResumeLayout(false);
-            panel66.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private SplitContainer splitContainer1;
+        private TextBox txtHieuUng;
+        private PictureBox pbProfile;
+        private PictureBox btnMenu;
+        private Panel pMain;
+        private Panel pProfile;
+        private Panel panel67;
+        private Button btnDoiMatKhau;
+        private Panel panel66;
+        private Button btnDangXuat;
         private FlowLayoutPanel flpMain;
         private PictureBox pbLogoMeXiu;
-        private Panel panel34;
-        private Button btnQLKhachHang;
-        private SplitContainer splitContainer1;
-        private Panel panel2;
-        private Button btnKhachHang;
-        private Panel panel4;
-        private Button btnCapBacKhachHang;
         private Panel KhachHangContainer;
-        private Panel panel6;
-        private Button btnNhaCungCap;
-        private Panel panel7;
-        private Button btnSMSZalo;
         private Panel panel9;
         private Button btnTiepNhanXuLyYeuCau;
         private Panel panel8;
         private Button btnSinhNhat;
-        private System.Windows.Forms.Timer KhachHangTimer;
+        private Panel panel4;
+        private Button btnCapBacKhachHang;
+        private Panel panel7;
+        private Button btnSMSZalo;
+        private Panel panel6;
+        private Button btnNhaCungCap;
+        private Panel panel2;
+        private Button btnKhachHang;
+        private Panel panel34;
+        private Button btnQLKhachHang;
         private Panel HangHoaContainer;
+        private Panel panel17;
+        private Button btnThongKeSanPhamDaBan;
         private Panel panel10;
         private Button btnTangGiaTheoNhom;
         private Panel panel11;
@@ -2459,17 +2530,25 @@
         private Button btnHangHoa;
         private Panel panel16;
         private Button btnDanhSachHangHoa;
-        private Panel panel17;
-        private Button btnThongKeSanPhamDaBan;
         private Panel KhoContainer;
         private Panel panel19;
         private Button btnDonHangOnline;
+        private Panel panel5;
+        private Button btnKiemTraHoaDonNhap;
+        private Panel panel29;
+        private Button button13;
+        private Panel panel27;
+        private Button btnLichSuPhieuNhap;
         private Panel panel20;
         private Button btnDonDatHangNCC;
+        private Panel panel28;
+        private Button btnKiemPhieuNhap;
         private Panel panel21;
         private Button btnChuyenKho;
         private Panel panel22;
         private Button btnKiemKho;
+        private Panel panel30;
+        private Button btnQuanLyDate;
         private Panel panel23;
         private Button btnXuatKho;
         private Panel panel24;
@@ -2478,24 +2557,36 @@
         private Button btnKho;
         private Panel panel26;
         private Button btnTonKho;
-        private System.Windows.Forms.Timer HangHoaTimer;
-        private Panel panel5;
-        private Button btnKiemTraHoaDonNhap;
-        private Panel panel27;
-        private Button btnLichSuPhieuNhap;
-        private Panel panel28;
-        private Button btnKiemPhieuNhap;
-        private Panel panel29;
-        private Button button13;
-        private Panel panel30;
-        private Button btnQuanLyDate;
-        private System.Windows.Forms.Timer KhoTimer;
-        private PictureBox btnMenu;
-        private System.Windows.Forms.Timer MenuTimer;
-        private PictureBox pbProfile;
-        private System.Windows.Forms.Timer HieuUngTimer;
-        private TextBox txtHieuUng;
+        private Panel BaoCaoContainer;
+        private Panel panel57;
+        private Button btnBaoCaoMaDuThuong;
+        private Panel panel58;
+        private Button btnBaoCaoTinNhanZalo;
+        private Panel panel59;
+        private Button btnKHDatTopNam;
+        private Panel panel60;
+        private Button btnKHDatTopThang;
+        private Panel panel61;
+        private Button btnSoQuyTienMat;
+        private Panel panel18;
+        private Button btnKiemTraGiaBanThucTe;
+        private Panel panel47;
+        private Button btnLichSuSanPham;
+        private Panel panel51;
+        private Button btnLichSuKhachHang;
+        private Panel panel52;
+        private Button btnBaoCaoTheoNhomHang;
+        private Panel panel53;
+        private Button btnBaoCaoSoTienTang;
+        private Panel panel54;
+        private Button btnBaoCaoDiem;
+        private Panel panel55;
+        private Button btnBaoCao;
+        private Panel panel56;
+        private Button btnBaoCaoBanHang;
         private Panel HoaDonContainer;
+        private Panel panel63;
+        private Button btnCaiDatHoaDon;
         private Panel panel3;
         private Button btnLichSuHoaDonTam;
         private Panel panel33;
@@ -2512,13 +2603,6 @@
         private Button btnHoaDon;
         private Panel panel42;
         private Button btnHoaDonVuaThanhToan;
-        private Panel NhanVienContainer;
-        private Panel panel44;
-        private Button btnChamCong;
-        private Panel panel45;
-        private Button btnNhanVien;
-        private Panel panel46;
-        private Button btnDanhSachNhanVien;
         private Panel CongNoContainer;
         private Panel panel48;
         private Button btnDuyetPhieuChi;
@@ -2536,59 +2620,38 @@
         private Button btnCongNo;
         private Panel panel35;
         private Button btnCongNoPhaiThuCuaKhachHang;
-        private Panel BaoCaoContainer;
-        private Panel panel18;
-        private Button btnKiemTraGiaBanThucTe;
-        private Panel panel47;
-        private Button btnLichSuSanPham;
-        private Panel panel51;
-        private Button btnLichSuKhachHang;
-        private Panel panel52;
-        private Button btnBaoCaoTheoNhomHang;
-        private Panel panel53;
-        private Button btnBaoCaoSoTienTang;
-        private Panel panel54;
-        private Button btnBaoCaoDiem;
-        private Panel panel55;
-        private Button btnBaoCao;
-        private Panel panel56;
-        private Button btnBaoCaoBanHang;
-        private Panel panel57;
-        private Button btnBaoCaoMaDuThuong;
-        private Panel panel58;
-        private Button btnBaoCaoTinNhanZalo;
-        private Panel panel59;
-        private Button btnKHDatTopNam;
-        private Panel panel60;
-        private Button btnKHDatTopThang;
-        private Panel panel61;
-        private Button btnSoQuyTienMat;
+        private Panel NhanVienContainer;
+        private Panel panel62;
+        private Button btnPhanQuyen;
+        private Panel panel44;
+        private Button btnChamCong;
+        private Panel panel45;
+        private Button btnNhanVien;
+        private Panel panel46;
+        private Button btnDanhSachNhanVien;
         private Panel ThuChiContainer;
         private Panel panel73;
         private Button btnThuChi;
-        private Panel panel62;
-        private Button btnPhanQuyen;
-        private Panel panel63;
-        private Button btnCaiDatHoaDon;
-        private Panel CaiDatContainer;
-        private Panel panel64;
-        private Button btnCaiDat;
+        private Panel PosContainer;
+        private Panel panel65;
+        private Button btnPos;
         private Panel ChiNhanhContainer;
         private Panel panel77;
         private Button btnChiNhanh;
+        private Panel CaiDatContainer;
+        private Panel panel64;
+        private Button btnCaiDat;
+        private System.Windows.Forms.Timer KhachHangTimer;
+        private System.Windows.Forms.Timer HangHoaTimer;
+        private System.Windows.Forms.Timer KhoTimer;
+        private System.Windows.Forms.Timer MenuTimer;
+        private System.Windows.Forms.Timer HieuUngTimer;
         private System.Windows.Forms.Timer NhanVienTimer;
         private System.Windows.Forms.Timer HoaDonTimer;
         private System.Windows.Forms.Timer CongNoTimer;
         private System.Windows.Forms.Timer BaoCaoTimer;
-        private Panel pProfile;
-        private Panel panel66;
-        private Button btnDangXuat;
-        private Panel panel67;
-        private Button btnDoiMatKhau;
-        private Panel PosContainer;
-        private Panel panel65;
-        private Button btnPos;
-        private Panel pMain;
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
+
