@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using PosManager.Forms.UI;
+using PosManager.Forms.UserControls;
+using PosManager.Forms.UserControls.KhachHang;
+using PosManager.Forms.UserControls.Kho;
+using PosManager.Forms.UserControls.Post;
 
 namespace Krypton_toolKitDemo
 {
@@ -33,6 +38,10 @@ namespace Krypton_toolKitDemo
         private void Form1_Load(object sender, EventArgs e)
         {
             HieuUngTimer.Start();
+            pMain.Controls.Clear();
+            POSUserControl pOSUserControl = new POSUserControl();
+            pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(pOSUserControl);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -287,16 +296,61 @@ namespace Krypton_toolKitDemo
             _fLogin = new fLogin();
             _fLogin.Show();
             Close();
-          
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(_fLogin == null)
+            if (_fLogin == null)
             {
                 Application.Exit();
             }
-          
+
+        }
+
+        private void btnChiNhanh_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            ChiNhanhUserControl chiNhanhControl = new ChiNhanhUserControl();
+            chiNhanhControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(chiNhanhControl);
+        }
+
+        private void flpMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnQuanLyKho_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            DanhSachKhoUserControl danhSachKhoUserControl = new DanhSachKhoUserControl();
+            danhSachKhoUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(danhSachKhoUserControl);
+        }
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            NhaCungCapUserControl nhaCungCapUserControl = new NhaCungCapUserControl();
+            nhaCungCapUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(nhaCungCapUserControl);
+        }
+
+        private void pbLogoMeXiu_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            POSUserControl pOSUserControl = new POSUserControl();
+            pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(pOSUserControl);
+        }
+
+        private void btnPos_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            POSUserControl pOSUserControl = new POSUserControl();
+            pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(pOSUserControl);
         }
     }
 }

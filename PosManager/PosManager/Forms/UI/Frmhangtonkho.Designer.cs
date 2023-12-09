@@ -257,7 +257,7 @@ namespace PosManager.Forms.UI
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1008, 701);
+            tableLayoutPanel1.Size = new Size(1280, 662);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -275,7 +275,7 @@ namespace PosManager.Forms.UI
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(6, 46);
             panel1.Name = "panel1";
-            panel1.Size = new Size(188, 649);
+            panel1.Size = new Size(188, 610);
             panel1.TabIndex = 1;
             // 
             // groupBox1
@@ -315,7 +315,7 @@ namespace PosManager.Forms.UI
             groupBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(188, 649);
+            groupBox1.Size = new Size(188, 610);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
@@ -769,6 +769,7 @@ namespace PosManager.Forms.UI
             cobnhom.Name = "cobnhom";
             cobnhom.Size = new Size(142, 24);
             cobnhom.TabIndex = 14;
+            cobnhom.SelectedIndexChanged += cobnhom_SelectedIndexChanged;
             cobnhom.Enter += cobnhom_Enter;
             cobnhom.Leave += cobnhom_Leave;
             // 
@@ -1001,7 +1002,7 @@ namespace PosManager.Forms.UI
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(203, 46);
             panel2.Name = "panel2";
-            panel2.Size = new Size(799, 649);
+            panel2.Size = new Size(1071, 610);
             panel2.TabIndex = 4;
             // 
             // dgvchitietnhap
@@ -1026,7 +1027,7 @@ namespace PosManager.Forms.UI
             dgvchitietnhap.RowHeadersWidth = 4;
             dgvchitietnhap.RowTemplate.Height = 25;
             dgvchitietnhap.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvchitietnhap.Size = new Size(799, 649);
+            dgvchitietnhap.Size = new Size(1071, 610);
             dgvchitietnhap.TabIndex = 2;
             dgvchitietnhap.CellClick += dgvchitietnhap_CellClick;
             // 
@@ -1286,7 +1287,7 @@ namespace PosManager.Forms.UI
             dgvtonkho.RowHeadersWidth = 4;
             dgvtonkho.RowTemplate.Height = 25;
             dgvtonkho.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvtonkho.Size = new Size(799, 649);
+            dgvtonkho.Size = new Size(1071, 610);
             dgvtonkho.TabIndex = 3;
             dgvtonkho.RowLeave += dgvtonkho_RowLeave;
             dgvtonkho.RowPrePaint += dgvtonkho_RowPrePaint;
@@ -1453,7 +1454,7 @@ namespace PosManager.Forms.UI
             dataGridViewCellStyle41.SelectionForeColor = Color.Black;
             dgvtonsoluong.RowsDefaultCellStyle = dataGridViewCellStyle41;
             dgvtonsoluong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvtonsoluong.Size = new Size(799, 649);
+            dgvtonsoluong.Size = new Size(1071, 610);
             dgvtonsoluong.TabIndex = 5;
             dgvtonsoluong.CellDoubleClick += dgvtonsoluong_CellDoubleClick;
             dgvtonsoluong.CellPainting += dgvtonsoluong_CellPainting;
@@ -1652,7 +1653,7 @@ namespace PosManager.Forms.UI
             dgvbangke.RowHeadersVisible = false;
             dgvbangke.RowHeadersWidth = 4;
             dgvbangke.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvbangke.Size = new Size(799, 649);
+            dgvbangke.Size = new Size(1071, 610);
             dgvbangke.TabIndex = 4;
             dgvbangke.CellClick += dgvbangke_CellClick;
             dgvbangke.CellMouseDoubleClick += dgvbangke_CellMouseDoubleClick;
@@ -1767,7 +1768,7 @@ namespace PosManager.Forms.UI
             dgvhanghoa.RowHeadersWidth = 4;
             dgvhanghoa.RowTemplate.Height = 25;
             dgvhanghoa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvhanghoa.Size = new Size(799, 649);
+            dgvhanghoa.Size = new Size(1071, 610);
             dgvhanghoa.TabIndex = 1;
             dgvhanghoa.RowPrePaint += dgvhanghoa_RowPrePaint_1;
             dgvhanghoa.MouseDown += dgvhanghoa_MouseDown;
@@ -1961,7 +1962,7 @@ namespace PosManager.Forms.UI
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(203, 6);
             panel3.Name = "panel3";
-            panel3.Size = new Size(799, 31);
+            panel3.Size = new Size(1071, 31);
             panel3.TabIndex = 24;
             // 
             // textBox2
@@ -1969,7 +1970,7 @@ namespace PosManager.Forms.UI
             textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textBox2.BackColor = Color.Yellow;
             textBox2.Font = new Font("Times New Roman", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(346, 2);
+            textBox2.Location = new Point(618, 2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(198, 27);
             textBox2.TabIndex = 24;
@@ -1985,7 +1986,7 @@ namespace PosManager.Forms.UI
             txttongcong.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txttongcong.BackColor = Color.Yellow;
             txttongcong.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txttongcong.Location = new Point(632, 2);
+            txttongcong.Location = new Point(904, 2);
             txttongcong.Name = "txttongcong";
             txttongcong.Size = new Size(167, 27);
             txttongcong.TabIndex = 25;
@@ -1998,7 +1999,7 @@ namespace PosManager.Forms.UI
             txttt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txttt.BackColor = Color.Yellow;
             txttt.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txttt.Location = new Point(488, 2);
+            txttt.Location = new Point(760, 2);
             txttt.Name = "txttt";
             txttt.ReadOnly = true;
             txttt.Size = new Size(210, 27);
@@ -2014,7 +2015,7 @@ namespace PosManager.Forms.UI
             txttim.Font = new Font("Times New Roman", 13F, FontStyle.Regular, GraphicsUnit.Point);
             txttim.Location = new Point(134, 2);
             txttim.Name = "txttim";
-            txttim.Size = new Size(576, 27);
+            txttim.Size = new Size(848, 27);
             txttim.TabIndex = 23;
             txttim.Tag = "Tìm tên hàng";
             txttim.Text = "Tìm tên hàng";
@@ -2049,6 +2050,7 @@ namespace PosManager.Forms.UI
             cob_kho.Size = new Size(188, 27);
             cob_kho.TabIndex = 25;
             cob_kho.Tag = "Tất cả KHO";
+            cob_kho.SelectedIndexChanged += cob_kho_SelectedIndexChanged;
             // 
             // printPreviewDialog1
             // 
@@ -2065,12 +2067,12 @@ namespace PosManager.Forms.UI
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PowderBlue;
+            ClientSize = new Size(1280, 662);
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.FromArgb(0, 0, 192);
             Margin = new Padding(5);
             Name = "Frmhangtonkho";
-            Size = new Size(1008, 701);
             Load += Frmhangtonkho_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

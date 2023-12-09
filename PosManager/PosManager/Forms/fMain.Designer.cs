@@ -41,67 +41,6 @@
             btnDoiMatKhau = new Button();
             panel66 = new Panel();
             btnDangXuat = new Button();
-            flpMain = new FlowLayoutPanel();
-            pbLogoMeXiu = new PictureBox();
-            KhachHangContainer = new Panel();
-            panel9 = new Panel();
-            btnTiepNhanXuLyYeuCau = new Button();
-            panel8 = new Panel();
-            btnSinhNhat = new Button();
-            panel4 = new Panel();
-            btnCapBacKhachHang = new Button();
-            panel7 = new Panel();
-            btnSMSZalo = new Button();
-            panel6 = new Panel();
-            btnNhaCungCap = new Button();
-            panel2 = new Panel();
-            btnKhachHang = new Button();
-            panel34 = new Panel();
-            btnQLKhachHang = new Button();
-            HangHoaContainer = new Panel();
-            panel17 = new Panel();
-            btnThongKeSanPhamDaBan = new Button();
-            panel10 = new Panel();
-            btnTangGiaTheoNhom = new Button();
-            panel11 = new Panel();
-            btnBaoGiaHangHoa = new Button();
-            panel12 = new Panel();
-            btnLichSuSanPhamDaBan = new Button();
-            panel13 = new Panel();
-            btnIntemMaVach = new Button();
-            panel14 = new Panel();
-            btnDieuChinhGia = new Button();
-            panel15 = new Panel();
-            btnHangHoa = new Button();
-            panel16 = new Panel();
-            btnDanhSachHangHoa = new Button();
-            KhoContainer = new Panel();
-            panel19 = new Panel();
-            btnDonHangOnline = new Button();
-            panel5 = new Panel();
-            btnKiemTraHoaDonNhap = new Button();
-            panel29 = new Panel();
-            button13 = new Button();
-            panel27 = new Panel();
-            btnLichSuPhieuNhap = new Button();
-            panel20 = new Panel();
-            btnDonDatHangNCC = new Button();
-            panel28 = new Panel();
-            btnKiemPhieuNhap = new Button();
-            panel21 = new Panel();
-            btnChuyenKho = new Button();
-            panel22 = new Panel();
-            btnKiemKho = new Button();
-            panel30 = new Panel();
-            btnQuanLyDate = new Button();
-            panel23 = new Panel();
-            btnXuatKho = new Button();
-            panel24 = new Panel();
-            btnNhapKho = new Button();
-            panel25 = new Panel();
-            btnKho = new Button();
-            panel26 = new Panel();
-            btnTonKho = new Button();
             BaoCaoContainer = new Panel();
             panel57 = new Panel();
             btnBaoCaoMaDuThuong = new Button();
@@ -129,6 +68,44 @@
             btnBaoCao = new Button();
             panel56 = new Panel();
             btnBaoCaoBanHang = new Button();
+            CaiDatContainer = new Panel();
+            panel64 = new Panel();
+            btnCaiDat = new Button();
+            ChiNhanhContainer = new Panel();
+            panel77 = new Panel();
+            btnChiNhanh = new Button();
+            PosContainer = new Panel();
+            panel65 = new Panel();
+            btnPos = new Button();
+            ThuChiContainer = new Panel();
+            panel73 = new Panel();
+            btnThuChi = new Button();
+            NhanVienContainer = new Panel();
+            panel62 = new Panel();
+            btnPhanQuyen = new Button();
+            panel44 = new Panel();
+            btnChamCong = new Button();
+            panel45 = new Panel();
+            btnNhanVien = new Button();
+            panel46 = new Panel();
+            btnDanhSachNhanVien = new Button();
+            CongNoContainer = new Panel();
+            panel48 = new Panel();
+            btnDuyetPhieuChi = new Button();
+            panel49 = new Panel();
+            btnGhiChuCongNo = new Button();
+            panel50 = new Panel();
+            btnQuanLyMuonHang = new Button();
+            panel38 = new Panel();
+            btnQuanLyDonHangNhapCongNo = new Button();
+            panel43 = new Panel();
+            btnCongNoDauKy = new Button();
+            panel31 = new Panel();
+            btnCongNoPhaiTraChoNhaCungCap = new Button();
+            panel32 = new Panel();
+            btnCongNo = new Button();
+            panel35 = new Panel();
+            btnCongNoPhaiThuCuaKhachHang = new Button();
             HoaDonContainer = new Panel();
             panel63 = new Panel();
             btnCaiDatHoaDon = new Button();
@@ -148,44 +125,69 @@
             btnHoaDon = new Button();
             panel42 = new Panel();
             btnHoaDonVuaThanhToan = new Button();
-            CongNoContainer = new Panel();
-            panel48 = new Panel();
-            btnDuyetPhieuChi = new Button();
-            panel49 = new Panel();
-            btnGhiChuCongNo = new Button();
-            panel50 = new Panel();
-            btnQuanLyMuonHang = new Button();
-            panel38 = new Panel();
-            btnQuanLyDonHangNhapCongNo = new Button();
-            panel43 = new Panel();
-            btnCongNoDauKy = new Button();
-            panel31 = new Panel();
-            btnCongNoPhaiTraChoNhaCungCap = new Button();
-            panel32 = new Panel();
-            btnCongNo = new Button();
-            panel35 = new Panel();
-            btnCongNoPhaiThuCuaKhachHang = new Button();
-            NhanVienContainer = new Panel();
-            panel62 = new Panel();
-            btnPhanQuyen = new Button();
-            panel44 = new Panel();
-            btnChamCong = new Button();
-            panel45 = new Panel();
-            btnNhanVien = new Button();
-            panel46 = new Panel();
-            btnDanhSachNhanVien = new Button();
-            ThuChiContainer = new Panel();
-            panel73 = new Panel();
-            btnThuChi = new Button();
-            PosContainer = new Panel();
-            panel65 = new Panel();
-            btnPos = new Button();
-            ChiNhanhContainer = new Panel();
-            panel77 = new Panel();
-            btnChiNhanh = new Button();
-            CaiDatContainer = new Panel();
-            panel64 = new Panel();
-            btnCaiDat = new Button();
+            flpMain = new FlowLayoutPanel();
+            pbLogoMeXiu = new PictureBox();
+            KhachHangContainer = new Panel();
+            panel9 = new Panel();
+            btnTiepNhanXuLyYeuCau = new Button();
+            panel8 = new Panel();
+            btnSinhNhat = new Button();
+            panel4 = new Panel();
+            btnCapBacKhachHang = new Button();
+            panel7 = new Panel();
+            btnSMSZalo = new Button();
+            panel6 = new Panel();
+            btnNhaCungCap = new Button();
+            panel2 = new Panel();
+            btnKhachHang = new Button();
+            panel34 = new Panel();
+            btnQLKhachHang = new Button();
+            KhoContainer = new Panel();
+            panel1 = new Panel();
+            btnQuanLyKho = new Button();
+            panel19 = new Panel();
+            btnDonHangOnline = new Button();
+            panel5 = new Panel();
+            btnKiemTraHoaDonNhap = new Button();
+            panel29 = new Panel();
+            button13 = new Button();
+            panel27 = new Panel();
+            btnLichSuPhieuNhap = new Button();
+            panel20 = new Panel();
+            btnDonDatHangNCC = new Button();
+            panel28 = new Panel();
+            btnKiemPhieuNhap = new Button();
+            panel21 = new Panel();
+            btnChuyenKho = new Button();
+            panel22 = new Panel();
+            btnKiemKho = new Button();
+            panel30 = new Panel();
+            btnQuanLyDate = new Button();
+            panel23 = new Panel();
+            btnXuatKho = new Button();
+            panel24 = new Panel();
+            btnNhapKho = new Button();
+            panel25 = new Panel();
+            btnKho = new Button();
+            panel26 = new Panel();
+            btnTonKho = new Button();
+            HangHoaContainer = new Panel();
+            panel17 = new Panel();
+            btnThongKeSanPhamDaBan = new Button();
+            panel10 = new Panel();
+            btnTangGiaTheoNhom = new Button();
+            panel11 = new Panel();
+            btnBaoGiaHangHoa = new Button();
+            panel12 = new Panel();
+            btnLichSuSanPhamDaBan = new Button();
+            panel13 = new Panel();
+            btnIntemMaVach = new Button();
+            panel14 = new Panel();
+            btnDieuChinhGia = new Button();
+            panel15 = new Panel();
+            btnHangHoa = new Button();
+            panel16 = new Panel();
+            btnDanhSachHangHoa = new Button();
             KhachHangTimer = new System.Windows.Forms.Timer(components);
             HangHoaTimer = new System.Windows.Forms.Timer(components);
             KhoTimer = new System.Windows.Forms.Timer(components);
@@ -207,39 +209,6 @@
             pProfile.SuspendLayout();
             panel67.SuspendLayout();
             panel66.SuspendLayout();
-            flpMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLogoMeXiu).BeginInit();
-            KhachHangContainer.SuspendLayout();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
-            panel4.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
-            panel2.SuspendLayout();
-            panel34.SuspendLayout();
-            HangHoaContainer.SuspendLayout();
-            panel17.SuspendLayout();
-            panel10.SuspendLayout();
-            panel11.SuspendLayout();
-            panel12.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            KhoContainer.SuspendLayout();
-            panel19.SuspendLayout();
-            panel5.SuspendLayout();
-            panel29.SuspendLayout();
-            panel27.SuspendLayout();
-            panel20.SuspendLayout();
-            panel28.SuspendLayout();
-            panel21.SuspendLayout();
-            panel22.SuspendLayout();
-            panel30.SuspendLayout();
-            panel23.SuspendLayout();
-            panel24.SuspendLayout();
-            panel25.SuspendLayout();
-            panel26.SuspendLayout();
             BaoCaoContainer.SuspendLayout();
             panel57.SuspendLayout();
             panel58.SuspendLayout();
@@ -254,6 +223,28 @@
             panel54.SuspendLayout();
             panel55.SuspendLayout();
             panel56.SuspendLayout();
+            CaiDatContainer.SuspendLayout();
+            panel64.SuspendLayout();
+            ChiNhanhContainer.SuspendLayout();
+            panel77.SuspendLayout();
+            PosContainer.SuspendLayout();
+            panel65.SuspendLayout();
+            ThuChiContainer.SuspendLayout();
+            panel73.SuspendLayout();
+            NhanVienContainer.SuspendLayout();
+            panel62.SuspendLayout();
+            panel44.SuspendLayout();
+            panel45.SuspendLayout();
+            panel46.SuspendLayout();
+            CongNoContainer.SuspendLayout();
+            panel48.SuspendLayout();
+            panel49.SuspendLayout();
+            panel50.SuspendLayout();
+            panel38.SuspendLayout();
+            panel43.SuspendLayout();
+            panel31.SuspendLayout();
+            panel32.SuspendLayout();
+            panel35.SuspendLayout();
             HoaDonContainer.SuspendLayout();
             panel63.SuspendLayout();
             panel3.SuspendLayout();
@@ -264,28 +255,40 @@
             panel40.SuspendLayout();
             panel41.SuspendLayout();
             panel42.SuspendLayout();
-            CongNoContainer.SuspendLayout();
-            panel48.SuspendLayout();
-            panel49.SuspendLayout();
-            panel50.SuspendLayout();
-            panel38.SuspendLayout();
-            panel43.SuspendLayout();
-            panel31.SuspendLayout();
-            panel32.SuspendLayout();
-            panel35.SuspendLayout();
-            NhanVienContainer.SuspendLayout();
-            panel62.SuspendLayout();
-            panel44.SuspendLayout();
-            panel45.SuspendLayout();
-            panel46.SuspendLayout();
-            ThuChiContainer.SuspendLayout();
-            panel73.SuspendLayout();
-            PosContainer.SuspendLayout();
-            panel65.SuspendLayout();
-            ChiNhanhContainer.SuspendLayout();
-            panel77.SuspendLayout();
-            CaiDatContainer.SuspendLayout();
-            panel64.SuspendLayout();
+            flpMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogoMeXiu).BeginInit();
+            KhachHangContainer.SuspendLayout();
+            panel9.SuspendLayout();
+            panel8.SuspendLayout();
+            panel4.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel2.SuspendLayout();
+            panel34.SuspendLayout();
+            KhoContainer.SuspendLayout();
+            panel1.SuspendLayout();
+            panel19.SuspendLayout();
+            panel5.SuspendLayout();
+            panel29.SuspendLayout();
+            panel27.SuspendLayout();
+            panel20.SuspendLayout();
+            panel28.SuspendLayout();
+            panel21.SuspendLayout();
+            panel22.SuspendLayout();
+            panel30.SuspendLayout();
+            panel23.SuspendLayout();
+            panel24.SuspendLayout();
+            panel25.SuspendLayout();
+            panel26.SuspendLayout();
+            HangHoaContainer.SuspendLayout();
+            panel17.SuspendLayout();
+            panel10.SuspendLayout();
+            panel11.SuspendLayout();
+            panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
+            panel15.SuspendLayout();
+            panel16.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -461,779 +464,6 @@
             btnDangXuat.UseVisualStyleBackColor = false;
             btnDangXuat.Click += btnDangXuat_Click;
             // 
-            // flpMain
-            // 
-            flpMain.BackColor = Color.FromArgb(89, 149, 206);
-            flpMain.Controls.Add(pbLogoMeXiu);
-            flpMain.Controls.Add(KhachHangContainer);
-            flpMain.Controls.Add(HangHoaContainer);
-            flpMain.Controls.Add(KhoContainer);
-            flpMain.Controls.Add(BaoCaoContainer);
-            flpMain.Controls.Add(HoaDonContainer);
-            flpMain.Controls.Add(CongNoContainer);
-            flpMain.Controls.Add(NhanVienContainer);
-            flpMain.Controls.Add(ThuChiContainer);
-            flpMain.Controls.Add(PosContainer);
-            flpMain.Controls.Add(ChiNhanhContainer);
-            flpMain.Controls.Add(CaiDatContainer);
-            flpMain.Dock = DockStyle.Left;
-            flpMain.Location = new Point(0, 0);
-            flpMain.MaximumSize = new Size(290, 0);
-            flpMain.MinimumSize = new Size(75, 0);
-            flpMain.Name = "flpMain";
-            flpMain.Size = new Size(290, 831);
-            flpMain.TabIndex = 2;
-            // 
-            // pbLogoMeXiu
-            // 
-            pbLogoMeXiu.BackColor = Color.FromArgb(89, 149, 206);
-            pbLogoMeXiu.Image = PosManager.Properties.Resources._326559583_468268058851274_8797007794984294310_n;
-            pbLogoMeXiu.Location = new Point(3, 3);
-            pbLogoMeXiu.MaximumSize = new Size(287, 80);
-            pbLogoMeXiu.MinimumSize = new Size(75, 80);
-            pbLogoMeXiu.Name = "pbLogoMeXiu";
-            pbLogoMeXiu.Size = new Size(287, 80);
-            pbLogoMeXiu.SizeMode = PictureBoxSizeMode.Zoom;
-            pbLogoMeXiu.TabIndex = 0;
-            pbLogoMeXiu.TabStop = false;
-            // 
-            // KhachHangContainer
-            // 
-            KhachHangContainer.BackColor = Color.DeepSkyBlue;
-            KhachHangContainer.Controls.Add(panel9);
-            KhachHangContainer.Controls.Add(panel8);
-            KhachHangContainer.Controls.Add(panel4);
-            KhachHangContainer.Controls.Add(panel7);
-            KhachHangContainer.Controls.Add(panel6);
-            KhachHangContainer.Controls.Add(panel2);
-            KhachHangContainer.Controls.Add(panel34);
-            KhachHangContainer.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            KhachHangContainer.Location = new Point(3, 89);
-            KhachHangContainer.MaximumSize = new Size(287, 302);
-            KhachHangContainer.MinimumSize = new Size(287, 41);
-            KhachHangContainer.Name = "KhachHangContainer";
-            KhachHangContainer.Size = new Size(287, 41);
-            KhachHangContainer.TabIndex = 6;
-            // 
-            // panel9
-            // 
-            panel9.Controls.Add(btnTiepNhanXuLyYeuCau);
-            panel9.Location = new Point(0, 222);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(209, 36);
-            panel9.TabIndex = 10;
-            // 
-            // btnTiepNhanXuLyYeuCau
-            // 
-            btnTiepNhanXuLyYeuCau.BackColor = Color.DeepSkyBlue;
-            btnTiepNhanXuLyYeuCau.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTiepNhanXuLyYeuCau.ForeColor = Color.White;
-            btnTiepNhanXuLyYeuCau.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnTiepNhanXuLyYeuCau.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTiepNhanXuLyYeuCau.Location = new Point(-15, -4);
-            btnTiepNhanXuLyYeuCau.Name = "btnTiepNhanXuLyYeuCau";
-            btnTiepNhanXuLyYeuCau.Padding = new Padding(30, 0, 0, 0);
-            btnTiepNhanXuLyYeuCau.Size = new Size(340, 47);
-            btnTiepNhanXuLyYeuCau.TabIndex = 3;
-            btnTiepNhanXuLyYeuCau.Text = "             Yêu Cầu";
-            btnTiepNhanXuLyYeuCau.TextAlign = ContentAlignment.MiddleLeft;
-            btnTiepNhanXuLyYeuCau.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            panel8.Controls.Add(btnSinhNhat);
-            panel8.Location = new Point(0, 173);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(209, 36);
-            panel8.TabIndex = 9;
-            // 
-            // btnSinhNhat
-            // 
-            btnSinhNhat.BackColor = Color.DeepSkyBlue;
-            btnSinhNhat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSinhNhat.ForeColor = Color.White;
-            btnSinhNhat.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnSinhNhat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSinhNhat.Location = new Point(-15, -4);
-            btnSinhNhat.Name = "btnSinhNhat";
-            btnSinhNhat.Padding = new Padding(30, 0, 0, 0);
-            btnSinhNhat.Size = new Size(325, 47);
-            btnSinhNhat.TabIndex = 3;
-            btnSinhNhat.Text = "             Sinh Nhật";
-            btnSinhNhat.TextAlign = ContentAlignment.MiddleLeft;
-            btnSinhNhat.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(btnCapBacKhachHang);
-            panel4.Location = new Point(0, 264);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(209, 36);
-            panel4.TabIndex = 5;
-            // 
-            // btnCapBacKhachHang
-            // 
-            btnCapBacKhachHang.BackColor = Color.DeepSkyBlue;
-            btnCapBacKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCapBacKhachHang.ForeColor = Color.White;
-            btnCapBacKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnCapBacKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCapBacKhachHang.Location = new Point(-15, -4);
-            btnCapBacKhachHang.Name = "btnCapBacKhachHang";
-            btnCapBacKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnCapBacKhachHang.Size = new Size(325, 47);
-            btnCapBacKhachHang.TabIndex = 3;
-            btnCapBacKhachHang.Text = "             Cấp Bậc";
-            btnCapBacKhachHang.TextAlign = ContentAlignment.MiddleLeft;
-            btnCapBacKhachHang.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(btnSMSZalo);
-            panel7.Location = new Point(0, 131);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(209, 36);
-            panel7.TabIndex = 8;
-            // 
-            // btnSMSZalo
-            // 
-            btnSMSZalo.BackColor = Color.DeepSkyBlue;
-            btnSMSZalo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSMSZalo.ForeColor = Color.White;
-            btnSMSZalo.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnSMSZalo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSMSZalo.Location = new Point(-15, -4);
-            btnSMSZalo.Name = "btnSMSZalo";
-            btnSMSZalo.Padding = new Padding(30, 0, 0, 0);
-            btnSMSZalo.Size = new Size(317, 47);
-            btnSMSZalo.TabIndex = 3;
-            btnSMSZalo.Text = "             SMS";
-            btnSMSZalo.TextAlign = ContentAlignment.MiddleLeft;
-            btnSMSZalo.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            panel6.Controls.Add(btnNhaCungCap);
-            panel6.Location = new Point(0, 87);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(209, 36);
-            panel6.TabIndex = 7;
-            // 
-            // btnNhaCungCap
-            // 
-            btnNhaCungCap.BackColor = Color.DeepSkyBlue;
-            btnNhaCungCap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNhaCungCap.ForeColor = Color.White;
-            btnNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhaCungCap.Location = new Point(-15, -4);
-            btnNhaCungCap.Name = "btnNhaCungCap";
-            btnNhaCungCap.Padding = new Padding(30, 0, 0, 0);
-            btnNhaCungCap.Size = new Size(325, 47);
-            btnNhaCungCap.TabIndex = 3;
-            btnNhaCungCap.Text = "             Nhà Cung Cấp";
-            btnNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
-            btnNhaCungCap.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(btnKhachHang);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(287, 39);
-            panel2.TabIndex = 5;
-            // 
-            // btnKhachHang
-            // 
-            btnKhachHang.BackColor = Color.FromArgb(89, 149, 206);
-            btnKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKhachHang.ForeColor = Color.White;
-            btnKhachHang.Image = (Image)resources.GetObject("btnKhachHang.Image");
-            btnKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKhachHang.Location = new Point(-17, -4);
-            btnKhachHang.Name = "btnKhachHang";
-            btnKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnKhachHang.Size = new Size(319, 53);
-            btnKhachHang.TabIndex = 3;
-            btnKhachHang.Text = "             Khách Hàng";
-            btnKhachHang.TextAlign = ContentAlignment.MiddleLeft;
-            btnKhachHang.UseVisualStyleBackColor = false;
-            btnKhachHang.Click += btnKhachHang_Click;
-            // 
-            // panel34
-            // 
-            panel34.Controls.Add(btnQLKhachHang);
-            panel34.Location = new Point(0, 45);
-            panel34.Name = "panel34";
-            panel34.Size = new Size(209, 36);
-            panel34.TabIndex = 4;
-            // 
-            // btnQLKhachHang
-            // 
-            btnQLKhachHang.BackColor = Color.DeepSkyBlue;
-            btnQLKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnQLKhachHang.ForeColor = Color.White;
-            btnQLKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnQLKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQLKhachHang.Location = new Point(-15, -4);
-            btnQLKhachHang.Name = "btnQLKhachHang";
-            btnQLKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnQLKhachHang.Size = new Size(325, 47);
-            btnQLKhachHang.TabIndex = 3;
-            btnQLKhachHang.Text = "             Danh Sách";
-            btnQLKhachHang.TextAlign = ContentAlignment.MiddleLeft;
-            btnQLKhachHang.UseVisualStyleBackColor = false;
-            // 
-            // HangHoaContainer
-            // 
-            HangHoaContainer.BackColor = Color.DeepSkyBlue;
-            HangHoaContainer.Controls.Add(panel17);
-            HangHoaContainer.Controls.Add(panel10);
-            HangHoaContainer.Controls.Add(panel11);
-            HangHoaContainer.Controls.Add(panel12);
-            HangHoaContainer.Controls.Add(panel13);
-            HangHoaContainer.Controls.Add(panel14);
-            HangHoaContainer.Controls.Add(panel15);
-            HangHoaContainer.Controls.Add(panel16);
-            HangHoaContainer.Location = new Point(3, 136);
-            HangHoaContainer.MaximumSize = new Size(287, 345);
-            HangHoaContainer.MinimumSize = new Size(287, 41);
-            HangHoaContainer.Name = "HangHoaContainer";
-            HangHoaContainer.Size = new Size(287, 41);
-            HangHoaContainer.TabIndex = 7;
-            // 
-            // panel17
-            // 
-            panel17.Controls.Add(btnThongKeSanPhamDaBan);
-            panel17.Location = new Point(0, 306);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(287, 36);
-            panel17.TabIndex = 11;
-            // 
-            // btnThongKeSanPhamDaBan
-            // 
-            btnThongKeSanPhamDaBan.BackColor = Color.DeepSkyBlue;
-            btnThongKeSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThongKeSanPhamDaBan.ForeColor = Color.White;
-            btnThongKeSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnThongKeSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThongKeSanPhamDaBan.Location = new Point(-15, -4);
-            btnThongKeSanPhamDaBan.Name = "btnThongKeSanPhamDaBan";
-            btnThongKeSanPhamDaBan.Padding = new Padding(30, 0, 0, 0);
-            btnThongKeSanPhamDaBan.Size = new Size(338, 47);
-            btnThongKeSanPhamDaBan.TabIndex = 3;
-            btnThongKeSanPhamDaBan.Text = "             Thống Kê Đã Bán";
-            btnThongKeSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
-            btnThongKeSanPhamDaBan.UseVisualStyleBackColor = false;
-            // 
-            // panel10
-            // 
-            panel10.Controls.Add(btnTangGiaTheoNhom);
-            panel10.Location = new Point(0, 222);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(287, 36);
-            panel10.TabIndex = 10;
-            // 
-            // btnTangGiaTheoNhom
-            // 
-            btnTangGiaTheoNhom.BackColor = Color.DeepSkyBlue;
-            btnTangGiaTheoNhom.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTangGiaTheoNhom.ForeColor = Color.White;
-            btnTangGiaTheoNhom.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnTangGiaTheoNhom.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTangGiaTheoNhom.Location = new Point(-15, -4);
-            btnTangGiaTheoNhom.Name = "btnTangGiaTheoNhom";
-            btnTangGiaTheoNhom.Padding = new Padding(30, 0, 0, 0);
-            btnTangGiaTheoNhom.Size = new Size(326, 47);
-            btnTangGiaTheoNhom.TabIndex = 3;
-            btnTangGiaTheoNhom.Text = "             Tăng Giá Theo Nhóm";
-            btnTangGiaTheoNhom.TextAlign = ContentAlignment.MiddleLeft;
-            btnTangGiaTheoNhom.UseVisualStyleBackColor = false;
-            // 
-            // panel11
-            // 
-            panel11.Controls.Add(btnBaoGiaHangHoa);
-            panel11.Location = new Point(0, 173);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(287, 36);
-            panel11.TabIndex = 9;
-            // 
-            // btnBaoGiaHangHoa
-            // 
-            btnBaoGiaHangHoa.BackColor = Color.DeepSkyBlue;
-            btnBaoGiaHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBaoGiaHangHoa.ForeColor = Color.White;
-            btnBaoGiaHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnBaoGiaHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoGiaHangHoa.Location = new Point(-15, -4);
-            btnBaoGiaHangHoa.Name = "btnBaoGiaHangHoa";
-            btnBaoGiaHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnBaoGiaHangHoa.Size = new Size(326, 47);
-            btnBaoGiaHangHoa.TabIndex = 3;
-            btnBaoGiaHangHoa.Text = "             Báo Giá";
-            btnBaoGiaHangHoa.TextAlign = ContentAlignment.MiddleLeft;
-            btnBaoGiaHangHoa.UseVisualStyleBackColor = false;
-            // 
-            // panel12
-            // 
-            panel12.Controls.Add(btnLichSuSanPhamDaBan);
-            panel12.Location = new Point(0, 264);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(287, 36);
-            panel12.TabIndex = 5;
-            // 
-            // btnLichSuSanPhamDaBan
-            // 
-            btnLichSuSanPhamDaBan.BackColor = Color.DeepSkyBlue;
-            btnLichSuSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLichSuSanPhamDaBan.ForeColor = Color.White;
-            btnLichSuSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnLichSuSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuSanPhamDaBan.Location = new Point(-15, -4);
-            btnLichSuSanPhamDaBan.Name = "btnLichSuSanPhamDaBan";
-            btnLichSuSanPhamDaBan.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuSanPhamDaBan.Size = new Size(338, 47);
-            btnLichSuSanPhamDaBan.TabIndex = 3;
-            btnLichSuSanPhamDaBan.Text = "             Lịch Sử Đã Bán";
-            btnLichSuSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
-            btnLichSuSanPhamDaBan.UseVisualStyleBackColor = false;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(btnIntemMaVach);
-            panel13.Location = new Point(0, 131);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(287, 36);
-            panel13.TabIndex = 8;
-            // 
-            // btnIntemMaVach
-            // 
-            btnIntemMaVach.BackColor = Color.DeepSkyBlue;
-            btnIntemMaVach.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnIntemMaVach.ForeColor = Color.White;
-            btnIntemMaVach.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnIntemMaVach.ImageAlign = ContentAlignment.MiddleLeft;
-            btnIntemMaVach.Location = new Point(-15, -4);
-            btnIntemMaVach.Name = "btnIntemMaVach";
-            btnIntemMaVach.Padding = new Padding(30, 0, 0, 0);
-            btnIntemMaVach.Size = new Size(326, 47);
-            btnIntemMaVach.TabIndex = 3;
-            btnIntemMaVach.Text = "             In Mã Vạch";
-            btnIntemMaVach.TextAlign = ContentAlignment.MiddleLeft;
-            btnIntemMaVach.UseVisualStyleBackColor = false;
-            // 
-            // panel14
-            // 
-            panel14.Controls.Add(btnDieuChinhGia);
-            panel14.Location = new Point(0, 87);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(287, 36);
-            panel14.TabIndex = 7;
-            // 
-            // btnDieuChinhGia
-            // 
-            btnDieuChinhGia.BackColor = Color.DeepSkyBlue;
-            btnDieuChinhGia.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDieuChinhGia.ForeColor = Color.White;
-            btnDieuChinhGia.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnDieuChinhGia.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDieuChinhGia.Location = new Point(-15, -4);
-            btnDieuChinhGia.Name = "btnDieuChinhGia";
-            btnDieuChinhGia.Padding = new Padding(30, 0, 0, 0);
-            btnDieuChinhGia.Size = new Size(341, 47);
-            btnDieuChinhGia.TabIndex = 3;
-            btnDieuChinhGia.Text = "             Điều Chỉnh";
-            btnDieuChinhGia.TextAlign = ContentAlignment.MiddleLeft;
-            btnDieuChinhGia.UseVisualStyleBackColor = false;
-            // 
-            // panel15
-            // 
-            panel15.Controls.Add(btnHangHoa);
-            panel15.Dock = DockStyle.Top;
-            panel15.Location = new Point(0, 0);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(287, 39);
-            panel15.TabIndex = 5;
-            // 
-            // btnHangHoa
-            // 
-            btnHangHoa.BackColor = Color.FromArgb(89, 149, 206);
-            btnHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHangHoa.ForeColor = Color.White;
-            btnHangHoa.Image = (Image)resources.GetObject("btnHangHoa.Image");
-            btnHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHangHoa.Location = new Point(-17, -4);
-            btnHangHoa.Name = "btnHangHoa";
-            btnHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnHangHoa.Size = new Size(328, 53);
-            btnHangHoa.TabIndex = 3;
-            btnHangHoa.Text = "             Hàng Hoá";
-            btnHangHoa.TextAlign = ContentAlignment.MiddleLeft;
-            btnHangHoa.UseVisualStyleBackColor = false;
-            btnHangHoa.Click += btnHangHoa_Click;
-            // 
-            // panel16
-            // 
-            panel16.Controls.Add(btnDanhSachHangHoa);
-            panel16.Location = new Point(0, 45);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(287, 36);
-            panel16.TabIndex = 4;
-            // 
-            // btnDanhSachHangHoa
-            // 
-            btnDanhSachHangHoa.BackColor = Color.DeepSkyBlue;
-            btnDanhSachHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDanhSachHangHoa.ForeColor = Color.White;
-            btnDanhSachHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnDanhSachHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDanhSachHangHoa.Location = new Point(-15, -4);
-            btnDanhSachHangHoa.Name = "btnDanhSachHangHoa";
-            btnDanhSachHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnDanhSachHangHoa.Size = new Size(326, 47);
-            btnDanhSachHangHoa.TabIndex = 3;
-            btnDanhSachHangHoa.Text = "             Danh Sách";
-            btnDanhSachHangHoa.TextAlign = ContentAlignment.MiddleLeft;
-            btnDanhSachHangHoa.UseVisualStyleBackColor = false;
-            // 
-            // KhoContainer
-            // 
-            KhoContainer.BackColor = Color.DeepSkyBlue;
-            KhoContainer.Controls.Add(panel19);
-            KhoContainer.Controls.Add(panel5);
-            KhoContainer.Controls.Add(panel29);
-            KhoContainer.Controls.Add(panel27);
-            KhoContainer.Controls.Add(panel20);
-            KhoContainer.Controls.Add(panel28);
-            KhoContainer.Controls.Add(panel21);
-            KhoContainer.Controls.Add(panel22);
-            KhoContainer.Controls.Add(panel30);
-            KhoContainer.Controls.Add(panel23);
-            KhoContainer.Controls.Add(panel24);
-            KhoContainer.Controls.Add(panel25);
-            KhoContainer.Controls.Add(panel26);
-            KhoContainer.Location = new Point(3, 183);
-            KhoContainer.MaximumSize = new Size(287, 577);
-            KhoContainer.MinimumSize = new Size(287, 41);
-            KhoContainer.Name = "KhoContainer";
-            KhoContainer.Size = new Size(287, 41);
-            KhoContainer.TabIndex = 8;
-            // 
-            // panel19
-            // 
-            panel19.Controls.Add(btnDonHangOnline);
-            panel19.Location = new Point(0, 306);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(287, 36);
-            panel19.TabIndex = 11;
-            // 
-            // btnDonHangOnline
-            // 
-            btnDonHangOnline.BackColor = Color.DeepSkyBlue;
-            btnDonHangOnline.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDonHangOnline.ForeColor = Color.White;
-            btnDonHangOnline.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnDonHangOnline.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDonHangOnline.Location = new Point(-15, -4);
-            btnDonHangOnline.Name = "btnDonHangOnline";
-            btnDonHangOnline.Padding = new Padding(30, 0, 0, 0);
-            btnDonHangOnline.Size = new Size(338, 47);
-            btnDonHangOnline.TabIndex = 3;
-            btnDonHangOnline.Text = "             Đơn Hàng Online";
-            btnDonHangOnline.TextAlign = ContentAlignment.MiddleLeft;
-            btnDonHangOnline.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(btnKiemTraHoaDonNhap);
-            panel5.Location = new Point(0, 537);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(287, 36);
-            panel5.TabIndex = 16;
-            // 
-            // btnKiemTraHoaDonNhap
-            // 
-            btnKiemTraHoaDonNhap.BackColor = Color.DeepSkyBlue;
-            btnKiemTraHoaDonNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKiemTraHoaDonNhap.ForeColor = Color.White;
-            btnKiemTraHoaDonNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnKiemTraHoaDonNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemTraHoaDonNhap.Location = new Point(-15, -4);
-            btnKiemTraHoaDonNhap.Name = "btnKiemTraHoaDonNhap";
-            btnKiemTraHoaDonNhap.Padding = new Padding(30, 0, 0, 0);
-            btnKiemTraHoaDonNhap.Size = new Size(338, 47);
-            btnKiemTraHoaDonNhap.TabIndex = 3;
-            btnKiemTraHoaDonNhap.Text = "             Kiểm Tra Hoá Đơn Nhập";
-            btnKiemTraHoaDonNhap.TextAlign = ContentAlignment.MiddleLeft;
-            btnKiemTraHoaDonNhap.UseVisualStyleBackColor = false;
-            // 
-            // panel29
-            // 
-            panel29.Controls.Add(button13);
-            panel29.Location = new Point(0, 495);
-            panel29.Name = "panel29";
-            panel29.Size = new Size(287, 36);
-            panel29.TabIndex = 12;
-            // 
-            // button13
-            // 
-            button13.BackColor = Color.DeepSkyBlue;
-            button13.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button13.ForeColor = Color.White;
-            button13.Image = PosManager.Properties.Resources.icons8_circle_20;
-            button13.ImageAlign = ContentAlignment.MiddleLeft;
-            button13.Location = new Point(-15, -4);
-            button13.Name = "button13";
-            button13.Padding = new Padding(30, 0, 0, 0);
-            button13.Size = new Size(338, 47);
-            button13.TabIndex = 3;
-            button13.Text = "             Kiểm Tra Giá Nhập";
-            button13.TextAlign = ContentAlignment.MiddleLeft;
-            button13.UseVisualStyleBackColor = false;
-            // 
-            // panel27
-            // 
-            panel27.Controls.Add(btnLichSuPhieuNhap);
-            panel27.Location = new Point(0, 446);
-            panel27.Name = "panel27";
-            panel27.Size = new Size(287, 36);
-            panel27.TabIndex = 15;
-            // 
-            // btnLichSuPhieuNhap
-            // 
-            btnLichSuPhieuNhap.BackColor = Color.DeepSkyBlue;
-            btnLichSuPhieuNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLichSuPhieuNhap.ForeColor = Color.White;
-            btnLichSuPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnLichSuPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuPhieuNhap.Location = new Point(-15, -4);
-            btnLichSuPhieuNhap.Name = "btnLichSuPhieuNhap";
-            btnLichSuPhieuNhap.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuPhieuNhap.Size = new Size(326, 47);
-            btnLichSuPhieuNhap.TabIndex = 3;
-            btnLichSuPhieuNhap.Text = "             Lịch Sử Phiếu Nhập";
-            btnLichSuPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
-            btnLichSuPhieuNhap.UseVisualStyleBackColor = false;
-            // 
-            // panel20
-            // 
-            panel20.Controls.Add(btnDonDatHangNCC);
-            panel20.Location = new Point(0, 222);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(287, 36);
-            panel20.TabIndex = 10;
-            // 
-            // btnDonDatHangNCC
-            // 
-            btnDonDatHangNCC.BackColor = Color.DeepSkyBlue;
-            btnDonDatHangNCC.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDonDatHangNCC.ForeColor = Color.White;
-            btnDonDatHangNCC.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnDonDatHangNCC.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDonDatHangNCC.Location = new Point(-15, -4);
-            btnDonDatHangNCC.Name = "btnDonDatHangNCC";
-            btnDonDatHangNCC.Padding = new Padding(30, 0, 0, 0);
-            btnDonDatHangNCC.Size = new Size(326, 47);
-            btnDonDatHangNCC.TabIndex = 3;
-            btnDonDatHangNCC.Text = "             Đơn Đặt Hàng NCC";
-            btnDonDatHangNCC.TextAlign = ContentAlignment.MiddleLeft;
-            btnDonDatHangNCC.UseVisualStyleBackColor = false;
-            // 
-            // panel28
-            // 
-            panel28.Controls.Add(btnKiemPhieuNhap);
-            panel28.Location = new Point(3, 404);
-            panel28.Name = "panel28";
-            panel28.Size = new Size(287, 36);
-            panel28.TabIndex = 14;
-            // 
-            // btnKiemPhieuNhap
-            // 
-            btnKiemPhieuNhap.BackColor = Color.DeepSkyBlue;
-            btnKiemPhieuNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKiemPhieuNhap.ForeColor = Color.White;
-            btnKiemPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnKiemPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemPhieuNhap.Location = new Point(-15, -4);
-            btnKiemPhieuNhap.Name = "btnKiemPhieuNhap";
-            btnKiemPhieuNhap.Padding = new Padding(30, 0, 0, 0);
-            btnKiemPhieuNhap.Size = new Size(326, 47);
-            btnKiemPhieuNhap.TabIndex = 3;
-            btnKiemPhieuNhap.Text = "             Kiểm Phiếu Nhập";
-            btnKiemPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
-            btnKiemPhieuNhap.UseVisualStyleBackColor = false;
-            // 
-            // panel21
-            // 
-            panel21.Controls.Add(btnChuyenKho);
-            panel21.Location = new Point(0, 173);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(287, 36);
-            panel21.TabIndex = 9;
-            // 
-            // btnChuyenKho
-            // 
-            btnChuyenKho.BackColor = Color.DeepSkyBlue;
-            btnChuyenKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnChuyenKho.ForeColor = Color.White;
-            btnChuyenKho.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnChuyenKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChuyenKho.Location = new Point(-15, -4);
-            btnChuyenKho.Name = "btnChuyenKho";
-            btnChuyenKho.Padding = new Padding(30, 0, 0, 0);
-            btnChuyenKho.Size = new Size(326, 47);
-            btnChuyenKho.TabIndex = 3;
-            btnChuyenKho.Text = "             Chuyển Kho";
-            btnChuyenKho.TextAlign = ContentAlignment.MiddleLeft;
-            btnChuyenKho.UseVisualStyleBackColor = false;
-            // 
-            // panel22
-            // 
-            panel22.Controls.Add(btnKiemKho);
-            panel22.Location = new Point(0, 264);
-            panel22.Name = "panel22";
-            panel22.Size = new Size(287, 36);
-            panel22.TabIndex = 5;
-            // 
-            // btnKiemKho
-            // 
-            btnKiemKho.BackColor = Color.DeepSkyBlue;
-            btnKiemKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKiemKho.ForeColor = Color.White;
-            btnKiemKho.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnKiemKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemKho.Location = new Point(-15, -4);
-            btnKiemKho.Name = "btnKiemKho";
-            btnKiemKho.Padding = new Padding(30, 0, 0, 0);
-            btnKiemKho.Size = new Size(338, 47);
-            btnKiemKho.TabIndex = 3;
-            btnKiemKho.Text = "             Kiểm Kho";
-            btnKiemKho.TextAlign = ContentAlignment.MiddleLeft;
-            btnKiemKho.UseVisualStyleBackColor = false;
-            // 
-            // panel30
-            // 
-            panel30.Controls.Add(btnQuanLyDate);
-            panel30.Location = new Point(3, 355);
-            panel30.Name = "panel30";
-            panel30.Size = new Size(287, 36);
-            panel30.TabIndex = 13;
-            // 
-            // btnQuanLyDate
-            // 
-            btnQuanLyDate.BackColor = Color.DeepSkyBlue;
-            btnQuanLyDate.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnQuanLyDate.ForeColor = Color.White;
-            btnQuanLyDate.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnQuanLyDate.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyDate.Location = new Point(-15, -4);
-            btnQuanLyDate.Name = "btnQuanLyDate";
-            btnQuanLyDate.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyDate.Size = new Size(326, 47);
-            btnQuanLyDate.TabIndex = 3;
-            btnQuanLyDate.Text = "             Quản Lý Date";
-            btnQuanLyDate.TextAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyDate.UseVisualStyleBackColor = false;
-            // 
-            // panel23
-            // 
-            panel23.Controls.Add(btnXuatKho);
-            panel23.Location = new Point(0, 131);
-            panel23.Name = "panel23";
-            panel23.Size = new Size(287, 36);
-            panel23.TabIndex = 8;
-            // 
-            // btnXuatKho
-            // 
-            btnXuatKho.BackColor = Color.DeepSkyBlue;
-            btnXuatKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXuatKho.ForeColor = Color.White;
-            btnXuatKho.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnXuatKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnXuatKho.Location = new Point(-15, -4);
-            btnXuatKho.Name = "btnXuatKho";
-            btnXuatKho.Padding = new Padding(30, 0, 0, 0);
-            btnXuatKho.Size = new Size(326, 47);
-            btnXuatKho.TabIndex = 3;
-            btnXuatKho.Text = "             Xuất Kho";
-            btnXuatKho.TextAlign = ContentAlignment.MiddleLeft;
-            btnXuatKho.UseVisualStyleBackColor = false;
-            // 
-            // panel24
-            // 
-            panel24.Controls.Add(btnNhapKho);
-            panel24.Location = new Point(0, 87);
-            panel24.Name = "panel24";
-            panel24.Size = new Size(287, 36);
-            panel24.TabIndex = 7;
-            // 
-            // btnNhapKho
-            // 
-            btnNhapKho.BackColor = Color.DeepSkyBlue;
-            btnNhapKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNhapKho.ForeColor = Color.White;
-            btnNhapKho.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnNhapKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhapKho.Location = new Point(-15, -4);
-            btnNhapKho.Name = "btnNhapKho";
-            btnNhapKho.Padding = new Padding(30, 0, 0, 0);
-            btnNhapKho.Size = new Size(341, 47);
-            btnNhapKho.TabIndex = 3;
-            btnNhapKho.Text = "             Nhập Kho";
-            btnNhapKho.TextAlign = ContentAlignment.MiddleLeft;
-            btnNhapKho.UseVisualStyleBackColor = false;
-            // 
-            // panel25
-            // 
-            panel25.Controls.Add(btnKho);
-            panel25.Dock = DockStyle.Top;
-            panel25.Location = new Point(0, 0);
-            panel25.Name = "panel25";
-            panel25.Size = new Size(287, 39);
-            panel25.TabIndex = 5;
-            // 
-            // btnKho
-            // 
-            btnKho.BackColor = Color.FromArgb(89, 149, 206);
-            btnKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKho.ForeColor = Color.White;
-            btnKho.Image = (Image)resources.GetObject("btnKho.Image");
-            btnKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKho.Location = new Point(-17, -4);
-            btnKho.Name = "btnKho";
-            btnKho.Padding = new Padding(30, 0, 0, 0);
-            btnKho.Size = new Size(328, 52);
-            btnKho.TabIndex = 3;
-            btnKho.Text = "             Kho";
-            btnKho.TextAlign = ContentAlignment.MiddleLeft;
-            btnKho.UseVisualStyleBackColor = false;
-            btnKho.Click += btnKho_Click;
-            // 
-            // panel26
-            // 
-            panel26.Controls.Add(btnTonKho);
-            panel26.Location = new Point(0, 45);
-            panel26.Name = "panel26";
-            panel26.Size = new Size(287, 36);
-            panel26.TabIndex = 4;
-            // 
-            // btnTonKho
-            // 
-            btnTonKho.BackColor = Color.DeepSkyBlue;
-            btnTonKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTonKho.ForeColor = Color.White;
-            btnTonKho.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnTonKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTonKho.Location = new Point(-15, -4);
-            btnTonKho.Name = "btnTonKho";
-            btnTonKho.Padding = new Padding(30, 0, 0, 0);
-            btnTonKho.Size = new Size(326, 47);
-            btnTonKho.TabIndex = 3;
-            btnTonKho.Text = "             Tồn Kho";
-            btnTonKho.TextAlign = ContentAlignment.MiddleLeft;
-            btnTonKho.UseVisualStyleBackColor = false;
-            // 
             // BaoCaoContainer
             // 
             BaoCaoContainer.BackColor = Color.DeepSkyBlue;
@@ -1250,11 +480,11 @@
             BaoCaoContainer.Controls.Add(panel54);
             BaoCaoContainer.Controls.Add(panel55);
             BaoCaoContainer.Controls.Add(panel56);
-            BaoCaoContainer.Location = new Point(3, 230);
+            BaoCaoContainer.Location = new Point(3, 183);
             BaoCaoContainer.MaximumSize = new Size(287, 549);
             BaoCaoContainer.MinimumSize = new Size(287, 41);
             BaoCaoContainer.Name = "BaoCaoContainer";
-            BaoCaoContainer.Size = new Size(287, 41);
+            BaoCaoContainer.Size = new Size(287, 43);
             BaoCaoContainer.TabIndex = 12;
             // 
             // panel57
@@ -1527,7 +757,7 @@
             panel55.Dock = DockStyle.Top;
             panel55.Location = new Point(0, 0);
             panel55.Name = "panel55";
-            panel55.Size = new Size(287, 39);
+            panel55.Size = new Size(287, 41);
             panel55.TabIndex = 5;
             // 
             // btnBaoCao
@@ -1537,10 +767,10 @@
             btnBaoCao.ForeColor = Color.White;
             btnBaoCao.Image = (Image)resources.GetObject("btnBaoCao.Image");
             btnBaoCao.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCao.Location = new Point(-15, -8);
+            btnBaoCao.Location = new Point(-12, -4);
             btnBaoCao.Name = "btnBaoCao";
             btnBaoCao.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCao.Size = new Size(328, 52);
+            btnBaoCao.Size = new Size(319, 52);
             btnBaoCao.TabIndex = 3;
             btnBaoCao.Text = "             Báo Cáo";
             btnBaoCao.TextAlign = ContentAlignment.MiddleLeft;
@@ -1571,6 +801,480 @@
             btnBaoCaoBanHang.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoBanHang.UseVisualStyleBackColor = false;
             // 
+            // CaiDatContainer
+            // 
+            CaiDatContainer.BackColor = Color.LightBlue;
+            CaiDatContainer.Controls.Add(panel64);
+            CaiDatContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            CaiDatContainer.Location = new Point(3, 561);
+            CaiDatContainer.MaximumSize = new Size(287, 41);
+            CaiDatContainer.MinimumSize = new Size(287, 41);
+            CaiDatContainer.Name = "CaiDatContainer";
+            CaiDatContainer.Size = new Size(287, 41);
+            CaiDatContainer.TabIndex = 14;
+            // 
+            // panel64
+            // 
+            panel64.Controls.Add(btnCaiDat);
+            panel64.Dock = DockStyle.Top;
+            panel64.Location = new Point(0, 0);
+            panel64.Name = "panel64";
+            panel64.Size = new Size(287, 39);
+            panel64.TabIndex = 5;
+            // 
+            // btnCaiDat
+            // 
+            btnCaiDat.BackColor = Color.FromArgb(89, 149, 206);
+            btnCaiDat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCaiDat.ForeColor = Color.White;
+            btnCaiDat.Image = (Image)resources.GetObject("btnCaiDat.Image");
+            btnCaiDat.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCaiDat.Location = new Point(-17, -4);
+            btnCaiDat.Name = "btnCaiDat";
+            btnCaiDat.Padding = new Padding(30, 0, 0, 0);
+            btnCaiDat.Size = new Size(328, 52);
+            btnCaiDat.TabIndex = 3;
+            btnCaiDat.Text = "             Cài Đặt";
+            btnCaiDat.TextAlign = ContentAlignment.MiddleLeft;
+            btnCaiDat.UseVisualStyleBackColor = false;
+            // 
+            // ChiNhanhContainer
+            // 
+            ChiNhanhContainer.BackColor = Color.LightBlue;
+            ChiNhanhContainer.Controls.Add(panel77);
+            ChiNhanhContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            ChiNhanhContainer.Location = new Point(3, 514);
+            ChiNhanhContainer.MaximumSize = new Size(287, 41);
+            ChiNhanhContainer.MinimumSize = new Size(287, 41);
+            ChiNhanhContainer.Name = "ChiNhanhContainer";
+            ChiNhanhContainer.Size = new Size(287, 41);
+            ChiNhanhContainer.TabIndex = 15;
+            // 
+            // panel77
+            // 
+            panel77.Controls.Add(btnChiNhanh);
+            panel77.Dock = DockStyle.Top;
+            panel77.Location = new Point(0, 0);
+            panel77.Name = "panel77";
+            panel77.Size = new Size(287, 39);
+            panel77.TabIndex = 5;
+            // 
+            // btnChiNhanh
+            // 
+            btnChiNhanh.BackColor = Color.FromArgb(89, 149, 206);
+            btnChiNhanh.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChiNhanh.ForeColor = Color.White;
+            btnChiNhanh.Image = (Image)resources.GetObject("btnChiNhanh.Image");
+            btnChiNhanh.ImageAlign = ContentAlignment.MiddleLeft;
+            btnChiNhanh.Location = new Point(-15, -8);
+            btnChiNhanh.Name = "btnChiNhanh";
+            btnChiNhanh.Padding = new Padding(30, 0, 0, 0);
+            btnChiNhanh.Size = new Size(328, 52);
+            btnChiNhanh.TabIndex = 3;
+            btnChiNhanh.Text = "             Chi Nhánh";
+            btnChiNhanh.TextAlign = ContentAlignment.MiddleLeft;
+            btnChiNhanh.UseVisualStyleBackColor = false;
+            btnChiNhanh.Click += btnChiNhanh_Click;
+            // 
+            // PosContainer
+            // 
+            PosContainer.BackColor = Color.LightBlue;
+            PosContainer.Controls.Add(panel65);
+            PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            PosContainer.Location = new Point(3, 467);
+            PosContainer.MaximumSize = new Size(287, 41);
+            PosContainer.MinimumSize = new Size(287, 41);
+            PosContainer.Name = "PosContainer";
+            PosContainer.Size = new Size(287, 41);
+            PosContainer.TabIndex = 16;
+            // 
+            // panel65
+            // 
+            panel65.Controls.Add(btnPos);
+            panel65.Dock = DockStyle.Top;
+            panel65.Location = new Point(0, 0);
+            panel65.Name = "panel65";
+            panel65.Size = new Size(287, 39);
+            panel65.TabIndex = 5;
+            // 
+            // btnPos
+            // 
+            btnPos.BackColor = Color.FromArgb(89, 149, 206);
+            btnPos.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPos.ForeColor = Color.White;
+            btnPos.Image = (Image)resources.GetObject("btnPos.Image");
+            btnPos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPos.Location = new Point(-17, -4);
+            btnPos.Name = "btnPos";
+            btnPos.Padding = new Padding(30, 0, 0, 0);
+            btnPos.Size = new Size(328, 52);
+            btnPos.TabIndex = 3;
+            btnPos.Text = "             POS";
+            btnPos.TextAlign = ContentAlignment.MiddleLeft;
+            btnPos.UseVisualStyleBackColor = false;
+            btnPos.Click += btnPos_Click;
+            // 
+            // ThuChiContainer
+            // 
+            ThuChiContainer.BackColor = Color.LightBlue;
+            ThuChiContainer.Controls.Add(panel73);
+            ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            ThuChiContainer.Location = new Point(3, 420);
+            ThuChiContainer.MaximumSize = new Size(287, 41);
+            ThuChiContainer.MinimumSize = new Size(287, 41);
+            ThuChiContainer.Name = "ThuChiContainer";
+            ThuChiContainer.Size = new Size(287, 41);
+            ThuChiContainer.TabIndex = 13;
+            // 
+            // panel73
+            // 
+            panel73.Controls.Add(btnThuChi);
+            panel73.Dock = DockStyle.Top;
+            panel73.Location = new Point(0, 0);
+            panel73.Name = "panel73";
+            panel73.Size = new Size(287, 39);
+            panel73.TabIndex = 5;
+            // 
+            // btnThuChi
+            // 
+            btnThuChi.BackColor = Color.FromArgb(89, 149, 206);
+            btnThuChi.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThuChi.ForeColor = Color.White;
+            btnThuChi.Image = (Image)resources.GetObject("btnThuChi.Image");
+            btnThuChi.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThuChi.Location = new Point(-17, -4);
+            btnThuChi.Name = "btnThuChi";
+            btnThuChi.Padding = new Padding(30, 0, 0, 0);
+            btnThuChi.Size = new Size(328, 52);
+            btnThuChi.TabIndex = 3;
+            btnThuChi.Text = "             Thu Chi";
+            btnThuChi.TextAlign = ContentAlignment.MiddleLeft;
+            btnThuChi.UseVisualStyleBackColor = false;
+            // 
+            // NhanVienContainer
+            // 
+            NhanVienContainer.BackColor = Color.DeepSkyBlue;
+            NhanVienContainer.Controls.Add(panel62);
+            NhanVienContainer.Controls.Add(panel44);
+            NhanVienContainer.Controls.Add(panel45);
+            NhanVienContainer.Controls.Add(panel46);
+            NhanVienContainer.Location = new Point(3, 373);
+            NhanVienContainer.MaximumSize = new Size(287, 167);
+            NhanVienContainer.MinimumSize = new Size(287, 41);
+            NhanVienContainer.Name = "NhanVienContainer";
+            NhanVienContainer.Size = new Size(287, 41);
+            NhanVienContainer.TabIndex = 10;
+            // 
+            // panel62
+            // 
+            panel62.Controls.Add(btnPhanQuyen);
+            panel62.Location = new Point(0, 127);
+            panel62.Name = "panel62";
+            panel62.Size = new Size(287, 36);
+            panel62.TabIndex = 8;
+            // 
+            // btnPhanQuyen
+            // 
+            btnPhanQuyen.BackColor = Color.DeepSkyBlue;
+            btnPhanQuyen.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPhanQuyen.ForeColor = Color.White;
+            btnPhanQuyen.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnPhanQuyen.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPhanQuyen.Location = new Point(-15, -4);
+            btnPhanQuyen.Name = "btnPhanQuyen";
+            btnPhanQuyen.Padding = new Padding(30, 0, 0, 0);
+            btnPhanQuyen.Size = new Size(341, 47);
+            btnPhanQuyen.TabIndex = 3;
+            btnPhanQuyen.Text = "             Phân Quyền";
+            btnPhanQuyen.TextAlign = ContentAlignment.MiddleLeft;
+            btnPhanQuyen.UseVisualStyleBackColor = false;
+            // 
+            // panel44
+            // 
+            panel44.Controls.Add(btnChamCong);
+            panel44.Location = new Point(0, 87);
+            panel44.Name = "panel44";
+            panel44.Size = new Size(287, 36);
+            panel44.TabIndex = 7;
+            // 
+            // btnChamCong
+            // 
+            btnChamCong.BackColor = Color.DeepSkyBlue;
+            btnChamCong.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChamCong.ForeColor = Color.White;
+            btnChamCong.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnChamCong.ImageAlign = ContentAlignment.MiddleLeft;
+            btnChamCong.Location = new Point(-15, -4);
+            btnChamCong.Name = "btnChamCong";
+            btnChamCong.Padding = new Padding(30, 0, 0, 0);
+            btnChamCong.Size = new Size(341, 47);
+            btnChamCong.TabIndex = 3;
+            btnChamCong.Text = "             Chấm Công";
+            btnChamCong.TextAlign = ContentAlignment.MiddleLeft;
+            btnChamCong.UseVisualStyleBackColor = false;
+            // 
+            // panel45
+            // 
+            panel45.Controls.Add(btnNhanVien);
+            panel45.Dock = DockStyle.Top;
+            panel45.Location = new Point(0, 0);
+            panel45.Name = "panel45";
+            panel45.Size = new Size(287, 39);
+            panel45.TabIndex = 5;
+            // 
+            // btnNhanVien
+            // 
+            btnNhanVien.BackColor = Color.FromArgb(89, 149, 206);
+            btnNhanVien.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNhanVien.ForeColor = Color.White;
+            btnNhanVien.Image = (Image)resources.GetObject("btnNhanVien.Image");
+            btnNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNhanVien.Location = new Point(-17, -4);
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.Padding = new Padding(30, 0, 0, 0);
+            btnNhanVien.Size = new Size(328, 52);
+            btnNhanVien.TabIndex = 3;
+            btnNhanVien.Text = "             Nhân Viên";
+            btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
+            btnNhanVien.UseVisualStyleBackColor = false;
+            btnNhanVien.Click += btnNhanVien_Click;
+            // 
+            // panel46
+            // 
+            panel46.Controls.Add(btnDanhSachNhanVien);
+            panel46.Location = new Point(0, 45);
+            panel46.Name = "panel46";
+            panel46.Size = new Size(287, 36);
+            panel46.TabIndex = 4;
+            // 
+            // btnDanhSachNhanVien
+            // 
+            btnDanhSachNhanVien.BackColor = Color.DeepSkyBlue;
+            btnDanhSachNhanVien.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDanhSachNhanVien.ForeColor = Color.White;
+            btnDanhSachNhanVien.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDanhSachNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDanhSachNhanVien.Location = new Point(-15, -4);
+            btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
+            btnDanhSachNhanVien.Padding = new Padding(30, 0, 0, 0);
+            btnDanhSachNhanVien.Size = new Size(326, 47);
+            btnDanhSachNhanVien.TabIndex = 3;
+            btnDanhSachNhanVien.Text = "             Danh Sách";
+            btnDanhSachNhanVien.TextAlign = ContentAlignment.MiddleLeft;
+            btnDanhSachNhanVien.UseVisualStyleBackColor = false;
+            // 
+            // CongNoContainer
+            // 
+            CongNoContainer.BackColor = Color.DeepSkyBlue;
+            CongNoContainer.Controls.Add(panel48);
+            CongNoContainer.Controls.Add(panel49);
+            CongNoContainer.Controls.Add(panel50);
+            CongNoContainer.Controls.Add(panel38);
+            CongNoContainer.Controls.Add(panel43);
+            CongNoContainer.Controls.Add(panel31);
+            CongNoContainer.Controls.Add(panel32);
+            CongNoContainer.Controls.Add(panel35);
+            CongNoContainer.Location = new Point(3, 326);
+            CongNoContainer.MaximumSize = new Size(287, 337);
+            CongNoContainer.MinimumSize = new Size(287, 41);
+            CongNoContainer.Name = "CongNoContainer";
+            CongNoContainer.Size = new Size(287, 41);
+            CongNoContainer.TabIndex = 11;
+            // 
+            // panel48
+            // 
+            panel48.Controls.Add(btnDuyetPhieuChi);
+            panel48.Location = new Point(0, 297);
+            panel48.Name = "panel48";
+            panel48.Size = new Size(287, 36);
+            panel48.TabIndex = 12;
+            // 
+            // btnDuyetPhieuChi
+            // 
+            btnDuyetPhieuChi.BackColor = Color.DeepSkyBlue;
+            btnDuyetPhieuChi.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDuyetPhieuChi.ForeColor = Color.White;
+            btnDuyetPhieuChi.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDuyetPhieuChi.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDuyetPhieuChi.Location = new Point(-15, -4);
+            btnDuyetPhieuChi.Name = "btnDuyetPhieuChi";
+            btnDuyetPhieuChi.Padding = new Padding(30, 0, 0, 0);
+            btnDuyetPhieuChi.Size = new Size(326, 47);
+            btnDuyetPhieuChi.TabIndex = 3;
+            btnDuyetPhieuChi.Text = "             Duyệt Phiếu Chi";
+            btnDuyetPhieuChi.TextAlign = ContentAlignment.MiddleLeft;
+            btnDuyetPhieuChi.UseVisualStyleBackColor = false;
+            // 
+            // panel49
+            // 
+            panel49.Controls.Add(btnGhiChuCongNo);
+            panel49.Location = new Point(0, 255);
+            panel49.Name = "panel49";
+            panel49.Size = new Size(287, 36);
+            panel49.TabIndex = 11;
+            // 
+            // btnGhiChuCongNo
+            // 
+            btnGhiChuCongNo.BackColor = Color.DeepSkyBlue;
+            btnGhiChuCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGhiChuCongNo.ForeColor = Color.White;
+            btnGhiChuCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnGhiChuCongNo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGhiChuCongNo.Location = new Point(-15, -4);
+            btnGhiChuCongNo.Name = "btnGhiChuCongNo";
+            btnGhiChuCongNo.Padding = new Padding(30, 0, 0, 0);
+            btnGhiChuCongNo.Size = new Size(341, 47);
+            btnGhiChuCongNo.TabIndex = 3;
+            btnGhiChuCongNo.Text = "             Ghi Chú";
+            btnGhiChuCongNo.TextAlign = ContentAlignment.MiddleLeft;
+            btnGhiChuCongNo.UseVisualStyleBackColor = false;
+            // 
+            // panel50
+            // 
+            panel50.Controls.Add(btnQuanLyMuonHang);
+            panel50.Location = new Point(0, 213);
+            panel50.Name = "panel50";
+            panel50.Size = new Size(287, 36);
+            panel50.TabIndex = 10;
+            // 
+            // btnQuanLyMuonHang
+            // 
+            btnQuanLyMuonHang.BackColor = Color.DeepSkyBlue;
+            btnQuanLyMuonHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQuanLyMuonHang.ForeColor = Color.White;
+            btnQuanLyMuonHang.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnQuanLyMuonHang.ImageAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyMuonHang.Location = new Point(-15, -4);
+            btnQuanLyMuonHang.Name = "btnQuanLyMuonHang";
+            btnQuanLyMuonHang.Padding = new Padding(30, 0, 0, 0);
+            btnQuanLyMuonHang.Size = new Size(326, 47);
+            btnQuanLyMuonHang.TabIndex = 3;
+            btnQuanLyMuonHang.Text = "             Quản Lý Mượn Hàng";
+            btnQuanLyMuonHang.TextAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyMuonHang.UseVisualStyleBackColor = false;
+            // 
+            // panel38
+            // 
+            panel38.Controls.Add(btnQuanLyDonHangNhapCongNo);
+            panel38.Location = new Point(0, 171);
+            panel38.Name = "panel38";
+            panel38.Size = new Size(287, 36);
+            panel38.TabIndex = 9;
+            // 
+            // btnQuanLyDonHangNhapCongNo
+            // 
+            btnQuanLyDonHangNhapCongNo.BackColor = Color.DeepSkyBlue;
+            btnQuanLyDonHangNhapCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQuanLyDonHangNhapCongNo.ForeColor = Color.White;
+            btnQuanLyDonHangNhapCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnQuanLyDonHangNhapCongNo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyDonHangNhapCongNo.Location = new Point(-15, -4);
+            btnQuanLyDonHangNhapCongNo.Name = "btnQuanLyDonHangNhapCongNo";
+            btnQuanLyDonHangNhapCongNo.Padding = new Padding(30, 0, 0, 0);
+            btnQuanLyDonHangNhapCongNo.Size = new Size(341, 47);
+            btnQuanLyDonHangNhapCongNo.TabIndex = 3;
+            btnQuanLyDonHangNhapCongNo.Text = "             Đơn Hàng Nhập";
+            btnQuanLyDonHangNhapCongNo.TextAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyDonHangNhapCongNo.UseVisualStyleBackColor = false;
+            // 
+            // panel43
+            // 
+            panel43.Controls.Add(btnCongNoDauKy);
+            panel43.Location = new Point(0, 129);
+            panel43.Name = "panel43";
+            panel43.Size = new Size(287, 36);
+            panel43.TabIndex = 8;
+            // 
+            // btnCongNoDauKy
+            // 
+            btnCongNoDauKy.BackColor = Color.DeepSkyBlue;
+            btnCongNoDauKy.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCongNoDauKy.ForeColor = Color.White;
+            btnCongNoDauKy.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnCongNoDauKy.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCongNoDauKy.Location = new Point(-15, -4);
+            btnCongNoDauKy.Name = "btnCongNoDauKy";
+            btnCongNoDauKy.Padding = new Padding(30, 0, 0, 0);
+            btnCongNoDauKy.Size = new Size(326, 47);
+            btnCongNoDauKy.TabIndex = 3;
+            btnCongNoDauKy.Text = "             Công Nợ Đầu Kỳ";
+            btnCongNoDauKy.TextAlign = ContentAlignment.MiddleLeft;
+            btnCongNoDauKy.UseVisualStyleBackColor = false;
+            // 
+            // panel31
+            // 
+            panel31.Controls.Add(btnCongNoPhaiTraChoNhaCungCap);
+            panel31.Location = new Point(0, 87);
+            panel31.Name = "panel31";
+            panel31.Size = new Size(287, 36);
+            panel31.TabIndex = 7;
+            // 
+            // btnCongNoPhaiTraChoNhaCungCap
+            // 
+            btnCongNoPhaiTraChoNhaCungCap.BackColor = Color.DeepSkyBlue;
+            btnCongNoPhaiTraChoNhaCungCap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCongNoPhaiTraChoNhaCungCap.ForeColor = Color.White;
+            btnCongNoPhaiTraChoNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnCongNoPhaiTraChoNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCongNoPhaiTraChoNhaCungCap.Location = new Point(-15, -4);
+            btnCongNoPhaiTraChoNhaCungCap.Name = "btnCongNoPhaiTraChoNhaCungCap";
+            btnCongNoPhaiTraChoNhaCungCap.Padding = new Padding(30, 0, 0, 0);
+            btnCongNoPhaiTraChoNhaCungCap.Size = new Size(341, 47);
+            btnCongNoPhaiTraChoNhaCungCap.TabIndex = 3;
+            btnCongNoPhaiTraChoNhaCungCap.Text = "             Trả Cho Nhà Cung Cấp";
+            btnCongNoPhaiTraChoNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
+            btnCongNoPhaiTraChoNhaCungCap.UseVisualStyleBackColor = false;
+            // 
+            // panel32
+            // 
+            panel32.Controls.Add(btnCongNo);
+            panel32.Dock = DockStyle.Top;
+            panel32.Location = new Point(0, 0);
+            panel32.Name = "panel32";
+            panel32.Size = new Size(287, 39);
+            panel32.TabIndex = 5;
+            // 
+            // btnCongNo
+            // 
+            btnCongNo.BackColor = Color.FromArgb(89, 149, 206);
+            btnCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCongNo.ForeColor = Color.White;
+            btnCongNo.Image = (Image)resources.GetObject("btnCongNo.Image");
+            btnCongNo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCongNo.Location = new Point(-17, -4);
+            btnCongNo.Name = "btnCongNo";
+            btnCongNo.Padding = new Padding(30, 0, 0, 0);
+            btnCongNo.Size = new Size(328, 52);
+            btnCongNo.TabIndex = 3;
+            btnCongNo.Text = "             Công Nợ";
+            btnCongNo.TextAlign = ContentAlignment.MiddleLeft;
+            btnCongNo.UseVisualStyleBackColor = false;
+            btnCongNo.Click += btnCongNo_Click;
+            // 
+            // panel35
+            // 
+            panel35.Controls.Add(btnCongNoPhaiThuCuaKhachHang);
+            panel35.Location = new Point(0, 45);
+            panel35.Name = "panel35";
+            panel35.Size = new Size(287, 36);
+            panel35.TabIndex = 4;
+            // 
+            // btnCongNoPhaiThuCuaKhachHang
+            // 
+            btnCongNoPhaiThuCuaKhachHang.BackColor = Color.DeepSkyBlue;
+            btnCongNoPhaiThuCuaKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCongNoPhaiThuCuaKhachHang.ForeColor = Color.White;
+            btnCongNoPhaiThuCuaKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnCongNoPhaiThuCuaKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCongNoPhaiThuCuaKhachHang.Location = new Point(-15, -4);
+            btnCongNoPhaiThuCuaKhachHang.Name = "btnCongNoPhaiThuCuaKhachHang";
+            btnCongNoPhaiThuCuaKhachHang.Padding = new Padding(30, 0, 0, 0);
+            btnCongNoPhaiThuCuaKhachHang.Size = new Size(326, 47);
+            btnCongNoPhaiThuCuaKhachHang.TabIndex = 3;
+            btnCongNoPhaiThuCuaKhachHang.Text = "             Thu Khách Hàng";
+            btnCongNoPhaiThuCuaKhachHang.TextAlign = ContentAlignment.MiddleLeft;
+            btnCongNoPhaiThuCuaKhachHang.UseVisualStyleBackColor = false;
+            // 
             // HoaDonContainer
             // 
             HoaDonContainer.BackColor = Color.DeepSkyBlue;
@@ -1583,7 +1287,7 @@
             HoaDonContainer.Controls.Add(panel40);
             HoaDonContainer.Controls.Add(panel41);
             HoaDonContainer.Controls.Add(panel42);
-            HoaDonContainer.Location = new Point(3, 277);
+            HoaDonContainer.Location = new Point(3, 232);
             HoaDonContainer.MaximumSize = new Size(287, 379);
             HoaDonContainer.MinimumSize = new Size(287, 41);
             HoaDonContainer.Name = "HoaDonContainer";
@@ -1808,477 +1512,806 @@
             btnHoaDonVuaThanhToan.TextAlign = ContentAlignment.MiddleLeft;
             btnHoaDonVuaThanhToan.UseVisualStyleBackColor = false;
             // 
-            // CongNoContainer
-            // 
-            CongNoContainer.BackColor = Color.DeepSkyBlue;
-            CongNoContainer.Controls.Add(panel48);
-            CongNoContainer.Controls.Add(panel49);
-            CongNoContainer.Controls.Add(panel50);
-            CongNoContainer.Controls.Add(panel38);
-            CongNoContainer.Controls.Add(panel43);
-            CongNoContainer.Controls.Add(panel31);
-            CongNoContainer.Controls.Add(panel32);
-            CongNoContainer.Controls.Add(panel35);
-            CongNoContainer.Location = new Point(3, 324);
-            CongNoContainer.MaximumSize = new Size(287, 337);
-            CongNoContainer.MinimumSize = new Size(287, 41);
-            CongNoContainer.Name = "CongNoContainer";
-            CongNoContainer.Size = new Size(287, 41);
-            CongNoContainer.TabIndex = 11;
-            // 
-            // panel48
-            // 
-            panel48.Controls.Add(btnDuyetPhieuChi);
-            panel48.Location = new Point(0, 297);
-            panel48.Name = "panel48";
-            panel48.Size = new Size(287, 36);
-            panel48.TabIndex = 12;
-            // 
-            // btnDuyetPhieuChi
-            // 
-            btnDuyetPhieuChi.BackColor = Color.DeepSkyBlue;
-            btnDuyetPhieuChi.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDuyetPhieuChi.ForeColor = Color.White;
-            btnDuyetPhieuChi.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnDuyetPhieuChi.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDuyetPhieuChi.Location = new Point(-15, -4);
-            btnDuyetPhieuChi.Name = "btnDuyetPhieuChi";
-            btnDuyetPhieuChi.Padding = new Padding(30, 0, 0, 0);
-            btnDuyetPhieuChi.Size = new Size(326, 47);
-            btnDuyetPhieuChi.TabIndex = 3;
-            btnDuyetPhieuChi.Text = "             Duyệt Phiếu Chi";
-            btnDuyetPhieuChi.TextAlign = ContentAlignment.MiddleLeft;
-            btnDuyetPhieuChi.UseVisualStyleBackColor = false;
-            // 
-            // panel49
-            // 
-            panel49.Controls.Add(btnGhiChuCongNo);
-            panel49.Location = new Point(0, 255);
-            panel49.Name = "panel49";
-            panel49.Size = new Size(287, 36);
-            panel49.TabIndex = 11;
-            // 
-            // btnGhiChuCongNo
-            // 
-            btnGhiChuCongNo.BackColor = Color.DeepSkyBlue;
-            btnGhiChuCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnGhiChuCongNo.ForeColor = Color.White;
-            btnGhiChuCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnGhiChuCongNo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGhiChuCongNo.Location = new Point(-15, -4);
-            btnGhiChuCongNo.Name = "btnGhiChuCongNo";
-            btnGhiChuCongNo.Padding = new Padding(30, 0, 0, 0);
-            btnGhiChuCongNo.Size = new Size(341, 47);
-            btnGhiChuCongNo.TabIndex = 3;
-            btnGhiChuCongNo.Text = "             Ghi Chú";
-            btnGhiChuCongNo.TextAlign = ContentAlignment.MiddleLeft;
-            btnGhiChuCongNo.UseVisualStyleBackColor = false;
-            // 
-            // panel50
-            // 
-            panel50.Controls.Add(btnQuanLyMuonHang);
-            panel50.Location = new Point(0, 213);
-            panel50.Name = "panel50";
-            panel50.Size = new Size(287, 36);
-            panel50.TabIndex = 10;
-            // 
-            // btnQuanLyMuonHang
-            // 
-            btnQuanLyMuonHang.BackColor = Color.DeepSkyBlue;
-            btnQuanLyMuonHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnQuanLyMuonHang.ForeColor = Color.White;
-            btnQuanLyMuonHang.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnQuanLyMuonHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyMuonHang.Location = new Point(-15, -4);
-            btnQuanLyMuonHang.Name = "btnQuanLyMuonHang";
-            btnQuanLyMuonHang.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyMuonHang.Size = new Size(326, 47);
-            btnQuanLyMuonHang.TabIndex = 3;
-            btnQuanLyMuonHang.Text = "             Quản Lý Mượn Hàng";
-            btnQuanLyMuonHang.TextAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyMuonHang.UseVisualStyleBackColor = false;
-            // 
-            // panel38
-            // 
-            panel38.Controls.Add(btnQuanLyDonHangNhapCongNo);
-            panel38.Location = new Point(0, 171);
-            panel38.Name = "panel38";
-            panel38.Size = new Size(287, 36);
-            panel38.TabIndex = 9;
-            // 
-            // btnQuanLyDonHangNhapCongNo
-            // 
-            btnQuanLyDonHangNhapCongNo.BackColor = Color.DeepSkyBlue;
-            btnQuanLyDonHangNhapCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnQuanLyDonHangNhapCongNo.ForeColor = Color.White;
-            btnQuanLyDonHangNhapCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnQuanLyDonHangNhapCongNo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyDonHangNhapCongNo.Location = new Point(-15, -4);
-            btnQuanLyDonHangNhapCongNo.Name = "btnQuanLyDonHangNhapCongNo";
-            btnQuanLyDonHangNhapCongNo.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyDonHangNhapCongNo.Size = new Size(341, 47);
-            btnQuanLyDonHangNhapCongNo.TabIndex = 3;
-            btnQuanLyDonHangNhapCongNo.Text = "             Đơn Hàng Nhập";
-            btnQuanLyDonHangNhapCongNo.TextAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyDonHangNhapCongNo.UseVisualStyleBackColor = false;
-            // 
-            // panel43
-            // 
-            panel43.Controls.Add(btnCongNoDauKy);
-            panel43.Location = new Point(0, 129);
-            panel43.Name = "panel43";
-            panel43.Size = new Size(287, 36);
-            panel43.TabIndex = 8;
-            // 
-            // btnCongNoDauKy
-            // 
-            btnCongNoDauKy.BackColor = Color.DeepSkyBlue;
-            btnCongNoDauKy.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCongNoDauKy.ForeColor = Color.White;
-            btnCongNoDauKy.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnCongNoDauKy.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNoDauKy.Location = new Point(-15, -4);
-            btnCongNoDauKy.Name = "btnCongNoDauKy";
-            btnCongNoDauKy.Padding = new Padding(30, 0, 0, 0);
-            btnCongNoDauKy.Size = new Size(326, 47);
-            btnCongNoDauKy.TabIndex = 3;
-            btnCongNoDauKy.Text = "             Công Nợ Đầu Kỳ";
-            btnCongNoDauKy.TextAlign = ContentAlignment.MiddleLeft;
-            btnCongNoDauKy.UseVisualStyleBackColor = false;
-            // 
-            // panel31
-            // 
-            panel31.Controls.Add(btnCongNoPhaiTraChoNhaCungCap);
-            panel31.Location = new Point(0, 87);
-            panel31.Name = "panel31";
-            panel31.Size = new Size(287, 36);
-            panel31.TabIndex = 7;
-            // 
-            // btnCongNoPhaiTraChoNhaCungCap
-            // 
-            btnCongNoPhaiTraChoNhaCungCap.BackColor = Color.DeepSkyBlue;
-            btnCongNoPhaiTraChoNhaCungCap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCongNoPhaiTraChoNhaCungCap.ForeColor = Color.White;
-            btnCongNoPhaiTraChoNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnCongNoPhaiTraChoNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNoPhaiTraChoNhaCungCap.Location = new Point(-15, -4);
-            btnCongNoPhaiTraChoNhaCungCap.Name = "btnCongNoPhaiTraChoNhaCungCap";
-            btnCongNoPhaiTraChoNhaCungCap.Padding = new Padding(30, 0, 0, 0);
-            btnCongNoPhaiTraChoNhaCungCap.Size = new Size(341, 47);
-            btnCongNoPhaiTraChoNhaCungCap.TabIndex = 3;
-            btnCongNoPhaiTraChoNhaCungCap.Text = "             Trả Cho Nhà Cung Cấp";
-            btnCongNoPhaiTraChoNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
-            btnCongNoPhaiTraChoNhaCungCap.UseVisualStyleBackColor = false;
-            // 
-            // panel32
-            // 
-            panel32.Controls.Add(btnCongNo);
-            panel32.Dock = DockStyle.Top;
-            panel32.Location = new Point(0, 0);
-            panel32.Name = "panel32";
-            panel32.Size = new Size(287, 39);
-            panel32.TabIndex = 5;
-            // 
-            // btnCongNo
-            // 
-            btnCongNo.BackColor = Color.FromArgb(89, 149, 206);
-            btnCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCongNo.ForeColor = Color.White;
-            btnCongNo.Image = (Image)resources.GetObject("btnCongNo.Image");
-            btnCongNo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNo.Location = new Point(-17, -4);
-            btnCongNo.Name = "btnCongNo";
-            btnCongNo.Padding = new Padding(30, 0, 0, 0);
-            btnCongNo.Size = new Size(328, 52);
-            btnCongNo.TabIndex = 3;
-            btnCongNo.Text = "             Công Nợ";
-            btnCongNo.TextAlign = ContentAlignment.MiddleLeft;
-            btnCongNo.UseVisualStyleBackColor = false;
-            btnCongNo.Click += btnCongNo_Click;
-            // 
-            // panel35
-            // 
-            panel35.Controls.Add(btnCongNoPhaiThuCuaKhachHang);
-            panel35.Location = new Point(0, 45);
-            panel35.Name = "panel35";
-            panel35.Size = new Size(287, 36);
-            panel35.TabIndex = 4;
-            // 
-            // btnCongNoPhaiThuCuaKhachHang
-            // 
-            btnCongNoPhaiThuCuaKhachHang.BackColor = Color.DeepSkyBlue;
-            btnCongNoPhaiThuCuaKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCongNoPhaiThuCuaKhachHang.ForeColor = Color.White;
-            btnCongNoPhaiThuCuaKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnCongNoPhaiThuCuaKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNoPhaiThuCuaKhachHang.Location = new Point(-15, -4);
-            btnCongNoPhaiThuCuaKhachHang.Name = "btnCongNoPhaiThuCuaKhachHang";
-            btnCongNoPhaiThuCuaKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnCongNoPhaiThuCuaKhachHang.Size = new Size(326, 47);
-            btnCongNoPhaiThuCuaKhachHang.TabIndex = 3;
-            btnCongNoPhaiThuCuaKhachHang.Text = "             Thu Khách Hàng";
-            btnCongNoPhaiThuCuaKhachHang.TextAlign = ContentAlignment.MiddleLeft;
-            btnCongNoPhaiThuCuaKhachHang.UseVisualStyleBackColor = false;
-            // 
-            // NhanVienContainer
-            // 
-            NhanVienContainer.BackColor = Color.DeepSkyBlue;
-            NhanVienContainer.Controls.Add(panel62);
-            NhanVienContainer.Controls.Add(panel44);
-            NhanVienContainer.Controls.Add(panel45);
-            NhanVienContainer.Controls.Add(panel46);
-            NhanVienContainer.Location = new Point(3, 371);
-            NhanVienContainer.MaximumSize = new Size(287, 167);
-            NhanVienContainer.MinimumSize = new Size(287, 41);
-            NhanVienContainer.Name = "NhanVienContainer";
-            NhanVienContainer.Size = new Size(287, 41);
-            NhanVienContainer.TabIndex = 10;
-            // 
-            // panel62
-            // 
-            panel62.Controls.Add(btnPhanQuyen);
-            panel62.Location = new Point(0, 127);
-            panel62.Name = "panel62";
-            panel62.Size = new Size(287, 36);
-            panel62.TabIndex = 8;
-            // 
-            // btnPhanQuyen
-            // 
-            btnPhanQuyen.BackColor = Color.DeepSkyBlue;
-            btnPhanQuyen.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPhanQuyen.ForeColor = Color.White;
-            btnPhanQuyen.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnPhanQuyen.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPhanQuyen.Location = new Point(-15, -4);
-            btnPhanQuyen.Name = "btnPhanQuyen";
-            btnPhanQuyen.Padding = new Padding(30, 0, 0, 0);
-            btnPhanQuyen.Size = new Size(341, 47);
-            btnPhanQuyen.TabIndex = 3;
-            btnPhanQuyen.Text = "             Phân Quyền";
-            btnPhanQuyen.TextAlign = ContentAlignment.MiddleLeft;
-            btnPhanQuyen.UseVisualStyleBackColor = false;
-            // 
-            // panel44
-            // 
-            panel44.Controls.Add(btnChamCong);
-            panel44.Location = new Point(0, 87);
-            panel44.Name = "panel44";
-            panel44.Size = new Size(287, 36);
-            panel44.TabIndex = 7;
-            // 
-            // btnChamCong
-            // 
-            btnChamCong.BackColor = Color.DeepSkyBlue;
-            btnChamCong.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnChamCong.ForeColor = Color.White;
-            btnChamCong.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnChamCong.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChamCong.Location = new Point(-15, -4);
-            btnChamCong.Name = "btnChamCong";
-            btnChamCong.Padding = new Padding(30, 0, 0, 0);
-            btnChamCong.Size = new Size(341, 47);
-            btnChamCong.TabIndex = 3;
-            btnChamCong.Text = "             Chấm Công";
-            btnChamCong.TextAlign = ContentAlignment.MiddleLeft;
-            btnChamCong.UseVisualStyleBackColor = false;
-            // 
-            // panel45
-            // 
-            panel45.Controls.Add(btnNhanVien);
-            panel45.Dock = DockStyle.Top;
-            panel45.Location = new Point(0, 0);
-            panel45.Name = "panel45";
-            panel45.Size = new Size(287, 39);
-            panel45.TabIndex = 5;
-            // 
-            // btnNhanVien
-            // 
-            btnNhanVien.BackColor = Color.FromArgb(89, 149, 206);
-            btnNhanVien.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNhanVien.ForeColor = Color.White;
-            btnNhanVien.Image = (Image)resources.GetObject("btnNhanVien.Image");
-            btnNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhanVien.Location = new Point(-17, -4);
-            btnNhanVien.Name = "btnNhanVien";
-            btnNhanVien.Padding = new Padding(30, 0, 0, 0);
-            btnNhanVien.Size = new Size(328, 52);
-            btnNhanVien.TabIndex = 3;
-            btnNhanVien.Text = "             Nhân Viên";
-            btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
-            btnNhanVien.UseVisualStyleBackColor = false;
-            btnNhanVien.Click += btnNhanVien_Click;
-            // 
-            // panel46
-            // 
-            panel46.Controls.Add(btnDanhSachNhanVien);
-            panel46.Location = new Point(0, 45);
-            panel46.Name = "panel46";
-            panel46.Size = new Size(287, 36);
-            panel46.TabIndex = 4;
-            // 
-            // btnDanhSachNhanVien
-            // 
-            btnDanhSachNhanVien.BackColor = Color.DeepSkyBlue;
-            btnDanhSachNhanVien.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDanhSachNhanVien.ForeColor = Color.White;
-            btnDanhSachNhanVien.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnDanhSachNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDanhSachNhanVien.Location = new Point(-15, -4);
-            btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
-            btnDanhSachNhanVien.Padding = new Padding(30, 0, 0, 0);
-            btnDanhSachNhanVien.Size = new Size(326, 47);
-            btnDanhSachNhanVien.TabIndex = 3;
-            btnDanhSachNhanVien.Text = "             Danh Sách";
-            btnDanhSachNhanVien.TextAlign = ContentAlignment.MiddleLeft;
-            btnDanhSachNhanVien.UseVisualStyleBackColor = false;
-            // 
-            // ThuChiContainer
-            // 
-            ThuChiContainer.BackColor = Color.LightBlue;
-            ThuChiContainer.Controls.Add(panel73);
-            ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ThuChiContainer.Location = new Point(3, 418);
-            ThuChiContainer.MaximumSize = new Size(287, 41);
-            ThuChiContainer.MinimumSize = new Size(287, 41);
-            ThuChiContainer.Name = "ThuChiContainer";
-            ThuChiContainer.Size = new Size(287, 41);
-            ThuChiContainer.TabIndex = 13;
-            // 
-            // panel73
-            // 
-            panel73.Controls.Add(btnThuChi);
-            panel73.Dock = DockStyle.Top;
-            panel73.Location = new Point(0, 0);
-            panel73.Name = "panel73";
-            panel73.Size = new Size(287, 39);
-            panel73.TabIndex = 5;
-            // 
-            // btnThuChi
-            // 
-            btnThuChi.BackColor = Color.FromArgb(89, 149, 206);
-            btnThuChi.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThuChi.ForeColor = Color.White;
-            btnThuChi.Image = (Image)resources.GetObject("btnThuChi.Image");
-            btnThuChi.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThuChi.Location = new Point(-17, -4);
-            btnThuChi.Name = "btnThuChi";
-            btnThuChi.Padding = new Padding(30, 0, 0, 0);
-            btnThuChi.Size = new Size(328, 52);
-            btnThuChi.TabIndex = 3;
-            btnThuChi.Text = "             Thu Chi";
-            btnThuChi.TextAlign = ContentAlignment.MiddleLeft;
-            btnThuChi.UseVisualStyleBackColor = false;
-            // 
-            // PosContainer
-            // 
-            PosContainer.BackColor = Color.LightBlue;
-            PosContainer.Controls.Add(panel65);
-            PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            PosContainer.Location = new Point(3, 465);
-            PosContainer.MaximumSize = new Size(287, 41);
-            PosContainer.MinimumSize = new Size(287, 41);
-            PosContainer.Name = "PosContainer";
-            PosContainer.Size = new Size(287, 41);
-            PosContainer.TabIndex = 16;
-            // 
-            // panel65
-            // 
-            panel65.Controls.Add(btnPos);
-            panel65.Dock = DockStyle.Top;
-            panel65.Location = new Point(0, 0);
-            panel65.Name = "panel65";
-            panel65.Size = new Size(287, 39);
-            panel65.TabIndex = 5;
-            // 
-            // btnPos
-            // 
-            btnPos.BackColor = Color.FromArgb(89, 149, 206);
-            btnPos.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPos.ForeColor = Color.White;
-            btnPos.Image = (Image)resources.GetObject("btnPos.Image");
-            btnPos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPos.Location = new Point(-17, -4);
-            btnPos.Name = "btnPos";
-            btnPos.Padding = new Padding(30, 0, 0, 0);
-            btnPos.Size = new Size(328, 52);
-            btnPos.TabIndex = 3;
-            btnPos.Text = "             POS";
-            btnPos.TextAlign = ContentAlignment.MiddleLeft;
-            btnPos.UseVisualStyleBackColor = false;
-            // 
-            // ChiNhanhContainer
-            // 
-            ChiNhanhContainer.BackColor = Color.LightBlue;
-            ChiNhanhContainer.Controls.Add(panel77);
-            ChiNhanhContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ChiNhanhContainer.Location = new Point(3, 512);
-            ChiNhanhContainer.MaximumSize = new Size(287, 41);
-            ChiNhanhContainer.MinimumSize = new Size(287, 41);
-            ChiNhanhContainer.Name = "ChiNhanhContainer";
-            ChiNhanhContainer.Size = new Size(287, 41);
-            ChiNhanhContainer.TabIndex = 15;
-            // 
-            // panel77
-            // 
-            panel77.Controls.Add(btnChiNhanh);
-            panel77.Dock = DockStyle.Top;
-            panel77.Location = new Point(0, 0);
-            panel77.Name = "panel77";
-            panel77.Size = new Size(287, 39);
-            panel77.TabIndex = 5;
-            // 
-            // btnChiNhanh
-            // 
-            btnChiNhanh.BackColor = Color.FromArgb(89, 149, 206);
-            btnChiNhanh.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnChiNhanh.ForeColor = Color.White;
-            btnChiNhanh.Image = (Image)resources.GetObject("btnChiNhanh.Image");
-            btnChiNhanh.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChiNhanh.Location = new Point(-15, -8);
-            btnChiNhanh.Name = "btnChiNhanh";
-            btnChiNhanh.Padding = new Padding(30, 0, 0, 0);
-            btnChiNhanh.Size = new Size(328, 52);
-            btnChiNhanh.TabIndex = 3;
-            btnChiNhanh.Text = "             Chi Nhánh";
-            btnChiNhanh.TextAlign = ContentAlignment.MiddleLeft;
-            btnChiNhanh.UseVisualStyleBackColor = false;
-            // 
-            // CaiDatContainer
-            // 
-            CaiDatContainer.BackColor = Color.LightBlue;
-            CaiDatContainer.Controls.Add(panel64);
-            CaiDatContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            CaiDatContainer.Location = new Point(3, 559);
-            CaiDatContainer.MaximumSize = new Size(287, 41);
-            CaiDatContainer.MinimumSize = new Size(287, 41);
-            CaiDatContainer.Name = "CaiDatContainer";
-            CaiDatContainer.Size = new Size(287, 41);
-            CaiDatContainer.TabIndex = 14;
-            // 
-            // panel64
-            // 
-            panel64.Controls.Add(btnCaiDat);
-            panel64.Dock = DockStyle.Top;
-            panel64.Location = new Point(0, 0);
-            panel64.Name = "panel64";
-            panel64.Size = new Size(287, 39);
-            panel64.TabIndex = 5;
-            // 
-            // btnCaiDat
-            // 
-            btnCaiDat.BackColor = Color.FromArgb(89, 149, 206);
-            btnCaiDat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCaiDat.ForeColor = Color.White;
-            btnCaiDat.Image = (Image)resources.GetObject("btnCaiDat.Image");
-            btnCaiDat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCaiDat.Location = new Point(-17, -4);
-            btnCaiDat.Name = "btnCaiDat";
-            btnCaiDat.Padding = new Padding(30, 0, 0, 0);
-            btnCaiDat.Size = new Size(328, 52);
-            btnCaiDat.TabIndex = 3;
-            btnCaiDat.Text = "             Cài Đặt";
-            btnCaiDat.TextAlign = ContentAlignment.MiddleLeft;
-            btnCaiDat.UseVisualStyleBackColor = false;
+            // flpMain
+            // 
+            flpMain.BackColor = Color.FromArgb(89, 149, 206);
+            flpMain.Controls.Add(pbLogoMeXiu);
+            flpMain.Controls.Add(KhachHangContainer);
+            flpMain.Controls.Add(KhoContainer);
+            flpMain.Controls.Add(BaoCaoContainer);
+            flpMain.Controls.Add(HoaDonContainer);
+            flpMain.Controls.Add(HangHoaContainer);
+            flpMain.Controls.Add(CongNoContainer);
+            flpMain.Controls.Add(NhanVienContainer);
+            flpMain.Controls.Add(ThuChiContainer);
+            flpMain.Controls.Add(PosContainer);
+            flpMain.Controls.Add(ChiNhanhContainer);
+            flpMain.Controls.Add(CaiDatContainer);
+            flpMain.Dock = DockStyle.Left;
+            flpMain.Location = new Point(0, 0);
+            flpMain.MaximumSize = new Size(290, 0);
+            flpMain.MinimumSize = new Size(75, 0);
+            flpMain.Name = "flpMain";
+            flpMain.Size = new Size(290, 831);
+            flpMain.TabIndex = 2;
+            flpMain.Paint += flpMain_Paint;
+            // 
+            // pbLogoMeXiu
+            // 
+            pbLogoMeXiu.BackColor = Color.FromArgb(89, 149, 206);
+            pbLogoMeXiu.Image = PosManager.Properties.Resources._326559583_468268058851274_8797007794984294310_n;
+            pbLogoMeXiu.Location = new Point(3, 3);
+            pbLogoMeXiu.MaximumSize = new Size(287, 80);
+            pbLogoMeXiu.MinimumSize = new Size(75, 80);
+            pbLogoMeXiu.Name = "pbLogoMeXiu";
+            pbLogoMeXiu.Size = new Size(287, 80);
+            pbLogoMeXiu.SizeMode = PictureBoxSizeMode.Zoom;
+            pbLogoMeXiu.TabIndex = 0;
+            pbLogoMeXiu.TabStop = false;
+            pbLogoMeXiu.Click += pbLogoMeXiu_Click;
+            // 
+            // KhachHangContainer
+            // 
+            KhachHangContainer.BackColor = Color.DeepSkyBlue;
+            KhachHangContainer.Controls.Add(panel9);
+            KhachHangContainer.Controls.Add(panel8);
+            KhachHangContainer.Controls.Add(panel4);
+            KhachHangContainer.Controls.Add(panel7);
+            KhachHangContainer.Controls.Add(panel6);
+            KhachHangContainer.Controls.Add(panel2);
+            KhachHangContainer.Controls.Add(panel34);
+            KhachHangContainer.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            KhachHangContainer.Location = new Point(3, 89);
+            KhachHangContainer.MaximumSize = new Size(287, 302);
+            KhachHangContainer.MinimumSize = new Size(287, 41);
+            KhachHangContainer.Name = "KhachHangContainer";
+            KhachHangContainer.Size = new Size(287, 41);
+            KhachHangContainer.TabIndex = 6;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(btnTiepNhanXuLyYeuCau);
+            panel9.Location = new Point(0, 222);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(209, 36);
+            panel9.TabIndex = 10;
+            // 
+            // btnTiepNhanXuLyYeuCau
+            // 
+            btnTiepNhanXuLyYeuCau.BackColor = Color.DeepSkyBlue;
+            btnTiepNhanXuLyYeuCau.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTiepNhanXuLyYeuCau.ForeColor = Color.White;
+            btnTiepNhanXuLyYeuCau.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnTiepNhanXuLyYeuCau.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTiepNhanXuLyYeuCau.Location = new Point(-15, -4);
+            btnTiepNhanXuLyYeuCau.Name = "btnTiepNhanXuLyYeuCau";
+            btnTiepNhanXuLyYeuCau.Padding = new Padding(30, 0, 0, 0);
+            btnTiepNhanXuLyYeuCau.Size = new Size(340, 47);
+            btnTiepNhanXuLyYeuCau.TabIndex = 3;
+            btnTiepNhanXuLyYeuCau.Text = "             Yêu Cầu";
+            btnTiepNhanXuLyYeuCau.TextAlign = ContentAlignment.MiddleLeft;
+            btnTiepNhanXuLyYeuCau.UseVisualStyleBackColor = false;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(btnSinhNhat);
+            panel8.Location = new Point(0, 173);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(209, 36);
+            panel8.TabIndex = 9;
+            // 
+            // btnSinhNhat
+            // 
+            btnSinhNhat.BackColor = Color.DeepSkyBlue;
+            btnSinhNhat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSinhNhat.ForeColor = Color.White;
+            btnSinhNhat.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnSinhNhat.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSinhNhat.Location = new Point(-15, -4);
+            btnSinhNhat.Name = "btnSinhNhat";
+            btnSinhNhat.Padding = new Padding(30, 0, 0, 0);
+            btnSinhNhat.Size = new Size(325, 47);
+            btnSinhNhat.TabIndex = 3;
+            btnSinhNhat.Text = "             Sinh Nhật";
+            btnSinhNhat.TextAlign = ContentAlignment.MiddleLeft;
+            btnSinhNhat.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(btnCapBacKhachHang);
+            panel4.Location = new Point(0, 264);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(209, 36);
+            panel4.TabIndex = 5;
+            // 
+            // btnCapBacKhachHang
+            // 
+            btnCapBacKhachHang.BackColor = Color.DeepSkyBlue;
+            btnCapBacKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCapBacKhachHang.ForeColor = Color.White;
+            btnCapBacKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnCapBacKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCapBacKhachHang.Location = new Point(-15, -4);
+            btnCapBacKhachHang.Name = "btnCapBacKhachHang";
+            btnCapBacKhachHang.Padding = new Padding(30, 0, 0, 0);
+            btnCapBacKhachHang.Size = new Size(325, 47);
+            btnCapBacKhachHang.TabIndex = 3;
+            btnCapBacKhachHang.Text = "             Cấp Bậc";
+            btnCapBacKhachHang.TextAlign = ContentAlignment.MiddleLeft;
+            btnCapBacKhachHang.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(btnSMSZalo);
+            panel7.Location = new Point(0, 131);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(209, 36);
+            panel7.TabIndex = 8;
+            // 
+            // btnSMSZalo
+            // 
+            btnSMSZalo.BackColor = Color.DeepSkyBlue;
+            btnSMSZalo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSMSZalo.ForeColor = Color.White;
+            btnSMSZalo.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnSMSZalo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSMSZalo.Location = new Point(-15, -4);
+            btnSMSZalo.Name = "btnSMSZalo";
+            btnSMSZalo.Padding = new Padding(30, 0, 0, 0);
+            btnSMSZalo.Size = new Size(317, 47);
+            btnSMSZalo.TabIndex = 3;
+            btnSMSZalo.Text = "             SMS";
+            btnSMSZalo.TextAlign = ContentAlignment.MiddleLeft;
+            btnSMSZalo.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(btnNhaCungCap);
+            panel6.Location = new Point(0, 87);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(209, 36);
+            panel6.TabIndex = 7;
+            // 
+            // btnNhaCungCap
+            // 
+            btnNhaCungCap.BackColor = Color.DeepSkyBlue;
+            btnNhaCungCap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNhaCungCap.ForeColor = Color.White;
+            btnNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNhaCungCap.Location = new Point(-15, -4);
+            btnNhaCungCap.Name = "btnNhaCungCap";
+            btnNhaCungCap.Padding = new Padding(30, 0, 0, 0);
+            btnNhaCungCap.Size = new Size(325, 47);
+            btnNhaCungCap.TabIndex = 3;
+            btnNhaCungCap.Text = "             Nhà Cung Cấp";
+            btnNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
+            btnNhaCungCap.UseVisualStyleBackColor = false;
+            btnNhaCungCap.Click += btnNhaCungCap_Click;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btnKhachHang);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(287, 39);
+            panel2.TabIndex = 5;
+            // 
+            // btnKhachHang
+            // 
+            btnKhachHang.BackColor = Color.FromArgb(89, 149, 206);
+            btnKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKhachHang.ForeColor = Color.White;
+            btnKhachHang.Image = (Image)resources.GetObject("btnKhachHang.Image");
+            btnKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKhachHang.Location = new Point(-17, -4);
+            btnKhachHang.Name = "btnKhachHang";
+            btnKhachHang.Padding = new Padding(30, 0, 0, 0);
+            btnKhachHang.Size = new Size(319, 53);
+            btnKhachHang.TabIndex = 3;
+            btnKhachHang.Text = "             Khách Hàng";
+            btnKhachHang.TextAlign = ContentAlignment.MiddleLeft;
+            btnKhachHang.UseVisualStyleBackColor = false;
+            btnKhachHang.Click += btnKhachHang_Click;
+            // 
+            // panel34
+            // 
+            panel34.Controls.Add(btnQLKhachHang);
+            panel34.Location = new Point(0, 45);
+            panel34.Name = "panel34";
+            panel34.Size = new Size(209, 36);
+            panel34.TabIndex = 4;
+            // 
+            // btnQLKhachHang
+            // 
+            btnQLKhachHang.BackColor = Color.DeepSkyBlue;
+            btnQLKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQLKhachHang.ForeColor = Color.White;
+            btnQLKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnQLKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
+            btnQLKhachHang.Location = new Point(-15, -4);
+            btnQLKhachHang.Name = "btnQLKhachHang";
+            btnQLKhachHang.Padding = new Padding(30, 0, 0, 0);
+            btnQLKhachHang.Size = new Size(325, 47);
+            btnQLKhachHang.TabIndex = 3;
+            btnQLKhachHang.Text = "             Danh Sách";
+            btnQLKhachHang.TextAlign = ContentAlignment.MiddleLeft;
+            btnQLKhachHang.UseVisualStyleBackColor = false;
+            // 
+            // KhoContainer
+            // 
+            KhoContainer.BackColor = Color.DeepSkyBlue;
+            KhoContainer.Controls.Add(panel1);
+            KhoContainer.Controls.Add(panel19);
+            KhoContainer.Controls.Add(panel5);
+            KhoContainer.Controls.Add(panel29);
+            KhoContainer.Controls.Add(panel27);
+            KhoContainer.Controls.Add(panel20);
+            KhoContainer.Controls.Add(panel28);
+            KhoContainer.Controls.Add(panel21);
+            KhoContainer.Controls.Add(panel22);
+            KhoContainer.Controls.Add(panel30);
+            KhoContainer.Controls.Add(panel23);
+            KhoContainer.Controls.Add(panel24);
+            KhoContainer.Controls.Add(panel25);
+            KhoContainer.Controls.Add(panel26);
+            KhoContainer.Location = new Point(3, 136);
+            KhoContainer.MaximumSize = new Size(287, 612);
+            KhoContainer.Name = "KhoContainer";
+            KhoContainer.Size = new Size(287, 41);
+            KhoContainer.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnQuanLyKho);
+            panel1.Location = new Point(0, 40);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(287, 36);
+            panel1.TabIndex = 17;
+            // 
+            // btnQuanLyKho
+            // 
+            btnQuanLyKho.BackColor = Color.DeepSkyBlue;
+            btnQuanLyKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQuanLyKho.ForeColor = Color.White;
+            btnQuanLyKho.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnQuanLyKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyKho.Location = new Point(-15, -4);
+            btnQuanLyKho.Name = "btnQuanLyKho";
+            btnQuanLyKho.Padding = new Padding(30, 0, 0, 0);
+            btnQuanLyKho.Size = new Size(338, 47);
+            btnQuanLyKho.TabIndex = 3;
+            btnQuanLyKho.Text = "             Quản Lý Kho";
+            btnQuanLyKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyKho.UseVisualStyleBackColor = false;
+            btnQuanLyKho.Click += btnQuanLyKho_Click;
+            // 
+            // panel19
+            // 
+            panel19.Controls.Add(btnDonHangOnline);
+            panel19.Location = new Point(0, 342);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(287, 36);
+            panel19.TabIndex = 11;
+            // 
+            // btnDonHangOnline
+            // 
+            btnDonHangOnline.BackColor = Color.DeepSkyBlue;
+            btnDonHangOnline.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDonHangOnline.ForeColor = Color.White;
+            btnDonHangOnline.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDonHangOnline.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDonHangOnline.Location = new Point(-15, -4);
+            btnDonHangOnline.Name = "btnDonHangOnline";
+            btnDonHangOnline.Padding = new Padding(30, 0, 0, 0);
+            btnDonHangOnline.Size = new Size(338, 47);
+            btnDonHangOnline.TabIndex = 3;
+            btnDonHangOnline.Text = "             Đơn Hàng Online";
+            btnDonHangOnline.TextAlign = ContentAlignment.MiddleLeft;
+            btnDonHangOnline.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(btnKiemTraHoaDonNhap);
+            panel5.Location = new Point(0, 573);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(287, 36);
+            panel5.TabIndex = 16;
+            // 
+            // btnKiemTraHoaDonNhap
+            // 
+            btnKiemTraHoaDonNhap.BackColor = Color.DeepSkyBlue;
+            btnKiemTraHoaDonNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKiemTraHoaDonNhap.ForeColor = Color.White;
+            btnKiemTraHoaDonNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnKiemTraHoaDonNhap.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKiemTraHoaDonNhap.Location = new Point(-15, -4);
+            btnKiemTraHoaDonNhap.Name = "btnKiemTraHoaDonNhap";
+            btnKiemTraHoaDonNhap.Padding = new Padding(30, 0, 0, 0);
+            btnKiemTraHoaDonNhap.Size = new Size(338, 47);
+            btnKiemTraHoaDonNhap.TabIndex = 3;
+            btnKiemTraHoaDonNhap.Text = "             Kiểm Tra Hoá Đơn Nhập";
+            btnKiemTraHoaDonNhap.TextAlign = ContentAlignment.MiddleLeft;
+            btnKiemTraHoaDonNhap.UseVisualStyleBackColor = false;
+            // 
+            // panel29
+            // 
+            panel29.Controls.Add(button13);
+            panel29.Location = new Point(0, 531);
+            panel29.Name = "panel29";
+            panel29.Size = new Size(287, 36);
+            panel29.TabIndex = 12;
+            // 
+            // button13
+            // 
+            button13.BackColor = Color.DeepSkyBlue;
+            button13.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button13.ForeColor = Color.White;
+            button13.Image = PosManager.Properties.Resources.icons8_circle_20;
+            button13.ImageAlign = ContentAlignment.MiddleLeft;
+            button13.Location = new Point(-15, -4);
+            button13.Name = "button13";
+            button13.Padding = new Padding(30, 0, 0, 0);
+            button13.Size = new Size(338, 47);
+            button13.TabIndex = 3;
+            button13.Text = "             Kiểm Tra Giá Nhập";
+            button13.TextAlign = ContentAlignment.MiddleLeft;
+            button13.UseVisualStyleBackColor = false;
+            // 
+            // panel27
+            // 
+            panel27.Controls.Add(btnLichSuPhieuNhap);
+            panel27.Location = new Point(0, 482);
+            panel27.Name = "panel27";
+            panel27.Size = new Size(287, 36);
+            panel27.TabIndex = 15;
+            // 
+            // btnLichSuPhieuNhap
+            // 
+            btnLichSuPhieuNhap.BackColor = Color.DeepSkyBlue;
+            btnLichSuPhieuNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLichSuPhieuNhap.ForeColor = Color.White;
+            btnLichSuPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnLichSuPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLichSuPhieuNhap.Location = new Point(-15, -4);
+            btnLichSuPhieuNhap.Name = "btnLichSuPhieuNhap";
+            btnLichSuPhieuNhap.Padding = new Padding(30, 0, 0, 0);
+            btnLichSuPhieuNhap.Size = new Size(326, 47);
+            btnLichSuPhieuNhap.TabIndex = 3;
+            btnLichSuPhieuNhap.Text = "             Lịch Sử Phiếu Nhập";
+            btnLichSuPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
+            btnLichSuPhieuNhap.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            panel20.Controls.Add(btnDonDatHangNCC);
+            panel20.Location = new Point(0, 258);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(287, 36);
+            panel20.TabIndex = 10;
+            // 
+            // btnDonDatHangNCC
+            // 
+            btnDonDatHangNCC.BackColor = Color.DeepSkyBlue;
+            btnDonDatHangNCC.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDonDatHangNCC.ForeColor = Color.White;
+            btnDonDatHangNCC.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDonDatHangNCC.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDonDatHangNCC.Location = new Point(-15, -4);
+            btnDonDatHangNCC.Name = "btnDonDatHangNCC";
+            btnDonDatHangNCC.Padding = new Padding(30, 0, 0, 0);
+            btnDonDatHangNCC.Size = new Size(326, 47);
+            btnDonDatHangNCC.TabIndex = 3;
+            btnDonDatHangNCC.Text = "             Đơn Đặt Hàng NCC";
+            btnDonDatHangNCC.TextAlign = ContentAlignment.MiddleLeft;
+            btnDonDatHangNCC.UseVisualStyleBackColor = false;
+            // 
+            // panel28
+            // 
+            panel28.Controls.Add(btnKiemPhieuNhap);
+            panel28.Location = new Point(3, 440);
+            panel28.Name = "panel28";
+            panel28.Size = new Size(287, 36);
+            panel28.TabIndex = 14;
+            // 
+            // btnKiemPhieuNhap
+            // 
+            btnKiemPhieuNhap.BackColor = Color.DeepSkyBlue;
+            btnKiemPhieuNhap.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKiemPhieuNhap.ForeColor = Color.White;
+            btnKiemPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnKiemPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKiemPhieuNhap.Location = new Point(-15, -4);
+            btnKiemPhieuNhap.Name = "btnKiemPhieuNhap";
+            btnKiemPhieuNhap.Padding = new Padding(30, 0, 0, 0);
+            btnKiemPhieuNhap.Size = new Size(326, 47);
+            btnKiemPhieuNhap.TabIndex = 3;
+            btnKiemPhieuNhap.Text = "             Kiểm Phiếu Nhập";
+            btnKiemPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
+            btnKiemPhieuNhap.UseVisualStyleBackColor = false;
+            // 
+            // panel21
+            // 
+            panel21.Controls.Add(btnChuyenKho);
+            panel21.Location = new Point(0, 209);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(287, 36);
+            panel21.TabIndex = 9;
+            // 
+            // btnChuyenKho
+            // 
+            btnChuyenKho.BackColor = Color.DeepSkyBlue;
+            btnChuyenKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChuyenKho.ForeColor = Color.White;
+            btnChuyenKho.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnChuyenKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnChuyenKho.Location = new Point(-15, -4);
+            btnChuyenKho.Name = "btnChuyenKho";
+            btnChuyenKho.Padding = new Padding(30, 0, 0, 0);
+            btnChuyenKho.Size = new Size(326, 47);
+            btnChuyenKho.TabIndex = 3;
+            btnChuyenKho.Text = "             Chuyển Kho";
+            btnChuyenKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnChuyenKho.UseVisualStyleBackColor = false;
+            // 
+            // panel22
+            // 
+            panel22.Controls.Add(btnKiemKho);
+            panel22.Location = new Point(0, 300);
+            panel22.Name = "panel22";
+            panel22.Size = new Size(287, 36);
+            panel22.TabIndex = 5;
+            // 
+            // btnKiemKho
+            // 
+            btnKiemKho.BackColor = Color.DeepSkyBlue;
+            btnKiemKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKiemKho.ForeColor = Color.White;
+            btnKiemKho.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnKiemKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKiemKho.Location = new Point(-15, -4);
+            btnKiemKho.Name = "btnKiemKho";
+            btnKiemKho.Padding = new Padding(30, 0, 0, 0);
+            btnKiemKho.Size = new Size(338, 47);
+            btnKiemKho.TabIndex = 3;
+            btnKiemKho.Text = "             Kiểm Kho";
+            btnKiemKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnKiemKho.UseVisualStyleBackColor = false;
+            // 
+            // panel30
+            // 
+            panel30.Controls.Add(btnQuanLyDate);
+            panel30.Location = new Point(3, 391);
+            panel30.Name = "panel30";
+            panel30.Size = new Size(287, 36);
+            panel30.TabIndex = 13;
+            // 
+            // btnQuanLyDate
+            // 
+            btnQuanLyDate.BackColor = Color.DeepSkyBlue;
+            btnQuanLyDate.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQuanLyDate.ForeColor = Color.White;
+            btnQuanLyDate.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnQuanLyDate.ImageAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyDate.Location = new Point(-15, -4);
+            btnQuanLyDate.Name = "btnQuanLyDate";
+            btnQuanLyDate.Padding = new Padding(30, 0, 0, 0);
+            btnQuanLyDate.Size = new Size(326, 47);
+            btnQuanLyDate.TabIndex = 3;
+            btnQuanLyDate.Text = "             Quản Lý Date";
+            btnQuanLyDate.TextAlign = ContentAlignment.MiddleLeft;
+            btnQuanLyDate.UseVisualStyleBackColor = false;
+            // 
+            // panel23
+            // 
+            panel23.Controls.Add(btnXuatKho);
+            panel23.Location = new Point(0, 167);
+            panel23.Name = "panel23";
+            panel23.Size = new Size(287, 36);
+            panel23.TabIndex = 8;
+            // 
+            // btnXuatKho
+            // 
+            btnXuatKho.BackColor = Color.DeepSkyBlue;
+            btnXuatKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXuatKho.ForeColor = Color.White;
+            btnXuatKho.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnXuatKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnXuatKho.Location = new Point(-15, -4);
+            btnXuatKho.Name = "btnXuatKho";
+            btnXuatKho.Padding = new Padding(30, 0, 0, 0);
+            btnXuatKho.Size = new Size(326, 47);
+            btnXuatKho.TabIndex = 3;
+            btnXuatKho.Text = "             Xuất Kho";
+            btnXuatKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnXuatKho.UseVisualStyleBackColor = false;
+            // 
+            // panel24
+            // 
+            panel24.Controls.Add(btnNhapKho);
+            panel24.Location = new Point(0, 123);
+            panel24.Name = "panel24";
+            panel24.Size = new Size(287, 36);
+            panel24.TabIndex = 7;
+            // 
+            // btnNhapKho
+            // 
+            btnNhapKho.BackColor = Color.DeepSkyBlue;
+            btnNhapKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNhapKho.ForeColor = Color.White;
+            btnNhapKho.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnNhapKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNhapKho.Location = new Point(-15, -4);
+            btnNhapKho.Name = "btnNhapKho";
+            btnNhapKho.Padding = new Padding(30, 0, 0, 0);
+            btnNhapKho.Size = new Size(341, 47);
+            btnNhapKho.TabIndex = 3;
+            btnNhapKho.Text = "             Nhập Kho";
+            btnNhapKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnNhapKho.UseVisualStyleBackColor = false;
+            // 
+            // panel25
+            // 
+            panel25.Controls.Add(btnKho);
+            panel25.Dock = DockStyle.Top;
+            panel25.Location = new Point(0, 0);
+            panel25.Name = "panel25";
+            panel25.Size = new Size(287, 46);
+            panel25.TabIndex = 5;
+            // 
+            // btnKho
+            // 
+            btnKho.BackColor = Color.FromArgb(89, 149, 206);
+            btnKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKho.ForeColor = Color.White;
+            btnKho.Image = (Image)resources.GetObject("btnKho.Image");
+            btnKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnKho.Location = new Point(-17, -6);
+            btnKho.Name = "btnKho";
+            btnKho.Padding = new Padding(30, 0, 0, 0);
+            btnKho.Size = new Size(319, 52);
+            btnKho.TabIndex = 3;
+            btnKho.Text = "             Kho";
+            btnKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnKho.UseVisualStyleBackColor = false;
+            btnKho.Click += btnKho_Click;
+            // 
+            // panel26
+            // 
+            panel26.Controls.Add(btnTonKho);
+            panel26.Location = new Point(0, 81);
+            panel26.Name = "panel26";
+            panel26.Size = new Size(287, 36);
+            panel26.TabIndex = 4;
+            // 
+            // btnTonKho
+            // 
+            btnTonKho.BackColor = Color.DeepSkyBlue;
+            btnTonKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTonKho.ForeColor = Color.White;
+            btnTonKho.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnTonKho.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTonKho.Location = new Point(-15, -4);
+            btnTonKho.Name = "btnTonKho";
+            btnTonKho.Padding = new Padding(30, 0, 0, 0);
+            btnTonKho.Size = new Size(326, 47);
+            btnTonKho.TabIndex = 3;
+            btnTonKho.Text = "             Tồn Kho";
+            btnTonKho.TextAlign = ContentAlignment.MiddleLeft;
+            btnTonKho.UseVisualStyleBackColor = false;
+            // 
+            // HangHoaContainer
+            // 
+            HangHoaContainer.BackColor = Color.DeepSkyBlue;
+            HangHoaContainer.Controls.Add(panel17);
+            HangHoaContainer.Controls.Add(panel10);
+            HangHoaContainer.Controls.Add(panel11);
+            HangHoaContainer.Controls.Add(panel12);
+            HangHoaContainer.Controls.Add(panel13);
+            HangHoaContainer.Controls.Add(panel14);
+            HangHoaContainer.Controls.Add(panel15);
+            HangHoaContainer.Controls.Add(panel16);
+            HangHoaContainer.Location = new Point(3, 279);
+            HangHoaContainer.MaximumSize = new Size(287, 345);
+            HangHoaContainer.MinimumSize = new Size(287, 41);
+            HangHoaContainer.Name = "HangHoaContainer";
+            HangHoaContainer.Size = new Size(287, 41);
+            HangHoaContainer.TabIndex = 7;
+            // 
+            // panel17
+            // 
+            panel17.Controls.Add(btnThongKeSanPhamDaBan);
+            panel17.Location = new Point(0, 306);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(287, 36);
+            panel17.TabIndex = 11;
+            // 
+            // btnThongKeSanPhamDaBan
+            // 
+            btnThongKeSanPhamDaBan.BackColor = Color.DeepSkyBlue;
+            btnThongKeSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThongKeSanPhamDaBan.ForeColor = Color.White;
+            btnThongKeSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnThongKeSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThongKeSanPhamDaBan.Location = new Point(-15, -4);
+            btnThongKeSanPhamDaBan.Name = "btnThongKeSanPhamDaBan";
+            btnThongKeSanPhamDaBan.Padding = new Padding(30, 0, 0, 0);
+            btnThongKeSanPhamDaBan.Size = new Size(338, 47);
+            btnThongKeSanPhamDaBan.TabIndex = 3;
+            btnThongKeSanPhamDaBan.Text = "             Thống Kê Đã Bán";
+            btnThongKeSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
+            btnThongKeSanPhamDaBan.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(btnTangGiaTheoNhom);
+            panel10.Location = new Point(0, 222);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(287, 36);
+            panel10.TabIndex = 10;
+            // 
+            // btnTangGiaTheoNhom
+            // 
+            btnTangGiaTheoNhom.BackColor = Color.DeepSkyBlue;
+            btnTangGiaTheoNhom.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTangGiaTheoNhom.ForeColor = Color.White;
+            btnTangGiaTheoNhom.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnTangGiaTheoNhom.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTangGiaTheoNhom.Location = new Point(-15, -4);
+            btnTangGiaTheoNhom.Name = "btnTangGiaTheoNhom";
+            btnTangGiaTheoNhom.Padding = new Padding(30, 0, 0, 0);
+            btnTangGiaTheoNhom.Size = new Size(326, 47);
+            btnTangGiaTheoNhom.TabIndex = 3;
+            btnTangGiaTheoNhom.Text = "             Tăng Giá Theo Nhóm";
+            btnTangGiaTheoNhom.TextAlign = ContentAlignment.MiddleLeft;
+            btnTangGiaTheoNhom.UseVisualStyleBackColor = false;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(btnBaoGiaHangHoa);
+            panel11.Location = new Point(0, 173);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(287, 36);
+            panel11.TabIndex = 9;
+            // 
+            // btnBaoGiaHangHoa
+            // 
+            btnBaoGiaHangHoa.BackColor = Color.DeepSkyBlue;
+            btnBaoGiaHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBaoGiaHangHoa.ForeColor = Color.White;
+            btnBaoGiaHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnBaoGiaHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBaoGiaHangHoa.Location = new Point(-15, -4);
+            btnBaoGiaHangHoa.Name = "btnBaoGiaHangHoa";
+            btnBaoGiaHangHoa.Padding = new Padding(30, 0, 0, 0);
+            btnBaoGiaHangHoa.Size = new Size(326, 47);
+            btnBaoGiaHangHoa.TabIndex = 3;
+            btnBaoGiaHangHoa.Text = "             Báo Giá";
+            btnBaoGiaHangHoa.TextAlign = ContentAlignment.MiddleLeft;
+            btnBaoGiaHangHoa.UseVisualStyleBackColor = false;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(btnLichSuSanPhamDaBan);
+            panel12.Location = new Point(0, 264);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(287, 36);
+            panel12.TabIndex = 5;
+            // 
+            // btnLichSuSanPhamDaBan
+            // 
+            btnLichSuSanPhamDaBan.BackColor = Color.DeepSkyBlue;
+            btnLichSuSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLichSuSanPhamDaBan.ForeColor = Color.White;
+            btnLichSuSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnLichSuSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLichSuSanPhamDaBan.Location = new Point(-15, -4);
+            btnLichSuSanPhamDaBan.Name = "btnLichSuSanPhamDaBan";
+            btnLichSuSanPhamDaBan.Padding = new Padding(30, 0, 0, 0);
+            btnLichSuSanPhamDaBan.Size = new Size(338, 47);
+            btnLichSuSanPhamDaBan.TabIndex = 3;
+            btnLichSuSanPhamDaBan.Text = "             Lịch Sử Đã Bán";
+            btnLichSuSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
+            btnLichSuSanPhamDaBan.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(btnIntemMaVach);
+            panel13.Location = new Point(0, 131);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(287, 36);
+            panel13.TabIndex = 8;
+            // 
+            // btnIntemMaVach
+            // 
+            btnIntemMaVach.BackColor = Color.DeepSkyBlue;
+            btnIntemMaVach.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnIntemMaVach.ForeColor = Color.White;
+            btnIntemMaVach.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnIntemMaVach.ImageAlign = ContentAlignment.MiddleLeft;
+            btnIntemMaVach.Location = new Point(-15, -4);
+            btnIntemMaVach.Name = "btnIntemMaVach";
+            btnIntemMaVach.Padding = new Padding(30, 0, 0, 0);
+            btnIntemMaVach.Size = new Size(326, 47);
+            btnIntemMaVach.TabIndex = 3;
+            btnIntemMaVach.Text = "             In Mã Vạch";
+            btnIntemMaVach.TextAlign = ContentAlignment.MiddleLeft;
+            btnIntemMaVach.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(btnDieuChinhGia);
+            panel14.Location = new Point(0, 87);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(287, 36);
+            panel14.TabIndex = 7;
+            // 
+            // btnDieuChinhGia
+            // 
+            btnDieuChinhGia.BackColor = Color.DeepSkyBlue;
+            btnDieuChinhGia.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDieuChinhGia.ForeColor = Color.White;
+            btnDieuChinhGia.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDieuChinhGia.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDieuChinhGia.Location = new Point(-15, -4);
+            btnDieuChinhGia.Name = "btnDieuChinhGia";
+            btnDieuChinhGia.Padding = new Padding(30, 0, 0, 0);
+            btnDieuChinhGia.Size = new Size(341, 47);
+            btnDieuChinhGia.TabIndex = 3;
+            btnDieuChinhGia.Text = "             Điều Chỉnh";
+            btnDieuChinhGia.TextAlign = ContentAlignment.MiddleLeft;
+            btnDieuChinhGia.UseVisualStyleBackColor = false;
+            // 
+            // panel15
+            // 
+            panel15.Controls.Add(btnHangHoa);
+            panel15.Dock = DockStyle.Top;
+            panel15.Location = new Point(0, 0);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(287, 39);
+            panel15.TabIndex = 5;
+            // 
+            // btnHangHoa
+            // 
+            btnHangHoa.BackColor = Color.FromArgb(89, 149, 206);
+            btnHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHangHoa.ForeColor = Color.White;
+            btnHangHoa.Image = (Image)resources.GetObject("btnHangHoa.Image");
+            btnHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHangHoa.Location = new Point(-17, -4);
+            btnHangHoa.Name = "btnHangHoa";
+            btnHangHoa.Padding = new Padding(30, 0, 0, 0);
+            btnHangHoa.Size = new Size(328, 53);
+            btnHangHoa.TabIndex = 3;
+            btnHangHoa.Text = "             Hàng Hoá";
+            btnHangHoa.TextAlign = ContentAlignment.MiddleLeft;
+            btnHangHoa.UseVisualStyleBackColor = false;
+            btnHangHoa.Click += btnHangHoa_Click;
+            // 
+            // panel16
+            // 
+            panel16.Controls.Add(btnDanhSachHangHoa);
+            panel16.Location = new Point(0, 45);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(287, 36);
+            panel16.TabIndex = 4;
+            // 
+            // btnDanhSachHangHoa
+            // 
+            btnDanhSachHangHoa.BackColor = Color.DeepSkyBlue;
+            btnDanhSachHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDanhSachHangHoa.ForeColor = Color.White;
+            btnDanhSachHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDanhSachHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDanhSachHangHoa.Location = new Point(-15, -4);
+            btnDanhSachHangHoa.Name = "btnDanhSachHangHoa";
+            btnDanhSachHangHoa.Padding = new Padding(30, 0, 0, 0);
+            btnDanhSachHangHoa.Size = new Size(326, 47);
+            btnDanhSachHangHoa.TabIndex = 3;
+            btnDanhSachHangHoa.Text = "             Danh Sách";
+            btnDanhSachHangHoa.TextAlign = ContentAlignment.MiddleLeft;
+            btnDanhSachHangHoa.UseVisualStyleBackColor = false;
             // 
             // KhachHangTimer
             // 
@@ -2372,7 +2405,7 @@
             // 
             timer1.Interval = 10;
             // 
-            // Form1
+            // fMain
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -2383,7 +2416,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
             MinimumSize = new Size(1640, 870);
-            Name = "Form1";
+            Name = "fMain";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             ShowIcon = false;
@@ -2401,39 +2434,6 @@
             pProfile.ResumeLayout(false);
             panel67.ResumeLayout(false);
             panel66.ResumeLayout(false);
-            flpMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbLogoMeXiu).EndInit();
-            KhachHangContainer.ResumeLayout(false);
-            panel9.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel34.ResumeLayout(false);
-            HangHoaContainer.ResumeLayout(false);
-            panel17.ResumeLayout(false);
-            panel10.ResumeLayout(false);
-            panel11.ResumeLayout(false);
-            panel12.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel14.ResumeLayout(false);
-            panel15.ResumeLayout(false);
-            panel16.ResumeLayout(false);
-            KhoContainer.ResumeLayout(false);
-            panel19.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel29.ResumeLayout(false);
-            panel27.ResumeLayout(false);
-            panel20.ResumeLayout(false);
-            panel28.ResumeLayout(false);
-            panel21.ResumeLayout(false);
-            panel22.ResumeLayout(false);
-            panel30.ResumeLayout(false);
-            panel23.ResumeLayout(false);
-            panel24.ResumeLayout(false);
-            panel25.ResumeLayout(false);
-            panel26.ResumeLayout(false);
             BaoCaoContainer.ResumeLayout(false);
             panel57.ResumeLayout(false);
             panel58.ResumeLayout(false);
@@ -2448,6 +2448,28 @@
             panel54.ResumeLayout(false);
             panel55.ResumeLayout(false);
             panel56.ResumeLayout(false);
+            CaiDatContainer.ResumeLayout(false);
+            panel64.ResumeLayout(false);
+            ChiNhanhContainer.ResumeLayout(false);
+            panel77.ResumeLayout(false);
+            PosContainer.ResumeLayout(false);
+            panel65.ResumeLayout(false);
+            ThuChiContainer.ResumeLayout(false);
+            panel73.ResumeLayout(false);
+            NhanVienContainer.ResumeLayout(false);
+            panel62.ResumeLayout(false);
+            panel44.ResumeLayout(false);
+            panel45.ResumeLayout(false);
+            panel46.ResumeLayout(false);
+            CongNoContainer.ResumeLayout(false);
+            panel48.ResumeLayout(false);
+            panel49.ResumeLayout(false);
+            panel50.ResumeLayout(false);
+            panel38.ResumeLayout(false);
+            panel43.ResumeLayout(false);
+            panel31.ResumeLayout(false);
+            panel32.ResumeLayout(false);
+            panel35.ResumeLayout(false);
             HoaDonContainer.ResumeLayout(false);
             panel63.ResumeLayout(false);
             panel3.ResumeLayout(false);
@@ -2458,28 +2480,40 @@
             panel40.ResumeLayout(false);
             panel41.ResumeLayout(false);
             panel42.ResumeLayout(false);
-            CongNoContainer.ResumeLayout(false);
-            panel48.ResumeLayout(false);
-            panel49.ResumeLayout(false);
-            panel50.ResumeLayout(false);
-            panel38.ResumeLayout(false);
-            panel43.ResumeLayout(false);
-            panel31.ResumeLayout(false);
-            panel32.ResumeLayout(false);
-            panel35.ResumeLayout(false);
-            NhanVienContainer.ResumeLayout(false);
-            panel62.ResumeLayout(false);
-            panel44.ResumeLayout(false);
-            panel45.ResumeLayout(false);
-            panel46.ResumeLayout(false);
-            ThuChiContainer.ResumeLayout(false);
-            panel73.ResumeLayout(false);
-            PosContainer.ResumeLayout(false);
-            panel65.ResumeLayout(false);
-            ChiNhanhContainer.ResumeLayout(false);
-            panel77.ResumeLayout(false);
-            CaiDatContainer.ResumeLayout(false);
-            panel64.ResumeLayout(false);
+            flpMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbLogoMeXiu).EndInit();
+            KhachHangContainer.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel34.ResumeLayout(false);
+            KhoContainer.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel29.ResumeLayout(false);
+            panel27.ResumeLayout(false);
+            panel20.ResumeLayout(false);
+            panel28.ResumeLayout(false);
+            panel21.ResumeLayout(false);
+            panel22.ResumeLayout(false);
+            panel30.ResumeLayout(false);
+            panel23.ResumeLayout(false);
+            panel24.ResumeLayout(false);
+            panel25.ResumeLayout(false);
+            panel26.ResumeLayout(false);
+            HangHoaContainer.ResumeLayout(false);
+            panel17.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel13.ResumeLayout(false);
+            panel14.ResumeLayout(false);
+            panel15.ResumeLayout(false);
+            panel16.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -2652,6 +2686,8 @@
         private System.Windows.Forms.Timer BaoCaoTimer;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
         private System.Windows.Forms.Timer timer1;
+        private Panel panel1;
+        private Button btnQuanLyKho;
     }
 }
 

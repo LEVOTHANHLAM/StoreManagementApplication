@@ -15,6 +15,15 @@
     <Compile Update="Forms\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\UserControls\ChiNhanh\fThemChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\KhachHang\fThemNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\Kho\fThemKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

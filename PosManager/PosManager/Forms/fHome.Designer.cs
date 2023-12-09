@@ -68,16 +68,16 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(panel1);
-            splitContainer1.Size = new Size(1334, 768);
-            splitContainer1.SplitterDistance = 143;
+            splitContainer1.Size = new Size(1318, 729);
+            splitContainer1.SplitterDistance = 135;
             splitContainer1.TabIndex = 0;
             // 
             // panel3
             // 
             panel3.Dock = DockStyle.Right;
-            panel3.Location = new Point(766, 0);
+            panel3.Location = new Point(750, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(568, 143);
+            panel3.Size = new Size(568, 135);
             panel3.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -89,7 +89,7 @@
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.MaximumSize = new Size(760, 143);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(760, 143);
+            flowLayoutPanel1.Size = new Size(760, 135);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // comboBox1
@@ -216,9 +216,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1318, 729);
             Controls.Add(splitContainer1);
             Name = "fHome";
-            Size = new Size(1334, 768);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();

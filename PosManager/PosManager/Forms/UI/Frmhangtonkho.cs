@@ -2762,5 +2762,15 @@ namespace PosManager.Forms.UI
 
         // Token: 0x0400104B RID: 4171
         private string mahoadon_suakho = "";
+
+        private void cobnhom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cob_kho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

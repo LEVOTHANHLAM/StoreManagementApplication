@@ -8857,7 +8857,7 @@ namespace PosManager.Forms.UI
             //                    {
             //                        if (this.txtmahang.Text.Trim().ToUpper() == this.dgvtimkiem.Rows[i].Cells["mahanghoa"].Value.ToString().Trim().ToUpper())
             //                        {
-            //                            this.tudonghanghoatheoma_endter();
+                                       this.tudonghanghoatheoma_endter();
             //                        }
             //                    }
             //                }

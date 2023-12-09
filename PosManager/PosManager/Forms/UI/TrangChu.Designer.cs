@@ -327,20 +327,20 @@ namespace PosManager.Forms.UI
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 90F));
-            tableLayoutPanel1.Size = new Size(1008, 710);
+            tableLayoutPanel1.Size = new Size(1612, 710);
             tableLayoutPanel1.TabIndex = 10;
             // 
             // menuchinh
             // 
             menuchinh.BackColor = Color.FromArgb(255, 255, 192);
             menuchinh.BackgroundImageLayout = ImageLayout.Stretch;
-            menuchinh.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            menuchinh.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuchinh.Items.AddRange(new ToolStripItem[] { hệThốngToolStripMenuItem, kháchHàngToolStripMenuItem, hàngHóaToolStripMenuItem, nhậpTồnKhoToolStripMenuItem, xuấtHóaĐơnToolStripMenuItem, Menucongno, menuthuchi, Menubaocao, chamcong_nv, Qrcode, Exit, Min, đơnHàngCôngNợToolStripMenuItem });
             menuchinh.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
             menuchinh.Location = new Point(2, 1);
             menuchinh.Name = "menuchinh";
             menuchinh.Padding = new Padding(5, 2, 0, 2);
-            menuchinh.Size = new Size(1005, 29);
+            menuchinh.Size = new Size(1609, 24);
             menuchinh.TabIndex = 4;
             menuchinh.MouseDoubleClick += menuchinh_MouseDoubleClick;
             // 
@@ -348,27 +348,27 @@ namespace PosManager.Forms.UI
             // 
             hệThốngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Menuthongtin, Menudoimatkhau, chọnMụcBánToolStripMenuItem, nhânViênToolStripMenuItem, nhânViênBánHàngToolStripMenuItem, phanquyen, ngàyBánHàngToolStripMenuItem, cậpNhậtSQLToolStripMenuItem, tínhTồnKhoToolStripMenuItem, sơĐồBánHàngToolStripMenuItem1, Menureset });
             hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            hệThốngToolStripMenuItem.Size = new Size(79, 25);
+            hệThốngToolStripMenuItem.Size = new Size(57, 20);
             hệThốngToolStripMenuItem.Text = "Cài Đặt";
             // 
             // Menuthongtin
             // 
             Menuthongtin.Name = "Menuthongtin";
-            Menuthongtin.Size = new Size(226, 26);
+            Menuthongtin.Size = new Size(181, 22);
             Menuthongtin.Text = "Cài đặt hóa đơn";
             Menuthongtin.Click += Menuthongtin_Click;
             // 
             // Menudoimatkhau
             // 
             Menudoimatkhau.Name = "Menudoimatkhau";
-            Menudoimatkhau.Size = new Size(226, 26);
+            Menudoimatkhau.Size = new Size(181, 22);
             Menudoimatkhau.Text = "Đổi mật khẩu";
             Menudoimatkhau.Click += Menudoimatkhau_Click;
             // 
             // chọnMụcBánToolStripMenuItem
             // 
             chọnMụcBánToolStripMenuItem.Name = "chọnMụcBánToolStripMenuItem";
-            chọnMụcBánToolStripMenuItem.Size = new Size(226, 26);
+            chọnMụcBánToolStripMenuItem.Size = new Size(181, 22);
             chọnMụcBánToolStripMenuItem.Text = "Chọn mục bán";
             chọnMụcBánToolStripMenuItem.Visible = false;
             chọnMụcBánToolStripMenuItem.Click += chọnMụcBánToolStripMenuItem_Click;
@@ -376,35 +376,35 @@ namespace PosManager.Forms.UI
             // nhânViênToolStripMenuItem
             // 
             nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            nhânViênToolStripMenuItem.Size = new Size(226, 26);
+            nhânViênToolStripMenuItem.Size = new Size(181, 22);
             nhânViênToolStripMenuItem.Text = "Nhân Viên";
             nhânViênToolStripMenuItem.Click += nhânViênToolStripMenuItem_Click;
             // 
             // nhânViênBánHàngToolStripMenuItem
             // 
             nhânViênBánHàngToolStripMenuItem.Name = "nhânViênBánHàngToolStripMenuItem";
-            nhânViênBánHàngToolStripMenuItem.Size = new Size(226, 26);
+            nhânViênBánHàngToolStripMenuItem.Size = new Size(181, 22);
             nhânViênBánHàngToolStripMenuItem.Text = "Nhân viên bán hàng";
             nhânViênBánHàngToolStripMenuItem.Click += nhânViênBánHàngToolStripMenuItem_Click;
             // 
             // phanquyen
             // 
             phanquyen.Name = "phanquyen";
-            phanquyen.Size = new Size(226, 26);
+            phanquyen.Size = new Size(181, 22);
             phanquyen.Text = "Phân Quyền";
             phanquyen.Click += phanquyen_Click;
             // 
             // ngàyBánHàngToolStripMenuItem
             // 
             ngàyBánHàngToolStripMenuItem.Name = "ngàyBánHàngToolStripMenuItem";
-            ngàyBánHàngToolStripMenuItem.Size = new Size(226, 26);
+            ngàyBánHàngToolStripMenuItem.Size = new Size(181, 22);
             ngàyBánHàngToolStripMenuItem.Text = "Ngày bán hàng";
             ngàyBánHàngToolStripMenuItem.Click += ngàyBánHàngToolStripMenuItem_Click;
             // 
             // cậpNhậtSQLToolStripMenuItem
             // 
             cậpNhậtSQLToolStripMenuItem.Name = "cậpNhậtSQLToolStripMenuItem";
-            cậpNhậtSQLToolStripMenuItem.Size = new Size(226, 26);
+            cậpNhậtSQLToolStripMenuItem.Size = new Size(181, 22);
             cậpNhậtSQLToolStripMenuItem.Text = "Thực hiện Lệnh";
             cậpNhậtSQLToolStripMenuItem.Click += cậpNhậtSQLToolStripMenuItem_Click;
             // 
@@ -413,14 +413,14 @@ namespace PosManager.Forms.UI
             tínhTồnKhoToolStripMenuItem.Checked = true;
             tínhTồnKhoToolStripMenuItem.CheckState = CheckState.Checked;
             tínhTồnKhoToolStripMenuItem.Name = "tínhTồnKhoToolStripMenuItem";
-            tínhTồnKhoToolStripMenuItem.Size = new Size(226, 26);
+            tínhTồnKhoToolStripMenuItem.Size = new Size(181, 22);
             tínhTồnKhoToolStripMenuItem.Text = "Tính tồn kho";
             tínhTồnKhoToolStripMenuItem.Click += tínhTồnKhoToolStripMenuItem_Click;
             // 
             // sơĐồBánHàngToolStripMenuItem1
             // 
             sơĐồBánHàngToolStripMenuItem1.Name = "sơĐồBánHàngToolStripMenuItem1";
-            sơĐồBánHàngToolStripMenuItem1.Size = new Size(226, 26);
+            sơĐồBánHàngToolStripMenuItem1.Size = new Size(181, 22);
             sơĐồBánHàngToolStripMenuItem1.Text = "Sơ đồ bán hàng";
             sơĐồBánHàngToolStripMenuItem1.Click += sơĐồBánHàngToolStripMenuItem1_Click;
             // 
@@ -428,21 +428,21 @@ namespace PosManager.Forms.UI
             // 
             Menureset.DropDownItems.AddRange(new ToolStripItem[] { xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem, xóaHếtDữLiệuToolStripMenuItem });
             Menureset.Name = "Menureset";
-            Menureset.Size = new Size(226, 26);
+            Menureset.Size = new Size(181, 22);
             Menureset.Text = "Reset Phần Mềm";
             Menureset.Click += Menureset_Click;
             // 
             // xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem
             // 
             xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem.Name = "xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem";
-            xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem.Size = new Size(338, 26);
+            xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem.Size = new Size(255, 22);
             xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem.Text = "Xóa báo cáo - nhập kho - công nợ";
             xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem.Click += xóaBáoCáoNhậpKhoCôngNợToolStripMenuItem_Click;
             // 
             // xóaHếtDữLiệuToolStripMenuItem
             // 
             xóaHếtDữLiệuToolStripMenuItem.Name = "xóaHếtDữLiệuToolStripMenuItem";
-            xóaHếtDữLiệuToolStripMenuItem.Size = new Size(338, 26);
+            xóaHếtDữLiệuToolStripMenuItem.Size = new Size(255, 22);
             xóaHếtDữLiệuToolStripMenuItem.Text = "Xóa hết dữ liệu";
             xóaHếtDữLiệuToolStripMenuItem.Click += xóaHếtDữLiệuToolStripMenuItem_Click;
             // 
@@ -450,61 +450,61 @@ namespace PosManager.Forms.UI
             // 
             kháchHàngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Menukhachhang, nhàPhânPhốiToolStripMenuItem, Menuchanhxe, gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem, báoSinhNhậtKháchHàngToolStripMenuItem, tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem, phânLoạiKháchHàngToolStripMenuItem, thôngTinKháchHàngTheoNhómToolStripMenuItem });
             kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            kháchHàngToolStripMenuItem.Size = new Size(114, 25);
+            kháchHàngToolStripMenuItem.Size = new Size(84, 20);
             kháchHàngToolStripMenuItem.Text = "Khách Hàng";
             // 
             // Menukhachhang
             // 
             Menukhachhang.Name = "Menukhachhang";
-            Menukhachhang.Size = new Size(368, 26);
+            Menukhachhang.Size = new Size(278, 22);
             Menukhachhang.Text = "Khách Hàng";
             Menukhachhang.Click += Menukhachhang_Click;
             // 
             // nhàPhânPhốiToolStripMenuItem
             // 
             nhàPhânPhốiToolStripMenuItem.Name = "nhàPhânPhốiToolStripMenuItem";
-            nhàPhânPhốiToolStripMenuItem.Size = new Size(368, 26);
+            nhàPhânPhốiToolStripMenuItem.Size = new Size(278, 22);
             nhàPhânPhốiToolStripMenuItem.Text = "Nhà Cung Cấp";
             nhàPhânPhốiToolStripMenuItem.Click += nhàPhânPhốiToolStripMenuItem_Click;
             // 
             // Menuchanhxe
             // 
             Menuchanhxe.Name = "Menuchanhxe";
-            Menuchanhxe.Size = new Size(368, 26);
+            Menuchanhxe.Size = new Size(278, 22);
             Menuchanhxe.Text = "Chành xe";
             // 
             // gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem
             // 
             gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem.Name = "gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem";
-            gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem.Size = new Size(368, 26);
+            gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem.Size = new Size(278, 22);
             gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem.Text = "Gửi tin nhắn SMS đến khách hàng";
             gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem.Click += gủiTinNhắnSMSĐếnKháchHàngToolStripMenuItem_Click;
             // 
             // báoSinhNhậtKháchHàngToolStripMenuItem
             // 
             báoSinhNhậtKháchHàngToolStripMenuItem.Name = "báoSinhNhậtKháchHàngToolStripMenuItem";
-            báoSinhNhậtKháchHàngToolStripMenuItem.Size = new Size(368, 26);
+            báoSinhNhậtKháchHàngToolStripMenuItem.Size = new Size(278, 22);
             báoSinhNhậtKháchHàngToolStripMenuItem.Text = "Báo sinh nhật khách hàng";
             báoSinhNhậtKháchHàngToolStripMenuItem.Click += báoSinhNhậtKháchHàngToolStripMenuItem_Click;
             // 
             // tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem
             // 
             tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem.Name = "tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem";
-            tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem.Size = new Size(368, 26);
+            tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem.Size = new Size(278, 22);
             tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem.Text = "Tiếp nhận và xử lý yêu cầu khách hàng";
             tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem.Click += tiếpNhậnVàXửLýYêuCầuKháchHàngToolStripMenuItem_Click;
             // 
             // phânLoạiKháchHàngToolStripMenuItem
             // 
             phânLoạiKháchHàngToolStripMenuItem.Name = "phânLoạiKháchHàngToolStripMenuItem";
-            phânLoạiKháchHàngToolStripMenuItem.Size = new Size(368, 26);
+            phânLoạiKháchHàngToolStripMenuItem.Size = new Size(278, 22);
             phânLoạiKháchHàngToolStripMenuItem.Text = "Phân loại khách hàng";
             phânLoạiKháchHàngToolStripMenuItem.Click += phânLoạiKháchHàngToolStripMenuItem_Click;
             // 
             // thôngTinKháchHàngTheoNhómToolStripMenuItem
             // 
             thôngTinKháchHàngTheoNhómToolStripMenuItem.Name = "thôngTinKháchHàngTheoNhómToolStripMenuItem";
-            thôngTinKháchHàngTheoNhómToolStripMenuItem.Size = new Size(368, 26);
+            thôngTinKháchHàngTheoNhómToolStripMenuItem.Size = new Size(278, 22);
             thôngTinKháchHàngTheoNhómToolStripMenuItem.Text = "Thông tin khách hàng theo nhóm";
             thôngTinKháchHàngTheoNhómToolStripMenuItem.Click += thôngTinKháchHàngTheoNhómToolStripMenuItem_Click;
             // 
@@ -512,42 +512,42 @@ namespace PosManager.Forms.UI
             // 
             hàngHóaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { Menutenhang, inMãVạchToolStripMenuItem, bảngBáoGiaToolStripMenuItem, tăngGiáĐồngLoạtHàngHáoToolStripMenuItem, tênNguyênLiệuToolStripMenuItem, địnhMứcNguyênLiệuToolStripMenuItem });
             hàngHóaToolStripMenuItem.Name = "hàngHóaToolStripMenuItem";
-            hàngHóaToolStripMenuItem.Size = new Size(97, 25);
+            hàngHóaToolStripMenuItem.Size = new Size(73, 20);
             hàngHóaToolStripMenuItem.Text = "Hàng Hóa";
             // 
             // Menutenhang
             // 
             Menutenhang.ForeColor = Color.Navy;
             Menutenhang.Name = "Menutenhang";
-            Menutenhang.Size = new Size(291, 26);
+            Menutenhang.Size = new Size(225, 22);
             Menutenhang.Text = "Tên hàng hóa";
             Menutenhang.Click += Menutenhang_Click;
             // 
             // inMãVạchToolStripMenuItem
             // 
             inMãVạchToolStripMenuItem.Name = "inMãVạchToolStripMenuItem";
-            inMãVạchToolStripMenuItem.Size = new Size(291, 26);
+            inMãVạchToolStripMenuItem.Size = new Size(225, 22);
             inMãVạchToolStripMenuItem.Text = "In tem mã vạch";
             inMãVạchToolStripMenuItem.Click += inMãVạchToolStripMenuItem_Click;
             // 
             // bảngBáoGiaToolStripMenuItem
             // 
             bảngBáoGiaToolStripMenuItem.Name = "bảngBáoGiaToolStripMenuItem";
-            bảngBáoGiaToolStripMenuItem.Size = new Size(291, 26);
+            bảngBáoGiaToolStripMenuItem.Size = new Size(225, 22);
             bảngBáoGiaToolStripMenuItem.Text = "Bảng báo gia";
             bảngBáoGiaToolStripMenuItem.Click += bảngBáoGiaToolStripMenuItem_Click;
             // 
             // tăngGiáĐồngLoạtHàngHáoToolStripMenuItem
             // 
             tăngGiáĐồngLoạtHàngHáoToolStripMenuItem.Name = "tăngGiáĐồngLoạtHàngHáoToolStripMenuItem";
-            tăngGiáĐồngLoạtHàngHáoToolStripMenuItem.Size = new Size(291, 26);
+            tăngGiáĐồngLoạtHàngHáoToolStripMenuItem.Size = new Size(225, 22);
             tăngGiáĐồngLoạtHàngHáoToolStripMenuItem.Text = "Tăng giá đồng loạt hàng hóa";
             tăngGiáĐồngLoạtHàngHáoToolStripMenuItem.Click += tăngGiáĐồngLoạtHàngHáoToolStripMenuItem_Click;
             // 
             // tênNguyênLiệuToolStripMenuItem
             // 
             tênNguyênLiệuToolStripMenuItem.Name = "tênNguyênLiệuToolStripMenuItem";
-            tênNguyênLiệuToolStripMenuItem.Size = new Size(291, 26);
+            tênNguyênLiệuToolStripMenuItem.Size = new Size(225, 22);
             tênNguyênLiệuToolStripMenuItem.Text = "Tên Nguyên Liệu";
             tênNguyênLiệuToolStripMenuItem.Visible = false;
             tênNguyênLiệuToolStripMenuItem.Click += tênNguyênLiệuToolStripMenuItem_Click;
@@ -555,7 +555,7 @@ namespace PosManager.Forms.UI
             // địnhMứcNguyênLiệuToolStripMenuItem
             // 
             địnhMứcNguyênLiệuToolStripMenuItem.Name = "địnhMứcNguyênLiệuToolStripMenuItem";
-            địnhMứcNguyênLiệuToolStripMenuItem.Size = new Size(291, 26);
+            địnhMứcNguyênLiệuToolStripMenuItem.Size = new Size(225, 22);
             địnhMứcNguyênLiệuToolStripMenuItem.Text = "Định mức nguyên liệu";
             địnhMứcNguyênLiệuToolStripMenuItem.Visible = false;
             địnhMứcNguyênLiệuToolStripMenuItem.Click += địnhMứcNguyênLiệuToolStripMenuItem_Click;
@@ -564,41 +564,41 @@ namespace PosManager.Forms.UI
             // 
             nhậpTồnKhoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tồnKhoToolStripMenuItem, nhậpKhoToolStripMenuItem1, xuấtKhoToolStripMenuItem, xuấtHủyKhoHàngToolStripMenuItem, chuyểnKhoToolStripMenuItem, nhậpKhoNguyênLiệuToolStripMenuItem, xuấtKhoNguyênLiệuToolStripMenuItem, cảnhBáoKhoHàngToolStripMenuItem });
             nhậpTồnKhoToolStripMenuItem.Name = "nhậpTồnKhoToolStripMenuItem";
-            nhậpTồnKhoToolStripMenuItem.Size = new Size(98, 25);
+            nhậpTồnKhoToolStripMenuItem.Size = new Size(72, 20);
             nhậpTồnKhoToolStripMenuItem.Text = "Kho Hàng";
             // 
             // tồnKhoToolStripMenuItem
             // 
             tồnKhoToolStripMenuItem.Name = "tồnKhoToolStripMenuItem";
-            tồnKhoToolStripMenuItem.Size = new Size(252, 26);
+            tồnKhoToolStripMenuItem.Size = new Size(197, 22);
             tồnKhoToolStripMenuItem.Text = "Tồn Kho";
             tồnKhoToolStripMenuItem.Click += tồnKhoToolStripMenuItem_Click;
             // 
             // nhậpKhoToolStripMenuItem1
             // 
             nhậpKhoToolStripMenuItem1.Name = "nhậpKhoToolStripMenuItem1";
-            nhậpKhoToolStripMenuItem1.Size = new Size(252, 26);
+            nhậpKhoToolStripMenuItem1.Size = new Size(197, 22);
             nhậpKhoToolStripMenuItem1.Text = "Nhập kho hàng hóa";
             nhậpKhoToolStripMenuItem1.Click += nhậpKhoToolStripMenuItem1_Click;
             // 
             // xuấtKhoToolStripMenuItem
             // 
             xuấtKhoToolStripMenuItem.Name = "xuấtKhoToolStripMenuItem";
-            xuấtKhoToolStripMenuItem.Size = new Size(252, 26);
+            xuấtKhoToolStripMenuItem.Size = new Size(197, 22);
             xuấtKhoToolStripMenuItem.Text = "Xuất Kho hàng hóa";
             xuấtKhoToolStripMenuItem.Click += xuấtKhoToolStripMenuItem_Click;
             // 
             // xuấtHủyKhoHàngToolStripMenuItem
             // 
             xuấtHủyKhoHàngToolStripMenuItem.Name = "xuấtHủyKhoHàngToolStripMenuItem";
-            xuấtHủyKhoHàngToolStripMenuItem.Size = new Size(252, 26);
+            xuấtHủyKhoHàngToolStripMenuItem.Size = new Size(197, 22);
             xuấtHủyKhoHàngToolStripMenuItem.Text = "Xuất hủy kho hàng hóa";
             xuấtHủyKhoHàngToolStripMenuItem.Click += xuấtHủyKhoHàngToolStripMenuItem_Click;
             // 
             // chuyểnKhoToolStripMenuItem
             // 
             chuyểnKhoToolStripMenuItem.Name = "chuyểnKhoToolStripMenuItem";
-            chuyểnKhoToolStripMenuItem.Size = new Size(252, 26);
+            chuyểnKhoToolStripMenuItem.Size = new Size(197, 22);
             chuyểnKhoToolStripMenuItem.Text = "Chuyển kho";
             chuyểnKhoToolStripMenuItem.Visible = false;
             chuyểnKhoToolStripMenuItem.Click += chuyểnKhoToolStripMenuItem_Click;
@@ -606,7 +606,7 @@ namespace PosManager.Forms.UI
             // nhậpKhoNguyênLiệuToolStripMenuItem
             // 
             nhậpKhoNguyênLiệuToolStripMenuItem.Name = "nhậpKhoNguyênLiệuToolStripMenuItem";
-            nhậpKhoNguyênLiệuToolStripMenuItem.Size = new Size(252, 26);
+            nhậpKhoNguyênLiệuToolStripMenuItem.Size = new Size(197, 22);
             nhậpKhoNguyênLiệuToolStripMenuItem.Text = "Nhập kho nguyên liệu";
             nhậpKhoNguyênLiệuToolStripMenuItem.Visible = false;
             nhậpKhoNguyênLiệuToolStripMenuItem.Click += nhậpKhoNguyênLiệuToolStripMenuItem_Click;
@@ -614,7 +614,7 @@ namespace PosManager.Forms.UI
             // xuấtKhoNguyênLiệuToolStripMenuItem
             // 
             xuấtKhoNguyênLiệuToolStripMenuItem.Name = "xuấtKhoNguyênLiệuToolStripMenuItem";
-            xuấtKhoNguyênLiệuToolStripMenuItem.Size = new Size(252, 26);
+            xuấtKhoNguyênLiệuToolStripMenuItem.Size = new Size(197, 22);
             xuấtKhoNguyênLiệuToolStripMenuItem.Text = "Xuất hủy nguyên liệu";
             xuấtKhoNguyênLiệuToolStripMenuItem.Visible = false;
             xuấtKhoNguyênLiệuToolStripMenuItem.Click += xuấtKhoNguyênLiệuToolStripMenuItem_Click;
@@ -622,14 +622,14 @@ namespace PosManager.Forms.UI
             // cảnhBáoKhoHàngToolStripMenuItem
             // 
             cảnhBáoKhoHàngToolStripMenuItem.Name = "cảnhBáoKhoHàngToolStripMenuItem";
-            cảnhBáoKhoHàngToolStripMenuItem.Size = new Size(252, 26);
+            cảnhBáoKhoHàngToolStripMenuItem.Size = new Size(197, 22);
             cảnhBáoKhoHàngToolStripMenuItem.Text = "Cảnh báo kho";
             cảnhBáoKhoHàngToolStripMenuItem.Click += cảnhBáoKhoHàngToolStripMenuItem_Click;
             // 
             // xuấtHóaĐơnToolStripMenuItem
             // 
             xuấtHóaĐơnToolStripMenuItem.Name = "xuấtHóaĐơnToolStripMenuItem";
-            xuấtHóaĐơnToolStripMenuItem.Size = new Size(91, 25);
+            xuấtHóaĐơnToolStripMenuItem.Size = new Size(66, 20);
             xuấtHóaĐơnToolStripMenuItem.Text = "Hóa Đơn";
             xuấtHóaĐơnToolStripMenuItem.Click += xuấtHóaĐơnToolStripMenuItem_Click;
             // 
@@ -637,55 +637,55 @@ namespace PosManager.Forms.UI
             // 
             Menucongno.DropDownItems.AddRange(new ToolStripItem[] { Menuchitietcongno, cnphaitra, côngNợĐầuKỳToolStripMenuItem, quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem, quảnLýMượnHàngToolStripMenuItem, duyệtPhiếuChiToolStripMenuItem });
             Menucongno.Name = "Menucongno";
-            Menucongno.Size = new Size(91, 25);
+            Menucongno.Size = new Size(67, 20);
             Menucongno.Text = "Công Nợ";
             // 
             // Menuchitietcongno
             // 
             Menuchitietcongno.Name = "Menuchitietcongno";
-            Menuchitietcongno.Size = new Size(342, 26);
+            Menuchitietcongno.Size = new Size(261, 22);
             Menuchitietcongno.Text = "Công nợ phải thu của khách hàng";
             Menuchitietcongno.Click += Menuchitietcongno_Click;
             // 
             // cnphaitra
             // 
             cnphaitra.Name = "cnphaitra";
-            cnphaitra.Size = new Size(342, 26);
+            cnphaitra.Size = new Size(261, 22);
             cnphaitra.Text = "Công nợ phải trả cho nhà cung cấp";
             cnphaitra.Click += cnphaitra_Click;
             // 
             // côngNợĐầuKỳToolStripMenuItem
             // 
             côngNợĐầuKỳToolStripMenuItem.Name = "côngNợĐầuKỳToolStripMenuItem";
-            côngNợĐầuKỳToolStripMenuItem.Size = new Size(342, 26);
+            côngNợĐầuKỳToolStripMenuItem.Size = new Size(261, 22);
             côngNợĐầuKỳToolStripMenuItem.Text = "Công nợ đầu kỳ";
             côngNợĐầuKỳToolStripMenuItem.Click += côngNợĐầuKỳToolStripMenuItem_Click;
             // 
             // quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem
             // 
             quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem.Name = "quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem";
-            quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem.Size = new Size(342, 26);
+            quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem.Size = new Size(261, 22);
             quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem.Text = "Quản lý đơn hàng nhập công nợ";
             quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem.Click += quảnLýĐơnHàngNhậpCôngNợToolStripMenuItem_Click;
             // 
             // quảnLýMượnHàngToolStripMenuItem
             // 
             quảnLýMượnHàngToolStripMenuItem.Name = "quảnLýMượnHàngToolStripMenuItem";
-            quảnLýMượnHàngToolStripMenuItem.Size = new Size(342, 26);
+            quảnLýMượnHàngToolStripMenuItem.Size = new Size(261, 22);
             quảnLýMượnHàngToolStripMenuItem.Text = "Quản lý mượn hàng";
             quảnLýMượnHàngToolStripMenuItem.Click += quảnLýMượnHàngToolStripMenuItem_Click;
             // 
             // duyệtPhiếuChiToolStripMenuItem
             // 
             duyệtPhiếuChiToolStripMenuItem.Name = "duyệtPhiếuChiToolStripMenuItem";
-            duyệtPhiếuChiToolStripMenuItem.Size = new Size(342, 26);
+            duyệtPhiếuChiToolStripMenuItem.Size = new Size(261, 22);
             duyệtPhiếuChiToolStripMenuItem.Text = "Duyệt phiếu chi";
             duyệtPhiếuChiToolStripMenuItem.Click += duyệtPhiếuChiToolStripMenuItem_Click;
             // 
             // menuthuchi
             // 
             menuthuchi.Name = "menuthuchi";
-            menuthuchi.Size = new Size(83, 25);
+            menuthuchi.Size = new Size(60, 20);
             menuthuchi.Text = "Thu Chi";
             menuthuchi.Click += menuthuchi_Click;
             // 
@@ -693,70 +693,70 @@ namespace PosManager.Forms.UI
             // 
             Menubaocao.DropDownItems.AddRange(new ToolStripItem[] { báoCáoBánHàngToolStripMenuItem, báoCáoĐiểmToolStripMenuItem, báoCáoTiềnTíchLũyToolStripMenuItem, báoCáoTheoNhómHàngToolStripMenuItem, sổQuỹTiềnMặtToolStripMenuItem, mt_khachhangdattop, kháchHàngĐạtTOPNămToolStripMenuItem });
             Menubaocao.Name = "Menubaocao";
-            Menubaocao.Size = new Size(88, 25);
+            Menubaocao.Size = new Size(63, 20);
             Menubaocao.Text = "Báo Cáo";
             Menubaocao.Click += Menubaocao_Click;
             // 
             // báoCáoBánHàngToolStripMenuItem
             // 
             báoCáoBánHàngToolStripMenuItem.Name = "báoCáoBánHàngToolStripMenuItem";
-            báoCáoBánHàngToolStripMenuItem.Size = new Size(282, 26);
+            báoCáoBánHàngToolStripMenuItem.Size = new Size(215, 22);
             báoCáoBánHàngToolStripMenuItem.Text = "Báo cáo bán hàng";
             báoCáoBánHàngToolStripMenuItem.Click += báoCáoBánHàngToolStripMenuItem_Click;
             // 
             // báoCáoĐiểmToolStripMenuItem
             // 
             báoCáoĐiểmToolStripMenuItem.Name = "báoCáoĐiểmToolStripMenuItem";
-            báoCáoĐiểmToolStripMenuItem.Size = new Size(282, 26);
+            báoCáoĐiểmToolStripMenuItem.Size = new Size(215, 22);
             báoCáoĐiểmToolStripMenuItem.Text = "Báo cáo điểm";
             báoCáoĐiểmToolStripMenuItem.Click += báoCáoĐiểmToolStripMenuItem_Click;
             // 
             // báoCáoTiềnTíchLũyToolStripMenuItem
             // 
             báoCáoTiềnTíchLũyToolStripMenuItem.Name = "báoCáoTiềnTíchLũyToolStripMenuItem";
-            báoCáoTiềnTíchLũyToolStripMenuItem.Size = new Size(282, 26);
+            báoCáoTiềnTíchLũyToolStripMenuItem.Size = new Size(215, 22);
             báoCáoTiềnTíchLũyToolStripMenuItem.Text = "Báo cáo tiền tích lũy";
             báoCáoTiềnTíchLũyToolStripMenuItem.Click += báoCáoTiềnTíchLũyToolStripMenuItem_Click;
             // 
             // báoCáoTheoNhómHàngToolStripMenuItem
             // 
             báoCáoTheoNhómHàngToolStripMenuItem.Name = "báoCáoTheoNhómHàngToolStripMenuItem";
-            báoCáoTheoNhómHàngToolStripMenuItem.Size = new Size(282, 26);
+            báoCáoTheoNhómHàngToolStripMenuItem.Size = new Size(215, 22);
             báoCáoTheoNhómHàngToolStripMenuItem.Text = "Báo cáo theo nhóm hàng";
             báoCáoTheoNhómHàngToolStripMenuItem.Click += báoCáoTheoNhómHàngToolStripMenuItem_Click;
             // 
             // sổQuỹTiềnMặtToolStripMenuItem
             // 
             sổQuỹTiềnMặtToolStripMenuItem.Name = "sổQuỹTiềnMặtToolStripMenuItem";
-            sổQuỹTiềnMặtToolStripMenuItem.Size = new Size(282, 26);
+            sổQuỹTiềnMặtToolStripMenuItem.Size = new Size(215, 22);
             sổQuỹTiềnMặtToolStripMenuItem.Text = "Sổ quỹ tiền mặt";
             sổQuỹTiềnMặtToolStripMenuItem.Click += sổQuỹTiềnMặtToolStripMenuItem_Click;
             // 
             // mt_khachhangdattop
             // 
             mt_khachhangdattop.Name = "mt_khachhangdattop";
-            mt_khachhangdattop.Size = new Size(282, 26);
+            mt_khachhangdattop.Size = new Size(215, 22);
             mt_khachhangdattop.Text = "Khách hàng đạt TOP tháng";
             mt_khachhangdattop.Click += mt_khachhangdattop_Click;
             // 
             // kháchHàngĐạtTOPNămToolStripMenuItem
             // 
             kháchHàngĐạtTOPNămToolStripMenuItem.Name = "kháchHàngĐạtTOPNămToolStripMenuItem";
-            kháchHàngĐạtTOPNămToolStripMenuItem.Size = new Size(282, 26);
+            kháchHàngĐạtTOPNămToolStripMenuItem.Size = new Size(215, 22);
             kháchHàngĐạtTOPNămToolStripMenuItem.Text = "Khách hàng đạt TOP năm";
             kháchHàngĐạtTOPNămToolStripMenuItem.Click += kháchHàngĐạtTOPNămToolStripMenuItem_Click;
             // 
             // chamcong_nv
             // 
             chamcong_nv.Name = "chamcong_nv";
-            chamcong_nv.Size = new Size(112, 25);
+            chamcong_nv.Size = new Size(83, 20);
             chamcong_nv.Text = "Chấm Công";
             chamcong_nv.Click += chamcong_nv_Click;
             // 
             // Qrcode
             // 
             Qrcode.Name = "Qrcode";
-            Qrcode.Size = new Size(101, 25);
+            Qrcode.Size = new Size(73, 20);
             Qrcode.Text = "Công Việc";
             Qrcode.Click += Qrcode_Click;
             // 
@@ -766,7 +766,7 @@ namespace PosManager.Forms.UI
             Exit.BackColor = Color.Red;
             Exit.ForeColor = Color.White;
             Exit.Name = "Exit";
-            Exit.Size = new Size(35, 25);
+            Exit.Size = new Size(26, 20);
             Exit.Text = "X";
             Exit.Click += Exit_Click;
             // 
@@ -776,14 +776,14 @@ namespace PosManager.Forms.UI
             Min.BackColor = Color.White;
             Min.ForeColor = Color.Black;
             Min.Name = "Min";
-            Min.Size = new Size(34, 25);
+            Min.Size = new Size(29, 20);
             Min.Text = "--";
             Min.Click += Min_Click;
             // 
             // đơnHàngCôngNợToolStripMenuItem
             // 
             đơnHàngCôngNợToolStripMenuItem.Name = "đơnHàngCôngNợToolStripMenuItem";
-            đơnHàngCôngNợToolStripMenuItem.Size = new Size(161, 25);
+            đơnHàngCôngNợToolStripMenuItem.Size = new Size(113, 20);
             đơnHàngCôngNợToolStripMenuItem.Text = "Quản Lý Công Nợ";
             đơnHàngCôngNợToolStripMenuItem.Click += đơnHàngCôngNợToolStripMenuItem_Click;
             // 
@@ -798,7 +798,7 @@ namespace PosManager.Forms.UI
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(999, 541);
+            tableLayoutPanel2.Size = new Size(1603, 541);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // panel6
@@ -856,7 +856,7 @@ namespace PosManager.Forms.UI
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(993, 535);
+            panel6.Size = new Size(1597, 535);
             panel6.TabIndex = 31;
             // 
             // button10
@@ -885,7 +885,7 @@ namespace PosManager.Forms.UI
             ptangqua.Controls.Add(button24);
             ptangqua.Controls.Add(txttangqua);
             ptangqua.Controls.Add(label1);
-            ptangqua.Location = new Point(429, 66);
+            ptangqua.Location = new Point(1071, 186);
             ptangqua.Name = "ptangqua";
             ptangqua.Size = new Size(468, 314);
             ptangqua.TabIndex = 10028;
@@ -1008,7 +1008,7 @@ namespace PosManager.Forms.UI
             bt_tangqua.FlatStyle = FlatStyle.Flat;
             bt_tangqua.Font = new Font("Times New Roman", 13F, FontStyle.Regular, GraphicsUnit.Point);
             bt_tangqua.ForeColor = Color.Black;
-            bt_tangqua.Location = new Point(428, 0);
+            bt_tangqua.Location = new Point(431, -1);
             bt_tangqua.Name = "bt_tangqua";
             bt_tangqua.Size = new Size(79, 62);
             bt_tangqua.TabIndex = 10021;
@@ -1090,7 +1090,7 @@ namespace PosManager.Forms.UI
             dataGridViewCellStyle14.SelectionForeColor = Color.MidnightBlue;
             dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
             dgvhanghoa.DefaultCellStyle = dataGridViewCellStyle14;
-            dgvhanghoa.Location = new Point(0, 134);
+            dgvhanghoa.Location = new Point(-63, 389);
             dgvhanghoa.Name = "dgvhanghoa";
             dgvhanghoa.RowHeadersVisible = false;
             dgvhanghoa.RowHeadersWidth = 4;
@@ -1098,7 +1098,7 @@ namespace PosManager.Forms.UI
             dgvhanghoa.RowsDefaultCellStyle = dataGridViewCellStyle15;
             dgvhanghoa.RowTemplate.Height = 38;
             dgvhanghoa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvhanghoa.Size = new Size(972, 404);
+            dgvhanghoa.Size = new Size(1576, 404);
             dgvhanghoa.TabIndex = 10;
             dgvhanghoa.CellClick += dgvhanghoa_CellClick;
             dgvhanghoa.CellContentClick += dgvhanghoa_CellContentClick;
@@ -1320,7 +1320,7 @@ namespace PosManager.Forms.UI
             ptlogo.BackColor = Color.FromArgb(192, 255, 192);
             ptlogo.BackgroundImageLayout = ImageLayout.None;
             ptlogo.BorderStyle = BorderStyle.FixedSingle;
-            ptlogo.Location = new Point(692, 256);
+            ptlogo.Location = new Point(1296, 256);
             ptlogo.Name = "ptlogo";
             ptlogo.Size = new Size(279, 279);
             ptlogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1456,7 +1456,7 @@ namespace PosManager.Forms.UI
             btluu.FlatStyle = FlatStyle.Flat;
             btluu.Font = new Font("Times New Roman", 16.8F, FontStyle.Bold, GraphicsUnit.Point);
             btluu.ForeColor = Color.White;
-            btluu.Location = new Point(878, 66);
+            btluu.Location = new Point(1482, 66);
             btluu.Name = "btluu";
             btluu.Size = new Size(94, 65);
             btluu.TabIndex = 3;
@@ -1587,16 +1587,16 @@ namespace PosManager.Forms.UI
             cobloai.BackColor = Color.White;
             cobloai.DropDownStyle = ComboBoxStyle.DropDownList;
             cobloai.FormattingEnabled = true;
-            cobloai.Location = new Point(11, 57);
+            cobloai.Location = new Point(82, 244);
             cobloai.Name = "cobloai";
-            cobloai.Size = new Size(0, 23);
+            cobloai.Size = new Size(604, 27);
             cobloai.TabIndex = 16;
             // 
             // txtdiachi
             // 
             txtdiachi.AllowDrop = true;
             txtdiachi.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            txtdiachi.Location = new Point(937, 48);
+            txtdiachi.Location = new Point(937, 74);
             txtdiachi.Multiline = true;
             txtdiachi.Name = "txtdiachi";
             txtdiachi.ScrollBars = ScrollBars.Horizontal;
@@ -1712,7 +1712,7 @@ namespace PosManager.Forms.UI
             dgvtimkiem.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvtimkiem.ColumnHeadersVisible = false;
             dgvtimkiem.Columns.AddRange(new DataGridViewColumn[] { mahanghoa, ten, dongia1, GIA_2, sl_ton, gia_von, Ban });
-            dgvtimkiem.Location = new Point(0, 102);
+            dgvtimkiem.Location = new Point(115, 137);
             dgvtimkiem.Name = "dgvtimkiem";
             dgvtimkiem.ReadOnly = true;
             dgvtimkiem.RowHeadersVisible = false;
@@ -1984,7 +1984,7 @@ namespace PosManager.Forms.UI
             dgvtimkhachhang.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 224, 192);
             dgvtimkhachhang.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgvtimkhachhang.RowTemplate.Height = 45;
-            dgvtimkhachhang.Size = new Size(465, 472);
+            dgvtimkhachhang.Size = new Size(1069, 472);
             dgvtimkhachhang.TabIndex = 10003;
             dgvtimkhachhang.Visible = false;
             dgvtimkhachhang.CellClick += dgvtimkhachhang_CellClick;
@@ -2090,7 +2090,7 @@ namespace PosManager.Forms.UI
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(999, 84);
+            tableLayoutPanel4.Size = new Size(1603, 84);
             tableLayoutPanel4.TabIndex = 3;
             // 
             // panel1
@@ -2277,9 +2277,9 @@ namespace PosManager.Forms.UI
             panel2.Controls.Add(textBox12);
             panel2.Controls.Add(txtthoilai);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(340, 3);
+            panel2.Location = new Point(620, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(308, 78);
+            panel2.Size = new Size(632, 78);
             panel2.TabIndex = 3;
             // 
             // button1
@@ -2294,7 +2294,7 @@ namespace PosManager.Forms.UI
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(205, 1);
+            button1.Location = new Point(529, 1);
             button1.Name = "button1";
             button1.Size = new Size(92, 79);
             button1.TabIndex = 6;
@@ -2390,7 +2390,7 @@ namespace PosManager.Forms.UI
             btghino.FlatStyle = FlatStyle.Flat;
             btghino.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btghino.ForeColor = Color.White;
-            btghino.Location = new Point(763, 3);
+            btghino.Location = new Point(1367, 3);
             btghino.MaximumSize = new Size(136, 79);
             btghino.MinimumSize = new Size(36, 79);
             btghino.Name = "btghino";
@@ -2407,7 +2407,7 @@ namespace PosManager.Forms.UI
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(70, 3);
             panel5.Name = "panel5";
-            panel5.Size = new Size(264, 78);
+            panel5.Size = new Size(544, 78);
             panel5.TabIndex = 11;
             // 
             // txtbangchu
@@ -2447,7 +2447,7 @@ namespace PosManager.Forms.UI
             btthanhtoan.FlatStyle = FlatStyle.Flat;
             btthanhtoan.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btthanhtoan.ForeColor = Color.White;
-            btthanhtoan.Location = new Point(872, 3);
+            btthanhtoan.Location = new Point(1476, 3);
             btthanhtoan.MaximumSize = new Size(168, 79);
             btthanhtoan.MinimumSize = new Size(68, 79);
             btthanhtoan.Name = "btthanhtoan";
@@ -2464,7 +2464,7 @@ namespace PosManager.Forms.UI
             btmoket.FlatStyle = FlatStyle.Flat;
             btmoket.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btmoket.ForeColor = Color.White;
-            btmoket.Location = new Point(654, 3);
+            btmoket.Location = new Point(1258, 3);
             btmoket.MaximumSize = new Size(106, 79);
             btmoket.MinimumSize = new Size(6, 79);
             btmoket.Name = "btmoket";
@@ -2491,7 +2491,7 @@ namespace PosManager.Forms.UI
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 1;
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel9.Size = new Size(999, 31);
+            tableLayoutPanel9.Size = new Size(1603, 31);
             tableLayoutPanel9.TabIndex = 2;
             // 
             // panel3
@@ -2751,7 +2751,7 @@ namespace PosManager.Forms.UI
             btnhanvien.FlatAppearance.MouseOverBackColor = Color.Yellow;
             btnhanvien.FlatStyle = FlatStyle.Flat;
             btnhanvien.ForeColor = Color.Blue;
-            btnhanvien.Location = new Point(1328, 1);
+            btnhanvien.Location = new Point(1932, 1);
             btnhanvien.Name = "btnhanvien";
             btnhanvien.Size = new Size(176, 29);
             btnhanvien.TabIndex = 1;
@@ -2800,7 +2800,7 @@ namespace PosManager.Forms.UI
             AutoSize = true;
             BackColor = Color.FromArgb(0, 192, 192);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1008, 710);
+            ClientSize = new Size(1612, 710);
             ControlBox = false;
             Controls.Add(btnhanvien);
             Controls.Add(tableLayoutPanel1);
