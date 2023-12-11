@@ -8,6 +8,6 @@ namespace PosManager.APIServices
 {
     public static class Constant
     {
-        public static string DomainAPI = "https://qnibot.com/api";
+        public static string DomainAPI = "https://localhost:5000";
     }
 }

@@ -837,6 +837,7 @@
             btnCaiDat.Text = "             Cài Đặt";
             btnCaiDat.TextAlign = ContentAlignment.MiddleLeft;
             btnCaiDat.UseVisualStyleBackColor = false;
+            btnCaiDat.Click += btnCaiDat_Click;
             // 
             // ChiNhanhContainer
             // 
@@ -881,7 +882,7 @@
             PosContainer.BackColor = Color.LightBlue;
             PosContainer.Controls.Add(panel65);
             PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            PosContainer.Location = new Point(3, 467);
+            PosContainer.Location = new Point(3, 420);
             PosContainer.MaximumSize = new Size(287, 41);
             PosContainer.MinimumSize = new Size(287, 41);
             PosContainer.Name = "PosContainer";
@@ -919,7 +920,7 @@
             ThuChiContainer.BackColor = Color.LightBlue;
             ThuChiContainer.Controls.Add(panel73);
             ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ThuChiContainer.Location = new Point(3, 420);
+            ThuChiContainer.Location = new Point(3, 326);
             ThuChiContainer.MaximumSize = new Size(287, 41);
             ThuChiContainer.MinimumSize = new Size(287, 41);
             ThuChiContainer.Name = "ThuChiContainer";
@@ -958,7 +959,7 @@
             NhanVienContainer.Controls.Add(panel44);
             NhanVienContainer.Controls.Add(panel45);
             NhanVienContainer.Controls.Add(panel46);
-            NhanVienContainer.Location = new Point(3, 373);
+            NhanVienContainer.Location = new Point(3, 232);
             NhanVienContainer.MaximumSize = new Size(287, 167);
             NhanVienContainer.MinimumSize = new Size(287, 41);
             NhanVienContainer.Name = "NhanVienContainer";
@@ -1074,7 +1075,7 @@
             CongNoContainer.Controls.Add(panel31);
             CongNoContainer.Controls.Add(panel32);
             CongNoContainer.Controls.Add(panel35);
-            CongNoContainer.Location = new Point(3, 326);
+            CongNoContainer.Location = new Point(3, 279);
             CongNoContainer.MaximumSize = new Size(287, 337);
             CongNoContainer.MinimumSize = new Size(287, 41);
             CongNoContainer.Name = "CongNoContainer";
@@ -1287,7 +1288,7 @@
             HoaDonContainer.Controls.Add(panel40);
             HoaDonContainer.Controls.Add(panel41);
             HoaDonContainer.Controls.Add(panel42);
-            HoaDonContainer.Location = new Point(3, 232);
+            HoaDonContainer.Location = new Point(3, 467);
             HoaDonContainer.MaximumSize = new Size(287, 379);
             HoaDonContainer.MinimumSize = new Size(287, 41);
             HoaDonContainer.Name = "HoaDonContainer";
@@ -1519,12 +1520,12 @@
             flpMain.Controls.Add(KhachHangContainer);
             flpMain.Controls.Add(KhoContainer);
             flpMain.Controls.Add(BaoCaoContainer);
-            flpMain.Controls.Add(HoaDonContainer);
-            flpMain.Controls.Add(HangHoaContainer);
-            flpMain.Controls.Add(CongNoContainer);
             flpMain.Controls.Add(NhanVienContainer);
+            flpMain.Controls.Add(CongNoContainer);
             flpMain.Controls.Add(ThuChiContainer);
+            flpMain.Controls.Add(HangHoaContainer);
             flpMain.Controls.Add(PosContainer);
+            flpMain.Controls.Add(HoaDonContainer);
             flpMain.Controls.Add(ChiNhanhContainer);
             flpMain.Controls.Add(CaiDatContainer);
             flpMain.Dock = DockStyle.Left;
@@ -1758,6 +1759,7 @@
             KhoContainer.Controls.Add(panel26);
             KhoContainer.Location = new Point(3, 136);
             KhoContainer.MaximumSize = new Size(287, 612);
+            KhoContainer.MinimumSize = new Size(287, 41);
             KhoContainer.Name = "KhoContainer";
             KhoContainer.Size = new Size(287, 41);
             KhoContainer.TabIndex = 8;
@@ -2112,7 +2114,7 @@
             HangHoaContainer.Controls.Add(panel14);
             HangHoaContainer.Controls.Add(panel15);
             HangHoaContainer.Controls.Add(panel16);
-            HangHoaContainer.Location = new Point(3, 279);
+            HangHoaContainer.Location = new Point(3, 373);
             HangHoaContainer.MaximumSize = new Size(287, 345);
             HangHoaContainer.MinimumSize = new Size(287, 41);
             HangHoaContainer.Name = "HangHoaContainer";
@@ -2330,7 +2332,7 @@
             // 
             // MenuTimer
             // 
-            MenuTimer.Interval = 10;
+            MenuTimer.Interval = 1;
             MenuTimer.Tick += MenuTimer_Tick;
             // 
             // HieuUngTimer

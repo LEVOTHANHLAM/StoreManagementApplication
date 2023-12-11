@@ -352,5 +352,13 @@ namespace Krypton_toolKitDemo
             pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(pOSUserControl);
         }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            FunctionsUserControl functionsUser = new FunctionsUserControl();
+            functionsUser.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(functionsUser);
+        }
     }
 }
