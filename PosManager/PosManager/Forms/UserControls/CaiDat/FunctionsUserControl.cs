@@ -1,18 +1,9 @@
-﻿using Krypton_toolKitDemo;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using Krypton_toolKitDemo;
 using PosManager.APIServices.CaiDat;
 using PosManager.Helper;
 using PosManager.Model;
 using Serilog;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PosManager.Forms.UserControls.KhachHang
 {
@@ -32,8 +23,9 @@ namespace PosManager.Forms.UserControls.KhachHang
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemNhaCungCap themNhaCungCap = new fThemNhaCungCap();
-            themNhaCungCap.ShowDialog();
+            fThemFunctions them = new fThemFunctions(null, null);
+            them.ShowDialog();
+            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
 
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
@@ -44,11 +36,12 @@ namespace PosManager.Forms.UserControls.KhachHang
         {
             try
             {
-                if(searchString == "Tìm kiếm")
+                if (searchString == "Tìm Kiếm")
                 {
                     searchString = "";
                 }
                 var accounts = await _systemFunctionsController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);
+                dtgvAccount.Rows.Clear();
                 if (accounts != null && accounts.StatusCode == 200 && accounts.Data.Result.Count > 0)
                 {
                     Total = accounts.Data.Total;
@@ -56,7 +49,7 @@ namespace PosManager.Forms.UserControls.KhachHang
 
                     dtgvAccount.Invoke((MethodInvoker)delegate
                     {
-                        dtgvAccount.Rows.Clear();
+
                         int i = 1;
                         foreach (var a in accounts.Data.Result)
                         {
@@ -81,17 +74,17 @@ namespace PosManager.Forms.UserControls.KhachHang
         {
             try
             {
-                lbThongBaoSoTrang.Text = $" Hiển thị từ {cbbCuonTrang.Text} đến {row} trong tổng số {Total} mục";
+                int startItem = (currentPage - 1) * pageSize + 1; // Số thứ tự bắt đầu
+                int endItem = Math.Min(currentPage * pageSize, Total); // Số thứ tự kết thúc
+
+                lbThongBaoSoTrang.Text = $" Hiển thị từ {startItem} đến {endItem} trong tổng số {Total} mục";
                 // Disable nút Previous khi ở trang đầu tiên
                 btnQuayLaiTrang.Enabled = currentPage > 1;
-
                 // Disable nút Next khi ở trang cuối cùng
                 btnTiepTucTrang.Enabled = currentPage < totalPages;
-
                 // Tính toán và hiển thị các nút trang
                 // Ví dụ: Button 1 là trang trước đó của trang hiện tại
                 btnTrang1.Enabled = currentPage != 1;
-
                 // Button 2 là trang trước trang hiện tại
                 btnTrang2.Visible = totalPages > 1;
                 btnTrang2.Enabled = currentPage != 2;
@@ -99,11 +92,9 @@ namespace PosManager.Forms.UserControls.KhachHang
                 // Button 3 là trang sau trang hiện tại
                 btnTrang3.Visible = totalPages > 2;
                 btnTrang3.Enabled = currentPage != totalPages;
-
                 // Button 11 là trang sau trang tiếp theo của trang hiện tại
                 label3.Visible = totalPages > 4;
                 btnTrangCuoi.Visible = totalPages > 3;
-               
                 btnTrangCuoi.Enabled = currentPage < totalPages;
                 btnTrangCuoi.Text = totalPages.ToString();
             }
@@ -132,8 +123,11 @@ namespace PosManager.Forms.UserControls.KhachHang
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                fThemNhaCungCap themNhaCungCap = new fThemNhaCungCap();
+                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
+                fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
                 themNhaCungCap.ShowDialog();
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             }
         }
 
@@ -279,7 +273,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             {
                 currentPage--;
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-                DisplayDataOnCurrentPage();
             }
         }
 
@@ -289,7 +282,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             {
                 currentPage++;
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-                DisplayDataOnCurrentPage();
             }
         }
 
@@ -299,7 +291,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             {
                 currentPage = 1;
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-                DisplayDataOnCurrentPage();
             }
         }
 
@@ -309,7 +300,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             {
                 currentPage = 2;
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-                DisplayDataOnCurrentPage();
             }
         }
 
@@ -319,7 +309,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             {
                 currentPage = 3;
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-                DisplayDataOnCurrentPage();
             }
         }
 
@@ -329,7 +318,38 @@ namespace PosManager.Forms.UserControls.KhachHang
             {
                 currentPage = totalPages;
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-                DisplayDataOnCurrentPage();
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            //currentPage = 1;
+            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ExportHelper.ExportStringDataFromDataGridViewToExcel(dtgvAccount);
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            var listDelete = GetListSelect();
+            if (listDelete.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa {listDelete.Count} dữ liệu này không?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    foreach (var item in listDelete)
+                    {
+                        var accounts = await _systemFunctionsController.Delete(GlobalModel.AccsessToken, item);
+                    }
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
+            }
+            else
+            {
+                MessageCommon.ShowMessageBox("Vui lòng chọn dữ liệu cần xóa", 4);
             }
         }
     }

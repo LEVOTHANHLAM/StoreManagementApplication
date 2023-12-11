@@ -121,7 +121,7 @@
             txtUsername.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtUsername.StateCommon.Border.Rounding = 18;
             txtUsername.StateCommon.Content.Color1 = Color.Gray;
-            txtUsername.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtUsername.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtUsername.TabIndex = 2;
             // 
@@ -138,7 +138,7 @@
             txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtPassword.StateCommon.Border.Rounding = 18;
             txtPassword.StateCommon.Content.Color1 = Color.Gray;
-            txtPassword.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtPassword.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtPassword.TabIndex = 3;
             txtPassword.UseSystemPasswordChar = true;
@@ -315,15 +315,15 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private Label label1;
+        private Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUsername;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private Label label3;
+        private Label label4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnQuenMatKhau;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private PictureBox pictureBox1;
     }
 }
 

@@ -17,6 +17,7 @@ namespace PosManager.APIServices.User
             try
             {
                 Log.Information($"Start: {nameof(AuthenticateController)}, params; {nameof(Login)},username; {username}, password; {password}");
+
                 string url = Constant.DomainAPI + "/api/Authenticate/login";
                 HttpClient httpClient = new HttpClient();
                 var requestData = new { username = username, password = password };

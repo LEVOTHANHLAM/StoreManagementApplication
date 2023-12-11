@@ -32,6 +32,9 @@ namespace PosManager.Forms.UserControls.KhachHang
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionsUserControl));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             txtSearch = new PlaceholderTextBox();
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
@@ -98,7 +101,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtSearch.TabIndex = 3;
-            txtSearch.Text = "Tìm kiếm";
+            txtSearch.Text = "Tìm Kiếm";
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // splitContainer1
             // 
@@ -192,6 +196,7 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnExport.TabIndex = 9;
             btnExport.Values.Image = (Image)resources.GetObject("btnExport.Values.Image");
             btnExport.Values.Text = "Xuất File";
+            btnExport.Click += btnExport_Click;
             // 
             // btnDelete
             // 
@@ -246,6 +251,7 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnDelete.TabIndex = 10;
             btnDelete.Values.Image = (Image)resources.GetObject("btnDelete.Values.Image");
             btnDelete.Values.Text = "Xoá";
+            btnDelete.Click += btnDelete_Click;
             // 
             // panel1
             // 
@@ -340,7 +346,7 @@ namespace PosManager.Forms.UserControls.KhachHang
             cbbCuonTrang.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
-            cbbCuonTrang.Items.AddRange(new object[] { "1", "2", "3", "100" });
+            cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
             cbbCuonTrang.Location = new Point(58, 56);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
@@ -379,9 +385,9 @@ namespace PosManager.Forms.UserControls.KhachHang
             flowLayoutPanel1.Controls.Add(btnTrangCuoi);
             flowLayoutPanel1.Controls.Add(btnTiepTucTrang);
             flowLayoutPanel1.Dock = DockStyle.Right;
-            flowLayoutPanel1.Location = new Point(875, 0);
+            flowLayoutPanel1.Location = new Point(967, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(459, 42);
+            flowLayoutPanel1.Size = new Size(367, 42);
             flowLayoutPanel1.TabIndex = 19;
             // 
             // btnQuayLaiTrang
@@ -389,23 +395,23 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnQuayLaiTrang.Enabled = false;
             btnQuayLaiTrang.Location = new Point(3, 3);
             btnQuayLaiTrang.Name = "btnQuayLaiTrang";
-            btnQuayLaiTrang.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnQuayLaiTrang.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
+            btnQuayLaiTrang.OverrideDefault.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.OverrideDefault.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnQuayLaiTrang.OverrideDefault.Back.ColorAngle = 45F;
-            btnQuayLaiTrang.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnQuayLaiTrang.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnQuayLaiTrang.OverrideDefault.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.OverrideDefault.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnQuayLaiTrang.OverrideDefault.Border.ColorAngle = 45F;
             btnQuayLaiTrang.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnQuayLaiTrang.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnQuayLaiTrang.OverrideDefault.Border.Rounding = 18;
             btnQuayLaiTrang.OverrideDefault.Border.Width = 1;
             btnQuayLaiTrang.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnQuayLaiTrang.Size = new Size(83, 35);
-            btnQuayLaiTrang.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnQuayLaiTrang.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnQuayLaiTrang.Size = new Size(46, 35);
+            btnQuayLaiTrang.StateCommon.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.StateCommon.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnQuayLaiTrang.StateCommon.Back.ColorAngle = 45F;
-            btnQuayLaiTrang.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnQuayLaiTrang.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnQuayLaiTrang.StateCommon.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.StateCommon.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnQuayLaiTrang.StateCommon.Border.ColorAngle = 45F;
             btnQuayLaiTrang.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnQuayLaiTrang.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -414,8 +420,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnQuayLaiTrang.StateCommon.Content.ShortText.Color1 = Color.White;
             btnQuayLaiTrang.StateCommon.Content.ShortText.Color2 = Color.White;
             btnQuayLaiTrang.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnQuayLaiTrang.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnQuayLaiTrang.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.StatePressed.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnQuayLaiTrang.StatePressed.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnQuayLaiTrang.StatePressed.Back.ColorAngle = 130F;
             btnQuayLaiTrang.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
             btnQuayLaiTrang.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
@@ -423,42 +429,42 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnQuayLaiTrang.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnQuayLaiTrang.StatePressed.Border.Rounding = 18;
             btnQuayLaiTrang.StatePressed.Border.Width = 1;
-            btnQuayLaiTrang.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnQuayLaiTrang.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnQuayLaiTrang.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnQuayLaiTrang.StateTracking.Back.ColorAngle = 45F;
-            btnQuayLaiTrang.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnQuayLaiTrang.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnQuayLaiTrang.StateTracking.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnQuayLaiTrang.StateTracking.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnQuayLaiTrang.StateTracking.Border.ColorAngle = 45F;
             btnQuayLaiTrang.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnQuayLaiTrang.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnQuayLaiTrang.StateTracking.Border.Rounding = 18;
             btnQuayLaiTrang.StateTracking.Border.Width = 1;
             btnQuayLaiTrang.TabIndex = 10;
-            btnQuayLaiTrang.Values.Text = "Lùi";
+            btnQuayLaiTrang.Values.Text = "<";
             btnQuayLaiTrang.Click += btnQuayLaiTrang_Click;
             // 
             // btnTrang1
             // 
             btnTrang1.Enabled = false;
-            btnTrang1.Location = new Point(92, 3);
+            btnTrang1.Location = new Point(55, 3);
             btnTrang1.Name = "btnTrang1";
-            btnTrang1.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang1.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang1.OverrideDefault.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang1.OverrideDefault.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang1.OverrideDefault.Back.ColorAngle = 45F;
-            btnTrang1.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang1.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang1.OverrideDefault.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang1.OverrideDefault.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang1.OverrideDefault.Border.ColorAngle = 45F;
             btnTrang1.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang1.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnTrang1.OverrideDefault.Border.Rounding = 18;
             btnTrang1.OverrideDefault.Border.Width = 1;
             btnTrang1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnTrang1.Size = new Size(52, 35);
-            btnTrang1.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang1.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnTrang1.Size = new Size(36, 35);
+            btnTrang1.StateCommon.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang1.StateCommon.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang1.StateCommon.Back.ColorAngle = 45F;
-            btnTrang1.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang1.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang1.StateCommon.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang1.StateCommon.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang1.StateCommon.Border.ColorAngle = 45F;
             btnTrang1.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -467,8 +473,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrang1.StateCommon.Content.ShortText.Color1 = Color.White;
             btnTrang1.StateCommon.Content.ShortText.Color2 = Color.White;
             btnTrang1.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTrang1.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrang1.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrang1.StatePressed.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrang1.StatePressed.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrang1.StatePressed.Back.ColorAngle = 130F;
             btnTrang1.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
             btnTrang1.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
@@ -476,8 +482,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrang1.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang1.StatePressed.Border.Rounding = 18;
             btnTrang1.StatePressed.Border.Width = 1;
-            btnTrang1.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrang1.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrang1.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrang1.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrang1.StateTracking.Back.ColorAngle = 45F;
             btnTrang1.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
             btnTrang1.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
@@ -492,25 +498,25 @@ namespace PosManager.Forms.UserControls.KhachHang
             // 
             // btnTrang2
             // 
-            btnTrang2.Location = new Point(150, 3);
+            btnTrang2.Location = new Point(97, 3);
             btnTrang2.Name = "btnTrang2";
-            btnTrang2.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang2.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang2.OverrideDefault.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang2.OverrideDefault.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang2.OverrideDefault.Back.ColorAngle = 45F;
-            btnTrang2.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang2.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang2.OverrideDefault.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang2.OverrideDefault.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang2.OverrideDefault.Border.ColorAngle = 45F;
             btnTrang2.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang2.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnTrang2.OverrideDefault.Border.Rounding = 18;
             btnTrang2.OverrideDefault.Border.Width = 1;
             btnTrang2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnTrang2.Size = new Size(52, 35);
-            btnTrang2.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang2.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnTrang2.Size = new Size(36, 35);
+            btnTrang2.StateCommon.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang2.StateCommon.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang2.StateCommon.Back.ColorAngle = 45F;
-            btnTrang2.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang2.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang2.StateCommon.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang2.StateCommon.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang2.StateCommon.Border.ColorAngle = 45F;
             btnTrang2.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -519,8 +525,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrang2.StateCommon.Content.ShortText.Color1 = Color.White;
             btnTrang2.StateCommon.Content.ShortText.Color2 = Color.White;
             btnTrang2.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTrang2.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrang2.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrang2.StatePressed.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrang2.StatePressed.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrang2.StatePressed.Back.ColorAngle = 130F;
             btnTrang2.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
             btnTrang2.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
@@ -528,8 +534,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrang2.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang2.StatePressed.Border.Rounding = 18;
             btnTrang2.StatePressed.Border.Width = 1;
-            btnTrang2.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrang2.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrang2.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrang2.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrang2.StateTracking.Back.ColorAngle = 45F;
             btnTrang2.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
             btnTrang2.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
@@ -545,25 +551,25 @@ namespace PosManager.Forms.UserControls.KhachHang
             // 
             // btnTrang3
             // 
-            btnTrang3.Location = new Point(208, 3);
+            btnTrang3.Location = new Point(139, 3);
             btnTrang3.Name = "btnTrang3";
-            btnTrang3.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang3.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang3.OverrideDefault.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang3.OverrideDefault.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang3.OverrideDefault.Back.ColorAngle = 45F;
-            btnTrang3.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang3.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang3.OverrideDefault.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang3.OverrideDefault.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang3.OverrideDefault.Border.ColorAngle = 45F;
             btnTrang3.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang3.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnTrang3.OverrideDefault.Border.Rounding = 18;
             btnTrang3.OverrideDefault.Border.Width = 1;
             btnTrang3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnTrang3.Size = new Size(52, 35);
-            btnTrang3.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang3.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnTrang3.Size = new Size(39, 35);
+            btnTrang3.StateCommon.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang3.StateCommon.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang3.StateCommon.Back.ColorAngle = 45F;
-            btnTrang3.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrang3.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrang3.StateCommon.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrang3.StateCommon.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrang3.StateCommon.Border.ColorAngle = 45F;
             btnTrang3.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -572,8 +578,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrang3.StateCommon.Content.ShortText.Color1 = Color.White;
             btnTrang3.StateCommon.Content.ShortText.Color2 = Color.White;
             btnTrang3.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTrang3.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrang3.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrang3.StatePressed.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrang3.StatePressed.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrang3.StatePressed.Back.ColorAngle = 130F;
             btnTrang3.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
             btnTrang3.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
@@ -581,8 +587,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrang3.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrang3.StatePressed.Border.Rounding = 18;
             btnTrang3.StatePressed.Border.Width = 1;
-            btnTrang3.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrang3.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrang3.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrang3.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrang3.StateTracking.Back.ColorAngle = 45F;
             btnTrang3.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
             btnTrang3.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
@@ -599,35 +605,35 @@ namespace PosManager.Forms.UserControls.KhachHang
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(266, 0);
+            label3.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(184, 0);
             label3.Name = "label3";
-            label3.Size = new Size(30, 26);
+            label3.Size = new Size(39, 36);
             label3.TabIndex = 18;
             label3.Text = "...";
             label3.Visible = false;
             // 
             // btnTrangCuoi
             // 
-            btnTrangCuoi.Location = new Point(302, 3);
+            btnTrangCuoi.Location = new Point(229, 3);
             btnTrangCuoi.Name = "btnTrangCuoi";
-            btnTrangCuoi.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrangCuoi.OverrideDefault.Back.Color1 = Color.FromArgb(64, 64, 64);
             btnTrangCuoi.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
             btnTrangCuoi.OverrideDefault.Back.ColorAngle = 45F;
-            btnTrangCuoi.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrangCuoi.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrangCuoi.OverrideDefault.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrangCuoi.OverrideDefault.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrangCuoi.OverrideDefault.Border.ColorAngle = 45F;
             btnTrangCuoi.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrangCuoi.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnTrangCuoi.OverrideDefault.Border.Rounding = 18;
             btnTrangCuoi.OverrideDefault.Border.Width = 1;
             btnTrangCuoi.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnTrangCuoi.Size = new Size(52, 35);
-            btnTrangCuoi.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrangCuoi.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnTrangCuoi.Size = new Size(40, 35);
+            btnTrangCuoi.StateCommon.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrangCuoi.StateCommon.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTrangCuoi.StateCommon.Back.ColorAngle = 45F;
-            btnTrangCuoi.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTrangCuoi.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTrangCuoi.StateCommon.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTrangCuoi.StateCommon.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTrangCuoi.StateCommon.Border.ColorAngle = 45F;
             btnTrangCuoi.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrangCuoi.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -636,8 +642,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrangCuoi.StateCommon.Content.ShortText.Color1 = Color.White;
             btnTrangCuoi.StateCommon.Content.ShortText.Color2 = Color.White;
             btnTrangCuoi.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTrangCuoi.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrangCuoi.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrangCuoi.StatePressed.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrangCuoi.StatePressed.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrangCuoi.StatePressed.Back.ColorAngle = 130F;
             btnTrangCuoi.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
             btnTrangCuoi.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
@@ -645,8 +651,8 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTrangCuoi.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTrangCuoi.StatePressed.Border.Rounding = 18;
             btnTrangCuoi.StatePressed.Border.Width = 1;
-            btnTrangCuoi.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTrangCuoi.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTrangCuoi.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTrangCuoi.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTrangCuoi.StateTracking.Back.ColorAngle = 45F;
             btnTrangCuoi.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
             btnTrangCuoi.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
@@ -663,25 +669,25 @@ namespace PosManager.Forms.UserControls.KhachHang
             // btnTiepTucTrang
             // 
             btnTiepTucTrang.Enabled = false;
-            btnTiepTucTrang.Location = new Point(360, 3);
+            btnTiepTucTrang.Location = new Point(275, 3);
             btnTiepTucTrang.Name = "btnTiepTucTrang";
-            btnTiepTucTrang.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTiepTucTrang.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
+            btnTiepTucTrang.OverrideDefault.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTiepTucTrang.OverrideDefault.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTiepTucTrang.OverrideDefault.Back.ColorAngle = 45F;
-            btnTiepTucTrang.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTiepTucTrang.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTiepTucTrang.OverrideDefault.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTiepTucTrang.OverrideDefault.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTiepTucTrang.OverrideDefault.Border.ColorAngle = 45F;
             btnTiepTucTrang.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTiepTucTrang.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             btnTiepTucTrang.OverrideDefault.Border.Rounding = 18;
             btnTiepTucTrang.OverrideDefault.Border.Width = 1;
             btnTiepTucTrang.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnTiepTucTrang.Size = new Size(83, 35);
-            btnTiepTucTrang.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnTiepTucTrang.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnTiepTucTrang.Size = new Size(42, 35);
+            btnTiepTucTrang.StateCommon.Back.Color1 = Color.FromArgb(64, 64, 64);
+            btnTiepTucTrang.StateCommon.Back.Color2 = Color.FromArgb(64, 64, 64);
             btnTiepTucTrang.StateCommon.Back.ColorAngle = 45F;
-            btnTiepTucTrang.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnTiepTucTrang.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnTiepTucTrang.StateCommon.Border.Color1 = Color.FromArgb(64, 64, 64);
+            btnTiepTucTrang.StateCommon.Border.Color2 = Color.FromArgb(64, 64, 64);
             btnTiepTucTrang.StateCommon.Border.ColorAngle = 45F;
             btnTiepTucTrang.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTiepTucTrang.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -690,17 +696,17 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTiepTucTrang.StateCommon.Content.ShortText.Color1 = Color.White;
             btnTiepTucTrang.StateCommon.Content.ShortText.Color2 = Color.White;
             btnTiepTucTrang.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnTiepTucTrang.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTiepTucTrang.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTiepTucTrang.StatePressed.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTiepTucTrang.StatePressed.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTiepTucTrang.StatePressed.Back.ColorAngle = 130F;
-            btnTiepTucTrang.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnTiepTucTrang.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
+            btnTiepTucTrang.StatePressed.Border.Color1 = Color.FromArgb(6, 174, 244);
+            btnTiepTucTrang.StatePressed.Border.Color2 = Color.FromArgb(6, 174, 244);
             btnTiepTucTrang.StatePressed.Border.ColorAngle = 130F;
             btnTiepTucTrang.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             btnTiepTucTrang.StatePressed.Border.Rounding = 18;
             btnTiepTucTrang.StatePressed.Border.Width = 1;
-            btnTiepTucTrang.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnTiepTucTrang.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
+            btnTiepTucTrang.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnTiepTucTrang.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnTiepTucTrang.StateTracking.Back.ColorAngle = 45F;
             btnTiepTucTrang.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
             btnTiepTucTrang.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
@@ -710,7 +716,7 @@ namespace PosManager.Forms.UserControls.KhachHang
             btnTiepTucTrang.StateTracking.Border.Rounding = 18;
             btnTiepTucTrang.StateTracking.Border.Width = 1;
             btnTiepTucTrang.TabIndex = 20;
-            btnTiepTucTrang.Values.Text = "Tiếp";
+            btnTiepTucTrang.Values.Text = ">";
             btnTiepTucTrang.Click += btnTiepTucTrang_Click;
             // 
             // lbThongBaoSoTrang
@@ -730,6 +736,14 @@ namespace PosManager.Forms.UserControls.KhachHang
             dtgvAccount.AllowUserToDeleteRows = false;
             dtgvAccount.AllowUserToResizeRows = false;
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEdit, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
@@ -752,10 +766,13 @@ namespace PosManager.Forms.UserControls.KhachHang
             cChon.FillWeight = 50F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 39;
+            cChon.Width = 50;
             // 
             // cSTT
             // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cSTT.DefaultCellStyle = dataGridViewCellStyle2;
             cSTT.HeaderText = "STT";
             cSTT.Name = "cSTT";
             cSTT.ReadOnly = true;
@@ -764,6 +781,9 @@ namespace PosManager.Forms.UserControls.KhachHang
             // cTen
             // 
             cTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cTen.DefaultCellStyle = dataGridViewCellStyle3;
             cTen.HeaderText = "Tên";
             cTen.Name = "cTen";
             // 
