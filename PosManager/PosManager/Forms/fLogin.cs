@@ -26,6 +26,9 @@ namespace Krypton_toolKitDemo
             {
                 string password = txtPassword.Text.Trim();
                 string username = txtUsername.Text.Trim();
+                PosManager.Properties.Settings.Default["username"] = username;
+                PosManager.Properties.Settings.Default["password"] = password;
+                PosManager.Properties.Settings.Default.Save();
                 if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(username))
                 {
                     MessageCommon.ShowMessageBox("Vui lòng đầy đủ thông tin!");
@@ -42,9 +45,6 @@ namespace Krypton_toolKitDemo
                 {
                     if (user.StatusCode == 200 && user.Message == "Success" && !string.IsNullOrEmpty(user.Data.Token))
                     {
-                        PosManager.Properties.Settings.Default["username"] = username;
-                        PosManager.Properties.Settings.Default["password"] = password;
-                        PosManager.Properties.Settings.Default.Save();
                         GlobalModel.AccsessToken = user.Data.Token;
                         fMain form1 = new fMain();
                         form1.Show();
