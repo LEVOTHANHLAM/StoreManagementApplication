@@ -188,15 +188,7 @@
             btnHangHoa = new Button();
             panel16 = new Panel();
             btnDanhSachHangHoa = new Button();
-            KhachHangTimer = new System.Windows.Forms.Timer(components);
-            HangHoaTimer = new System.Windows.Forms.Timer(components);
-            KhoTimer = new System.Windows.Forms.Timer(components);
-            MenuTimer = new System.Windows.Forms.Timer(components);
             HieuUngTimer = new System.Windows.Forms.Timer(components);
-            NhanVienTimer = new System.Windows.Forms.Timer(components);
-            HoaDonTimer = new System.Windows.Forms.Timer(components);
-            CongNoTimer = new System.Windows.Forms.Timer(components);
-            BaoCaoTimer = new System.Windows.Forms.Timer(components);
             kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -351,7 +343,7 @@
             // 
             splitContainer1.Panel2.Controls.Add(pMain);
             splitContainer1.Size = new Size(1334, 831);
-            splitContainer1.SplitterDistance = 59;
+            splitContainer1.SplitterDistance = 45;
             splitContainer1.TabIndex = 3;
             // 
             // txtHieuUng
@@ -364,7 +356,7 @@
             txtHieuUng.MinimumSize = new Size(971, 56);
             txtHieuUng.Multiline = true;
             txtHieuUng.Name = "txtHieuUng";
-            txtHieuUng.Size = new Size(1180, 59);
+            txtHieuUng.Size = new Size(1180, 56);
             txtHieuUng.TabIndex = 6;
             txtHieuUng.TextAlign = HorizontalAlignment.Center;
             // 
@@ -374,7 +366,7 @@
             pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
             pbProfile.Location = new Point(1222, 0);
             pbProfile.Name = "pbProfile";
-            pbProfile.Size = new Size(112, 59);
+            pbProfile.Size = new Size(112, 45);
             pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
             pbProfile.TabIndex = 6;
             pbProfile.TabStop = false;
@@ -386,7 +378,7 @@
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
             btnMenu.Location = new Point(0, 0);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(42, 59);
+            btnMenu.Size = new Size(42, 45);
             btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
             btnMenu.TabIndex = 6;
             btnMenu.TabStop = false;
@@ -398,7 +390,7 @@
             pMain.Dock = DockStyle.Fill;
             pMain.Location = new Point(0, 0);
             pMain.Name = "pMain";
-            pMain.Size = new Size(1334, 768);
+            pMain.Size = new Size(1334, 782);
             pMain.TabIndex = 16;
             // 
             // pProfile
@@ -480,7 +472,7 @@
             BaoCaoContainer.Controls.Add(panel54);
             BaoCaoContainer.Controls.Add(panel55);
             BaoCaoContainer.Controls.Add(panel56);
-            BaoCaoContainer.Location = new Point(3, 183);
+            BaoCaoContainer.Location = new Point(3, 152);
             BaoCaoContainer.MaximumSize = new Size(287, 549);
             BaoCaoContainer.MinimumSize = new Size(287, 41);
             BaoCaoContainer.Name = "BaoCaoContainer";
@@ -806,7 +798,7 @@
             CaiDatContainer.BackColor = Color.LightBlue;
             CaiDatContainer.Controls.Add(panel64);
             CaiDatContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            CaiDatContainer.Location = new Point(3, 561);
+            CaiDatContainer.Location = new Point(3, 530);
             CaiDatContainer.MaximumSize = new Size(287, 41);
             CaiDatContainer.MinimumSize = new Size(287, 41);
             CaiDatContainer.Name = "CaiDatContainer";
@@ -844,7 +836,7 @@
             ChiNhanhContainer.BackColor = Color.LightBlue;
             ChiNhanhContainer.Controls.Add(panel77);
             ChiNhanhContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ChiNhanhContainer.Location = new Point(3, 514);
+            ChiNhanhContainer.Location = new Point(3, 483);
             ChiNhanhContainer.MaximumSize = new Size(287, 41);
             ChiNhanhContainer.MinimumSize = new Size(287, 41);
             ChiNhanhContainer.Name = "ChiNhanhContainer";
@@ -882,7 +874,7 @@
             PosContainer.BackColor = Color.LightBlue;
             PosContainer.Controls.Add(panel65);
             PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            PosContainer.Location = new Point(3, 420);
+            PosContainer.Location = new Point(3, 389);
             PosContainer.MaximumSize = new Size(287, 41);
             PosContainer.MinimumSize = new Size(287, 41);
             PosContainer.Name = "PosContainer";
@@ -920,7 +912,7 @@
             ThuChiContainer.BackColor = Color.LightBlue;
             ThuChiContainer.Controls.Add(panel73);
             ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ThuChiContainer.Location = new Point(3, 326);
+            ThuChiContainer.Location = new Point(3, 295);
             ThuChiContainer.MaximumSize = new Size(287, 41);
             ThuChiContainer.MinimumSize = new Size(287, 41);
             ThuChiContainer.Name = "ThuChiContainer";
@@ -959,7 +951,7 @@
             NhanVienContainer.Controls.Add(panel44);
             NhanVienContainer.Controls.Add(panel45);
             NhanVienContainer.Controls.Add(panel46);
-            NhanVienContainer.Location = new Point(3, 232);
+            NhanVienContainer.Location = new Point(3, 201);
             NhanVienContainer.MaximumSize = new Size(287, 167);
             NhanVienContainer.MinimumSize = new Size(287, 41);
             NhanVienContainer.Name = "NhanVienContainer";
@@ -1075,7 +1067,7 @@
             CongNoContainer.Controls.Add(panel31);
             CongNoContainer.Controls.Add(panel32);
             CongNoContainer.Controls.Add(panel35);
-            CongNoContainer.Location = new Point(3, 279);
+            CongNoContainer.Location = new Point(3, 248);
             CongNoContainer.MaximumSize = new Size(287, 337);
             CongNoContainer.MinimumSize = new Size(287, 41);
             CongNoContainer.Name = "CongNoContainer";
@@ -1288,7 +1280,7 @@
             HoaDonContainer.Controls.Add(panel40);
             HoaDonContainer.Controls.Add(panel41);
             HoaDonContainer.Controls.Add(panel42);
-            HoaDonContainer.Location = new Point(3, 467);
+            HoaDonContainer.Location = new Point(3, 436);
             HoaDonContainer.MaximumSize = new Size(287, 379);
             HoaDonContainer.MinimumSize = new Size(287, 41);
             HoaDonContainer.Name = "HoaDonContainer";
@@ -1542,10 +1534,10 @@
             pbLogoMeXiu.BackColor = Color.FromArgb(89, 149, 206);
             pbLogoMeXiu.Image = PosManager.Properties.Resources._326559583_468268058851274_8797007794984294310_n;
             pbLogoMeXiu.Location = new Point(3, 3);
-            pbLogoMeXiu.MaximumSize = new Size(287, 80);
-            pbLogoMeXiu.MinimumSize = new Size(75, 80);
+            pbLogoMeXiu.MaximumSize = new Size(287, 49);
+            pbLogoMeXiu.MinimumSize = new Size(72, 49);
             pbLogoMeXiu.Name = "pbLogoMeXiu";
-            pbLogoMeXiu.Size = new Size(287, 80);
+            pbLogoMeXiu.Size = new Size(287, 49);
             pbLogoMeXiu.SizeMode = PictureBoxSizeMode.Zoom;
             pbLogoMeXiu.TabIndex = 0;
             pbLogoMeXiu.TabStop = false;
@@ -1562,7 +1554,7 @@
             KhachHangContainer.Controls.Add(panel2);
             KhachHangContainer.Controls.Add(panel34);
             KhachHangContainer.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            KhachHangContainer.Location = new Point(3, 89);
+            KhachHangContainer.Location = new Point(3, 58);
             KhachHangContainer.MaximumSize = new Size(287, 302);
             KhachHangContainer.MinimumSize = new Size(287, 41);
             KhachHangContainer.Name = "KhachHangContainer";
@@ -1757,7 +1749,7 @@
             KhoContainer.Controls.Add(panel24);
             KhoContainer.Controls.Add(panel25);
             KhoContainer.Controls.Add(panel26);
-            KhoContainer.Location = new Point(3, 136);
+            KhoContainer.Location = new Point(3, 105);
             KhoContainer.MaximumSize = new Size(287, 612);
             KhoContainer.MinimumSize = new Size(287, 41);
             KhoContainer.Name = "KhoContainer";
@@ -2114,7 +2106,7 @@
             HangHoaContainer.Controls.Add(panel14);
             HangHoaContainer.Controls.Add(panel15);
             HangHoaContainer.Controls.Add(panel16);
-            HangHoaContainer.Location = new Point(3, 373);
+            HangHoaContainer.Location = new Point(3, 342);
             HangHoaContainer.MaximumSize = new Size(287, 345);
             HangHoaContainer.MinimumSize = new Size(287, 41);
             HangHoaContainer.Name = "HangHoaContainer";
@@ -2315,50 +2307,10 @@
             btnDanhSachHangHoa.TextAlign = ContentAlignment.MiddleLeft;
             btnDanhSachHangHoa.UseVisualStyleBackColor = false;
             // 
-            // KhachHangTimer
-            // 
-            KhachHangTimer.Interval = 10;
-            KhachHangTimer.Tick += KhachHangTimer_Tick;
-            // 
-            // HangHoaTimer
-            // 
-            HangHoaTimer.Interval = 10;
-            HangHoaTimer.Tick += HangHoaTimer_Tick;
-            // 
-            // KhoTimer
-            // 
-            KhoTimer.Interval = 10;
-            KhoTimer.Tick += KhoTimer_Tick;
-            // 
-            // MenuTimer
-            // 
-            MenuTimer.Interval = 1;
-            MenuTimer.Tick += MenuTimer_Tick;
-            // 
             // HieuUngTimer
             // 
             HieuUngTimer.Interval = 500;
             HieuUngTimer.Tick += HieuUngTimer_Tick;
-            // 
-            // NhanVienTimer
-            // 
-            NhanVienTimer.Interval = 10;
-            NhanVienTimer.Tick += NhanVienTimer_Tick;
-            // 
-            // HoaDonTimer
-            // 
-            HoaDonTimer.Interval = 10;
-            HoaDonTimer.Tick += HoaDonTimer_Tick;
-            // 
-            // CongNoTimer
-            // 
-            CongNoTimer.Interval = 10;
-            CongNoTimer.Tick += CongNoTimer_Tick;
-            // 
-            // BaoCaoTimer
-            // 
-            BaoCaoTimer.Interval = 10;
-            BaoCaoTimer.Tick += BaoCaoTimer_Tick;
             // 
             // kryptonPalette2
             // 
@@ -2677,15 +2629,7 @@
         private Panel CaiDatContainer;
         private Panel panel64;
         private Button btnCaiDat;
-        private System.Windows.Forms.Timer KhachHangTimer;
-        private System.Windows.Forms.Timer HangHoaTimer;
-        private System.Windows.Forms.Timer KhoTimer;
-        private System.Windows.Forms.Timer MenuTimer;
         private System.Windows.Forms.Timer HieuUngTimer;
-        private System.Windows.Forms.Timer NhanVienTimer;
-        private System.Windows.Forms.Timer HoaDonTimer;
-        private System.Windows.Forms.Timer CongNoTimer;
-        private System.Windows.Forms.Timer BaoCaoTimer;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
         private System.Windows.Forms.Timer timer1;
         private Panel panel1;

@@ -346,7 +346,7 @@ namespace PosManager.Forms.UserControls.KhachHang
             cbbCuonTrang.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
-            cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
+            cbbCuonTrang.Items.AddRange(new object[] { "2", "20", "50", "100" });
             cbbCuonTrang.Location = new Point(58, 56);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);

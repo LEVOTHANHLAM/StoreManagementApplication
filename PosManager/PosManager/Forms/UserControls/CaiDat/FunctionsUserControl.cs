@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using Krypton_toolKitDemo;
+﻿using Krypton_toolKitDemo;
 using PosManager.APIServices.CaiDat;
 using PosManager.Helper;
 using PosManager.Model;
@@ -264,6 +263,7 @@ namespace PosManager.Forms.UserControls.KhachHang
         private void cbbCuonTrang_SelectedIndexChanged(object sender, EventArgs e)
         {
             pageSize = int.Parse(cbbCuonTrang.Text);
+            currentPage = 1;
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
 
