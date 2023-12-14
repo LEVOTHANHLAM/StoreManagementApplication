@@ -18,7 +18,7 @@ namespace PosManager.APIServices.CaiDat
                     // Thêm Authorization header
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     // Tạo URL của API endpoint
-                    string apiUrl = $"{Constant.DomainAPI}/api/SystemFunctions/search?pageIndex={pageIndex}&pageSize={pageSize}&searchString={searchString}";
+                    string apiUrl = $"{Constant.DomainAPI}/api/SystemFunctions?pageIndex={pageIndex}&pageSize={pageSize}&searchString={searchString}";
                     HttpResponseMessage response = await client.GetAsync(apiUrl);
                     var body = await response.Content.ReadAsStringAsync();
                     ApiResponse<ApiResult<List<FunctionsModel>>> data = JsonConvert.DeserializeObject<ApiResponse<ApiResult<List<FunctionsModel>>>>(body);

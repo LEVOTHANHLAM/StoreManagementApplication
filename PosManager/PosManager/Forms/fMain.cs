@@ -12,6 +12,7 @@ using PosManager.Forms.UI;
 using PosManager.Forms.UserControls;
 using PosManager.Forms.UserControls.KhachHang;
 using PosManager.Forms.UserControls.Kho;
+using PosManager.Forms.UserControls.NhanVien;
 using PosManager.Forms.UserControls.Post;
 
 namespace Krypton_toolKitDemo
@@ -29,7 +30,7 @@ namespace Krypton_toolKitDemo
         bool BaoCaoCollapse = true;
 
         private int startPosition = 0;
-        private string displayText = "Cảm Ơn Quý Khách Đã Tin Tưởng Chúng Tôi!               ";
+        private string displayText = "Cảm Ơn Quý Khách Đã Tin Tưởng Chúng Tôi!                                                                                                                                                                                                                ";
         public fMain()
         {
             InitializeComponent();
@@ -252,6 +253,14 @@ namespace Krypton_toolKitDemo
             FunctionsUserControl functionsUser = new FunctionsUserControl();
             functionsUser.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(functionsUser);
+        }
+
+        private void btnDanhSachNhanVien_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            QuanLyNhanVienUserControl quanLyNhanVienUserControl = new QuanLyNhanVienUserControl();
+            quanLyNhanVienUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(quanLyNhanVienUserControl);
         }
     }
 }

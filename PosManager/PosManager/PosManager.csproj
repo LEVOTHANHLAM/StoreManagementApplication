@@ -15,6 +15,9 @@
     <Compile Update="Forms\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\UserControls\CaiDat\fPhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\UserControls\CaiDat\fThemFunctions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -25,6 +28,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\UserControls\Kho\fThemKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\NhanVien\fThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">

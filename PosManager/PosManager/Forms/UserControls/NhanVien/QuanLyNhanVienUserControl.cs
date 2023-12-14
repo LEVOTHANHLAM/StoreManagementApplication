@@ -1,9 +1,11 @@
-﻿using Krypton_toolKitDemo;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Vml;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Krypton_toolKitDemo;
 using PosManager.APIServices.CaiDat;
-using PosManager.APIServices.Kho;
+using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
-using PosManager.Model.ChiNhanh;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -15,25 +17,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PosManager.Forms.UserControls.Kho
+namespace PosManager.Forms.UserControls.NhanVien
 {
-    public partial class DanhSachKhoUserControl : UserControl
+    public partial class QuanLyNhanVienUserControl : UserControl
     {
-        private StocksController _stocksController;
+        private UsersController _usersController;
         private int currentPage = 1;
         private int totalPages = 0;
         private int pageSize = 10; // Số phần tử trên mỗi trang
         private int Total = 1000;
         private int row = 0;
-        public DanhSachKhoUserControl()
+        public QuanLyNhanVienUserControl()
         {
             InitializeComponent();
-            _stocksController = new StocksController();
+            _usersController = new UsersController();
             cbbCuonTrang.SelectedIndex = 0;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemKho them = new fThemKho(null);
+            fThemNhanVien them = new fThemNhanVien(null);
             them.ShowDialog();
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
@@ -50,7 +52,7 @@ namespace PosManager.Forms.UserControls.Kho
                 {
                     searchString = "";
                 }
-                var accounts = await _stocksController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);
+                var accounts = await _usersController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);
                 dtgvAccount.Rows.Clear();
                 if (accounts != null && accounts.StatusCode == 200 && accounts.Data.Result.Count > 0)
                 {
@@ -62,8 +64,12 @@ namespace PosManager.Forms.UserControls.Kho
                         int i = 1;
                         foreach (var a in accounts.Data.Result)
                         {
-
-                            dtgvAccount.Rows.Add(false, i, a.MaKho, a.TenKho, Properties.Resources.Edit, a.Id);
+                            string value = "Nhân Viên";
+                            if (a.Role == "SysAdmin")
+                            {
+                                value = "Admin";
+                            }
+                            dtgvAccount.Rows.Add(false, i, a.Fullname, a.Email, a.Username, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, Properties.Resources.Edit, Properties.Resources.PhanQuyen, a.Id);
                             i++;
                         }
                         row = i;
@@ -133,9 +139,15 @@ namespace PosManager.Forms.UserControls.Kho
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
-                fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
-                themNhaCungCap.ShowDialog();
+                fThemNhanVien edit = new fThemNhanVien(id);
+                edit.ShowDialog();
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cPhanQuyen"].Index)
+            {
+                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                fPhanQuyen PhanQuyen = new fPhanQuyen(id);
+                PhanQuyen.ShowDialog();
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             }
         }
@@ -267,7 +279,6 @@ namespace PosManager.Forms.UserControls.Kho
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void cbbCuonTrang_SelectedIndexChanged(object sender, EventArgs e)
@@ -333,7 +344,8 @@ namespace PosManager.Forms.UserControls.Kho
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //currentPage = 1;
+            pageSize = int.Parse(cbbCuonTrang.Text);
+            currentPage = 1;
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
 
@@ -352,7 +364,7 @@ namespace PosManager.Forms.UserControls.Kho
                 {
                     foreach (var item in listDelete)
                     {
-                        var accounts = await _stocksController.Delete(GlobalModel.AccsessToken, item);
+                        var accounts = await _usersController.Delete(GlobalModel.AccsessToken, item);
                     }
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }
@@ -361,6 +373,11 @@ namespace PosManager.Forms.UserControls.Kho
             {
                 MessageCommon.ShowMessageBox("Vui lòng chọn dữ liệu cần xóa", 4);
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

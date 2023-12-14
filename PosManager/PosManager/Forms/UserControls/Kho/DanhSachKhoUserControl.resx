@@ -117,6 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExport.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAAJ9JREFUOE+tkr0NgzAUhD0DWQeUwAyISRIlIApKBmEaahagS6Zw7sxzwc+zoySf
+        9BXW3cnNMz9jrT3BK7xvLKWig1INNW5SOwaFbumpNFLdgzA2JpXU1yD4ZNxJd4IXNyQMmEbw4xS+YBEa
+        Dy4U8N52Zi04wv+cwSfMvxmP8OyGhAHTCG68g8GSB1HHoQvzPKS+BkECW9grMkuk/g+MeQOMpv9IboPw
+        5QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnDelete.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAAJFJREFUOE/Fi7EJAkEUBS+6Yg6xELEQMb3ADlSswVAb0Vxb0D6Eddb/wOD5FxNx
+        YGD5b7b7GaWUvZ5tCAfc4QM/Ue91H/TlTT3i9gv9c4VhxFXDUanDeMcWN6UO4zmalJNSh/EYTcpBqcO4
+        iSZlrdRhXEaTslDqMM6jSZkpdRin0aRMlDqMPV5fmXPBXulf6bonjzyH41ehsg0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnAdd.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAAHJJREFUOE/NktEJgDAMRLOWW/XP3ZTSbz9cxRXiHQ0YoWJUCj44Qo4cgRDpgqoO
+        0MhqVhyEMkSyWXEQKjWrxaw4DNVszzAGeJwJmp02iLB6n3PHEdEk6AnJopebF2i16v3z5hYY+Pu1WyD0
+        6cPe//Y9IjuIBQGS5d3G4gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="cMa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ctmsAcc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

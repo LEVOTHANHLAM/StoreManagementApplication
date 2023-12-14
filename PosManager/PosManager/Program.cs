@@ -29,11 +29,11 @@ namespace PosManager
                 Application.SetHighDpiMode(HighDpiMode.SystemAware);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                //Lấy ra cái Form1 đã được khai báo trong services
+                //Lấy ra cái fThemNhanVien đã được khai báo trong services
                 try
                 {
                     var form1 = _host.Services.GetRequiredService<fLogin>();
-                    //Lệnh chạy gốc là: Application.Run(new Form1);
+                    //Lệnh chạy gốc là: Application.Run(new fThemNhanVien);
                     //Đã được thay thế bằng lệnh sử dụng service khai báo trong host
                     Application.Run(form1);
                     Log.Information("Application start");

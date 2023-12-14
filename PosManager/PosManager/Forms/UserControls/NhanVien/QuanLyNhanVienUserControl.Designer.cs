@@ -1,9 +1,9 @@
 ﻿using PosManager.Forms.UserControls.KhachHang;
 using PosManager.Helper.CustomControls;
 
-namespace PosManager.Forms.UserControls.Kho
+namespace PosManager.Forms.UserControls.NhanVien
 {
-    partial class DanhSachKhoUserControl
+    partial class QuanLyNhanVienUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace PosManager.Forms.UserControls.Kho
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachKhoUserControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhanVienUserControl));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -61,9 +61,16 @@ namespace PosManager.Forms.UserControls.Kho
             dtgvAccount = new DataGridView();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
-            cMa = new DataGridViewTextBoxColumn();
             cTen = new DataGridViewTextBoxColumn();
+            cEmail = new DataGridViewTextBoxColumn();
+            cUserName = new DataGridViewTextBoxColumn();
+            cCCCD = new DataGridViewTextBoxColumn();
+            cPhoneNumber = new DataGridViewTextBoxColumn();
+            cDiaChi = new DataGridViewTextBoxColumn();
+            cNgaySinh = new DataGridViewTextBoxColumn();
+            cRole = new DataGridViewTextBoxColumn();
             cEdit = new DataGridViewImageColumn();
+            cPhanQuyen = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
             ctmsAcc = new ContextMenuStrip(components);
             selectedToolStripMenuItem = new ToolStripMenuItem();
@@ -134,6 +141,7 @@ namespace PosManager.Forms.UserControls.Kho
             panel2.Name = "panel2";
             panel2.Size = new Size(920, 83);
             panel2.TabIndex = 0;
+            panel2.Paint += panel2_Paint;
             // 
             // panel4
             // 
@@ -348,7 +356,7 @@ namespace PosManager.Forms.UserControls.Kho
             cbbCuonTrang.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
-            cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
+            cbbCuonTrang.Items.AddRange(new object[] { "2", "20", "50", "100" });
             cbbCuonTrang.Location = new Point(58, 56);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
@@ -747,7 +755,7 @@ namespace PosManager.Forms.UserControls.Kho
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMa, cTen, cEdit, cId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cEdit, cPhanQuyen, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -772,19 +780,15 @@ namespace PosManager.Forms.UserControls.Kho
             // 
             // cSTT
             // 
+            cSTT.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cSTT.DefaultCellStyle = dataGridViewCellStyle2;
+            cSTT.FillWeight = 50F;
             cSTT.HeaderText = "STT";
             cSTT.Name = "cSTT";
             cSTT.ReadOnly = true;
-            cSTT.Width = 51;
-            // 
-            // cMa
-            // 
-            cMa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cMa.HeaderText = "Mã";
-            cMa.Name = "cMa";
+            cSTT.Width = 50;
             // 
             // cTen
             // 
@@ -795,13 +799,60 @@ namespace PosManager.Forms.UserControls.Kho
             cTen.HeaderText = "Tên";
             cTen.Name = "cTen";
             // 
+            // cEmail
+            // 
+            cEmail.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cEmail.HeaderText = "Email";
+            cEmail.Name = "cEmail";
+            // 
+            // cUserName
+            // 
+            cUserName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cUserName.HeaderText = "Tài Khoản";
+            cUserName.Name = "cUserName";
+            // 
+            // cCCCD
+            // 
+            cCCCD.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cCCCD.HeaderText = "CCCD";
+            cCCCD.Name = "cCCCD";
+            // 
+            // cPhoneNumber
+            // 
+            cPhoneNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cPhoneNumber.HeaderText = "SĐT";
+            cPhoneNumber.Name = "cPhoneNumber";
+            // 
+            // cDiaChi
+            // 
+            cDiaChi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cDiaChi.HeaderText = "Địa Chỉ";
+            cDiaChi.Name = "cDiaChi";
+            // 
+            // cNgaySinh
+            // 
+            cNgaySinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cNgaySinh.HeaderText = "Ngày Sinh";
+            cNgaySinh.Name = "cNgaySinh";
+            // 
+            // cRole
+            // 
+            cRole.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cRole.HeaderText = "Chức Vụ";
+            cRole.Name = "cRole";
+            // 
             // cEdit
             // 
             cEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             cEdit.HeaderText = "Sửa";
             cEdit.Name = "cEdit";
             cEdit.Resizable = DataGridViewTriState.True;
-            cEdit.Width = 120;
+            // 
+            // cPhanQuyen
+            // 
+            cPhanQuyen.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cPhanQuyen.HeaderText = "Phân Quyền";
+            cPhanQuyen.Name = "cPhanQuyen";
             // 
             // cId
             // 
@@ -853,13 +904,13 @@ namespace PosManager.Forms.UserControls.Kho
             kryptonTextBox1.Size = new Size(100, 23);
             kryptonTextBox1.TabIndex = 0;
             // 
-            // DanhSachKhoUserControl
+            // QuanLyNhanVienUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
             MinimumSize = new Size(1334, 768);
-            Name = "DanhSachKhoUserControl";
+            Name = "QuanLyNhanVienUserControl";
             Size = new Size(1334, 768);
             Load += ChiNhanhUserControl_Load;
             splitContainer1.Panel1.ResumeLayout(false);
@@ -914,9 +965,16 @@ namespace PosManager.Forms.UserControls.Kho
         private Panel panel4;
         private DataGridViewCheckBoxColumn cChon;
         private DataGridViewTextBoxColumn cSTT;
-        private DataGridViewTextBoxColumn cMa;
         private DataGridViewTextBoxColumn cTen;
+        private DataGridViewTextBoxColumn cEmail;
+        private DataGridViewTextBoxColumn cUserName;
+        private DataGridViewTextBoxColumn cCCCD;
+        private DataGridViewTextBoxColumn cPhoneNumber;
+        private DataGridViewTextBoxColumn cDiaChi;
+        private DataGridViewTextBoxColumn cNgaySinh;
+        private DataGridViewTextBoxColumn cRole;
         private DataGridViewImageColumn cEdit;
+        private DataGridViewImageColumn cPhanQuyen;
         private DataGridViewTextBoxColumn cId;
     }
 }

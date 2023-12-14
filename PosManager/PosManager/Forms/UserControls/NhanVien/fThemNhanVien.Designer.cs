@@ -1,6 +1,6 @@
 ﻿namespace Krypton_toolKitDemo
 {
-    partial class fThemKho
+    partial class fThemNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,28 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThemKho));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThemNhanVien));
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             txtTen = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             label3 = new Label();
-            label1 = new Label();
-            txtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            label1 = new Label();
+            txtUsername = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            label2 = new Label();
+            label4 = new Label();
+            txtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            label5 = new Label();
+            dateNgaySinh = new DateTimePicker();
+            label6 = new Label();
+            txtPhonenumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            label7 = new Label();
+            txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            label8 = new Label();
+            txtCCCD = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            label9 = new Label();
+            txtEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            cbbChucVu = new ComboBox();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -84,7 +98,7 @@
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(145, 12);
+            txtTen.Location = new Point(142, 12);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(344, 31);
             txtTen.StateCommon.Back.Color1 = Color.White;
@@ -103,44 +117,16 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(64, 64, 64);
-            label3.Location = new Point(2, 77);
+            label3.Location = new Point(-2, 19);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(96, 24);
+            label3.Size = new Size(59, 24);
             label3.TabIndex = 5;
-            label3.Text = "Tên Kho:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(2, 19);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(93, 24);
-            label1.TabIndex = 7;
-            label1.Text = "Mã Kho :";
-            // 
-            // txtDiaChi
-            // 
-            txtDiaChi.Location = new Point(145, 70);
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(344, 31);
-            txtDiaChi.StateCommon.Back.Color1 = Color.White;
-            txtDiaChi.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtDiaChi.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtDiaChi.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtDiaChi.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtDiaChi.StateCommon.Border.Rounding = 18;
-            txtDiaChi.StateCommon.Content.Color1 = Color.Black;
-            txtDiaChi.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDiaChi.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtDiaChi.TabIndex = 6;
+            label3.Text = "Tên :";
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(145, 142);
+            btnSave.Location = new Point(82, 469);
             btnSave.Name = "btnSave";
             btnSave.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnSave.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -192,7 +178,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(354, 142);
+            btnCancel.Location = new Point(291, 469);
             btnCancel.Name = "btnCancel";
             btnCancel.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnCancel.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -242,23 +228,250 @@
             btnCancel.Values.Text = "Quay Lại";
             btnCancel.Click += btnCancel_Click;
             // 
-            // fThemKho
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(64, 64, 64);
+            label1.Location = new Point(-2, 116);
+            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 24);
+            label1.TabIndex = 13;
+            label1.Text = "Tài Khoản :";
+            // 
+            // txtUsername
+            // 
+            txtUsername.Location = new Point(142, 109);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(344, 31);
+            txtUsername.StateCommon.Back.Color1 = Color.White;
+            txtUsername.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtUsername.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtUsername.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtUsername.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtUsername.StateCommon.Border.Rounding = 18;
+            txtUsername.StateCommon.Content.Color1 = Color.Black;
+            txtUsername.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtUsername.TabIndex = 12;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(64, 64, 64);
+            label2.Location = new Point(-2, 359);
+            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 24);
+            label2.TabIndex = 17;
+            label2.Text = "Chức Vụ :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(64, 64, 64);
+            label4.Location = new Point(-2, 265);
+            label4.Margin = new Padding(6, 0, 6, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(89, 24);
+            label4.TabIndex = 15;
+            label4.Text = "Địa Chỉ :";
+            // 
+            // txtDiaChi
+            // 
+            txtDiaChi.Location = new Point(142, 258);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(344, 31);
+            txtDiaChi.StateCommon.Back.Color1 = Color.White;
+            txtDiaChi.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtDiaChi.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtDiaChi.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtDiaChi.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtDiaChi.StateCommon.Border.Rounding = 18;
+            txtDiaChi.StateCommon.Content.Color1 = Color.Black;
+            txtDiaChi.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDiaChi.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtDiaChi.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(64, 64, 64);
+            label5.Location = new Point(-3, 215);
+            label5.Margin = new Padding(6, 0, 6, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(118, 24);
+            label5.TabIndex = 18;
+            label5.Text = "Ngày Sinh :";
+            // 
+            // dateNgaySinh
+            // 
+            dateNgaySinh.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dateNgaySinh.Location = new Point(142, 214);
+            dateNgaySinh.Name = "dateNgaySinh";
+            dateNgaySinh.Size = new Size(344, 24);
+            dateNgaySinh.TabIndex = 19;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(64, 64, 64);
+            label6.Location = new Point(-2, 311);
+            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(62, 24);
+            label6.TabIndex = 21;
+            label6.Text = "SĐT :";
+            // 
+            // txtPhonenumber
+            // 
+            txtPhonenumber.Location = new Point(142, 304);
+            txtPhonenumber.Name = "txtPhonenumber";
+            txtPhonenumber.Size = new Size(344, 31);
+            txtPhonenumber.StateCommon.Back.Color1 = Color.White;
+            txtPhonenumber.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtPhonenumber.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtPhonenumber.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtPhonenumber.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtPhonenumber.StateCommon.Border.Rounding = 18;
+            txtPhonenumber.StateCommon.Content.Color1 = Color.Black;
+            txtPhonenumber.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPhonenumber.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtPhonenumber.TabIndex = 20;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.FromArgb(64, 64, 64);
+            label7.Location = new Point(-2, 415);
+            label7.Margin = new Padding(6, 0, 6, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(109, 24);
+            label7.TabIndex = 23;
+            label7.Text = "Mật Khẩu :";
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(142, 408);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(344, 31);
+            txtPassword.StateCommon.Back.Color1 = Color.White;
+            txtPassword.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtPassword.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtPassword.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtPassword.StateCommon.Border.Rounding = 18;
+            txtPassword.StateCommon.Content.Color1 = Color.Black;
+            txtPassword.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtPassword.TabIndex = 22;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(64, 64, 64);
+            label8.Location = new Point(-3, 67);
+            label8.Margin = new Padding(6, 0, 6, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(78, 24);
+            label8.TabIndex = 25;
+            label8.Text = "CCCD :";
+            // 
+            // txtCCCD
+            // 
+            txtCCCD.Location = new Point(142, 60);
+            txtCCCD.Name = "txtCCCD";
+            txtCCCD.Size = new Size(344, 31);
+            txtCCCD.StateCommon.Back.Color1 = Color.White;
+            txtCCCD.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtCCCD.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtCCCD.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtCCCD.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtCCCD.StateCommon.Border.Rounding = 18;
+            txtCCCD.StateCommon.Content.Color1 = Color.Black;
+            txtCCCD.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCCCD.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtCCCD.TabIndex = 24;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.FromArgb(64, 64, 64);
+            label9.Location = new Point(-2, 166);
+            label9.Margin = new Padding(6, 0, 6, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(74, 24);
+            label9.TabIndex = 27;
+            label9.Text = "Email :";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(142, 159);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(344, 31);
+            txtEmail.StateCommon.Back.Color1 = Color.White;
+            txtEmail.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtEmail.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtEmail.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtEmail.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtEmail.StateCommon.Border.Rounding = 18;
+            txtEmail.StateCommon.Content.Color1 = Color.Black;
+            txtEmail.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtEmail.TabIndex = 26;
+            // 
+            // cbbChucVu
+            // 
+            cbbChucVu.DisplayMember = "DisplayText";
+            cbbChucVu.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbChucVu.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbChucVu.FormattingEnabled = true;
+            cbbChucVu.Items.AddRange(new object[] { "Admin", "Nhân Viên" });
+            cbbChucVu.Location = new Point(142, 359);
+            cbbChucVu.Name = "cbbChucVu";
+            cbbChucVu.Size = new Size(344, 26);
+            cbbChucVu.TabIndex = 28;
+            cbbChucVu.ValueMember = "Value";
+            // 
+            // fThemNhanVien
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(501, 203);
+            ClientSize = new Size(498, 521);
+            Controls.Add(cbbChucVu);
+            Controls.Add(label9);
+            Controls.Add(txtEmail);
+            Controls.Add(label8);
+            Controls.Add(txtCCCD);
+            Controls.Add(label7);
+            Controls.Add(txtPassword);
+            Controls.Add(label6);
+            Controls.Add(txtPhonenumber);
+            Controls.Add(dateNgaySinh);
+            Controls.Add(label5);
+            Controls.Add(label2);
+            Controls.Add(label4);
+            Controls.Add(txtDiaChi);
+            Controls.Add(label1);
+            Controls.Add(txtUsername);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
-            Controls.Add(label1);
-            Controls.Add(txtDiaChi);
             Controls.Add(label3);
             Controls.Add(txtTen);
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
-            MaximumSize = new Size(517, 242);
-            MinimumSize = new Size(517, 242);
-            Name = "fThemKho";
+            MaximumSize = new Size(514, 560);
+            MinimumSize = new Size(514, 560);
+            Name = "fThemNhanVien";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             ShowIcon = false;
@@ -273,10 +486,24 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTen;
         private Label label3;
-        private Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiaChi;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancel;
+        private Label label1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUsername;
+        private Label label2;
+        private Label label4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiaChi;
+        private Label label5;
+        private DateTimePicker dateNgaySinh;
+        private Label label6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhonenumber;
+        private Label label7;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
+        private Label label8;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCCCD;
+        private Label label9;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmail;
+        private ComboBox cbbChucVu;
     }
 }
 
