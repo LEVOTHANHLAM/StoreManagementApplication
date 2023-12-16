@@ -90,8 +90,10 @@
             panel73 = new Panel();
             btnThuChi = new Button();
             HangHoaContainer = new Panel();
+            panel68 = new Panel();
+            btnLoaiSanPham = new Button();
             panel17 = new Panel();
-            btnThongKeSanPhamDaBan = new Button();
+            btnDonViHangHoa = new Button();
             panel10 = new Panel();
             btnTangGiaTheoNhom = new Button();
             panel11 = new Panel();
@@ -229,6 +231,7 @@
             ThuChiContainer.SuspendLayout();
             panel73.SuspendLayout();
             HangHoaContainer.SuspendLayout();
+            panel68.SuspendLayout();
             panel17.SuspendLayout();
             panel10.SuspendLayout();
             panel11.SuspendLayout();
@@ -467,7 +470,7 @@
             CongNoContainer.Controls.Add(panel31);
             CongNoContainer.Controls.Add(panel32);
             CongNoContainer.Controls.Add(panel35);
-            CongNoContainer.Location = new Point(3, 342);
+            CongNoContainer.Location = new Point(3, 436);
             CongNoContainer.MaximumSize = new Size(287, 337);
             CongNoContainer.MinimumSize = new Size(287, 41);
             CongNoContainer.Name = "CongNoContainer";
@@ -756,7 +759,7 @@
             HoaDonContainer.Controls.Add(panel40);
             HoaDonContainer.Controls.Add(panel41);
             HoaDonContainer.Controls.Add(panel42);
-            HoaDonContainer.Location = new Point(3, 295);
+            HoaDonContainer.Location = new Point(3, 246);
             HoaDonContainer.MaximumSize = new Size(287, 379);
             HoaDonContainer.MinimumSize = new Size(287, 41);
             HoaDonContainer.Name = "HoaDonContainer";
@@ -986,7 +989,7 @@
             PosContainer.BackColor = Color.LightBlue;
             PosContainer.Controls.Add(panel65);
             PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            PosContainer.Location = new Point(3, 436);
+            PosContainer.Location = new Point(3, 389);
             PosContainer.MaximumSize = new Size(287, 41);
             PosContainer.MinimumSize = new Size(287, 41);
             PosContainer.Name = "PosContainer";
@@ -1024,7 +1027,7 @@
             ThuChiContainer.BackColor = Color.LightBlue;
             ThuChiContainer.Controls.Add(panel73);
             ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ThuChiContainer.Location = new Point(3, 389);
+            ThuChiContainer.Location = new Point(3, 293);
             ThuChiContainer.MaximumSize = new Size(287, 41);
             ThuChiContainer.MinimumSize = new Size(287, 41);
             ThuChiContainer.Name = "ThuChiContainer";
@@ -1059,6 +1062,7 @@
             // HangHoaContainer
             // 
             HangHoaContainer.BackColor = Color.DeepSkyBlue;
+            HangHoaContainer.Controls.Add(panel68);
             HangHoaContainer.Controls.Add(panel17);
             HangHoaContainer.Controls.Add(panel10);
             HangHoaContainer.Controls.Add(panel11);
@@ -1067,41 +1071,68 @@
             HangHoaContainer.Controls.Add(panel14);
             HangHoaContainer.Controls.Add(panel15);
             HangHoaContainer.Controls.Add(panel16);
-            HangHoaContainer.Location = new Point(3, 248);
-            HangHoaContainer.MaximumSize = new Size(287, 345);
+            HangHoaContainer.Location = new Point(3, 105);
+            HangHoaContainer.MaximumSize = new Size(287, 373);
             HangHoaContainer.MinimumSize = new Size(287, 41);
             HangHoaContainer.Name = "HangHoaContainer";
             HangHoaContainer.Size = new Size(287, 41);
             HangHoaContainer.TabIndex = 7;
+            HangHoaContainer.Paint += HangHoaContainer_Paint;
+            // 
+            // panel68
+            // 
+            panel68.Controls.Add(btnLoaiSanPham);
+            panel68.Location = new Point(3, 337);
+            panel68.Name = "panel68";
+            panel68.Size = new Size(285, 36);
+            panel68.TabIndex = 12;
+            // 
+            // btnLoaiSanPham
+            // 
+            btnLoaiSanPham.BackColor = Color.DeepSkyBlue;
+            btnLoaiSanPham.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLoaiSanPham.ForeColor = Color.White;
+            btnLoaiSanPham.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnLoaiSanPham.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLoaiSanPham.Location = new Point(-18, -5);
+            btnLoaiSanPham.Name = "btnLoaiSanPham";
+            btnLoaiSanPham.Padding = new Padding(30, 0, 0, 0);
+            btnLoaiSanPham.Size = new Size(338, 47);
+            btnLoaiSanPham.TabIndex = 3;
+            btnLoaiSanPham.Text = "             Nhóm Hàng Hoá";
+            btnLoaiSanPham.TextAlign = ContentAlignment.MiddleLeft;
+            btnLoaiSanPham.UseVisualStyleBackColor = false;
+            btnLoaiSanPham.Click += btnLoaiSanPham_Click;
             // 
             // panel17
             // 
-            panel17.Controls.Add(btnThongKeSanPhamDaBan);
-            panel17.Location = new Point(0, 306);
+            panel17.Controls.Add(btnDonViHangHoa);
+            panel17.Location = new Point(2, 296);
             panel17.Name = "panel17";
-            panel17.Size = new Size(287, 36);
+            panel17.Size = new Size(285, 36);
             panel17.TabIndex = 11;
             // 
-            // btnThongKeSanPhamDaBan
+            // btnDonViHangHoa
             // 
-            btnThongKeSanPhamDaBan.BackColor = Color.DeepSkyBlue;
-            btnThongKeSanPhamDaBan.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThongKeSanPhamDaBan.ForeColor = Color.White;
-            btnThongKeSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
-            btnThongKeSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThongKeSanPhamDaBan.Location = new Point(-15, -4);
-            btnThongKeSanPhamDaBan.Name = "btnThongKeSanPhamDaBan";
-            btnThongKeSanPhamDaBan.Padding = new Padding(30, 0, 0, 0);
-            btnThongKeSanPhamDaBan.Size = new Size(338, 47);
-            btnThongKeSanPhamDaBan.TabIndex = 3;
-            btnThongKeSanPhamDaBan.Text = "             Thống Kê Đã Bán";
-            btnThongKeSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
-            btnThongKeSanPhamDaBan.UseVisualStyleBackColor = false;
+            btnDonViHangHoa.BackColor = Color.DeepSkyBlue;
+            btnDonViHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDonViHangHoa.ForeColor = Color.White;
+            btnDonViHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
+            btnDonViHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDonViHangHoa.Location = new Point(-18, -5);
+            btnDonViHangHoa.Name = "btnDonViHangHoa";
+            btnDonViHangHoa.Padding = new Padding(30, 0, 0, 0);
+            btnDonViHangHoa.Size = new Size(338, 47);
+            btnDonViHangHoa.TabIndex = 3;
+            btnDonViHangHoa.Text = "             Đơn Vị Hàng Hoá";
+            btnDonViHangHoa.TextAlign = ContentAlignment.MiddleLeft;
+            btnDonViHangHoa.UseVisualStyleBackColor = false;
+            btnDonViHangHoa.Click += btnDonViHangHoa_Click;
             // 
             // panel10
             // 
             panel10.Controls.Add(btnTangGiaTheoNhom);
-            panel10.Location = new Point(0, 222);
+            panel10.Location = new Point(0, 213);
             panel10.Name = "panel10";
             panel10.Size = new Size(287, 36);
             panel10.TabIndex = 10;
@@ -1125,7 +1156,7 @@
             // panel11
             // 
             panel11.Controls.Add(btnBaoGiaHangHoa);
-            panel11.Location = new Point(0, 173);
+            panel11.Location = new Point(0, 172);
             panel11.Name = "panel11";
             panel11.Size = new Size(287, 36);
             panel11.TabIndex = 9;
@@ -1149,7 +1180,7 @@
             // panel12
             // 
             panel12.Controls.Add(btnLichSuSanPhamDaBan);
-            panel12.Location = new Point(0, 264);
+            panel12.Location = new Point(0, 255);
             panel12.Name = "panel12";
             panel12.Size = new Size(287, 36);
             panel12.TabIndex = 5;
@@ -1173,7 +1204,7 @@
             // panel13
             // 
             panel13.Controls.Add(btnIntemMaVach);
-            panel13.Location = new Point(0, 131);
+            panel13.Location = new Point(0, 130);
             panel13.Name = "panel13";
             panel13.Size = new Size(287, 36);
             panel13.TabIndex = 8;
@@ -1197,7 +1228,7 @@
             // panel14
             // 
             panel14.Controls.Add(btnDieuChinhGia);
-            panel14.Location = new Point(0, 87);
+            panel14.Location = new Point(0, 86);
             panel14.Name = "panel14";
             panel14.Size = new Size(287, 36);
             panel14.TabIndex = 7;
@@ -1247,7 +1278,7 @@
             // panel16
             // 
             panel16.Controls.Add(btnDanhSachHangHoa);
-            panel16.Location = new Point(0, 45);
+            panel16.Location = new Point(0, 44);
             panel16.Name = "panel16";
             panel16.Size = new Size(287, 36);
             panel16.TabIndex = 4;
@@ -1284,7 +1315,7 @@
             BaoCaoContainer.Controls.Add(panel54);
             BaoCaoContainer.Controls.Add(panel55);
             BaoCaoContainer.Controls.Add(panel56);
-            BaoCaoContainer.Location = new Point(3, 152);
+            BaoCaoContainer.Location = new Point(3, 340);
             BaoCaoContainer.MaximumSize = new Size(287, 549);
             BaoCaoContainer.MinimumSize = new Size(287, 41);
             BaoCaoContainer.Name = "BaoCaoContainer";
@@ -1612,7 +1643,7 @@
             NhanVienContainer.Controls.Add(panel44);
             NhanVienContainer.Controls.Add(panel45);
             NhanVienContainer.Controls.Add(panel46);
-            NhanVienContainer.Location = new Point(3, 201);
+            NhanVienContainer.Location = new Point(3, 199);
             NhanVienContainer.MaximumSize = new Size(287, 167);
             NhanVienContainer.MinimumSize = new Size(287, 41);
             NhanVienContainer.Name = "NhanVienContainer";
@@ -1723,14 +1754,14 @@
             flpMain.BackColor = Color.FromArgb(89, 149, 206);
             flpMain.Controls.Add(pbLogoMeXiu);
             flpMain.Controls.Add(KhachHangContainer);
-            flpMain.Controls.Add(KhoContainer);
-            flpMain.Controls.Add(BaoCaoContainer);
-            flpMain.Controls.Add(NhanVienContainer);
             flpMain.Controls.Add(HangHoaContainer);
+            flpMain.Controls.Add(KhoContainer);
+            flpMain.Controls.Add(NhanVienContainer);
             flpMain.Controls.Add(HoaDonContainer);
-            flpMain.Controls.Add(CongNoContainer);
             flpMain.Controls.Add(ThuChiContainer);
+            flpMain.Controls.Add(BaoCaoContainer);
             flpMain.Controls.Add(PosContainer);
+            flpMain.Controls.Add(CongNoContainer);
             flpMain.Controls.Add(ChiNhanhContainer);
             flpMain.Controls.Add(CaiDatContainer);
             flpMain.Dock = DockStyle.Left;
@@ -1962,7 +1993,7 @@
             KhoContainer.Controls.Add(panel24);
             KhoContainer.Controls.Add(panel25);
             KhoContainer.Controls.Add(panel26);
-            KhoContainer.Location = new Point(3, 105);
+            KhoContainer.Location = new Point(3, 152);
             KhoContainer.MaximumSize = new Size(287, 612);
             KhoContainer.MinimumSize = new Size(287, 41);
             KhoContainer.Name = "KhoContainer";
@@ -2417,6 +2448,7 @@
             ThuChiContainer.ResumeLayout(false);
             panel73.ResumeLayout(false);
             HangHoaContainer.ResumeLayout(false);
+            panel68.ResumeLayout(false);
             panel17.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel11.ResumeLayout(false);
@@ -2504,7 +2536,7 @@
         private Button btnQLKhachHang;
         private Panel HangHoaContainer;
         private Panel panel17;
-        private Button btnThongKeSanPhamDaBan;
+        private Button btnDonViHangHoa;
         private Panel panel10;
         private Button btnTangGiaTheoNhom;
         private Panel panel11;
@@ -2635,6 +2667,8 @@
         private System.Windows.Forms.Timer timer1;
         private Panel panel1;
         private Button btnQuanLyKho;
+        private Panel panel68;
+        private Button btnLoaiSanPham;
     }
 }
 

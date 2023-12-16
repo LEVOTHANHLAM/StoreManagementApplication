@@ -14,6 +14,7 @@ using PosManager.Forms.UserControls.KhachHang;
 using PosManager.Forms.UserControls.Kho;
 using PosManager.Forms.UserControls.NhanVien;
 using PosManager.Forms.UserControls.Post;
+using PosManager.Forms.UserControls.SanPham;
 
 namespace Krypton_toolKitDemo
 {
@@ -261,6 +262,27 @@ namespace Krypton_toolKitDemo
             QuanLyNhanVienUserControl quanLyNhanVienUserControl = new QuanLyNhanVienUserControl();
             quanLyNhanVienUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(quanLyNhanVienUserControl);
+        }
+
+        private void HangHoaContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLoaiSanPham_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            LoaiSanPhamUserControl loaiSanPhamUserControl = new LoaiSanPhamUserControl();
+            loaiSanPhamUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(loaiSanPhamUserControl);
+        }
+
+        private void btnDonViHangHoa_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            DonViHangHoaUserControl donViTinhHangHoaUserControl = new DonViHangHoaUserControl();
+            donViTinhHangHoaUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(donViTinhHangHoaUserControl);
         }
     }
 }

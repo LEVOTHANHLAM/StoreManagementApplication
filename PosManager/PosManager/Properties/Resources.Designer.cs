@@ -83,6 +83,16 @@ namespace PosManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_circle_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-circle-20", resourceCulture);
@@ -96,6 +106,26 @@ namespace PosManager.Properties {
         internal static System.Drawing.Bitmap icons8_circle_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-circle-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_15__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-export-15 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
