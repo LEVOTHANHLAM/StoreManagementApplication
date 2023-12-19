@@ -24,13 +24,13 @@
     <Compile Update="Forms\UserControls\ChiNhanh\fThemChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\UserControls\KhachHang\fThemNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\UserControls\Kho\fThemKho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\UserControls\NhanVien\fThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\SanPham\fThemNCC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\UserControls\SanPham\fThemDonViHangHoa.cs">
@@ -60,6 +60,7 @@
 
   <ItemGroup>
     <Folder Include="Forms\UI\KhachHang\" />
+    <Folder Include="Forms\UserControls\KhachHang\" />
   </ItemGroup>
 
   <ItemGroup>

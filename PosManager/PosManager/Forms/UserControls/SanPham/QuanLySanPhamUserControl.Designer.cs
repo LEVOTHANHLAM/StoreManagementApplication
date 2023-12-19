@@ -1,9 +1,8 @@
-﻿using PosManager.Forms.UserControls.KhachHang;
-using PosManager.Helper.CustomControls;
+﻿using PosManager.Helper.CustomControls;
 
 namespace PosManager.Forms.UserControls.SanPham
 {
-    partial class LoaiSanPhamUserControl
+    partial class QuanLySanPhamUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -850,13 +849,13 @@ namespace PosManager.Forms.UserControls.SanPham
             kryptonTextBox1.Size = new Size(100, 23);
             kryptonTextBox1.TabIndex = 0;
             // 
-            // LoaiSanPhamUserControl
+            // QuanLySanPhamUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
             MinimumSize = new Size(1334, 768);
-            Name = "LoaiSanPhamUserControl";
+            Name = "QuanLySanPhamUserControl";
             Size = new Size(1334, 768);
             Load += ChiNhanhUserControl_Load;
             splitContainer1.Panel1.ResumeLayout(false);
