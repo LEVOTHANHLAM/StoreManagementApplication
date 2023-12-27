@@ -1,8 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
 using Serilog;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Krypton_toolKitDemo
 {
@@ -24,6 +27,7 @@ namespace Krypton_toolKitDemo
 
             try
             {
+                btnLogin.Enabled = false;
                 string password = txtPassword.Text.Trim();
                 string username = txtUsername.Text.Trim();
                 PosManager.Properties.Settings.Default["username"] = username;
@@ -32,6 +36,7 @@ namespace Krypton_toolKitDemo
                 if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(username))
                 {
                     MessageCommon.ShowMessageBox("Vui lòng đầy đủ thông tin!");
+                    btnLogin.Enabled = true;
                     return;
                 }
                 AuthenticateController login = new AuthenticateController();
@@ -39,6 +44,7 @@ namespace Krypton_toolKitDemo
                 if (user == null)
                 {
                     MessageCommon.ShowMessageBox("Lỗi Hệ Thống Vui Lòng Liên Hệ Admin!", 4);
+                    btnLogin.Enabled = true;
                     return;
                 }
                 else
@@ -46,6 +52,7 @@ namespace Krypton_toolKitDemo
                     if (user.StatusCode == 200 && user.Message == "Success" && !string.IsNullOrEmpty(user.Data.Token))
                     {
                         GlobalModel.AccsessToken = user.Data.Token;
+                        var s = ConvertTokenToJson(user.Data.Token);
                         fMain form1 = new fMain();
                         form1.Show();
                         this.Hide();
@@ -64,6 +71,25 @@ namespace Krypton_toolKitDemo
                 return;
             }
 
+        }
+        private string ConvertTokenToJson(string token)
+        {
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var claims = tokenHandler.ReadJwtToken(token).Claims.ToList();
+                foreach (var claim in claims)
+                {
+                    Console.WriteLine($"Type: {claim.Type}, Value: {claim.Value}");
+                    // Xử lý các thông tin claim tại đây
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+                return null; // Trả về null nếu có lỗi xảy ra
+            }
+            return null;
         }
     }
 }

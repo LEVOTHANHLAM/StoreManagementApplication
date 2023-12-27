@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Forms\UserControls\KhachHang\**" />
+    <EmbeddedResource Remove="Forms\UserControls\KhachHang\**" />
+    <None Remove="Forms\UserControls\KhachHang\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Forms\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +66,6 @@
 
   <ItemGroup>
     <Folder Include="Forms\UI\KhachHang\" />
-    <Folder Include="Forms\UserControls\KhachHang\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,6 +75,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
     <PackageReference Include="System.IO.Ports" Version="8.0.0" />
   </ItemGroup>
 

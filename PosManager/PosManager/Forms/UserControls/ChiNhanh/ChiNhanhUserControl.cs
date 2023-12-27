@@ -1,5 +1,8 @@
 ﻿using Krypton_toolKitDemo;
+using PosManager.APIServices.ChiNhanh;
+using PosManager.APIServices.Kho;
 using PosManager.Helper;
+using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using Serilog;
 using System.Windows.Forms;
@@ -9,51 +12,57 @@ namespace PosManager.Forms.UserControls
 {
     public partial class ChiNhanhUserControl : UserControl
     {
-
+        private StoresController _storesController;
+        private int currentPage = 1;
+        private int totalPages = 0;
+        private int pageSize = 10; // Số phần tử trên mỗi trang
+        private int Total = 1000;
+        private int row = 0;
         public ChiNhanhUserControl()
         {
             InitializeComponent();
-
+            _storesController = new StoresController();
+            cbbCuonTrang.SelectedIndex = 0;
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemChiNhanh themChiNhanh = new fThemChiNhanh(null);
-            themChiNhanh.ShowDialog();
+            fThemKho them = new fThemKho(null);
+            them.ShowDialog();
+            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
 
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
         {
-            loadAccount();
+            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
-        private void loadAccount()
+        private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
             try
             {
-                var data = new[]
-{
-    new { STT = 1, Ten = "Tên 1", DiaChi = "Địa chỉ 1", SoDienThoai = "123456789", NgayTao = DateTime.Now, Id = 1 },
-    new { STT = 2, Ten = "Tên 2", DiaChi = "Địa chỉ 2", SoDienThoai = "987654321", NgayTao = DateTime.Now, Id = 2 },
-    // Thêm dữ liệu cho các hàng khác tương tự
-};
-                //var accounts = _accountRepository.GetAll();
-                //if (accounts.Count > 0)
-                //{
-                //    dtgvAccount.Invoke((MethodInvoker)delegate
-                //    {
-                //        dtgvAccount.Rows.Clear();
-                //        int i = 1;
-                //        foreach (var a in accounts)
-                //        {
-
-                foreach (var item in data)
+                if (searchString == "Tìm Kiếm")
                 {
-                    dtgvAccount.Rows.Add(false, item.STT, item.Ten, item.DiaChi, item.SoDienThoai, item.NgayTao.ToString("dd/MM/yyyy HH:mm:ss"), Properties.Resources.Edit, item.Id);
+                    searchString = "";
                 }
-                //            i++;
-                //        }
-                //    });
-                //}
+                var accounts = await _storesController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);
+                dtgvAccount.Rows.Clear();
+                if (accounts != null && accounts.StatusCode == 200 && accounts.Data.Result.Count > 0)
+                {
+                    Total = accounts.Data.Total;
+                    totalPages = (int)Math.Ceiling((double)Total / pageSize);
+
+                    dtgvAccount.Invoke((MethodInvoker)delegate
+                    {
+                        int i = (currentPage - 1) * pageSize + 1;
+                        foreach (var a in accounts.Data.Result)
+                        {
+                            dtgvAccount.Rows.Add(false, i, a.MaCuaHang, a.TenCuaHang, a.MaKho, a.TenKho, Properties.Resources.Edit, a.Id);
+                            i++;
+                        }
+                        row = i;
+                    });
+
+                    DisplayDataOnCurrentPage();
+                }
             }
             catch (Exception ex)
             {
@@ -62,6 +71,39 @@ namespace PosManager.Forms.UserControls
             }
         }
 
+        private void DisplayDataOnCurrentPage()
+        {
+            try
+            {
+                int startItem = (currentPage - 1) * pageSize + 1; // Số thứ tự bắt đầu
+                int endItem = Math.Min(currentPage * pageSize, Total); // Số thứ tự kết thúc
+
+                lbThongBaoSoTrang.Text = $" Hiển thị từ {startItem} đến {endItem} trong tổng số {Total} mục";
+                // Disable nút Previous khi ở trang đầu tiên
+                btnQuayLaiTrang.Enabled = currentPage > 1;
+                // Disable nút Next khi ở trang cuối cùng
+                btnTiepTucTrang.Enabled = currentPage < totalPages;
+                // Tính toán và hiển thị các nút trang
+                // Ví dụ: Button 1 là trang trước đó của trang hiện tại
+                btnTrang1.Enabled = currentPage != 1;
+                // Button 2 là trang trước trang hiện tại
+                btnTrang2.Visible = totalPages > 1;
+                btnTrang2.Enabled = currentPage != 2;
+
+                // Button 3 là trang sau trang hiện tại
+                btnTrang3.Visible = totalPages > 2;
+                btnTrang3.Enabled = currentPage != totalPages;
+                // Button 11 là trang sau trang tiếp theo của trang hiện tại
+                label3.Visible = totalPages > 4;
+                btnTrangCuoi.Visible = totalPages > 3;
+                btnTrangCuoi.Enabled = currentPage < totalPages;
+                btnTrangCuoi.Text = totalPages.ToString();
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(DisplayDataOnCurrentPage)}, Error; {ex.Message}, Exception; {ex}");
+            }
+        }
         private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0 && e.RowIndex > -1)
@@ -82,13 +124,11 @@ namespace PosManager.Forms.UserControls
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                ChiNhanhModel chiNhanhModel = new ChiNhanhModel();
-                chiNhanhModel.SDT = DataGridViewHelper.GetCellValue(dtgvAccount, e.RowIndex, "cSoDienThoai");
-                chiNhanhModel.Id = DataGridViewHelper.GetCellValue(dtgvAccount, e.RowIndex, "cId");
-                chiNhanhModel.Address = DataGridViewHelper.GetCellValue(dtgvAccount, e.RowIndex, "cDiaChi");
-                chiNhanhModel.Name = DataGridViewHelper.GetCellValue(dtgvAccount, e.RowIndex, "cTen");
-                fThemChiNhanh fThemChiNhanh = new fThemChiNhanh(chiNhanhModel);
-                fThemChiNhanh.ShowDialog();
+                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
+                fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
+                themNhaCungCap.ShowDialog();
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             }
         }
 
@@ -217,6 +257,102 @@ namespace PosManager.Forms.UserControls
             }
         }
 
-       
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbbCuonTrang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pageSize = int.Parse(cbbCuonTrang.Text);
+            currentPage = 1;
+            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+        }
+
+        private void btnQuayLaiTrang_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+        }
+
+        private void btnTiepTucTrang_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+        }
+
+        private void btnTrang1_Click(object sender, EventArgs e)
+        {
+            if (currentPage != 1)
+            {
+                currentPage = 1;
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+        }
+
+        private void btnTrang2_Click(object sender, EventArgs e)
+        {
+            if (currentPage != 2)
+            {
+                currentPage = 2;
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+        }
+
+        private void btnTrang3_Click(object sender, EventArgs e)
+        {
+            if (currentPage != 3)
+            {
+                currentPage = 3;
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+        }
+
+        private void btnTrangCuoi_Click(object sender, EventArgs e)
+        {
+            if (currentPage != totalPages)
+            {
+                currentPage = totalPages;
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            //currentPage = 1;
+            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ExportHelper.ExportStringDataFromDataGridViewToExcel(dtgvAccount);
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            var listDelete = GetListSelect();
+            if (listDelete.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa {listDelete.Count} dữ liệu này không?", "Thông báo", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    foreach (var item in listDelete)
+                    {
+                        var accounts = await _storesController.Delete(GlobalModel.AccsessToken, item);
+                    }
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
+            }
+            else
+            {
+                MessageCommon.ShowMessageBox("Vui lòng chọn dữ liệu cần xóa", 4);
+            }
+        }
     }
 }
