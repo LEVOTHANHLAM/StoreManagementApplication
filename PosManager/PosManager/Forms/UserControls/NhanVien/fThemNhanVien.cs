@@ -32,11 +32,11 @@ namespace Krypton_toolKitDemo
                     label7.Visible = false;
                     txtPassword.Visible = false;
                     txtDiaChi.Text = result.Data.Address;
-                    txtUsername.Text = result.Data.Username;
+                    txtUsername.Text = result.Data.UserName;
                     txtCCCD.Text = result.Data.CCCD;
                     txtPhonenumber.Text = result.Data.PhoneNumber;
                     dateNgaySinh.Value = (DateTime)result.Data.DateOfBirth;
-                    txtTen.Text = result.Data.Fullname;
+                    txtTen.Text = result.Data.FullName;
                     cbbChucVu.SelectedIndex = 1;
                     if (result.Data.Role == "SysAdmin")
                     {
@@ -64,11 +64,11 @@ namespace Krypton_toolKitDemo
                 user.Email = txtEmail.Text;
                 user.Password = txtPassword.Text;
                 user.Address = txtDiaChi.Text;
-                user.Username = txtUsername.Text;
+                user.UserName = txtUsername.Text;
                 user.CCCD = txtCCCD.Text;
                 user.PhoneNumber = txtPhonenumber.Text;
                 user.DateOfBirth = dateNgaySinh.Value;
-                user.Fullname = txtTen.Text;
+                user.FullName = txtTen.Text;
                 user.Role = "SysAdmin";
                 if (cbbChucVu.SelectedIndex == 1)
                 {

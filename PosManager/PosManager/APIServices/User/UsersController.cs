@@ -45,7 +45,7 @@ namespace PosManager.APIServices.User
                 var requestData = new
                 {
                     email = user.Email,
-                    fullName = user.Fullname,
+                    fullName = user.FullName,
                     phoneNumber = user.PhoneNumber,
                     cccd = user.CCCD,
                     address = user.Address,

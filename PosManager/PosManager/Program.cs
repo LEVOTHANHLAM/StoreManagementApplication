@@ -1,8 +1,7 @@
 ﻿using Krypton_toolKitDemo;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PosManager.Forms;
-using PosManager.Forms.UI;
+using PosManager.Helper;
 using Serilog;
 
 namespace PosManager
@@ -47,8 +46,8 @@ namespace PosManager
                         Log.Error(ex.ToString());
                         Log.Error(ex.InnerException.Message);
                     }
+                    MessageCommon.ShowMessageBox(ex.Message, 4);
                 }
-
                 //Khi form chính (form1) bị đóng <==> chương trình kết thúc ấy
                 //thì dừng host
                 _host.StopAsync().GetAwaiter().GetResult();
@@ -63,6 +62,7 @@ namespace PosManager
                     Log.Error(ex.ToString());
                     Log.Error(ex.InnerException.Message);
                 }
+                MessageCommon.ShowMessageBox(ex.Message, 4);
             }
             finally
             {

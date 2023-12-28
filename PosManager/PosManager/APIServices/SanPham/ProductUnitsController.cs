@@ -140,5 +140,142 @@ namespace PosManager.APIServices.SanPham
                 return null;
             }
         }
+
+        //////////////////////////////////////////////////////////////////////////
+        public async Task<ApiResponse<string?>> AddProductUnitDetail(string token, ProductUnitDetailModel productUnitDetailModel)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(ProductUnitsController)}, params; {nameof(Add)},Ma; {productUnitDetailModel.MaDonViHangHoa}");
+
+                string url = Constant.DomainAPI + "/api/productunits/details";
+                HttpClient httpClient = new HttpClient();
+                httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                var requestData = new
+                {
+                    maHangHoa = productUnitDetailModel.MaHangHoa,
+                    maDonViHangHoa = productUnitDetailModel.MaDonViHangHoa,
+                    tyLeChuyenDoi = productUnitDetailModel.TyLeChuyenDoi,
+                    createById = ""
+                };
+                var content = new StringContent(JsonConvert.SerializeObject(requestData), System.Text.Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await httpClient.PostAsync(url, content);
+                var body = await response.Content.ReadAsStringAsync();
+                ApiResponse<string?> data = JsonConvert.DeserializeObject<ApiResponse<string?>>(body);
+
+                Log.Information($"End: {nameof(ProductUnitsController)}, params; {nameof(AddProductUnitDetail)},Ma; {productUnitDetailModel.MaDonViHangHoa}");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ProductUnitsController)}, params; {nameof(AddProductUnitDetail)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
+        public async Task<ApiResponse<ProductUnitDetailModel>> GetDetailById(string token, string id)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(ProductUnitsController)}, params; {nameof(GetDetailById)},id; {id}");
+
+                // Tạo HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Thêm Authorization header
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    // Tạo URL của API endpoint
+                    string apiUrl = $"{Constant.DomainAPI}/api/productunits/details/{id}";
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    var body = await response.Content.ReadAsStringAsync();
+                    ApiResponse<ProductUnitDetailModel> data = JsonConvert.DeserializeObject<ApiResponse<ProductUnitDetailModel>>(body);
+
+                    Log.Information($"End: {nameof(ProductUnitsController)}, params; {nameof(GetDetailById)},id; {id}");
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ProductUnitsController)}, params; {nameof(GetDetailById)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
+        public async Task<ApiResponse<List<ProductUnitDetailModel>>> GetDetailByProductId(string token, string idProduct)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(ProductUnitsController)}, params; {nameof(GetDetailById)},id; {idProduct}");
+
+                // Tạo HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Thêm Authorization header
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    // Tạo URL của API endpoint
+                    string apiUrl = $"{Constant.DomainAPI}/api/productunits/details/products/{idProduct}";
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    var body = await response.Content.ReadAsStringAsync();
+                    ApiResponse<List<ProductUnitDetailModel>> data = JsonConvert.DeserializeObject<ApiResponse<List<ProductUnitDetailModel>>>(body);
+
+                    Log.Information($"End: {nameof(ProductUnitsController)}, params; {nameof(GetDetailById)},id; {idProduct}");
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ProductUnitsController)}, params; {nameof(GetDetailById)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
+        public async Task<ApiResponse<string?>> UpdateDetail(string token, ProductUnitDetailModel productUnitDetailModel)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(ProductUnitsController)}, params; {nameof(Edit)},Ma;  {productUnitDetailModel.MaDonViHangHoa}");
+
+                string url = Constant.DomainAPI + $"/api/productunits/details/{productUnitDetailModel.Id}";
+                HttpClient httpClient = new HttpClient();
+                httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                var requestData = new
+                {
+                    maDonViHangHoa = productUnitDetailModel.MaDonViHangHoa,
+                    tenDonViHangHoa = productUnitDetailModel.TenDonViHangHoa,
+                    lastModifiedById = ""
+                };
+                var content = new StringContent(JsonConvert.SerializeObject(requestData), System.Text.Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await httpClient.PutAsync(url, content);
+                var body = await response.Content.ReadAsStringAsync();
+                ApiResponse<string?> data = JsonConvert.DeserializeObject<ApiResponse<string?>>(body);
+
+                Log.Information($"End: {nameof(ProductUnitsController)}, params; {nameof(Edit)},Ma;  {productUnitDetailModel.MaDonViHangHoa}");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ProductUnitsController)}, params; {nameof(Edit)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
+        public async Task<ApiResponse<string?>> DeleteDetail(string token, string id)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(ProductUnitsController)}, params; {nameof(Delete)},name; {id}");
+
+                string url = Constant.DomainAPI + $"/api/productunits/details/{id}";
+                HttpClient httpClient = new HttpClient();
+                httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                HttpResponseMessage response = await httpClient.DeleteAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+                ApiResponse<string?> data = JsonConvert.DeserializeObject<ApiResponse<string?>>(body);
+
+                Log.Information($"End: {nameof(ProductUnitsController)}, params; {nameof(Delete)},name; {id}");
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ProductUnitsController)}, params; {nameof(Delete)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
     }
 }

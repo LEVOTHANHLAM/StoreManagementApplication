@@ -124,11 +124,23 @@ namespace PosManager.Forms.UserControls
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
-                fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
-                themNhaCungCap.ShowDialog();
-                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                try
+                {
+                    StoreModel store = new StoreModel();
+                    store.Id = Guid.Parse(dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString());
+                    store.MaCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cMaCuaHang"].Value.ToString();
+                    store.TenCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cTenCuaHang"].Value.ToString();
+                    store.MaKho = dtgvAccount.Rows[e.RowIndex].Cells["cMaKho"].Value.ToString();
+                    store.TenKho = dtgvAccount.Rows[e.RowIndex].Cells["cTenKho"].Value.ToString();
+                    fThemChiNhanh sua = new fThemChiNhanh(store);
+                    sua.ShowDialog();
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellContentClick)}, Error; {ex.Message}, Exception; {ex}");
+                    MessageCommon.ShowMessageBox(ex.Message, 4);
+                }
             }
         }
 

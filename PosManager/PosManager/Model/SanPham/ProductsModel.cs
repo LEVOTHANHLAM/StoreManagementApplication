@@ -8,6 +8,7 @@
         public string? TenHangHoaKhongDau { get; set; }
         public string? MaNhomHang { get; set; }
         public string? TenNhomHang { get; set; }
+        public string? MaDonViCoBan { get; set; }
         public double? VAT { get; set; }
         public string? GhiChu { get; set; }
         public string? MaVach { get; set; }

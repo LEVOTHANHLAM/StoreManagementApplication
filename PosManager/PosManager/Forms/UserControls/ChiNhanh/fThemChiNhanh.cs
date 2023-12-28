@@ -1,5 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.Kho;
+using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using PosManager.Model.Kho;
@@ -30,20 +32,20 @@ namespace Krypton_toolKitDemo
                 stocks.AddRange(result.Data.Result);
                 if (stocks.Any())
                 {
-                    cbbChucVu.Items.Clear();
+                    cbbMaKho.Items.Clear();
                     foreach (var item in stocks)
                     {
-                        cbbChucVu.Items.Add(item.MaKho);
+                        cbbMaKho.Items.Add(item.MaKho);
                     }
 
                 }
             }
-            cbbChucVu.SelectedIndex = 0;
+            cbbMaKho.SelectedIndex = 0;
             if (_store != null)
             {
-                if (cbbChucVu.Items.Count > 0)
+                if (cbbMaKho.Items.Count > 0)
                 {
-                    cbbChucVu.SelectedItem = _store.MaKho;
+                    cbbMaKho.SelectedItem = _store.MaKho;
                     cbbChucVu_SelectedIndexChanged(null, null);
                 }
             }
@@ -59,30 +61,57 @@ namespace Krypton_toolKitDemo
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private async void btnSave_Click(object sender, EventArgs e)
         {
-              
+            try
+            {
+                if (string.IsNullOrEmpty(txtMaCuaHang.Text) || string.IsNullOrEmpty(txtTenCuaHang.Text))
+                {
+                    MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
+                    return;
+                }
+                StoresController storesController = new StoresController();
+                StoreModel storeModel = new StoreModel();
+                storeModel.MaCuaHang = txtMaCuaHang.Text.Trim();
+                storeModel.TenCuaHang = txtTenCuaHang.Text.Trim();
+                storeModel.MaKho = cbbMaKho.SelectedItem.ToString();
+                if (_store != null)
+                {
+                   storeModel.Id = _store.Id;
+                    var result = await storesController.Edit(GlobalModel.AccsessToken, storeModel);
+                    if (result != null)
+                    {
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                }
+                else
+                {
+                    var result = await storesController.Add(GlobalModel.AccsessToken, storeModel);
+                    if (result != null)
+                    {
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                }
 
-            if (_store != null)
+            }
+            catch (Exception ex)
             {
 
             }
-            else
-            {
 
-            }
+          
         }
 
         private void cbbChucVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbChucVu.Items.Count > 0)
+            if (cbbMaKho.Items.Count > 0)
             {
-                var maKho = cbbChucVu.SelectedItem.ToString();
+                var maKho = cbbMaKho.SelectedItem.ToString();
                 foreach (var item in stocks)
                 {
                     if (item.MaKho == maKho)
                     {
-                        txtUsername.Text = item.TenKho;
+                        txtTenKho.Text = item.TenKho;
                         break;
                     }
                 }

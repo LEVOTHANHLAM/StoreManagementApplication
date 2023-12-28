@@ -69,7 +69,12 @@ namespace PosManager.Forms.UserControls.NhanVien
                             {
                                 value = "Admin";
                             }
-                            dtgvAccount.Rows.Add(false, i, a.Fullname, a.Email, a.Username, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, Properties.Resources.Edit, Properties.Resources.PhanQuyen, a.Id);
+                            Button button = new Button();
+                            button.Image = Properties.Resources.Show;
+                            button.ImageAlign = ContentAlignment.MiddleLeft;
+                            button.Text = "Show";
+                            button.TextAlign = ContentAlignment.MiddleRight;
+                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, button, a.Id);
                             i++;
                         }
                         row = i;
@@ -141,13 +146,6 @@ namespace PosManager.Forms.UserControls.NhanVien
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                 fThemNhanVien edit = new fThemNhanVien(id);
                 edit.ShowDialog();
-                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
-            }
-            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cPhanQuyen"].Index)
-            {
-                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                fPhanQuyen PhanQuyen = new fPhanQuyen(id);
-                PhanQuyen.ShowDialog();
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             }
         }

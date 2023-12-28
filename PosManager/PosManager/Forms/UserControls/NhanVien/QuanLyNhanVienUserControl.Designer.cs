@@ -41,7 +41,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             panel2 = new Panel();
             panel4 = new Panel();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
@@ -59,6 +58,12 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
+            ctmsAcc = new ContextMenuStrip(components);
+            selectedToolStripMenuItem = new ToolStripMenuItem();
+            selectAllToolStripMenuItem = new ToolStripMenuItem();
+            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
+            deselectAllToolStripMenuItem = new ToolStripMenuItem();
+            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
             cTen = new DataGridViewTextBoxColumn();
@@ -69,15 +74,9 @@ namespace PosManager.Forms.UserControls.NhanVien
             cDiaChi = new DataGridViewTextBoxColumn();
             cNgaySinh = new DataGridViewTextBoxColumn();
             cRole = new DataGridViewTextBoxColumn();
-            cEdit = new DataGridViewImageColumn();
-            cPhanQuyen = new DataGridViewImageColumn();
+            cCuaHang = new DataGridViewTextBoxColumn();
+            cEdit = new DataGridViewButtonColumn();
             cId = new DataGridViewTextBoxColumn();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
-            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -147,7 +146,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             // 
             panel4.Controls.Add(btnExport);
             panel4.Controls.Add(txtSearch);
-            panel4.Controls.Add(btnDelete);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
@@ -207,61 +205,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnExport.Values.Image = (Image)resources.GetObject("btnExport.Values.Image");
             btnExport.Values.Text = "Xuất File";
             btnExport.Click += btnExport_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(236, 3);
-            btnDelete.MaximumSize = new Size(133, 35);
-            btnDelete.MinimumSize = new Size(133, 35);
-            btnDelete.Name = "btnDelete";
-            btnDelete.OverrideDefault.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.OverrideDefault.Border.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.OverrideDefault.Border.Rounding = 18;
-            btnDelete.OverrideDefault.Border.Width = 1;
-            btnDelete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnDelete.Size = new Size(133, 35);
-            btnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateCommon.Border.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateCommon.Border.Rounding = 18;
-            btnDelete.StateCommon.Border.Width = 1;
-            btnDelete.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDelete.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnDelete.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
-            btnDelete.StatePressed.Back.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnDelete.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnDelete.StatePressed.Border.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StatePressed.Border.Rounding = 18;
-            btnDelete.StatePressed.Border.Width = 1;
-            btnDelete.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnDelete.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
-            btnDelete.StateTracking.Back.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateTracking.Border.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateTracking.Border.Rounding = 18;
-            btnDelete.StateTracking.Border.Width = 1;
-            btnDelete.TabIndex = 10;
-            btnDelete.Values.Image = (Image)resources.GetObject("btnDelete.Values.Image");
-            btnDelete.Values.Text = "Xoá";
-            btnDelete.Click += btnDelete_Click;
             // 
             // panel1
             // 
@@ -755,7 +698,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cEdit, cPhanQuyen, cId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cCuaHang, cEdit, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -769,6 +712,48 @@ namespace PosManager.Forms.UserControls.NhanVien
             dtgvAccount.CellClick += dtgvAccount_CellClick;
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
+            // 
+            // ctmsAcc
+            // 
+            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
+            ctmsAcc.Name = "contextMenuStrip1";
+            ctmsAcc.Size = new Size(134, 48);
+            // 
+            // selectedToolStripMenuItem
+            // 
+            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
+            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
+            selectedToolStripMenuItem.Size = new Size(133, 22);
+            selectedToolStripMenuItem.Text = "Selected";
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            selectAllToolStripMenuItem.Size = new Size(184, 22);
+            selectAllToolStripMenuItem.Text = "Select all";
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // selectAllHighlightedToolStripMenuItem
+            // 
+            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
+            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
+            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
+            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
+            // 
+            // deselectAllToolStripMenuItem
+            // 
+            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+            deselectAllToolStripMenuItem.Size = new Size(133, 22);
+            deselectAllToolStripMenuItem.Text = "Deselect all";
+            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
+            // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(0, 0);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(100, 23);
+            kryptonTextBox1.TabIndex = 0;
             // 
             // cChon
             // 
@@ -841,18 +826,18 @@ namespace PosManager.Forms.UserControls.NhanVien
             cRole.HeaderText = "Chức Vụ";
             cRole.Name = "cRole";
             // 
+            // cCuaHang
+            // 
+            cCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cCuaHang.HeaderText = "Mã Cửa Hàng";
+            cCuaHang.Name = "cCuaHang";
+            // 
             // cEdit
             // 
             cEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            cEdit.HeaderText = "Sửa";
+            cEdit.HeaderText = "Hiển Thị";
             cEdit.Name = "cEdit";
             cEdit.Resizable = DataGridViewTriState.True;
-            // 
-            // cPhanQuyen
-            // 
-            cPhanQuyen.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            cPhanQuyen.HeaderText = "Phân Quyền";
-            cPhanQuyen.Name = "cPhanQuyen";
             // 
             // cId
             // 
@@ -861,48 +846,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             cId.Name = "cId";
             cId.ReadOnly = true;
             cId.Visible = false;
-            // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(0, 0);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(100, 23);
-            kryptonTextBox1.TabIndex = 0;
             // 
             // QuanLyNhanVienUserControl
             // 
@@ -947,7 +890,6 @@ namespace PosManager.Forms.UserControls.NhanVien
         private ToolStripMenuItem selectAllToolStripMenuItem;
         private ToolStripMenuItem selectAllHighlightedToolStripMenuItem;
         private ToolStripMenuItem deselectAllToolStripMenuItem;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Panel panel3;
         private Label label1;
@@ -973,8 +915,8 @@ namespace PosManager.Forms.UserControls.NhanVien
         private DataGridViewTextBoxColumn cDiaChi;
         private DataGridViewTextBoxColumn cNgaySinh;
         private DataGridViewTextBoxColumn cRole;
-        private DataGridViewImageColumn cEdit;
-        private DataGridViewImageColumn cPhanQuyen;
+        private DataGridViewTextBoxColumn cCuaHang;
+        private DataGridViewButtonColumn cEdit;
         private DataGridViewTextBoxColumn cId;
     }
 }

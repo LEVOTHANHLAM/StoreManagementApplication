@@ -49,6 +49,7 @@ namespace PosManager.APIServices.SanPham
                     tenHangHoa = productsModel.TenHangHoa,
                     tenHangHoaKhongDau = productsModel.TenHangHoaKhongDau,
                     maNhomHang = productsModel.MaNhomHang,
+                    maDonViCoBan = productsModel.MaDonViCoBan,
                     vat = productsModel.VAT,
                     ghiChu = productsModel.GhiChu,
                     maVach = productsModel.MaVach,

@@ -127,14 +127,6 @@
         5QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnDelete.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAJFJREFUOE/Fi7EJAkEUBS+6Yg6xELEQMb3ADlSswVAb0Vxb0D6Eddb/wOD5FxNx
-        YGD5b7b7GaWUvZ5tCAfc4QM/Ue91H/TlTT3i9gv9c4VhxFXDUanDeMcWN6UO4zmalJNSh/EYTcpBqcO4
-        iSZlrdRhXEaTslDqMM6jSZkpdRin0aRMlDqMPV5fmXPBXulf6bonjzyH41ehsg0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnAdd.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -164,7 +156,7 @@
   <metadata name="cRole.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="cPhanQuyen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="cCuaHang.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="ctmsAcc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

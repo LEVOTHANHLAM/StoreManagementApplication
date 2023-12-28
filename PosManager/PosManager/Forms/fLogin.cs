@@ -1,11 +1,14 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
+using PosManager.Model.ChiNhanh;
+using PosManager.Model.User;
 using Serilog;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using static PosManager.Model.GlobalModel;
 
 namespace Krypton_toolKitDemo
 {
@@ -16,7 +19,7 @@ namespace Krypton_toolKitDemo
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             txtUsername.Text = (string)PosManager.Properties.Settings.Default["username"];
             txtPassword.Text = (string)PosManager.Properties.Settings.Default["password"];
@@ -24,7 +27,6 @@ namespace Krypton_toolKitDemo
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-
             try
             {
                 btnLogin.Enabled = false;
@@ -52,10 +54,13 @@ namespace Krypton_toolKitDemo
                     if (user.StatusCode == 200 && user.Message == "Success" && !string.IsNullOrEmpty(user.Data.Token))
                     {
                         GlobalModel.AccsessToken = user.Data.Token;
-                        var s = ConvertTokenToJson(user.Data.Token);
-                        fMain form1 = new fMain();
-                        form1.Show();
-                        this.Hide();
+                        GlobalModel.UserInfo = GetUserInfoFromToken(user.Data.Token);
+                        if (GlobalModel.UserInfo != null)
+                        {
+                            fMain form1 = new fMain();
+                            form1.Show();
+                            this.Hide();
+                        }
                     }
                     else
                     {
@@ -72,24 +77,37 @@ namespace Krypton_toolKitDemo
             }
 
         }
-        private string ConvertTokenToJson(string token)
+        public TokenInfo GetUserInfoFromToken(string jwtToken)
         {
-            try
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var jwtTokenObj = tokenHandler.ReadJwtToken(jwtToken);
+
+            var permissionsClaim = jwtTokenObj.Claims.FirstOrDefault(claim => claim.Type == "permissions")?.Value;
+            var storeClaim = jwtTokenObj.Claims.FirstOrDefault(claim => claim.Type == "store")?.Value;
+            var userIdClaim = jwtTokenObj.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.NameIdentifier)?.Value;
+            var userNameClaim = jwtTokenObj.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Name)?.Value;
+
+            List<PermissionModel> permissions = new List<PermissionModel>();
+            if (!string.IsNullOrEmpty(permissionsClaim))
             {
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var claims = tokenHandler.ReadJwtToken(token).Claims.ToList();
-                foreach (var claim in claims)
-                {
-                    Console.WriteLine($"Type: {claim.Type}, Value: {claim.Value}");
-                    // Xử lý các thông tin claim tại đây
-                }
+                permissions = JsonConvert.DeserializeObject<List<PermissionModel>>(permissionsClaim);
             }
-            catch (Exception ex)
+
+            StoreModel store = null;
+            if (!string.IsNullOrEmpty(storeClaim))
             {
-                Console.WriteLine("Exception: " + ex.Message);
-                return null; // Trả về null nếu có lỗi xảy ra
+                store = JsonConvert.DeserializeObject<StoreModel>(storeClaim);
             }
-            return null;
+
+            var userInfo = new TokenInfo
+            {
+                Permissions = permissions ?? new List<PermissionModel>(),
+                Store = store,
+                Id = userIdClaim,
+                Name = userNameClaim
+            };
+
+            return userInfo;
         }
     }
 }

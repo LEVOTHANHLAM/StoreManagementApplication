@@ -142,5 +142,32 @@ namespace PosManager.APIServices.SanPham
                 return null;
             }
         }
+        public async Task<ApiResponse<CategoryModel>> GetByCode(string token, string code)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(CategoriesController)}, params; {nameof(Search)},id; {code}");
+
+                // Tạo HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Thêm Authorization header
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    // Tạo URL của API endpoint
+                    string apiUrl = $"{Constant.DomainAPI}/api/categories/{code}";
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    var body = await response.Content.ReadAsStringAsync();
+                    ApiResponse<CategoryModel> data = JsonConvert.DeserializeObject<ApiResponse<CategoryModel>>(body);
+
+                    Log.Information($"End: {nameof(CategoriesController)}, params; {nameof(Search)},id; {code}");
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(CategoriesController)}, params; {nameof(Search)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
     }
 }

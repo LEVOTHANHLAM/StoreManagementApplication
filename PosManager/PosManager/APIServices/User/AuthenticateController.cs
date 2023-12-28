@@ -1,13 +1,6 @@
 ﻿using Newtonsoft.Json;
 using PosManager.Model.User;
 using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PosManager.APIServices.User
 {
@@ -48,10 +41,11 @@ namespace PosManager.APIServices.User
                 var requestData = new
                 {
                     email = user.Email,
-                    userName = user.Username,
-                    fullName = user.Fullname,
+                    userName = user.UserName,
+                    fullName = user.FullName,
                     phoneNumber = user.PhoneNumber,
                     cccd = user.CCCD,
+                    maCuaHang = user.MaCuaHang,
                     address = user.Address,
                     dateOfBirth = user.DateOfBirth,
                     password = user.Password,

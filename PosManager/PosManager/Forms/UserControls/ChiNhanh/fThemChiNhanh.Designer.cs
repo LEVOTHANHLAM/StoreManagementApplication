@@ -36,11 +36,11 @@
             btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             label1 = new Label();
-            txtUsername = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            txtTenKho = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             label7 = new Label();
             label8 = new Label();
             txtTenCuaHang = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            cbbChucVu = new ComboBox();
+            cbbMaKho = new ComboBox();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -231,22 +231,22 @@
             label1.TabIndex = 13;
             label1.Text = "Mã Kho :";
             // 
-            // txtUsername
+            // txtTenKho
             // 
-            txtUsername.Enabled = false;
-            txtUsername.Location = new Point(193, 160);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(344, 31);
-            txtUsername.StateCommon.Back.Color1 = Color.White;
-            txtUsername.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtUsername.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtUsername.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtUsername.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtUsername.StateCommon.Border.Rounding = 18;
-            txtUsername.StateCommon.Content.Color1 = Color.Black;
-            txtUsername.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsername.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtUsername.TabIndex = 12;
+            txtTenKho.Enabled = false;
+            txtTenKho.Location = new Point(193, 160);
+            txtTenKho.Name = "txtTenKho";
+            txtTenKho.Size = new Size(344, 31);
+            txtTenKho.StateCommon.Back.Color1 = Color.White;
+            txtTenKho.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtTenKho.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtTenKho.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtTenKho.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtTenKho.StateCommon.Border.Rounding = 18;
+            txtTenKho.StateCommon.Content.Color1 = Color.Black;
+            txtTenKho.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenKho.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtTenKho.TabIndex = 12;
             // 
             // label7
             // 
@@ -288,19 +288,19 @@
             txtTenCuaHang.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtTenCuaHang.TabIndex = 24;
             // 
-            // cbbChucVu
+            // cbbMaKho
             // 
-            cbbChucVu.DisplayMember = "DisplayText";
-            cbbChucVu.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbChucVu.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cbbChucVu.FormattingEnabled = true;
-            cbbChucVu.Items.AddRange(new object[] { "Admin", "Nhân Viên" });
-            cbbChucVu.Location = new Point(193, 114);
-            cbbChucVu.Name = "cbbChucVu";
-            cbbChucVu.Size = new Size(344, 26);
-            cbbChucVu.TabIndex = 28;
-            cbbChucVu.ValueMember = "Value";
-            cbbChucVu.SelectedIndexChanged += cbbChucVu_SelectedIndexChanged;
+            cbbMaKho.DisplayMember = "DisplayText";
+            cbbMaKho.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbMaKho.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbMaKho.FormattingEnabled = true;
+            cbbMaKho.Items.AddRange(new object[] { "Admin", "Nhân Viên" });
+            cbbMaKho.Location = new Point(193, 114);
+            cbbMaKho.Name = "cbbMaKho";
+            cbbMaKho.Size = new Size(344, 26);
+            cbbMaKho.TabIndex = 28;
+            cbbMaKho.ValueMember = "Value";
+            cbbMaKho.SelectedIndexChanged += cbbChucVu_SelectedIndexChanged;
             // 
             // fThemChiNhanh
             // 
@@ -308,12 +308,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(579, 275);
-            Controls.Add(cbbChucVu);
+            Controls.Add(cbbMaKho);
             Controls.Add(label8);
             Controls.Add(txtTenCuaHang);
             Controls.Add(label7);
             Controls.Add(label1);
-            Controls.Add(txtUsername);
+            Controls.Add(txtTenKho);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(label3);
@@ -340,11 +340,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancel;
         private Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUsername;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenKho;
         private Label label7;
         private Label label8;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenCuaHang;
-        private ComboBox cbbChucVu;
+        private ComboBox cbbMaKho;
     }
 }
 
