@@ -26,7 +26,7 @@ namespace PosManager.Forms.UserControls
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemKho them = new fThemKho(null);
+            fThemChiNhanh them = new fThemChiNhanh(null);
             them.ShowDialog();
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }

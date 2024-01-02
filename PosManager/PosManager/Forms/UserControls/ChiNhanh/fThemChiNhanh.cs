@@ -21,6 +21,10 @@ namespace Krypton_toolKitDemo
                 txtMaCuaHang.Text = storeModel.MaCuaHang;
                 txtTenCuaHang.Text = storeModel.TenCuaHang;
             }
+            else
+            {
+                txtMaCuaHang.Enabled = true;
+            }
         }
 
         private async void Form1_Load(object sender, EventArgs e)

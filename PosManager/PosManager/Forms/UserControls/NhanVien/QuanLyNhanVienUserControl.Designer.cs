@@ -36,11 +36,11 @@ namespace PosManager.Forms.UserControls.NhanVien
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            txtSearch = new PlaceholderTextBox();
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
             panel4 = new Panel();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            txtSearch = new PlaceholderTextBox();
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
@@ -58,12 +58,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
-            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
             cTen = new DataGridViewTextBoxColumn();
@@ -77,6 +71,12 @@ namespace PosManager.Forms.UserControls.NhanVien
             cCuaHang = new DataGridViewTextBoxColumn();
             cEdit = new DataGridViewButtonColumn();
             cId = new DataGridViewTextBoxColumn();
+            ctmsAcc = new ContextMenuStrip(components);
+            selectedToolStripMenuItem = new ToolStripMenuItem();
+            selectAllToolStripMenuItem = new ToolStripMenuItem();
+            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
+            deselectAllToolStripMenuItem = new ToolStripMenuItem();
+            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -90,27 +90,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).BeginInit();
             ctmsAcc.SuspendLayout();
             SuspendLayout();
-            // 
-            // txtSearch
-            // 
-            txtSearch.ForeColor = Color.Gray;
-            txtSearch.Location = new Point(3, 40);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderColor = Color.Gray;
-            txtSearch.PlaceholderText = "Tìm Kiếm";
-            txtSearch.Size = new Size(420, 36);
-            txtSearch.StateCommon.Back.Color1 = Color.White;
-            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtSearch.StateCommon.Border.Rounding = 18;
-            txtSearch.StateCommon.Content.Color1 = Color.Black;
-            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtSearch.TabIndex = 3;
-            txtSearch.Text = "Tìm Kiếm";
-            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // splitContainer1
             // 
@@ -153,7 +132,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             // 
             // btnExport
             // 
-            btnExport.Location = new Point(65, 3);
+            btnExport.Location = new Point(290, 3);
             btnExport.MaximumSize = new Size(133, 35);
             btnExport.MinimumSize = new Size(133, 35);
             btnExport.Name = "btnExport";
@@ -205,6 +184,27 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnExport.Values.Image = (Image)resources.GetObject("btnExport.Values.Image");
             btnExport.Values.Text = "Xuất File";
             btnExport.Click += btnExport_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.ForeColor = Color.Gray;
+            txtSearch.Location = new Point(3, 40);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderColor = Color.Gray;
+            txtSearch.PlaceholderText = "Tìm Kiếm";
+            txtSearch.Size = new Size(420, 36);
+            txtSearch.StateCommon.Back.Color1 = Color.White;
+            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtSearch.StateCommon.Border.Rounding = 18;
+            txtSearch.StateCommon.Content.Color1 = Color.Black;
+            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtSearch.TabIndex = 3;
+            txtSearch.Text = "Tìm Kiếm";
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // panel1
             // 
@@ -713,55 +713,13 @@ namespace PosManager.Forms.UserControls.NhanVien
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
             // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(0, 0);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(100, 23);
-            kryptonTextBox1.TabIndex = 0;
-            // 
             // cChon
             // 
-            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            cChon.FillWeight = 50F;
+            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cChon.FillWeight = 60F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 50;
+            cChon.Width = 60;
             // 
             // cSTT
             // 
@@ -828,9 +786,10 @@ namespace PosManager.Forms.UserControls.NhanVien
             // 
             // cCuaHang
             // 
-            cCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             cCuaHang.HeaderText = "Mã Cửa Hàng";
             cCuaHang.Name = "cCuaHang";
+            cCuaHang.Width = 131;
             // 
             // cEdit
             // 
@@ -846,6 +805,48 @@ namespace PosManager.Forms.UserControls.NhanVien
             cId.Name = "cId";
             cId.ReadOnly = true;
             cId.Visible = false;
+            // 
+            // ctmsAcc
+            // 
+            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
+            ctmsAcc.Name = "contextMenuStrip1";
+            ctmsAcc.Size = new Size(134, 48);
+            // 
+            // selectedToolStripMenuItem
+            // 
+            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
+            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
+            selectedToolStripMenuItem.Size = new Size(133, 22);
+            selectedToolStripMenuItem.Text = "Selected";
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            selectAllToolStripMenuItem.Size = new Size(184, 22);
+            selectAllToolStripMenuItem.Text = "Select all";
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // selectAllHighlightedToolStripMenuItem
+            // 
+            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
+            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
+            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
+            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
+            // 
+            // deselectAllToolStripMenuItem
+            // 
+            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+            deselectAllToolStripMenuItem.Size = new Size(133, 22);
+            deselectAllToolStripMenuItem.Text = "Deselect all";
+            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
+            // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(0, 0);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(100, 23);
+            kryptonTextBox1.TabIndex = 0;
             // 
             // QuanLyNhanVienUserControl
             // 

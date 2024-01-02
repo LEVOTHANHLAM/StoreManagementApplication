@@ -35,7 +35,7 @@ namespace PosManager.APIServices.User
             {
                 Log.Information($"Start: {nameof(AuthenticateController)}, params; {nameof(Create)},Email; {user.Email}");
 
-                string url = Constant.DomainAPI + "/api/Authenticate/login";
+                string url = Constant.DomainAPI + "/api/Authenticate/create";
                 HttpClient httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 var requestData = new

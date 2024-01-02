@@ -65,6 +65,7 @@ namespace Krypton_toolKitDemo
                     else
                     {
                         MessageCommon.ShowMessageBox(user.Message, 4);
+                        btnLogin.Enabled = true;
                         return;
                     }
                 }
@@ -93,16 +94,16 @@ namespace Krypton_toolKitDemo
                 permissions = JsonConvert.DeserializeObject<List<PermissionModel>>(permissionsClaim);
             }
 
-            StoreModel store = null;
+            string store = null;
             if (!string.IsNullOrEmpty(storeClaim))
             {
-                store = JsonConvert.DeserializeObject<StoreModel>(storeClaim);
+                store = storeClaim;
             }
 
             var userInfo = new TokenInfo
             {
                 Permissions = permissions ?? new List<PermissionModel>(),
-                Store = store,
+                StoreCode = store,
                 Id = userIdClaim,
                 Name = userNameClaim
             };

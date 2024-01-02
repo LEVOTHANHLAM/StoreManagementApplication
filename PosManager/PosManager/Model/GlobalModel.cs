@@ -10,7 +10,7 @@ namespace PosManager.Model
         public class TokenInfo
         {
             public List<PermissionModel>? Permissions { get; set; }
-            public StoreModel? Store { get; set; }
+            public string? StoreCode { get; set; }
             public string? Id {  get; set; }
             public string? Name { get; set; }
         }

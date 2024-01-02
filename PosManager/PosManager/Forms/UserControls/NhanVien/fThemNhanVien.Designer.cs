@@ -51,6 +51,12 @@
             label9 = new Label();
             txtEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cbbChucVu = new ComboBox();
+            cbbMaCuaHang = new ComboBox();
+            label10 = new Label();
+            label11 = new Label();
+            txtTenCuaHang = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            pcAvatar = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pcAvatar).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -98,9 +104,9 @@
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(142, 12);
+            txtTen.Location = new Point(200, 7);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(344, 31);
+            txtTen.Size = new Size(344, 32);
             txtTen.StateCommon.Back.Color1 = Color.White;
             txtTen.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtTen.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -108,8 +114,9 @@
             txtTen.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtTen.StateCommon.Border.Rounding = 18;
             txtTen.StateCommon.Content.Color1 = Color.Black;
-            txtTen.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTen.StateCommon.Content.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtTen.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtTen.StateDisabled.Content.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtTen.TabIndex = 3;
             // 
             // label3
@@ -117,7 +124,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(64, 64, 64);
-            label3.Location = new Point(-2, 19);
+            label3.Location = new Point(11, 14);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
             label3.Size = new Size(59, 24);
@@ -126,7 +133,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(82, 469);
+            btnSave.Location = new Point(117, 593);
             btnSave.Name = "btnSave";
             btnSave.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnSave.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -178,7 +185,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(291, 469);
+            btnCancel.Location = new Point(326, 593);
             btnCancel.Name = "btnCancel";
             btnCancel.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnCancel.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -233,7 +240,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(-2, 116);
+            label1.Location = new Point(11, 111);
             label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
             label1.Size = new Size(117, 24);
@@ -242,7 +249,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(142, 109);
+            txtUsername.Location = new Point(200, 104);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(344, 31);
             txtUsername.StateCommon.Back.Color1 = Color.White;
@@ -261,7 +268,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(64, 64, 64);
-            label2.Location = new Point(-2, 359);
+            label2.Location = new Point(11, 354);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
             label2.Size = new Size(103, 24);
@@ -273,7 +280,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(64, 64, 64);
-            label4.Location = new Point(-2, 265);
+            label4.Location = new Point(11, 260);
             label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
             label4.Size = new Size(89, 24);
@@ -282,7 +289,7 @@
             // 
             // txtDiaChi
             // 
-            txtDiaChi.Location = new Point(142, 258);
+            txtDiaChi.Location = new Point(200, 253);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(344, 31);
             txtDiaChi.StateCommon.Back.Color1 = Color.White;
@@ -301,7 +308,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(64, 64, 64);
-            label5.Location = new Point(-3, 215);
+            label5.Location = new Point(10, 210);
             label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
             label5.Size = new Size(118, 24);
@@ -311,7 +318,7 @@
             // dateNgaySinh
             // 
             dateNgaySinh.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateNgaySinh.Location = new Point(142, 214);
+            dateNgaySinh.Location = new Point(200, 209);
             dateNgaySinh.Name = "dateNgaySinh";
             dateNgaySinh.Size = new Size(344, 24);
             dateNgaySinh.TabIndex = 19;
@@ -321,7 +328,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(64, 64, 64);
-            label6.Location = new Point(-2, 311);
+            label6.Location = new Point(11, 306);
             label6.Margin = new Padding(6, 0, 6, 0);
             label6.Name = "label6";
             label6.Size = new Size(62, 24);
@@ -330,7 +337,7 @@
             // 
             // txtPhonenumber
             // 
-            txtPhonenumber.Location = new Point(142, 304);
+            txtPhonenumber.Location = new Point(200, 299);
             txtPhonenumber.Name = "txtPhonenumber";
             txtPhonenumber.Size = new Size(344, 31);
             txtPhonenumber.StateCommon.Back.Color1 = Color.White;
@@ -349,7 +356,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(64, 64, 64);
-            label7.Location = new Point(-2, 415);
+            label7.Location = new Point(11, 410);
             label7.Margin = new Padding(6, 0, 6, 0);
             label7.Name = "label7";
             label7.Size = new Size(109, 24);
@@ -358,7 +365,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(142, 408);
+            txtPassword.Location = new Point(200, 403);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(344, 31);
             txtPassword.StateCommon.Back.Color1 = Color.White;
@@ -377,7 +384,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
-            label8.Location = new Point(-3, 67);
+            label8.Location = new Point(10, 62);
             label8.Margin = new Padding(6, 0, 6, 0);
             label8.Name = "label8";
             label8.Size = new Size(78, 24);
@@ -386,7 +393,7 @@
             // 
             // txtCCCD
             // 
-            txtCCCD.Location = new Point(142, 60);
+            txtCCCD.Location = new Point(200, 55);
             txtCCCD.Name = "txtCCCD";
             txtCCCD.Size = new Size(344, 31);
             txtCCCD.StateCommon.Back.Color1 = Color.White;
@@ -405,7 +412,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(64, 64, 64);
-            label9.Location = new Point(-2, 166);
+            label9.Location = new Point(11, 161);
             label9.Margin = new Padding(6, 0, 6, 0);
             label9.Name = "label9";
             label9.Size = new Size(74, 24);
@@ -414,7 +421,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(142, 159);
+            txtEmail.Location = new Point(200, 154);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(344, 31);
             txtEmail.StateCommon.Back.Color1 = Color.White;
@@ -435,18 +442,86 @@
             cbbChucVu.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cbbChucVu.FormattingEnabled = true;
             cbbChucVu.Items.AddRange(new object[] { "Admin", "Nhân Viên" });
-            cbbChucVu.Location = new Point(142, 359);
+            cbbChucVu.Location = new Point(200, 354);
             cbbChucVu.Name = "cbbChucVu";
             cbbChucVu.Size = new Size(344, 26);
             cbbChucVu.TabIndex = 28;
             cbbChucVu.ValueMember = "Value";
+            // 
+            // cbbMaCuaHang
+            // 
+            cbbMaCuaHang.DisplayMember = "DisplayText";
+            cbbMaCuaHang.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbMaCuaHang.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbMaCuaHang.FormattingEnabled = true;
+            cbbMaCuaHang.Location = new Point(200, 463);
+            cbbMaCuaHang.Name = "cbbMaCuaHang";
+            cbbMaCuaHang.Size = new Size(344, 26);
+            cbbMaCuaHang.TabIndex = 30;
+            cbbMaCuaHang.ValueMember = "Value";
+            cbbMaCuaHang.SelectedIndexChanged += cbbMaCuaHang_SelectedIndexChanged;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.FromArgb(64, 64, 64);
+            label10.Location = new Point(11, 463);
+            label10.Margin = new Padding(6, 0, 6, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(149, 24);
+            label10.TabIndex = 29;
+            label10.Text = "Mã Cửa Hàng :";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(64, 64, 64);
+            label11.Location = new Point(11, 525);
+            label11.Margin = new Padding(6, 0, 6, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(158, 24);
+            label11.TabIndex = 32;
+            label11.Text = "Tên Cửa Hàng :";
+            // 
+            // txtTenCuaHang
+            // 
+            txtTenCuaHang.Location = new Point(200, 518);
+            txtTenCuaHang.Name = "txtTenCuaHang";
+            txtTenCuaHang.Size = new Size(344, 31);
+            txtTenCuaHang.StateCommon.Back.Color1 = Color.White;
+            txtTenCuaHang.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtTenCuaHang.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtTenCuaHang.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtTenCuaHang.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtTenCuaHang.StateCommon.Border.Rounding = 18;
+            txtTenCuaHang.StateCommon.Content.Color1 = Color.Black;
+            txtTenCuaHang.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenCuaHang.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtTenCuaHang.TabIndex = 31;
+            // 
+            // pcAvatar
+            // 
+            pcAvatar.Image = PosManager.Properties.Resources.icons8_avatar_100;
+            pcAvatar.Location = new Point(611, 7);
+            pcAvatar.Name = "pcAvatar";
+            pcAvatar.Size = new Size(140, 98);
+            pcAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            pcAvatar.TabIndex = 33;
+            pcAvatar.TabStop = false;
             // 
             // fThemNhanVien
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(498, 521);
+            ClientSize = new Size(776, 640);
+            Controls.Add(pcAvatar);
+            Controls.Add(label11);
+            Controls.Add(txtTenCuaHang);
+            Controls.Add(cbbMaCuaHang);
+            Controls.Add(label10);
             Controls.Add(cbbChucVu);
             Controls.Add(label9);
             Controls.Add(txtEmail);
@@ -469,7 +544,6 @@
             Controls.Add(txtTen);
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
-            MaximumSize = new Size(514, 560);
             MinimumSize = new Size(514, 560);
             Name = "fThemNhanVien";
             Palette = kryptonPalette1;
@@ -477,6 +551,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pcAvatar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -504,6 +579,12 @@
         private Label label9;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmail;
         private ComboBox cbbChucVu;
+        private ComboBox cbbMaCuaHang;
+        private Label label10;
+        private Label label11;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenCuaHang;
+        private PictureBox pcAvatar;
+        private TextBox textBox1;
     }
 }
 

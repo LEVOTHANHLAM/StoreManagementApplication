@@ -42,8 +42,8 @@ namespace Krypton_toolKitDemo
             _stocksController = new StocksController();
             if (_stock != null)
             {
-                _stock.TenKho = txtTen.Text;
-                _stock.MaKho = txtDiaChi.Text;
+                _stock.TenKho = txtDiaChi.Text;
+                _stock.MaKho = txtTen.Text;
                 var result = await _stocksController.Edit(GlobalModel.AccsessToken, _stock);
                 if (result != null)
                 {

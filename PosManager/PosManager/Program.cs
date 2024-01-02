@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PosManager.Helper;
 using Serilog;
+using System.Runtime.InteropServices;
 
 namespace PosManager
 {
@@ -28,6 +29,16 @@ namespace PosManager
                 Application.SetHighDpiMode(HighDpiMode.SystemAware);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+                InputLanguage vietnameseInputLanguage = null;
+                foreach (InputLanguage lang in InputLanguage.InstalledInputLanguages)
+                {
+                    if (lang.Culture.Name == "vi-VN")
+                    {
+                        vietnameseInputLanguage = lang;
+                        break;
+                    }
+                }
+                Application.CurrentInputLanguage = vietnameseInputLanguage;
                 //Lấy ra cái fThemNhanVien đã được khai báo trong services
                 try
                 {

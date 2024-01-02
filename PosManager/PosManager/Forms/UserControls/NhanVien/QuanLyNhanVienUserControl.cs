@@ -1,21 +1,8 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Vml;
-using DocumentFormat.OpenXml.Wordprocessing;
-using Krypton_toolKitDemo;
-using PosManager.APIServices.CaiDat;
+﻿using Krypton_toolKitDemo;
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
 using Serilog;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PosManager.Forms.UserControls.NhanVien
 {
@@ -69,12 +56,7 @@ namespace PosManager.Forms.UserControls.NhanVien
                             {
                                 value = "Admin";
                             }
-                            Button button = new Button();
-                            button.Image = Properties.Resources.Show;
-                            button.ImageAlign = ContentAlignment.MiddleLeft;
-                            button.Text = "Show";
-                            button.TextAlign = ContentAlignment.MiddleRight;
-                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, button, a.Id);
+                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, "Show", a.Id);
                             i++;
                         }
                         row = i;

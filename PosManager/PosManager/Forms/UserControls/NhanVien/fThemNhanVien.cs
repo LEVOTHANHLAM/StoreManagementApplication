@@ -1,9 +1,11 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Microsoft.VisualBasic.ApplicationServices;
 using PosManager.APIServices.CaiDat;
+using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
+using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
 
 namespace Krypton_toolKitDemo
@@ -11,17 +13,36 @@ namespace Krypton_toolKitDemo
     public partial class fThemNhanVien : KryptonForm
     {
         private AuthenticateController _authenticateController;
+        private StoresController _storesController;
+        List<StoreModel> _storeModels = new List<StoreModel>();
         private string _idUser { get; set; }
+        private string maCuaHang { get; set; }
         public fThemNhanVien(string? idUser)
         {
             InitializeComponent();
             _idUser = idUser;
             _authenticateController = new AuthenticateController();
             cbbChucVu.SelectedIndex = 0;
+            _storesController = new StoresController();
         }
 
         private async void Form1_Load(object sender, EventArgs e)
         {
+            var resultStore = await _storesController.Search(GlobalModel.AccsessToken, "1", "99999");
+            if (resultStore != null && resultStore.Data.Result.Any())
+            {
+                _storeModels.AddRange(resultStore.Data.Result);
+                if (_storeModels.Any())
+                {
+                    cbbMaCuaHang.Items.Clear();
+                    foreach (var item in _storeModels)
+                    {
+                        cbbMaCuaHang.Items.Add(item.MaCuaHang);
+                    }
+
+                }
+            }
+            cbbMaCuaHang.SelectedIndex = 0;
             if (!string.IsNullOrEmpty(_idUser))
             {
                 UsersController usersController = new UsersController();
@@ -42,6 +63,8 @@ namespace Krypton_toolKitDemo
                     {
                         cbbChucVu.SelectedIndex = 0;
                     }
+                    cbbMaCuaHang.SelectedItem = result.Data.MaCuaHang;
+                    cbbMaCuaHang_SelectedIndexChanged(null, null);
                 }
             }
         }
@@ -74,10 +97,28 @@ namespace Krypton_toolKitDemo
                 {
                     user.Role = "NhanVien";
                 }
+                user.MaCuaHang = maCuaHang;
                 var result = await _authenticateController.Create(GlobalModel.AccsessToken, user);
                 if (result != null)
                 {
                     MessageCommon.ShowMessageBox(result.Message);
+                }
+            }
+        }
+
+        private void cbbMaCuaHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbMaCuaHang.Items.Count > 0)
+            {
+                var ma = cbbMaCuaHang.SelectedItem.ToString();
+                foreach (var item in _storeModels)
+                {
+                    if (item.MaCuaHang == ma)
+                    {
+                        txtTenCuaHang.Text = item.TenCuaHang;
+                        maCuaHang = item.MaCuaHang;
+                        break;
+                    }
                 }
             }
         }
