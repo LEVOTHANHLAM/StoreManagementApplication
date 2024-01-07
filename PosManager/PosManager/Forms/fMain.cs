@@ -274,5 +274,13 @@ namespace Krypton_toolKitDemo
             donViTinhHangHoaUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(donViTinhHangHoaUserControl);
         }
+
+        private void btnDanhSachHangHoa_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            QuanLySanPhamUserControl quanLySanPhamUserControl = new QuanLySanPhamUserControl();
+            quanLySanPhamUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(quanLySanPhamUserControl);
+        }
     }
 }

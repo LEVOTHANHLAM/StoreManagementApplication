@@ -141,6 +141,34 @@ namespace PosManager.APIServices.SanPham
             }
         }
 
+        public async Task<ApiResponse<List<DonViHangHoaModel>>> GetAll(string token)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(ProductUnitsController)}, params; {nameof(GetAll)}");
+
+                // Tạo HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Thêm Authorization header
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    // Tạo URL của API endpoint
+                    string apiUrl = $"{Constant.DomainAPI}/api/productunits/all";
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    var body = await response.Content.ReadAsStringAsync();
+                    ApiResponse<List<DonViHangHoaModel>> data = JsonConvert.DeserializeObject<ApiResponse<List<DonViHangHoaModel>>>(body);
+
+                    Log.Information($"End: {nameof(ProductUnitsController)}, params; {nameof(GetAll)}");
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(ProductUnitsController)}, params; {nameof(GetAll)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
+
         //////////////////////////////////////////////////////////////////////////
         public async Task<ApiResponse<string?>> AddProductUnitDetail(string token, ProductUnitDetailModel productUnitDetailModel)
         {

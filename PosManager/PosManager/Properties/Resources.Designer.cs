@@ -73,6 +73,26 @@ namespace PosManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete {
+            get {
+                object obj = ResourceManager.GetObject("delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete15 {
+            get {
+                object obj = ResourceManager.GetObject("delete15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit {
             get {
                 object obj = ResourceManager.GetObject("Edit", resourceCulture);
@@ -86,6 +106,16 @@ namespace PosManager.Properties {
         internal static System.Drawing.Bitmap icons8_add_15 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +173,19 @@ namespace PosManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_export_15__1_ {
+        internal static System.Drawing.Bitmap icons8_left_40 {
             get {
-                object obj = ResourceManager.GetObject("icons8-export-15 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-left-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_left_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-left-80", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

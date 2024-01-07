@@ -8,7 +8,7 @@ namespace PosManager.Forms.UserControls.SanPham
 {
     public partial class QuanLySanPhamUserControl : UserControl
     {
-        private CategoriesController _categoriesController;
+        private ProductsController _productsController;
         private int currentPage = 1;
         private int totalPages = 0;
         private int pageSize = 10; // Số phần tử trên mỗi trang
@@ -17,12 +17,12 @@ namespace PosManager.Forms.UserControls.SanPham
         public QuanLySanPhamUserControl()
         {
             InitializeComponent();
-            _categoriesController = new CategoriesController();
+            _productsController = new ProductsController();
             cbbCuonTrang.SelectedIndex = 0;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemLoaiSanPham them = new fThemLoaiSanPham(null);
+            fThemHangHoa them = new fThemHangHoa();
             them.ShowDialog();
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
@@ -39,7 +39,7 @@ namespace PosManager.Forms.UserControls.SanPham
                 {
                     searchString = "";
                 }
-                var accounts = await _categoriesController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);
+                var accounts = await _productsController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);
                 dtgvAccount.Rows.Clear();
                 if (accounts != null && accounts.StatusCode == 200 && accounts.Data.Result.Count > 0)
                 {
@@ -48,23 +48,16 @@ namespace PosManager.Forms.UserControls.SanPham
 
                     dtgvAccount.Invoke((MethodInvoker)delegate
                     {
-
-                        int i = 1;
+                        int i = (currentPage - 1) * pageSize + 1; // Số thứ tự bắt đầu
                         foreach (var a in accounts.Data.Result)
                         {
-                            if (a.MaNhomHang != "ROOT")
+                            if (a.MaNhomHang == "ROOT")
                             {
-                                if (a.ParentName == "Root")
-                                {
-                                    a.ParentName = "None";
-                                }
-                                if (a.ParentCode == "ROOT")
-                                {
-                                    a.ParentCode = "None";
-                                }
-                                dtgvAccount.Rows.Add(false, i, a.MaNhomHang, a.TenNhomHang, a.ParentCode, a.ParentName, Properties.Resources.Edit, a.Id, a.ParentId);
-                                i++;
+                                a.MaNhomHang = "";
+                                a.TenNhomHang = "";
                             }
+                            dtgvAccount.Rows.Add(false, i, a.MaHangHoa, a.TenHangHoa, a.TenHangHoaKhongDau, a.MaNhomHang, a.TenNhomHang, a.VAT, a.GhiChu, Properties.Resources.Show, a.Id);
+                            i++;
                         }
                         row = i;
                     });
@@ -130,7 +123,7 @@ namespace PosManager.Forms.UserControls.SanPham
 
         private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cShow"].Index)
             {
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                 fThemLoaiSanPham themNhaCungCap = new fThemLoaiSanPham(id);
@@ -273,7 +266,7 @@ namespace PosManager.Forms.UserControls.SanPham
         {
             pageSize = int.Parse(cbbCuonTrang.Text);
             currentPage = 1;
-            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            //loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
 
         private void btnQuayLaiTrang_Click(object sender, EventArgs e)
@@ -351,7 +344,7 @@ namespace PosManager.Forms.UserControls.SanPham
                 {
                     foreach (var item in listDelete)
                     {
-                        var accounts = await _categoriesController.Delete(GlobalModel.AccsessToken, item);
+                        // var accounts = await _categoriesController.Delete(GlobalModel.AccsessToken, item);
                     }
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }

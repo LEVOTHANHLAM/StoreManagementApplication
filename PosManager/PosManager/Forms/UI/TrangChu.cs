@@ -18199,156 +18199,156 @@ namespace PosManager.Forms.UI
                 }
                 else if (this.dgvhanghoa.Columns[columnIndex].Name == "dongia")
                 {
-                    if (TrangChu.GIAMO == "True")
-                    {
-                        Frm_suagia.magia = int.Parse(this.dgvhanghoa.CurrentRow.Cells["MALOAI"].Value.ToString());
-                        Frm_suagia.sotien_cu = this.dgvhanghoa.CurrentCell.Value.ToString();
-                        Frm_suagia.mahanghoa = this.dgvhanghoa.CurrentRow.Cells["mahang"].Value.ToString();
-                        int index = this.dgvhanghoa.CurrentRow.Index;
-                        Frm_suagia frm_suagia = new Frm_suagia();
-                        frm_suagia.ShowDialog();
-                        if (Frm_suagia.ok == "ok")
-                        {
-                            this.dgvhanghoa.Rows[index].Cells["dongia"].Value = Frm_suagia.sotien;
-                            this.dgvhanghoa.Rows[index].Cells["dongiaban"].Value = Frm_suagia.sotien;
-                            double num3 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["soluong"].Value.ToString());
-                            double num4 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["quycach"].Value.ToString());
-                            string a = this.dgvhanghoa["loai", index].Value.ToString();
-                            double num5 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["quydoi"].Value.ToString());
-                            double num7;
-                            if (this.mahang_luugia == this.dgvhanghoa.Rows[index].Cells["mahang"].Value.ToString())
-                            {
-                                double num6 = num5;
-                                if (num6 <= this.sl_gia1 && this.sl_gia1 != 0.0)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban1);
-                                }
-                                else if (num6 <= this.sl_gia2 && this.sl_gia2 != 0.0 && num6 > this.sl_gia1)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban2);
-                                }
-                                else if (num6 <= this.sl_gia3 && this.sl_gia3 != 0.0 && num6 > this.sl_gia2)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban3);
-                                }
-                                else if (num6 <= this.sl_gia4 && this.sl_gia4 != 0.0 && num6 > this.sl_gia3)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban4);
-                                }
-                                else if (num6 <= this.sl_gia5 && this.sl_gia5 != 0.0 && num6 > this.sl_gia4)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban5);
-                                }
-                                else if (num6 <= this.sl_gia6 && this.sl_gia6 != 0.0 && num6 > this.sl_gia5)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban6);
-                                }
-                                else if (num6 >= this.sl_gia6 && this.sl_gia6 != 0.0)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban6);
-                                }
-                                else if (num6 > this.sl_gia5 && this.sl_gia5 != 0.0)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban5);
-                                }
-                                else if (num6 > this.sl_gia4 && this.sl_gia4 != 0.0)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban4);
-                                }
-                                else if (num6 > this.sl_gia3 && this.sl_gia3 != 0.0)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban3);
-                                }
-                                else if (num6 > this.sl_gia2 && this.sl_gia2 != 0.0)
-                                {
-                                    num7 = Convert.ToDouble(this.giaban2);
-                                }
-                                else
-                                {
-                                    num7 = Convert.ToDouble(this.giaban1);
-                                }
-                                this.dgvhanghoa.Rows[index].Cells["dongia"].Value = num7;
-                            }
-                            else
-                            {
-                                num7 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["dongia"].Value.ToString());
-                            }
-                            double num8 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["chietkhau"].Value.ToString());
-                            double num9;
-                            if (num8 > 100.0)
-                            {
-                                num9 = num7 - num8;
-                            }
-                            else
-                            {
-                                num9 = num7 - num7 * num8 / 100.0;
-                            }
-                            if (a == "A")
-                            {
-                                this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 * num5;
-                            }
-                            else if (a == "B")
-                            {
-                                this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value = num3 * num4 / double.Parse(TrangChu.doicm);
-                                double num10 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value.ToString());
-                                this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 / (double)int.Parse(TrangChu.tile) * (num10 * num5);
-                            }
-                            else if (a == "C")
-                            {
-                                this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value = num3 * num4 / double.Parse(TrangChu.doicm);
-                                double num10 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value.ToString());
-                                this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 * (num10 / double.Parse(TrangChu.doicm)) * num5;
-                            }
-                            else if (a == "D")
-                            {
-                                this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value = (num3 + num4) * 2.0;
-                                double num10 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value.ToString());
-                                this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 * (num10 / double.Parse(TrangChu.doicm)) * num5;
-                            }
-                            this.dgvhanghoa.Rows[index].Cells["dongiaban"].Value = num9;
-                            if (this.dgvhanghoa.Rows[index].Cells["tang"].Value.ToString() == "True")
-                            {
-                                this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = "0";
-                            }
-                            this.dgvhanghoa.Rows[index].Cells["dongia"].Value = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["dongia"].Value.ToString()).ToString("#,##0");
-                            if (this.manhinhbanhang == "0")
-                            {
-                                try
-                                {
-                                    if (!this.P_manhinh.IsOpen)
-                                    {
-                                        this.P_manhinh.Open();
-                                    }
-                                    else if (this.sokytu_manhinh >= 20)
-                                    {
-                                        string text = this.NonUnicode(this.dgvhanghoa.Rows[index].Cells["tenhang"].Value.ToString()) + "                    ";
-                                        string text2 = num9.ToString("#,##0");
-                                        string text3 = this.dgvhanghoa.Rows[index].Cells["Quydoi"].Value.ToString() + "x";
-                                        string text4 = "";
-                                        int num11 = 20 - text2.Length - text3.Length;
-                                        for (int i = 0; i < num11; i++)
-                                        {
-                                            text4 += " ";
-                                        }
-                                        string text5 = text3 + text4 + text2;
-                                        string text6 = text.Substring(0, 20) + text5.Substring(0, 20);
-                                        this.P_manhinh.Write(text6);
-                                    }
-                                    else
-                                    {
-                                        double num12 = num9;
-                                        string text5 = "                   " + num12;
-                                        string text6 = text5.Substring(text5.Length - 8, 8);
-                                        this.P_manhinh.Write(text6);
-                                    }
-                                }
-                                catch
-                                {
-                                }
-                            }
-                            this.tinhtinhtong();
-                        }
-                    }
+                    //if (TrangChu.GIAMO == "True")
+                    //{
+                    //    fNhapSo.magia = int.Parse(this.dgvhanghoa.CurrentRow.Cells["MALOAI"].Value.ToString());
+                    //    fNhapSo.sotien_cu = this.dgvhanghoa.CurrentCell.Value.ToString();
+                    //    fNhapSo.mahanghoa = this.dgvhanghoa.CurrentRow.Cells["mahang"].Value.ToString();
+                    //    int index = this.dgvhanghoa.CurrentRow.Index;
+                    //    fNhapSo frm_suagia = new Frm_suagia();
+                    //    frm_suagia.ShowDialog();
+                    //    if (fNhapSo.ok == "ok")
+                    //    {
+                    //        this.dgvhanghoa.Rows[index].Cells["dongia"].Value = fNhapSo.sotien;
+                    //        this.dgvhanghoa.Rows[index].Cells["dongiaban"].Value = fNhapSo.sotien;
+                    //        double num3 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["soluong"].Value.ToString());
+                    //        double num4 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["quycach"].Value.ToString());
+                    //        string a = this.dgvhanghoa["loai", index].Value.ToString();
+                    //        double num5 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["quydoi"].Value.ToString());
+                    //        double num7;
+                    //        if (this.mahang_luugia == this.dgvhanghoa.Rows[index].Cells["mahang"].Value.ToString())
+                    //        {
+                    //            double num6 = num5;
+                    //            if (num6 <= this.sl_gia1 && this.sl_gia1 != 0.0)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban1);
+                    //            }
+                    //            else if (num6 <= this.sl_gia2 && this.sl_gia2 != 0.0 && num6 > this.sl_gia1)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban2);
+                    //            }
+                    //            else if (num6 <= this.sl_gia3 && this.sl_gia3 != 0.0 && num6 > this.sl_gia2)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban3);
+                    //            }
+                    //            else if (num6 <= this.sl_gia4 && this.sl_gia4 != 0.0 && num6 > this.sl_gia3)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban4);
+                    //            }
+                    //            else if (num6 <= this.sl_gia5 && this.sl_gia5 != 0.0 && num6 > this.sl_gia4)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban5);
+                    //            }
+                    //            else if (num6 <= this.sl_gia6 && this.sl_gia6 != 0.0 && num6 > this.sl_gia5)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban6);
+                    //            }
+                    //            else if (num6 >= this.sl_gia6 && this.sl_gia6 != 0.0)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban6);
+                    //            }
+                    //            else if (num6 > this.sl_gia5 && this.sl_gia5 != 0.0)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban5);
+                    //            }
+                    //            else if (num6 > this.sl_gia4 && this.sl_gia4 != 0.0)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban4);
+                    //            }
+                    //            else if (num6 > this.sl_gia3 && this.sl_gia3 != 0.0)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban3);
+                    //            }
+                    //            else if (num6 > this.sl_gia2 && this.sl_gia2 != 0.0)
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban2);
+                    //            }
+                    //            else
+                    //            {
+                    //                num7 = Convert.ToDouble(this.giaban1);
+                    //            }
+                    //            this.dgvhanghoa.Rows[index].Cells["dongia"].Value = num7;
+                    //        }
+                    //        else
+                    //        {
+                    //            num7 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["dongia"].Value.ToString());
+                    //        }
+                    //        double num8 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["chietkhau"].Value.ToString());
+                    //        double num9;
+                    //        if (num8 > 100.0)
+                    //        {
+                    //            num9 = num7 - num8;
+                    //        }
+                    //        else
+                    //        {
+                    //            num9 = num7 - num7 * num8 / 100.0;
+                    //        }
+                    //        if (a == "A")
+                    //        {
+                    //            this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 * num5;
+                    //        }
+                    //        else if (a == "B")
+                    //        {
+                    //            this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value = num3 * num4 / double.Parse(TrangChu.doicm);
+                    //            double num10 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value.ToString());
+                    //            this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 / (double)int.Parse(TrangChu.tile) * (num10 * num5);
+                    //        }
+                    //        else if (a == "C")
+                    //        {
+                    //            this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value = num3 * num4 / double.Parse(TrangChu.doicm);
+                    //            double num10 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value.ToString());
+                    //            this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 * (num10 / double.Parse(TrangChu.doicm)) * num5;
+                    //        }
+                    //        else if (a == "D")
+                    //        {
+                    //            this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value = (num3 + num4) * 2.0;
+                    //            double num10 = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["Tongsoluong"].Value.ToString());
+                    //            this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = num9 * (num10 / double.Parse(TrangChu.doicm)) * num5;
+                    //        }
+                    //        this.dgvhanghoa.Rows[index].Cells["dongiaban"].Value = num9;
+                    //        if (this.dgvhanghoa.Rows[index].Cells["tang"].Value.ToString() == "True")
+                    //        {
+                    //            this.dgvhanghoa.Rows[index].Cells["thanhtien"].Value = "0";
+                    //        }
+                    //        this.dgvhanghoa.Rows[index].Cells["dongia"].Value = Convert.ToDouble(this.dgvhanghoa.Rows[index].Cells["dongia"].Value.ToString()).ToString("#,##0");
+                    //        if (this.manhinhbanhang == "0")
+                    //        {
+                    //            try
+                    //            {
+                    //                if (!this.P_manhinh.IsOpen)
+                    //                {
+                    //                    this.P_manhinh.Open();
+                    //                }
+                    //                else if (this.sokytu_manhinh >= 20)
+                    //                {
+                    //                    string text = this.NonUnicode(this.dgvhanghoa.Rows[index].Cells["tenhang"].Value.ToString()) + "                    ";
+                    //                    string text2 = num9.ToString("#,##0");
+                    //                    string text3 = this.dgvhanghoa.Rows[index].Cells["Quydoi"].Value.ToString() + "x";
+                    //                    string text4 = "";
+                    //                    int num11 = 20 - text2.Length - text3.Length;
+                    //                    for (int i = 0; i < num11; i++)
+                    //                    {
+                    //                        text4 += " ";
+                    //                    }
+                    //                    string text5 = text3 + text4 + text2;
+                    //                    string text6 = text.Substring(0, 20) + text5.Substring(0, 20);
+                    //                    this.P_manhinh.Write(text6);
+                    //                }
+                    //                else
+                    //                {
+                    //                    double num12 = num9;
+                    //                    string text5 = "                   " + num12;
+                    //                    string text6 = text5.Substring(text5.Length - 8, 8);
+                    //                    this.P_manhinh.Write(text6);
+                    //                }
+                    //            }
+                    //            catch
+                    //            {
+                    //            }
+                    //        }
+                    //        this.tinhtinhtong();
+                    //    }
+                    //}
                 }
             }
             this.txtmahang.Focus();

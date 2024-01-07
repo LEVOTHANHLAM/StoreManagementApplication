@@ -37,8 +37,8 @@ namespace PosManager.Forms.UserControls.SanPham
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
             panel4 = new Panel();
+            txtSearch = new PlaceholderTextBox();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
@@ -58,13 +58,15 @@ namespace PosManager.Forms.UserControls.SanPham
             dtgvAccount = new DataGridView();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
+            cMaHangHoa = new DataGridViewTextBoxColumn();
+            cTenHangHoa = new DataGridViewTextBoxColumn();
+            cTenHangHoaKhongDau = new DataGridViewTextBoxColumn();
             cMaNhomHang = new DataGridViewTextBoxColumn();
             cTenNhomHang = new DataGridViewTextBoxColumn();
-            cMaNhomChu = new DataGridViewTextBoxColumn();
-            cTenNhomChu = new DataGridViewTextBoxColumn();
-            cEdit = new DataGridViewImageColumn();
+            cVAT = new DataGridViewTextBoxColumn();
+            cGhiChu = new DataGridViewTextBoxColumn();
+            cShow = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
-            cParentId = new DataGridViewTextBoxColumn();
             ctmsAcc = new ContextMenuStrip(components);
             selectedToolStripMenuItem = new ToolStripMenuItem();
             selectAllToolStripMenuItem = new ToolStripMenuItem();
@@ -116,12 +118,33 @@ namespace PosManager.Forms.UserControls.SanPham
             // 
             // panel4
             // 
+            panel4.Controls.Add(txtSearch);
             panel4.Controls.Add(btnExport);
-            panel4.Controls.Add(btnDelete);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
             panel4.TabIndex = 11;
+            // 
+            // txtSearch
+            // 
+            txtSearch.ForeColor = Color.Gray;
+            txtSearch.Location = new Point(3, 40);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderColor = Color.Gray;
+            txtSearch.PlaceholderText = "Tìm Kiếm";
+            txtSearch.Size = new Size(420, 36);
+            txtSearch.StateCommon.Back.Color1 = Color.White;
+            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtSearch.StateCommon.Border.Rounding = 18;
+            txtSearch.StateCommon.Content.Color1 = Color.Black;
+            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtSearch.TabIndex = 3;
+            txtSearch.Text = "Tìm Kiếm";
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnExport
             // 
@@ -174,64 +197,9 @@ namespace PosManager.Forms.UserControls.SanPham
             btnExport.StateTracking.Border.Rounding = 18;
             btnExport.StateTracking.Border.Width = 1;
             btnExport.TabIndex = 9;
-            btnExport.Values.Image = Properties.Resources.icons8_export_15__1_;
+            btnExport.Values.Image = Properties.Resources.delete;
             btnExport.Values.Text = "Xuất File";
             btnExport.Click += btnExport_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(236, 3);
-            btnDelete.MaximumSize = new Size(133, 35);
-            btnDelete.MinimumSize = new Size(133, 35);
-            btnDelete.Name = "btnDelete";
-            btnDelete.OverrideDefault.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.OverrideDefault.Border.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.OverrideDefault.Border.Rounding = 18;
-            btnDelete.OverrideDefault.Border.Width = 1;
-            btnDelete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnDelete.Size = new Size(133, 35);
-            btnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateCommon.Border.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateCommon.Border.Rounding = 18;
-            btnDelete.StateCommon.Border.Width = 1;
-            btnDelete.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDelete.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnDelete.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
-            btnDelete.StatePressed.Back.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnDelete.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnDelete.StatePressed.Border.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StatePressed.Border.Rounding = 18;
-            btnDelete.StatePressed.Border.Width = 1;
-            btnDelete.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnDelete.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
-            btnDelete.StateTracking.Back.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateTracking.Border.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateTracking.Border.Rounding = 18;
-            btnDelete.StateTracking.Border.Width = 1;
-            btnDelete.TabIndex = 10;
-            btnDelete.Values.Image = Properties.Resources.icons8_delete_15;
-            btnDelete.Values.Text = "Xoá";
-            btnDelete.Click += btnDelete_Click;
             // 
             // panel1
             // 
@@ -326,7 +294,7 @@ namespace PosManager.Forms.UserControls.SanPham
             cbbCuonTrang.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
-            cbbCuonTrang.Items.AddRange(new object[] { "2", "20", "50", "100" });
+            cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
             cbbCuonTrang.Location = new Point(58, 56);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
@@ -725,7 +693,7 @@ namespace PosManager.Forms.UserControls.SanPham
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMaNhomHang, cTenNhomHang, cMaNhomChu, cTenNhomChu, cEdit, cId, cParentId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMaHangHoa, cTenHangHoa, cTenHangHoaKhongDau, cMaNhomHang, cTenNhomHang, cVAT, cGhiChu, cShow, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -742,14 +710,15 @@ namespace PosManager.Forms.UserControls.SanPham
             // 
             // cChon
             // 
-            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            cChon.FillWeight = 50F;
+            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cChon.FillWeight = 60F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 50;
+            cChon.Width = 60;
             // 
             // cSTT
             // 
+            cSTT.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cSTT.DefaultCellStyle = dataGridViewCellStyle2;
@@ -757,6 +726,24 @@ namespace PosManager.Forms.UserControls.SanPham
             cSTT.Name = "cSTT";
             cSTT.ReadOnly = true;
             cSTT.Width = 51;
+            // 
+            // cMaHangHoa
+            // 
+            cMaHangHoa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cMaHangHoa.HeaderText = "Mã Hàng Hóa";
+            cMaHangHoa.Name = "cMaHangHoa";
+            // 
+            // cTenHangHoa
+            // 
+            cTenHangHoa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cTenHangHoa.HeaderText = "Tên Hàng Hóa";
+            cTenHangHoa.Name = "cTenHangHoa";
+            // 
+            // cTenHangHoaKhongDau
+            // 
+            cTenHangHoaKhongDau.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cTenHangHoaKhongDau.HeaderText = "Tên Hàng Hóa Không Dấu";
+            cTenHangHoaKhongDau.Name = "cTenHangHoaKhongDau";
             // 
             // cMaNhomHang
             // 
@@ -773,25 +760,26 @@ namespace PosManager.Forms.UserControls.SanPham
             cTenNhomHang.HeaderText = "Tên Nhóm Hàng";
             cTenNhomHang.Name = "cTenNhomHang";
             // 
-            // cMaNhomChu
+            // cVAT
             // 
-            cMaNhomChu.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cMaNhomChu.HeaderText = "Mã Nhóm Chủ";
-            cMaNhomChu.Name = "cMaNhomChu";
+            cVAT.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cVAT.HeaderText = "VAT";
+            cVAT.Name = "cVAT";
+            cVAT.Width = 63;
             // 
-            // cTenNhomChu
+            // cGhiChu
             // 
-            cTenNhomChu.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cTenNhomChu.HeaderText = "Tên Nhóm Chủ";
-            cTenNhomChu.Name = "cTenNhomChu";
+            cGhiChu.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cGhiChu.HeaderText = "Ghi Chú";
+            cGhiChu.Name = "cGhiChu";
             // 
-            // cEdit
+            // cShow
             // 
-            cEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            cEdit.HeaderText = "Sửa";
-            cEdit.Name = "cEdit";
-            cEdit.Resizable = DataGridViewTriState.True;
-            cEdit.Width = 120;
+            cShow.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cShow.HeaderText = "Chi Tiết";
+            cShow.Name = "cShow";
+            cShow.Resizable = DataGridViewTriState.True;
+            cShow.Width = 80;
             // 
             // cId
             // 
@@ -800,12 +788,6 @@ namespace PosManager.Forms.UserControls.SanPham
             cId.Name = "cId";
             cId.ReadOnly = true;
             cId.Visible = false;
-            // 
-            // cParentId
-            // 
-            cParentId.HeaderText = "cParentId";
-            cParentId.Name = "cParentId";
-            cParentId.Visible = false;
             // 
             // ctmsAcc
             // 
@@ -864,6 +846,7 @@ namespace PosManager.Forms.UserControls.SanPham
             splitContainer1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pDatagridView.ResumeLayout(false);
@@ -891,7 +874,6 @@ namespace PosManager.Forms.UserControls.SanPham
         private ToolStripMenuItem selectAllToolStripMenuItem;
         private ToolStripMenuItem selectAllHighlightedToolStripMenuItem;
         private ToolStripMenuItem deselectAllToolStripMenuItem;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Panel panel3;
         private Label label1;
@@ -909,12 +891,14 @@ namespace PosManager.Forms.UserControls.SanPham
         private Panel panel4;
         private DataGridViewCheckBoxColumn cChon;
         private DataGridViewTextBoxColumn cSTT;
+        private DataGridViewTextBoxColumn cMaHangHoa;
+        private DataGridViewTextBoxColumn cTenHangHoa;
+        private DataGridViewTextBoxColumn cTenHangHoaKhongDau;
         private DataGridViewTextBoxColumn cMaNhomHang;
         private DataGridViewTextBoxColumn cTenNhomHang;
-        private DataGridViewTextBoxColumn cMaNhomChu;
-        private DataGridViewTextBoxColumn cTenNhomChu;
-        private DataGridViewImageColumn cEdit;
+        private DataGridViewTextBoxColumn cVAT;
+        private DataGridViewTextBoxColumn cGhiChu;
+        private DataGridViewImageColumn cShow;
         private DataGridViewTextBoxColumn cId;
-        private DataGridViewTextBoxColumn cParentId;
     }
 }

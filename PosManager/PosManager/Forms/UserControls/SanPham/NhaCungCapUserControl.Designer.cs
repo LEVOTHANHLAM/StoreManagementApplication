@@ -173,7 +173,7 @@ namespace PosManager.Forms.UserControls.SanPham
             btnExport.StateTracking.Border.Rounding = 18;
             btnExport.StateTracking.Border.Width = 1;
             btnExport.TabIndex = 9;
-            btnExport.Values.Image = Properties.Resources.icons8_export_15__1_;
+            btnExport.Values.Image = Properties.Resources.delete;
             btnExport.Values.Text = "Xuất File";
             btnExport.Click += btnExport_Click;
             // 
@@ -745,7 +745,7 @@ namespace PosManager.Forms.UserControls.SanPham
             cChon.FillWeight = 50F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 50;
+            cChon.Width = 38;
             // 
             // cSTT
             // 

@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
-using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
 using Serilog;
 using System.IdentityModel.Tokens.Jwt;

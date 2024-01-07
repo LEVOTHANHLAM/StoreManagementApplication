@@ -94,7 +94,7 @@
             txtMaDonViHH.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtMaDonViHH.StateCommon.Border.Rounding = 18;
             txtMaDonViHH.StateCommon.Content.Color1 = Color.Black;
-            txtMaDonViHH.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMaDonViHH.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtMaDonViHH.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtMaDonViHH.TabIndex = 3;
             // 
@@ -238,7 +238,7 @@
             txtTenDonViHH.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtTenDonViHH.StateCommon.Border.Rounding = 18;
             txtTenDonViHH.StateCommon.Content.Color1 = Color.Black;
-            txtTenDonViHH.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenDonViHH.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtTenDonViHH.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtTenDonViHH.TabIndex = 24;
             // 

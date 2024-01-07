@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PosManager.Model.SanPham;
 using Serilog;
-using System.Text.RegularExpressions;
+using System.Text;
 
 namespace PosManager.APIServices.SanPham
 {
@@ -40,23 +40,12 @@ namespace PosManager.APIServices.SanPham
             {
                 Log.Information($"Start: {nameof(ProductsController)}, params; {nameof(Add)},Ma; {productsModel.MaHangHoa}");
 
-                string url = Constant.DomainAPI + "/api/products";
+                string url = Constant.DomainAPI + "/api/Products";
                 HttpClient httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-                var requestData = new
-                {
-                    maHangHoa = productsModel.MaHangHoa,
-                    tenHangHoa = productsModel.TenHangHoa,
-                    tenHangHoaKhongDau = productsModel.TenHangHoaKhongDau,
-                    maNhomHang = productsModel.MaNhomHang,
-                    maDonViCoBan = productsModel.MaDonViCoBan,
-                    vat = productsModel.VAT,
-                    ghiChu = productsModel.GhiChu,
-                    maVach = productsModel.MaVach,
-                    maQR = productsModel.MaQR,
-                    createById = ""
-                };
-                var content = new StringContent(JsonConvert.SerializeObject(requestData), System.Text.Encoding.UTF8, "application/json");
+                var requestData = JsonConvert.SerializeObject(productsModel);
+               // var content = new StringContent(JsonConvert.SerializeObject(requestData), System.Text.Encoding.UTF8, "application/json");
+                var content = new StringContent(requestData, System.Text.Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await httpClient.PostAsync(url, content);
                 var body = await response.Content.ReadAsStringAsync();
                 ApiResponse<string?> data = JsonConvert.DeserializeObject<ApiResponse<string?>>(body);
@@ -79,17 +68,7 @@ namespace PosManager.APIServices.SanPham
                 string url = Constant.DomainAPI + $"/api/products/{productsModel.Id}";
                 HttpClient httpClient = new HttpClient();
                 httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
-                var requestData = new
-                {
-                    tenHangHoa = productsModel.TenHangHoa,
-                    tenHangHoaKhongDau = productsModel.TenHangHoaKhongDau,
-                    maNhomHang = productsModel.MaNhomHang,
-                    vat = productsModel.VAT,
-                    ghiChu = productsModel.GhiChu,
-                    maVach = productsModel.MaVach,
-                    maQR = productsModel.MaQR,
-                    lastModifiedById = ""
-                };
+                var requestData = JsonConvert.SerializeObject(productsModel);
                 var content = new StringContent(JsonConvert.SerializeObject(requestData), System.Text.Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await httpClient.PutAsync(url, content);
                 var body = await response.Content.ReadAsStringAsync();

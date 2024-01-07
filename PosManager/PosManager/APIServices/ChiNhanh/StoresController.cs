@@ -141,5 +141,32 @@ namespace PosManager.APIServices.ChiNhanh
                 return null;
             }
         }
+        public async Task<ApiResponse<List<StoreModel>>> GetAll(string token)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(StoresController)}, params; {nameof(GetAll)}");
+
+                // Tạo HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Thêm Authorization header
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    // Tạo URL của API endpoint
+                    string apiUrl = $"{Constant.DomainAPI}/api/stores/all";
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    var body = await response.Content.ReadAsStringAsync();
+                    ApiResponse<List<StoreModel>> data = JsonConvert.DeserializeObject<ApiResponse<List<StoreModel>>>(body);
+
+                    Log.Information($"End: {nameof(StoresController)}, params; {nameof(GetAll)}");
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(StoresController)}, params; {nameof(GetAll)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
     }
 }
