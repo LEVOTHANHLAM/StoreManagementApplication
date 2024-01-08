@@ -2,6 +2,7 @@
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
 using PosManager.Model;
+using PosManager.Model.User;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace PosManager.Forms.UserControls.SanPham
         private int pageSize = 10; // Số phần tử trên mỗi trang
         private int Total = 1000;
         private int row = 0;
+        private PermissionModel permissionModel;
         public DonViHangHoaUserControl()
         {
             InitializeComponent();
@@ -39,6 +41,15 @@ namespace PosManager.Forms.UserControls.SanPham
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
         {
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            if (GlobalModel.UserInfo.Permissions != null)
+            {
+                permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "DonViHangHoaUserControl");
+                if (permissionModel != null)
+                {
+                    btnAdd.Enabled = permissionModel.HasCreate;
+                    btnDelete.Enabled = permissionModel.HasDelete;
+                }
+            }
         }
         private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
@@ -128,10 +139,13 @@ namespace PosManager.Forms.UserControls.SanPham
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                fThemDonViHangHoa themNhaCungCap = new fThemDonViHangHoa(id);
-                themNhaCungCap.ShowDialog();
-                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                if(permissionModel != null && permissionModel.HasUpdate)
+                {
+                    var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                    fThemDonViHangHoa themNhaCungCap = new fThemDonViHangHoa(id);
+                    themNhaCungCap.ShowDialog();
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
             }
         }
 

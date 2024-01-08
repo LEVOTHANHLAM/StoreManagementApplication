@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using PosManager.APIServices.SanPham;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.SanPham;
+using Serilog;
 
 namespace Krypton_toolKitDemo
 {
@@ -42,28 +44,52 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            DonViHangHoaModel donViHangHoaModel = new DonViHangHoaModel();
-            donViHangHoaModel.TenDonViHangHoa = txtTenDonViHH.Text;
-            donViHangHoaModel.MaDonViHangHoa = txtMaDonViHH.Text.Trim();
-            if (string.IsNullOrEmpty(_id))
+            fLoading loading = new fLoading();
+            loading.StartLoading();
+            try
             {
-                var result = await _productUnitsController.Add(GlobalModel.AccsessToken, donViHangHoaModel);
-                if (result != null)
+                DonViHangHoaModel donViHangHoaModel = new DonViHangHoaModel();
+                donViHangHoaModel.TenDonViHangHoa = txtTenDonViHH.Text;
+                donViHangHoaModel.MaDonViHangHoa = txtMaDonViHH.Text.Trim();
+                if (string.IsNullOrEmpty(_id))
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    var result = await _productUnitsController.Add(GlobalModel.AccsessToken, donViHangHoaModel);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
+                    }
                 }
+                else
+                {
+                    donViHangHoaModel.Id = Guid.Parse(_id);
+                    var result = await _productUnitsController.Edit(GlobalModel.AccsessToken, donViHangHoaModel);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
+                    }
+                }
+                txtMaDonViHH.Text = "";
+                txtTenDonViHH.Text = "";
             }
-            else
+            catch (Exception ex)
             {
-                donViHangHoaModel.Id = Guid.Parse(_id);
-                var result = await _productUnitsController.Edit(GlobalModel.AccsessToken, donViHangHoaModel);
-                if (result != null)
-                {
-                    MessageCommon.ShowMessageBox(result.Message);
-                }
+                loading.Close();
+                Log.Error(ex, ex.Message);
+                MessageCommon.ShowMessageBox(ex.Message, 3);
             }
-            txtMaDonViHH.Text = "";
-            txtTenDonViHH.Text = "";
+            loading.Close();
         }
     }
 }

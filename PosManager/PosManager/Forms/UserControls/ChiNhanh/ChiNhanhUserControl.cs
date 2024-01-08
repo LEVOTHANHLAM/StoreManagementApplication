@@ -1,12 +1,10 @@
 ﻿using Krypton_toolKitDemo;
 using PosManager.APIServices.ChiNhanh;
-using PosManager.APIServices.Kho;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
+using PosManager.Model.User;
 using Serilog;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PosManager.Forms.UserControls
 {
@@ -18,11 +16,13 @@ namespace PosManager.Forms.UserControls
         private int pageSize = 10; // Số phần tử trên mỗi trang
         private int Total = 1000;
         private int row = 0;
+        private PermissionModel permissionModel;
         public ChiNhanhUserControl()
         {
             InitializeComponent();
             _storesController = new StoresController();
             cbbCuonTrang.SelectedIndex = 0;
+
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -34,6 +34,16 @@ namespace PosManager.Forms.UserControls
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
         {
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            if (GlobalModel.UserInfo.Permissions != null)
+            {
+                permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "ChiNhanhControl");
+                if (permissionModel != null)
+                {
+                    btnAdd.Enabled = permissionModel.HasCreate;
+                    btnDelete.Enabled = permissionModel.HasDelete;
+                }
+            }
+          
         }
         private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
@@ -122,25 +132,30 @@ namespace PosManager.Forms.UserControls
 
         private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                try
+                if (permissionModel != null && permissionModel.HasUpdate)
                 {
-                    StoreModel store = new StoreModel();
-                    store.Id = Guid.Parse(dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString());
-                    store.MaCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cMaCuaHang"].Value.ToString();
-                    store.TenCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cTenCuaHang"].Value.ToString();
-                    store.MaKho = dtgvAccount.Rows[e.RowIndex].Cells["cMaKho"].Value.ToString();
-                    store.TenKho = dtgvAccount.Rows[e.RowIndex].Cells["cTenKho"].Value.ToString();
-                    fThemChiNhanh sua = new fThemChiNhanh(store);
-                    sua.ShowDialog();
-                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                    try
+                    {
+                        StoreModel store = new StoreModel();
+                        store.Id = Guid.Parse(dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString());
+                        store.MaCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cMaCuaHang"].Value.ToString();
+                        store.TenCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cTenCuaHang"].Value.ToString();
+                        store.MaKho = dtgvAccount.Rows[e.RowIndex].Cells["cMaKho"].Value.ToString();
+                        store.TenKho = dtgvAccount.Rows[e.RowIndex].Cells["cTenKho"].Value.ToString();
+                        fThemChiNhanh sua = new fThemChiNhanh(store);
+                        sua.ShowDialog();
+                        loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellContentClick)}, Error; {ex.Message}, Exception; {ex}");
+                        MessageCommon.ShowMessageBox(ex.Message, 4);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellContentClick)}, Error; {ex.Message}, Exception; {ex}");
-                    MessageCommon.ShowMessageBox(ex.Message, 4);
-                }
+               
             }
         }
 

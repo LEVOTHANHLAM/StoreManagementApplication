@@ -1,10 +1,12 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.Kho;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using PosManager.Model.Kho;
+using Serilog;
 
 namespace Krypton_toolKitDemo
 {
@@ -74,33 +76,57 @@ namespace Krypton_toolKitDemo
                     MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                     return;
                 }
-                StoresController storesController = new StoresController();
-                StoreModel storeModel = new StoreModel();
-                storeModel.MaCuaHang = txtMaCuaHang.Text.Trim();
-                storeModel.TenCuaHang = txtTenCuaHang.Text.Trim();
-                storeModel.MaKho = cbbMaKho.SelectedItem.ToString();
-                if (_store != null)
+                fLoading loading = new fLoading();
+                loading.StartLoading();
+                try
                 {
-                   storeModel.Id = _store.Id;
-                    var result = await storesController.Edit(GlobalModel.AccsessToken, storeModel);
-                    if (result != null)
+                    StoresController storesController = new StoresController();
+                    StoreModel storeModel = new StoreModel();
+                    storeModel.MaCuaHang = txtMaCuaHang.Text.Trim();
+                    storeModel.TenCuaHang = txtTenCuaHang.Text.Trim();
+                    storeModel.MaKho = cbbMaKho.SelectedItem.ToString();
+                    if (_store != null)
                     {
-                        MessageCommon.ShowMessageBox(result.Message);
+                        storeModel.Id = _store.Id;
+                        var result = await storesController.Edit(GlobalModel.AccsessToken, storeModel);
+                        if (result != null)
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox(result.Message);
+                        }
+                        else
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
+                        }
+                    }
+                    else
+                    {
+                        var result = await storesController.Add(GlobalModel.AccsessToken, storeModel);
+                        if (result != null)
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox(result.Message);
+                        }
+                        else
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
+                        }
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    var result = await storesController.Add(GlobalModel.AccsessToken, storeModel);
-                    if (result != null)
-                    {
-                        MessageCommon.ShowMessageBox(result.Message);
-                    }
-                }
+                    loading.Close();
+                    Log.Error(ex, ex.Message);
+                    MessageCommon.ShowMessageBox(ex.Message, 3);
 
+                }
             }
             catch (Exception ex)
             {
-
+                Log.Error(ex, ex.Message);
+                MessageCommon.ShowMessageBox(ex.Message, 3);
             }
 
           

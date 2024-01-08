@@ -11,10 +11,10 @@ namespace PosManager.Model.User
         public Guid? FunctionId { get; set; }
         public string? FunctionName { get; set; }
         public string? UserId { get; set; }
-        public bool? HasView { get; set; }
-        public bool? HasCreate { get; set; }
-        public bool? HasUpdate { get; set; }
-        public bool? HasDelete { get; set; }
+        public bool HasView { get; set; } = true;
+        public bool HasCreate { get; set; } = true;
+        public bool HasUpdate { get; set; } = true;
+        public bool HasDelete { get; set; } = true;
     }
     public class PermissionUpdateModel
     {

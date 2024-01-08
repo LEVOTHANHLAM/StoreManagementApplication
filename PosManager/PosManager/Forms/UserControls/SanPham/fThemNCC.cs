@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using PosManager.APIServices.SanPham;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.SanPham;
+using Serilog;
 
 namespace Krypton_toolKitDemo
 {
@@ -43,32 +45,45 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            SupplierModel supplierModel = new SupplierModel();
-            supplierModel.TenNhaCungCap = txtTenNCC.Text.Trim();
-            supplierModel.MaNhaCungCap = txtMaNCC.Text.Trim();
-            supplierModel.DiaChi = txtDiaChi.Text.Trim();
-            supplierModel.SoDienThoai = txtSDT.Text.Trim();
-            if (string.IsNullOrEmpty(_id))
+            fLoading loading = new fLoading();
+            try
             {
-                var result = await _suppliersController.Add(GlobalModel.AccsessToken, supplierModel);
-                if (result != null)
+                loading.StartLoading();
+                SupplierModel supplierModel = new SupplierModel();
+                supplierModel.TenNhaCungCap = txtTenNCC.Text.Trim();
+                supplierModel.MaNhaCungCap = txtMaNCC.Text.Trim();
+                supplierModel.DiaChi = txtDiaChi.Text.Trim();
+                supplierModel.SoDienThoai = txtSDT.Text.Trim();
+                if (string.IsNullOrEmpty(_id))
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    var result = await _suppliersController.Add(GlobalModel.AccsessToken, supplierModel);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
                 }
+                else
+                {
+                    supplierModel.Id = Guid.Parse(_id);
+                    var result = await _suppliersController.Edit(GlobalModel.AccsessToken, supplierModel);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                }
+                txtMaNCC.Text = "";
+                txtTenNCC.Text = "";
+                txtDiaChi.Text = "";
+                txtSDT.Text = "";
             }
-            else
+            catch (Exception ex)
             {
-                supplierModel.Id = Guid.Parse(_id);
-                var result = await _suppliersController.Edit(GlobalModel.AccsessToken, supplierModel);
-                if (result != null)
-                {
-                    MessageCommon.ShowMessageBox(result.Message);
-                }
+                Log.Error(ex, ex.Message);
+                MessageCommon.ShowMessageBox(ex.Message);
             }
-            txtMaNCC.Text = "";
-            txtTenNCC.Text = "";
-            txtDiaChi.Text = "";
-            txtSDT.Text = "";
+            loading.Close();
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)

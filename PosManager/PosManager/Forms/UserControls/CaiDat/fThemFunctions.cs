@@ -1,7 +1,9 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using PosManager.APIServices.CaiDat;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
+using Serilog;
 
 namespace Krypton_toolKitDemo
 {
@@ -22,28 +24,48 @@ namespace Krypton_toolKitDemo
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTen.Text.Trim()))
+            fLoading fLoading = new fLoading();
+            try
             {
-                MessageCommon.ShowMessageBox("Vui Lòng Nhập thông tin!", 3);
-                return;
-            }
-            SystemFunctionsController systemFunctionsController = new SystemFunctionsController();
-            if (string.IsNullOrEmpty(Id))
-            {
-                var result = await systemFunctionsController.Add(GlobalModel.AccsessToken, txtTen.Text.Trim(), null);
-                if (result != null)
+                if (string.IsNullOrEmpty(txtTen.Text.Trim()))
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    MessageCommon.ShowMessageBox("Vui Lòng Nhập thông tin!", 3);
+                    return;
                 }
-            }
-            else
-            {
-                var result = await systemFunctionsController.Edit(GlobalModel.AccsessToken, Id, txtTen.Text.Trim(), null);
-                if (result != null)
+                fLoading.StartLoading();
+                SystemFunctionsController systemFunctionsController = new SystemFunctionsController();
+                if (string.IsNullOrEmpty(Id))
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    var result = await systemFunctionsController.Add(GlobalModel.AccsessToken, txtTen.Text.Trim(), null);
+                    if (result != null)
+                    {
+                        fLoading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
                 }
+                else
+                {
+                    var result = await systemFunctionsController.Edit(GlobalModel.AccsessToken, Id, txtTen.Text.Trim(), null);
+                    if (result != null)
+                    {
+                        fLoading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        fLoading.Close();
+                        MessageCommon.ShowMessageBox(" Lỗi hệ thống vui lòng thử lại ", 3);
+                    }
+                }
+                fLoading.Close();
             }
+            catch (Exception ex)
+            {
+                fLoading.Close();
+                Log.Error(ex, ex.Message);
+                MessageCommon.ShowMessageBox(ex.Message);
+            }
+         
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

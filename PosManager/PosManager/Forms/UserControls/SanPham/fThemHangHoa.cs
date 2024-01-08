@@ -3,6 +3,7 @@ using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.SanPham;
+using PosManager.Forms;
 using PosManager.Forms.UI;
 using PosManager.Helper;
 using PosManager.Model;
@@ -10,6 +11,7 @@ using PosManager.Model.ChiNhanh;
 using PosManager.Model.SanPham;
 using Serilog;
 using System.Drawing.Printing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Krypton_toolKitDemo
@@ -171,66 +173,82 @@ namespace Krypton_toolKitDemo
                     MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                     return;
                 }
-                ProductsModel products = new ProductsModel();
-                products.MaHangHoa = txtMaVach.Text.Trim();
-                products.TenHangHoa = txtTenHangHoa.Text.Trim();
-                products.TenHangHoaKhongDau = txtTenHangHoaKhongDau.Text.Trim();
-                if (cbbMaNhomHang.SelectedItem.ToString() == "None")
+                fLoading loading = new fLoading();
+                loading.StartLoading();
+                try
                 {
-                    products.MaNhomHang = "ROOT";
-                }
-                else
-                {
-                    products.MaNhomHang = cbbMaNhomHang.SelectedItem.ToString().Split(" - ").FirstOrDefault();
-                }
-                products.MaDonViCoBan = cbbMaDonviCoBan.SelectedItem.ToString().Split(" - ").FirstOrDefault();
-                products.MaVach = txtMaVach.Text.Trim();
-                products.VAT = double.Parse(txtVAT.Text.Trim().Split(" %").FirstOrDefault());
-                products.DonViKhac = new List<ProductUnitDetailModel>();
-                products.GiaBan = new List<PriceModel>();
-                foreach (DataGridViewRow row in dtgvDonViTinh.Rows)
-                {
-                    if (string.IsNullOrEmpty(row.Cells["cQuyDoi"].Value.ToString()))
+                    ProductsModel products = new ProductsModel();
+                    products.MaHangHoa = txtMaVach.Text.Trim();
+                    products.TenHangHoa = txtTenHangHoa.Text.Trim();
+                    products.TenHangHoaKhongDau = txtTenHangHoaKhongDau.Text.Trim();
+                    if (cbbMaNhomHang.SelectedItem.ToString() == "None")
                     {
-                        MessageCommon.ShowMessageBox("Chưa Nhập Số Lượng Quy Đổi");
-                        checker = false;
-                        break;
-                    }
-                    ProductUnitDetailModel donViHangHoa = new ProductUnitDetailModel();
-                    donViHangHoa.MaHangHoa = txtMaVach.Text.Trim();
-                    var madonviHangHoa = row.Cells["cTenDonViTinh"].Value.ToString().Split(" - ").FirstOrDefault();
-                    donViHangHoa.MaDonViHangHoa = madonviHangHoa;
-                    donViHangHoa.TyLeChuyenDoi = float.Parse(row.Cells["cQuyDoi"].Value.ToString());
-                    products.DonViKhac.Add(donViHangHoa);
-                }
-                foreach (DataGridViewRow row in dtgvCuaHang.Rows)
-                {
-                    PriceModel priceModel = new PriceModel();
-                    priceModel.MaHangHoa = txtMaVach.Text.Trim();
-                    priceModel.MaCuaHang = row.Cells["cMaCuaHang"].Value.ToString();
-                    priceModel.MaDonViHangHoa = row.Cells["cMaDonViTinh"].Value.ToString();
-                    priceModel.Gia = decimal.Parse(row.Cells["cGia"].Value.ToString());
-                    products.GiaBan.Add(priceModel);
-                }
-                if (checker == true)
-                {
-                    var result = await _productsController.Add(GlobalModel.AccsessToken, products);
-                    if (result != null)
-                    {
-                        MessageCommon.ShowMessageBox(result.Message);
-                        if (result.StatusCode == 200)
-                        {
-                            Close();
-                        }
+                        products.MaNhomHang = "ROOT";
                     }
                     else
                     {
-                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
+                        products.MaNhomHang = cbbMaNhomHang.SelectedItem.ToString().Split(" - ").FirstOrDefault();
+                    }
+                    products.MaDonViCoBan = cbbMaDonviCoBan.SelectedItem.ToString().Split(" - ").FirstOrDefault();
+                    products.MaVach = txtMaVach.Text.Trim();
+                    products.VAT = double.Parse(txtVAT.Text.Trim().Split(" %").FirstOrDefault());
+                    products.DonViKhac = new List<ProductUnitDetailModel>();
+                    products.GiaBan = new List<PriceModel>();
+                    foreach (DataGridViewRow row in dtgvDonViTinh.Rows)
+                    {
+                        if (string.IsNullOrEmpty(row.Cells["cQuyDoi"].Value.ToString()))
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox("Chưa Nhập Số Lượng Quy Đổi");
+                            checker = false;
+                            break;
+                        }
+                        ProductUnitDetailModel donViHangHoa = new ProductUnitDetailModel();
+                        donViHangHoa.MaHangHoa = txtMaVach.Text.Trim();
+                        var madonviHangHoa = row.Cells["cTenDonViTinh"].Value.ToString().Split(" - ").FirstOrDefault();
+                        donViHangHoa.MaDonViHangHoa = madonviHangHoa;
+                        donViHangHoa.TyLeChuyenDoi = float.Parse(row.Cells["cQuyDoi"].Value.ToString());
+                        products.DonViKhac.Add(donViHangHoa);
+                    }
+                    foreach (DataGridViewRow row in dtgvCuaHang.Rows)
+                    {
+                        PriceModel priceModel = new PriceModel();
+                        priceModel.MaHangHoa = txtMaVach.Text.Trim();
+                        priceModel.MaCuaHang = row.Cells["cMaCuaHang"].Value.ToString();
+                        priceModel.MaDonViHangHoa = row.Cells["cMaDonViTinh"].Value.ToString();
+                        priceModel.Gia = decimal.Parse(row.Cells["cGia"].Value.ToString());
+                        products.GiaBan.Add(priceModel);
+                    }
+                    if (checker == true)
+                    {
+                        var result = await _productsController.Add(GlobalModel.AccsessToken, products);
+                        if (result != null)
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox(result.Message);
+                            if (result.StatusCode == 200)
+                            {
+                                Close();
+                            }
+                        }
+                        else
+                        {
+                            loading.Close();
+                            MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    loading.Close();
+                    Log.Error(ex, ex.Message);
+                    MessageCommon.ShowMessageBox(ex.Message, 3);
+                }
+              
             }
             catch (Exception ex)
             {
+                loading.Close();
                 Log.Error(ex, ex.Message);
                 MessageCommon.ShowMessageBox(ex.Message, 3);
             }

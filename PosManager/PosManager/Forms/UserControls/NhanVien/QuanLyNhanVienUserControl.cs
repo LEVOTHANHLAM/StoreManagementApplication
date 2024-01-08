@@ -2,6 +2,7 @@
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Model;
+using PosManager.Model.User;
 using Serilog;
 
 namespace PosManager.Forms.UserControls.NhanVien
@@ -14,6 +15,7 @@ namespace PosManager.Forms.UserControls.NhanVien
         private int pageSize = 10; // Số phần tử trên mỗi trang
         private int Total = 1000;
         private int row = 0;
+        private PermissionModel permissionModel;
         public QuanLyNhanVienUserControl()
         {
             InitializeComponent();
@@ -30,6 +32,15 @@ namespace PosManager.Forms.UserControls.NhanVien
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
         {
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            if (GlobalModel.UserInfo.Permissions != null)
+            {
+                permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "QuanLyNhanVienUserControl");
+                if (permissionModel != null)
+                {
+                    btnAdd.Enabled = permissionModel.HasCreate;
+                    //btnDelete.Enabled = permissionModel.HasDelete;
+                }
+            }
         }
         private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
@@ -125,10 +136,13 @@ namespace PosManager.Forms.UserControls.NhanVien
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                fThemNhanVien edit = new fThemNhanVien(id);
-                edit.ShowDialog();
-                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                if(permissionModel !=null && permissionModel.HasUpdate)
+                {
+                    var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                    fThemNhanVien edit = new fThemNhanVien(id);
+                    edit.ShowDialog();
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
             }
         }
 

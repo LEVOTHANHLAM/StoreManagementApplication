@@ -1,15 +1,18 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using PosManager.Forms;
 using PosManager.Forms.UserControls;
 using PosManager.Forms.UserControls.KhachHang;
 using PosManager.Forms.UserControls.Kho;
 using PosManager.Forms.UserControls.NhanVien;
 using PosManager.Forms.UserControls.Post;
 using PosManager.Forms.UserControls.SanPham;
+using PosManager.Model;
 
 namespace Krypton_toolKitDemo
 {
     public partial class fMain : KryptonForm
     {
+        private fLoading loading = new fLoading();
         private fLogin _fLogin;
         bool khachHangCollapse = true;
         bool hangHoaCollapse = true;
@@ -21,7 +24,7 @@ namespace Krypton_toolKitDemo
         bool BaoCaoCollapse = true;
 
         private int startPosition = 0;
-        private string displayText = "Cảm Ơn Quý Khách Đã Tin Tưởng Chúng Tôi!                                                                                                                                                                                                                ";
+        private string displayText = "Cảm Ơn Quý Khách Đã Tin Tưởng Chúng Tôi!";
         public fMain()
         {
             InitializeComponent();
@@ -29,11 +32,19 @@ namespace Krypton_toolKitDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (displayText.Length < 250)
+            {
+                // Tạo chuỗi mới chỉ chứa khoảng trắng để đạt đến độ dài 250
+                int spacesToAdd = 250 - displayText.Length;
+                string spaces = new string(' ', spacesToAdd);
+                displayText += spaces;
+            }
             HieuUngTimer.Start();
             pMain.Controls.Clear();
             POSUserControl pOSUserControl = new POSUserControl();
             pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(pOSUserControl);
+            LoadFunction();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -195,10 +206,12 @@ namespace Krypton_toolKitDemo
 
         private void btnChiNhanh_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             ChiNhanhUserControl chiNhanhControl = new ChiNhanhUserControl();
             chiNhanhControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(chiNhanhControl);
+            loading.StopLoading();
         }
 
         private void flpMain_Paint(object sender, PaintEventArgs e)
@@ -208,50 +221,62 @@ namespace Krypton_toolKitDemo
 
         private void btnQuanLyKho_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             DanhSachKhoUserControl danhSachKhoUserControl = new DanhSachKhoUserControl();
             danhSachKhoUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(danhSachKhoUserControl);
+            loading.StopLoading();
         }
 
         private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             NhaCungCapUserControl nhaCungCapUserControl = new NhaCungCapUserControl();
             nhaCungCapUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(nhaCungCapUserControl);
+            loading.StopLoading();
         }
 
         private void pbLogoMeXiu_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             POSUserControl pOSUserControl = new POSUserControl();
             pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(pOSUserControl);
+            loading.StopLoading();
         }
 
         private void btnPos_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             POSUserControl pOSUserControl = new POSUserControl();
             pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(pOSUserControl);
+            loading.StopLoading();
         }
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             FunctionsUserControl functionsUser = new FunctionsUserControl();
             functionsUser.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(functionsUser);
+            loading.StopLoading();
         }
 
         private void btnDanhSachNhanVien_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             QuanLyNhanVienUserControl quanLyNhanVienUserControl = new QuanLyNhanVienUserControl();
             quanLyNhanVienUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(quanLyNhanVienUserControl);
+            loading.StopLoading();
         }
 
         private void HangHoaContainer_Paint(object sender, PaintEventArgs e)
@@ -261,26 +286,87 @@ namespace Krypton_toolKitDemo
 
         private void btnLoaiSanPham_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             LoaiSanPhamUserControl loaiSanPhamUserControl = new LoaiSanPhamUserControl();
             loaiSanPhamUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(loaiSanPhamUserControl);
+            loading.StopLoading();
         }
 
         private void btnDonViHangHoa_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             DonViHangHoaUserControl donViTinhHangHoaUserControl = new DonViHangHoaUserControl();
             donViTinhHangHoaUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(donViTinhHangHoaUserControl);
+            loading.StopLoading();
         }
 
         private void btnDanhSachHangHoa_Click(object sender, EventArgs e)
         {
+            loading.StartLoading();
             pMain.Controls.Clear();
             QuanLySanPhamUserControl quanLySanPhamUserControl = new QuanLySanPhamUserControl();
             quanLySanPhamUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(quanLySanPhamUserControl);
+            loading.StopLoading();
+        }
+        private void LoadFunction()
+        {
+            foreach (var item in GlobalModel.UserInfo.Permissions)
+            {
+                  switch (item.FunctionName)
+                {
+                    case "ChiNhanhControl":
+                        {
+                            btnChiNhanh.Enabled = item.HasView;
+                            break;
+                        }
+                    case "DanhSachKhoUserControl":
+                        {
+                            btnQuanLyKho.Enabled = item.HasView;
+                            break;
+                        }
+                    case "NhaCungCapUserControl":
+                        {
+                            btnNhaCungCap.Enabled = item.HasView;
+                            break;
+                        }
+                    case "POSUserControl":
+                        {
+                            btnPos.Enabled = item.HasView;
+                            break;
+                        }
+                    case "FunctionsUserControl":
+                        {
+                            btnCaiDat.Enabled = item.HasView;
+                            break;
+                        }
+                    case "QuanLyNhanVienUserControl":
+                        {
+                            btnDanhSachNhanVien.Enabled = item.HasView;
+                            break;
+                        }
+                    case "LoaiSanPhamUserControl":
+                        {
+                            btnLoaiSanPham.Enabled = item.HasView;
+                            break;
+                        }
+                    case "DonViHangHoaUserControl":
+                        {
+                            btnDonViHangHoa.Enabled = item.HasView;
+                            break;
+                        }
+                    case "QuanLySanPhamUserControl":
+                        {
+                            btnDanhSachHangHoa.Enabled = item.HasView;
+                            break;
+                        }
+
+                }
+            }
         }
     }
 }

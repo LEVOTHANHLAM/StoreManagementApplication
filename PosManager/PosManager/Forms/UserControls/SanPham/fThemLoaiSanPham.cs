@@ -1,8 +1,10 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using PosManager.APIServices.SanPham;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.SanPham;
+using Serilog;
 
 namespace Krypton_toolKitDemo
 {
@@ -70,35 +72,55 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            CategoryModel category = new CategoryModel();
-            category.TenNhomHang = txtTenNhomHang.Text;
-            category.MaNhomHang = txtMaNhomHang.Text.Trim();
-            var value = "ROOT";
-            if (cbbMaNhomChu.Text != "None")
+            fLoading loading = new fLoading();
+            loading.StartLoading();
+            try
             {
-                value = cbbMaNhomChu.Text.Split(" - ").FirstOrDefault();
-            }
-            category.ParentId = categoryModels.FirstOrDefault(x => x.MaNhomHang == value).Id;
-            if (string.IsNullOrEmpty(_id))
-            {
-                var result = await _categoriesController.Add(GlobalModel.AccsessToken, category);
-                if (result != null)
+                CategoryModel category = new CategoryModel();
+                category.TenNhomHang = txtTenNhomHang.Text;
+                category.MaNhomHang = txtMaNhomHang.Text.Trim();
+                var value = "ROOT";
+                if (cbbMaNhomChu.Text != "None")
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    value = cbbMaNhomChu.Text.Split(" - ").FirstOrDefault();
                 }
-            }
-            else
-            {
-                category.Id = Guid.Parse(_id);
-                var result = await _categoriesController.Edit(GlobalModel.AccsessToken, category);
-                if (result != null)
+                category.ParentId = categoryModels.FirstOrDefault(x => x.MaNhomHang == value).Id;
+                if (string.IsNullOrEmpty(_id))
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    var result = await _categoriesController.Add(GlobalModel.AccsessToken, category);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
                 }
+                else
+                {
+                    category.Id = Guid.Parse(_id);
+                    var result = await _categoriesController.Edit(GlobalModel.AccsessToken, category);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!", 3);
+                    }
+                }
+                loadComboBox();
+                txtMaNhomHang.Text = "";
+                txtTenNhomHang.Text = "";
+                loading.Close();
             }
-            loadComboBox();
-            txtMaNhomHang.Text = "";
-            txtTenNhomHang.Text = "";
+            catch (Exception ex)
+            {
+                loading.Close();
+                Log.Error(ex, ex.Message);
+                MessageCommon.ShowMessageBox(ex.Message);
+            }
+            loading.Close();
         }
     }
 }

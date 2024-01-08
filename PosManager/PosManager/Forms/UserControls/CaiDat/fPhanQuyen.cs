@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using DocumentFormat.OpenXml.Wordprocessing;
 using PosManager.APIServices.User;
+using PosManager.Forms;
 using PosManager.Model;
 using PosManager.Model.User;
 
@@ -38,6 +39,7 @@ namespace Krypton_toolKitDemo
 
         private async void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             PermissionUpdateModel updateModel = new PermissionUpdateModel();
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cView"].Index)
             {
@@ -71,8 +73,11 @@ namespace Krypton_toolKitDemo
                 updateModel.Command = "Delete";
                 updateModel.FunctionId = (Guid)dtgvAccount.Rows[e.RowIndex].Cells["cFunctionId"].Value;
             }
+            fLoading loading = new fLoading();
+            loading.StartLoading();
             await _usersController.UpdatePermissionsByIdUser(GlobalModel.AccsessToken, updateModel);
             await loadAccount();
+            loading.Close();
         }
     }
 }

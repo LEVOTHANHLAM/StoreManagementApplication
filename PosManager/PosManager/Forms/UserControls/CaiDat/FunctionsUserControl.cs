@@ -2,6 +2,7 @@
 using PosManager.APIServices.CaiDat;
 using PosManager.Helper;
 using PosManager.Model;
+using PosManager.Model.User;
 using Serilog;
 
 namespace PosManager.Forms.UserControls.KhachHang
@@ -14,6 +15,7 @@ namespace PosManager.Forms.UserControls.KhachHang
         private int pageSize = 10; // Số phần tử trên mỗi trang
         private int Total = 1000;
         private int row = 0;
+        private PermissionModel permissionModel;
         public FunctionsUserControl()
         {
             InitializeComponent();
@@ -30,6 +32,15 @@ namespace PosManager.Forms.UserControls.KhachHang
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
         {
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            if (GlobalModel.UserInfo.Permissions != null)
+            {
+                permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "FunctionsUserControl");
+                if (permissionModel != null)
+                {
+                    btnAdd.Enabled = permissionModel.HasCreate;
+                    btnDelete.Enabled = permissionModel.HasDelete;
+                }
+            }
         }
         private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
@@ -122,11 +133,15 @@ namespace PosManager.Forms.UserControls.KhachHang
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
-                fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
-                themNhaCungCap.ShowDialog();
-                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                if(permissionModel != null && permissionModel.HasUpdate)
+                {
+                    var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                    var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
+                    fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
+                    themNhaCungCap.ShowDialog();
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
+              
             }
         }
 

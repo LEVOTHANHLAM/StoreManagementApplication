@@ -3,6 +3,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using PosManager.APIServices.CaiDat;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.User;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
@@ -81,29 +82,46 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            if (string.IsNullOrEmpty(_idUser))
+            fLoading loading = new fLoading();
+            loading.StartLoading();
+            try
             {
-                UserModel user = new UserModel();
-                user.Email = txtEmail.Text;
-                user.Password = txtPassword.Text;
-                user.Address = txtDiaChi.Text;
-                user.UserName = txtUsername.Text;
-                user.CCCD = txtCCCD.Text;
-                user.PhoneNumber = txtPhonenumber.Text;
-                user.DateOfBirth = dateNgaySinh.Value;
-                user.FullName = txtTen.Text;
-                user.Role = "SysAdmin";
-                if (cbbChucVu.SelectedIndex == 1)
+                if (string.IsNullOrEmpty(_idUser))
                 {
-                    user.Role = "NhanVien";
-                }
-                user.MaCuaHang = maCuaHang;
-                var result = await _authenticateController.Create(GlobalModel.AccsessToken, user);
-                if (result != null)
-                {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    UserModel user = new UserModel();
+                    user.Email = txtEmail.Text;
+                    user.Password = txtPassword.Text;
+                    user.Address = txtDiaChi.Text;
+                    user.UserName = txtUsername.Text;
+                    user.CCCD = txtCCCD.Text;
+                    user.PhoneNumber = txtPhonenumber.Text;
+                    user.DateOfBirth = dateNgaySinh.Value;
+                    user.FullName = txtTen.Text;
+                    user.Role = "SysAdmin";
+                    if (cbbChucVu.SelectedIndex == 1)
+                    {
+                        user.Role = "NhanVien";
+                    }
+                    user.MaCuaHang = maCuaHang;
+                    var result = await _authenticateController.Create(GlobalModel.AccsessToken, user);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                loading.Close();
+                MessageCommon.ShowMessageBox(ex.Message);
+            }
+            loading.Close();
         }
 
         private void cbbMaCuaHang_SelectedIndexChanged(object sender, EventArgs e)

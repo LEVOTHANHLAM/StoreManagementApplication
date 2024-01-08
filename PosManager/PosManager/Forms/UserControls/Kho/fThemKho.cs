@@ -2,9 +2,11 @@
 using DocumentFormat.OpenXml.Office2010.Excel;
 using PosManager.APIServices.CaiDat;
 using PosManager.APIServices.Kho;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.Kho;
+using Serilog;
 
 namespace Krypton_toolKitDemo
 {
@@ -39,28 +41,53 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập đủ thông tin!");
                 return;
             }
-            _stocksController = new StocksController();
-            if (_stock != null)
+            fLoading loading = new fLoading();
+            loading.StartLoading();
+            try
             {
-                _stock.TenKho = txtDiaChi.Text;
-                _stock.MaKho = txtTen.Text;
-                var result = await _stocksController.Edit(GlobalModel.AccsessToken, _stock);
-                if (result != null)
+                _stocksController = new StocksController();
+                if (_stock != null)
                 {
-                    MessageCommon.ShowMessageBox(result.Message);
+                    _stock.TenKho = txtDiaChi.Text;
+                    _stock.MaKho = txtTen.Text;
+                    var result = await _stocksController.Edit(GlobalModel.AccsessToken, _stock);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
+                    }
+                }
+                else
+                {
+                    StockModel stock = new StockModel();
+                    stock.TenKho = txtTen.Text;
+                    stock.MaKho = txtDiaChi.Text;
+                    var result = await _stocksController.Add(GlobalModel.AccsessToken, stock);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                StockModel stock = new StockModel();
-                stock.TenKho = txtTen.Text;
-                stock.MaKho = txtDiaChi.Text;
-                var result = await _stocksController.Add(GlobalModel.AccsessToken, stock);
-                if (result != null)
-                {
-                    MessageCommon.ShowMessageBox(result.Message);
-                }
+                loading.Close();
+                Log.Error(ex, ex.Message);
+                MessageCommon.ShowMessageBox(ex.Message, 3);
+
             }
+          
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using Newtonsoft.Json;
 using PosManager.APIServices.User;
+using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.User;
@@ -26,6 +27,7 @@ namespace Krypton_toolKitDemo
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            fLoading loading = new fLoading();
             try
             {
                 btnLogin.Enabled = false;
@@ -40,12 +42,15 @@ namespace Krypton_toolKitDemo
                     btnLogin.Enabled = true;
                     return;
                 }
+              
+                loading.StartLoading();
                 AuthenticateController login = new AuthenticateController();
                 var user = await login.Login(username, password);
                 if (user == null)
                 {
                     MessageCommon.ShowMessageBox("Lỗi Hệ Thống Vui Lòng Liên Hệ Admin!", 4);
                     btnLogin.Enabled = true;
+                    loading.Close();
                     return;
                 }
                 else
@@ -58,6 +63,7 @@ namespace Krypton_toolKitDemo
                         {
                             fMain form1 = new fMain();
                             form1.Show();
+                            loading.Close();
                             this.Hide();
                         }
                     }
@@ -65,6 +71,7 @@ namespace Krypton_toolKitDemo
                     {
                         MessageCommon.ShowMessageBox(user.Message, 4);
                         btnLogin.Enabled = true;
+                        loading.Close();
                         return;
                     }
                 }
@@ -73,9 +80,10 @@ namespace Krypton_toolKitDemo
             {
                 Log.Error($"{nameof(fLogin)}, params; {nameof(btnLogin_Click)}, Error; {ex.Message}, Exception; {ex}");
                 MessageCommon.ShowMessageBox(ex.Message, 4);
+                loading.StopLoading();
                 return;
             }
-
+            loading.Close();
         }
         public TokenInfo GetUserInfoFromToken(string jwtToken)
         {
