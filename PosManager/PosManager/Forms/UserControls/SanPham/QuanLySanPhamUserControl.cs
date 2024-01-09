@@ -66,7 +66,7 @@ namespace PosManager.Forms.UserControls.SanPham
                                 a.MaNhomHang = "";
                                 a.TenNhomHang = "";
                             }
-                            dtgvAccount.Rows.Add(false, i, a.MaHangHoa, a.TenHangHoa, a.TenHangHoaKhongDau, a.MaNhomHang, a.TenNhomHang, a.VAT, a.GhiChu, Properties.Resources.Show, a.Id);
+                            dtgvAccount.Rows.Add(false, i, a.MaHangHoa, a.TenHangHoa, a.TenHangHoaKhongDau, a.MaNhomHang, a.TenNhomHang, a.VAT, a.GhiChu, Properties.Resources.Show, Properties.Resources.delete15, a.Id);
                             i++;
                         }
                         row = i;
@@ -131,19 +131,48 @@ namespace PosManager.Forms.UserControls.SanPham
             }
         }
 
-        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cShow"].Index)
             {
-                if(permissionModel != null && !permissionModel.HasUpdate && !permissionModel.HasDelete)
+                if (permissionModel != null && !permissionModel.HasUpdate)
+                {
+                    MessageCommon.ShowMessageBox("Bạn không có quyền  sửa", 2);
+                    return;
+                }
+                fLoading loading = new fLoading();
+                loading.StartLoading(); 
+                var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                fChiTietHangHoa update = new fChiTietHangHoa(id);
+                update.ShowDialog();
+                loading.Close();
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+            else if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cDelete"].Index)
+            {
+                if (permissionModel != null && !permissionModel.HasDelete)
                 {
                     MessageCommon.ShowMessageBox("Bạn không có quyền xoá và sửa", 2);
                     return;
                 }
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
-                fThemLoaiSanPham themNhaCungCap = new fThemLoaiSanPham(id);
-                themNhaCungCap.ShowDialog();
-                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                if (MessageCommon.ShowConfirmationBox("Bạn Có Chắc Chắn Muốn Xoá Sản Phẩm Này Không?") == DialogResult.Yes)
+                {
+                    fLoading loading = new fLoading();
+                    loading.StartLoading();
+                    var result = await _productsController.Delete(GlobalModel.AccsessToken, id);
+                    if (result != null)
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox(result.Message);
+                        loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                    }
+                    else
+                    {
+                        loading.Close();
+                        MessageCommon.ShowMessageBox("Đã gặp lỗi vui lòng thử lại!", 2);
+                    }
+                }
             }
         }
 

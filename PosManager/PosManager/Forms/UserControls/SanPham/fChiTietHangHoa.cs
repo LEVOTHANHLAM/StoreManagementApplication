@@ -12,6 +12,8 @@ namespace Krypton_toolKitDemo
 {
     public partial class fChiTietHangHoa : KryptonForm
     {
+        private string Id;
+        private ProductsModel Products;
         private StoresController _storesController;
         private CategoriesController _categoriesController;
         private ProductUnitsController _productUnitsController;
@@ -19,7 +21,7 @@ namespace Krypton_toolKitDemo
         private List<StoreModel> storeModels = new List<StoreModel>();
         private List<DonViHangHoaModel> donViHangHoaModesl = new List<DonViHangHoaModel>();
         private List<CategoryModel> categoryModels = new List<CategoryModel>();
-        public fChiTietHangHoa()
+        public fChiTietHangHoa(string id)
         {
             InitializeComponent();
             _storesController = new StoresController();
@@ -27,53 +29,93 @@ namespace Krypton_toolKitDemo
             _productsController = new ProductsController();
             _categoriesController = new CategoriesController();
             txtVAT.Text = "0 %";
+            Id = id;
         }
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            var stores = await _storesController.GetAll(GlobalModel.AccsessToken);
-            if (stores != null && stores.Data.Any())
+            if (!string.IsNullOrEmpty(Id))
             {
-                storeModels.Clear();
-                storeModels.AddRange(stores.Data);
-            }
-            var donViHangHoas = await _productUnitsController.GetAll(GlobalModel.AccsessToken);
-            if (donViHangHoas != null && donViHangHoas.Data.Any())
-            {
-                donViHangHoaModesl.Clear();
-                donViHangHoaModesl.AddRange(donViHangHoas.Data);
-            }
-            var loaiSanPhams = await _categoriesController.Search(GlobalModel.AccsessToken, "1", "99999", "");
-            if (loaiSanPhams != null && loaiSanPhams.Data.Result.Any())
-            {
-                categoryModels.Clear();
-                categoryModels.AddRange(loaiSanPhams.Data.Result);
-            }
-            if (!storeModels.Any() || !donViHangHoaModesl.Any() || !categoryModels.Any())
-            {
-                MessageCommon.ShowMessageBox("Đã xảy ra lỗi vui lòng thử lại!", 3);
-                Close();
-                return;
-            }
-            cbbMaDonviCoBan.Items.Clear();
-            foreach (var donViHangHoa in donViHangHoaModesl)
-            {
-                var name = donViHangHoa.MaDonViHangHoa + " - " + donViHangHoa.TenDonViHangHoa;
-                cbbMaDonviCoBan.Items.Add(name);
-            }
-            cbbMaDonviCoBan.SelectedIndex = 0;
-
-            cbbMaNhomHang.Items.Clear();
-            cbbMaNhomHang.Items.Add("None");
-            foreach (var categoryModel in categoryModels)
-            {
-                if (categoryModel.MaNhomHang != "ROOT")
+                var result = await _productsController.GetById(GlobalModel.AccsessToken, Id);
+                if (result != null && result.Data != null)
                 {
-                    cbbMaNhomHang.Items.Add($"{categoryModel.MaNhomHang} - {categoryModel.TenNhomHang}");
+                    Products = result.Data;
+                    txtMaVach.Text = Products.MaVach;
+                    txtGhiChu.Text = Products.GhiChu;
+                    txtTenHangHoa.Text = Products.TenHangHoa;
+                    txtTenHangHoaKhongDau.Text = Products.TenHangHoaKhongDau;
+                    txtVAT.Text = Products.VAT.ToString() + " %";
+
+                    var stores = await _storesController.GetAll(GlobalModel.AccsessToken);
+                    if (stores != null && stores.Data.Any())
+                    {
+                        storeModels.Clear();
+                        storeModels.AddRange(stores.Data);
+                    }
+                    var donViHangHoas = await _productUnitsController.GetAll(GlobalModel.AccsessToken);
+                    if (donViHangHoas != null && donViHangHoas.Data.Any())
+                    {
+                        donViHangHoaModesl.Clear();
+                        donViHangHoaModesl.AddRange(donViHangHoas.Data);
+                    }
+                    var loaiSanPhams = await _categoriesController.Search(GlobalModel.AccsessToken, "1", "99999", "");
+                    if (loaiSanPhams != null && loaiSanPhams.Data.Result.Any())
+                    {
+                        categoryModels.Clear();
+                        categoryModels.AddRange(loaiSanPhams.Data.Result);
+                    }
+                    if (!storeModels.Any() || !donViHangHoaModesl.Any() || !categoryModels.Any())
+                    {
+                        MessageCommon.ShowMessageBox("Đã xảy ra lỗi vui lòng thử lại!", 3);
+                        Close();
+                        return;
+                    }
+                    cbbMaDonviCoBan.Items.Clear();
+                    foreach (var donViHangHoa in donViHangHoaModesl)
+                    {
+                        var name = donViHangHoa.MaDonViHangHoa + " - " + donViHangHoa.TenDonViHangHoa;
+                        cbbMaDonviCoBan.Items.Add(name);
+                    }
+                    foreach (var item in cbbMaDonviCoBan.Items)
+                    {
+                        if (item.ToString().Contains(Products.MaDonViCoBan))
+                        {
+                            cbbMaDonviCoBan.SelectedItem = item;
+                            break;
+                        }
+                    }
+                    cbbMaNhomHang.Items.Clear();
+                    cbbMaNhomHang.Items.Add("None");
+                    foreach (var categoryModel in categoryModels)
+                    {
+                        if (categoryModel.MaNhomHang != "ROOT")
+                        {
+                            cbbMaNhomHang.Items.Add($"{categoryModel.MaNhomHang} - {categoryModel.TenNhomHang}");
+                        }
+                    }
+                    cbbMaNhomHang.SelectedIndex = 0;
+                    if (Products.MaNhomHang != "ROOT")
+                    {
+                        foreach (var item in cbbMaNhomHang.Items)
+                        {
+                            if (item.ToString().Contains(Products.MaNhomHang))
+                            {
+                                cbbMaDonviCoBan.SelectedItem = item;
+                                break;
+                            }
+                        }
+                    }
+                    foreach(var item in Products.GiaBan)
+                    {
+
+                    }
+
+                    AddRowtgvCuaHang();
                 }
+
             }
-            cbbMaNhomHang.SelectedIndex = 0;
-            AddRowtgvCuaHang();
+
+
         }
         private void AddRowtgvCuaHang()
         {

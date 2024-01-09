@@ -165,6 +165,7 @@ namespace Krypton_toolKitDemo
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
+            fLoading loading = new fLoading();
             try
             {
                 bool checker = true;
@@ -173,7 +174,7 @@ namespace Krypton_toolKitDemo
                     MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                     return;
                 }
-                fLoading loading = new fLoading();
+               
                 loading.StartLoading();
                 try
                 {
