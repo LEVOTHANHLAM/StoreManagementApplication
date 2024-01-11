@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThemHangHoa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fChiTietHangHoa));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             panel1 = new Panel();
             btnAddColumdtgvDonViTinh = new PictureBox();
@@ -55,9 +55,6 @@
             splitContainer1 = new SplitContainer();
             panel8 = new Panel();
             dtgvDonViTinh = new DataGridView();
-            cDelete = new DataGridViewImageColumn();
-            cTenDonViTinh = new DataGridViewComboBoxColumn();
-            cQuyDoi = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
             label2 = new Label();
             panel7 = new Panel();
@@ -74,6 +71,12 @@
             btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel6 = new Panel();
+            cDelete = new DataGridViewImageColumn();
+            cTenDonViTinh = new DataGridViewComboBoxColumn();
+            cQuyDoi = new DataGridViewTextBoxColumn();
+            cMaDVT = new DataGridViewTextBoxColumn();
+            cMaHangHoa = new DataGridViewTextBoxColumn();
+            cId = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAddColumdtgvDonViTinh).BeginInit();
             panel2.SuspendLayout();
@@ -412,7 +415,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvDonViTinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvDonViTinh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvDonViTinh.Columns.AddRange(new DataGridViewColumn[] { cDelete, cTenDonViTinh, cQuyDoi });
+            dtgvDonViTinh.Columns.AddRange(new DataGridViewColumn[] { cDelete, cTenDonViTinh, cQuyDoi, cMaDVT, cMaHangHoa, cId });
             dtgvDonViTinh.Dock = DockStyle.Fill;
             dtgvDonViTinh.EditMode = DataGridViewEditMode.EditOnEnter;
             dtgvDonViTinh.Location = new Point(0, 0);
@@ -427,34 +430,6 @@
             dtgvDonViTinh.CellContentClick += dtgvDonViTinh_CellContentClick;
             dtgvDonViTinh.CellValueChanged += dtgvDonViTinh_CellValueChanged;
             dtgvDonViTinh.EditingControlShowing += dtgvDonViTinh_EditingControlShowing;
-            // 
-            // cDelete
-            // 
-            cDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            cDelete.HeaderText = "Xóa";
-            cDelete.Name = "cDelete";
-            cDelete.Resizable = DataGridViewTriState.True;
-            cDelete.SortMode = DataGridViewColumnSortMode.Automatic;
-            cDelete.Width = 70;
-            // 
-            // cTenDonViTinh
-            // 
-            cTenDonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cTenDonViTinh.DefaultCellStyle = dataGridViewCellStyle2;
-            cTenDonViTinh.HeaderText = "Tên Đơn Vị Tính";
-            cTenDonViTinh.Name = "cTenDonViTinh";
-            cTenDonViTinh.Resizable = DataGridViewTriState.True;
-            cTenDonViTinh.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
-            // cQuyDoi
-            // 
-            cQuyDoi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cQuyDoi.HeaderText = "Quy Đổi";
-            cQuyDoi.Name = "cQuyDoi";
-            cQuyDoi.ReadOnly = true;
-            cQuyDoi.Resizable = DataGridViewTriState.True;
             // 
             // panel3
             // 
@@ -704,7 +679,53 @@
             panel6.Size = new Size(1410, 309);
             panel6.TabIndex = 4;
             // 
-            // fThemHangHoa
+            // cDelete
+            // 
+            cDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cDelete.HeaderText = "Xóa";
+            cDelete.Name = "cDelete";
+            cDelete.Resizable = DataGridViewTriState.True;
+            cDelete.SortMode = DataGridViewColumnSortMode.Automatic;
+            cDelete.Width = 70;
+            // 
+            // cTenDonViTinh
+            // 
+            cTenDonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cTenDonViTinh.DefaultCellStyle = dataGridViewCellStyle2;
+            cTenDonViTinh.HeaderText = "Tên Đơn Vị Tính";
+            cTenDonViTinh.Name = "cTenDonViTinh";
+            cTenDonViTinh.Resizable = DataGridViewTriState.True;
+            cTenDonViTinh.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // cQuyDoi
+            // 
+            cQuyDoi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            cQuyDoi.HeaderText = "Quy Đổi";
+            cQuyDoi.Name = "cQuyDoi";
+            cQuyDoi.ReadOnly = true;
+            cQuyDoi.Resizable = DataGridViewTriState.True;
+            // 
+            // cMaDVT
+            // 
+            cMaDVT.HeaderText = "cMaDVT";
+            cMaDVT.Name = "cMaDVT";
+            cMaDVT.Visible = false;
+            // 
+            // cMaHangHoa
+            // 
+            cMaHangHoa.HeaderText = "cMaHangHoa";
+            cMaHangHoa.Name = "cMaHangHoa";
+            cMaHangHoa.Visible = false;
+            // 
+            // cId
+            // 
+            cId.HeaderText = "cId";
+            cId.Name = "cId";
+            cId.Visible = false;
+            // 
+            // fChiTietHangHoa
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -715,7 +736,7 @@
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
-            Name = "fThemHangHoa";
+            Name = "fChiTietHangHoa";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             ShowIcon = false;
@@ -778,14 +799,17 @@
         private Panel panel7;
         private Panel panel9;
         private PictureBox btnAddColumdtgvDonViTinh;
-        private DataGridViewImageColumn cDelete;
-        private DataGridViewComboBoxColumn cTenDonViTinh;
-        private DataGridViewTextBoxColumn cQuyDoi;
         private DataGridViewTextBoxColumn cTenCuaHang;
         private DataGridViewTextBoxColumn cDonViTinh;
         private DataGridViewTextBoxColumn cGia;
         private DataGridViewTextBoxColumn cMaCuaHang;
         private DataGridViewTextBoxColumn cMaDonViTinh;
+        private DataGridViewImageColumn cDelete;
+        private DataGridViewComboBoxColumn cTenDonViTinh;
+        private DataGridViewTextBoxColumn cQuyDoi;
+        private DataGridViewTextBoxColumn cMaDVT;
+        private DataGridViewTextBoxColumn cMaHangHoa;
+        private DataGridViewTextBoxColumn cId;
     }
 }
 

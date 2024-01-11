@@ -35,10 +35,10 @@ namespace PosManager.Forms.UserControls.KhachHang
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            txtSearch = new PlaceholderTextBox();
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
             panel4 = new Panel();
+            txtSearch = new PlaceholderTextBox();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel1 = new Panel();
@@ -83,27 +83,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             ctmsAcc.SuspendLayout();
             SuspendLayout();
             // 
-            // txtSearch
-            // 
-            txtSearch.ForeColor = Color.Gray;
-            txtSearch.Location = new Point(3, 40);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderColor = Color.Gray;
-            txtSearch.PlaceholderText = "Tìm Kiếm";
-            txtSearch.Size = new Size(420, 36);
-            txtSearch.StateCommon.Back.Color1 = Color.White;
-            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtSearch.StateCommon.Border.Rounding = 18;
-            txtSearch.StateCommon.Content.Color1 = Color.Black;
-            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtSearch.TabIndex = 3;
-            txtSearch.Text = "Tìm Kiếm";
-            txtSearch.TextChanged += txtSearch_TextChanged;
-            // 
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
@@ -135,13 +114,34 @@ namespace PosManager.Forms.UserControls.KhachHang
             // 
             // panel4
             // 
-            panel4.Controls.Add(btnExport);
             panel4.Controls.Add(txtSearch);
+            panel4.Controls.Add(btnExport);
             panel4.Controls.Add(btnDelete);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
             panel4.TabIndex = 11;
+            // 
+            // txtSearch
+            // 
+            txtSearch.ForeColor = Color.Gray;
+            txtSearch.Location = new Point(3, 40);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderColor = Color.Gray;
+            txtSearch.PlaceholderText = "Tìm Kiếm";
+            txtSearch.Size = new Size(420, 36);
+            txtSearch.StateCommon.Back.Color1 = Color.White;
+            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtSearch.StateCommon.Border.Rounding = 18;
+            txtSearch.StateCommon.Content.Color1 = Color.Black;
+            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtSearch.TabIndex = 3;
+            txtSearch.Text = "Tìm Kiếm";
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnExport
             // 

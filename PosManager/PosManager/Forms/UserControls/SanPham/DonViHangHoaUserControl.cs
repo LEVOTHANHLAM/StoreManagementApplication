@@ -139,7 +139,7 @@ namespace PosManager.Forms.UserControls.SanPham
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                if(permissionModel != null && permissionModel.HasUpdate)
+                if (permissionModel != null && permissionModel.HasUpdate)
                 {
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fThemDonViHangHoa themNhaCungCap = new fThemDonViHangHoa(id);

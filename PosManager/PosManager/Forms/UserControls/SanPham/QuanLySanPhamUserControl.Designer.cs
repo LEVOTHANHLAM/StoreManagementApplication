@@ -56,12 +56,6 @@ namespace PosManager.Forms.UserControls.SanPham
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
-            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
             cMaHangHoa = new DataGridViewTextBoxColumn();
@@ -74,6 +68,12 @@ namespace PosManager.Forms.UserControls.SanPham
             cShow = new DataGridViewImageColumn();
             cDelete = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
+            ctmsAcc = new ContextMenuStrip(components);
+            selectedToolStripMenuItem = new ToolStripMenuItem();
+            selectAllToolStripMenuItem = new ToolStripMenuItem();
+            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
+            deselectAllToolStripMenuItem = new ToolStripMenuItem();
+            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -709,48 +709,6 @@ namespace PosManager.Forms.UserControls.SanPham
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
             // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(0, 0);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(100, 23);
-            kryptonTextBox1.TabIndex = 0;
-            // 
             // cChon
             // 
             cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
@@ -839,6 +797,48 @@ namespace PosManager.Forms.UserControls.SanPham
             cId.Name = "cId";
             cId.ReadOnly = true;
             cId.Visible = false;
+            // 
+            // ctmsAcc
+            // 
+            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
+            ctmsAcc.Name = "contextMenuStrip1";
+            ctmsAcc.Size = new Size(134, 48);
+            // 
+            // selectedToolStripMenuItem
+            // 
+            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
+            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
+            selectedToolStripMenuItem.Size = new Size(133, 22);
+            selectedToolStripMenuItem.Text = "Selected";
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            selectAllToolStripMenuItem.Size = new Size(184, 22);
+            selectAllToolStripMenuItem.Text = "Select all";
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // selectAllHighlightedToolStripMenuItem
+            // 
+            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
+            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
+            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
+            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
+            // 
+            // deselectAllToolStripMenuItem
+            // 
+            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+            deselectAllToolStripMenuItem.Size = new Size(133, 22);
+            deselectAllToolStripMenuItem.Text = "Deselect all";
+            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
+            // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(0, 0);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(100, 23);
+            kryptonTextBox1.TabIndex = 0;
             // 
             // QuanLySanPhamUserControl
             // 

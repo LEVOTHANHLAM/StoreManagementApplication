@@ -43,7 +43,7 @@ namespace PosManager.Forms.UserControls
                     btnDelete.Enabled = permissionModel.HasDelete;
                 }
             }
-          
+
         }
         private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
@@ -132,7 +132,7 @@ namespace PosManager.Forms.UserControls
 
         private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
                 if (permissionModel != null && permissionModel.HasUpdate)
@@ -155,7 +155,7 @@ namespace PosManager.Forms.UserControls
                         MessageCommon.ShowMessageBox(ex.Message, 4);
                     }
                 }
-               
+
             }
         }
 

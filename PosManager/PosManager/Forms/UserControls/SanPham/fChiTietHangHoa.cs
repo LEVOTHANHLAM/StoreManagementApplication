@@ -7,6 +7,9 @@ using PosManager.Model.ChiNhanh;
 using PosManager.Model.SanPham;
 using PosManager.Model;
 using Serilog;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System.Xml.Linq;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Krypton_toolKitDemo
 {
@@ -100,17 +103,29 @@ namespace Krypton_toolKitDemo
                         {
                             if (item.ToString().Contains(Products.MaNhomHang))
                             {
-                                cbbMaDonviCoBan.SelectedItem = item;
+                                cbbMaNhomHang.SelectedItem = item;
                                 break;
                             }
                         }
                     }
-                    foreach(var item in Products.GiaBan)
+                    var details = await _productUnitsController.GetDetailByProductId(GlobalModel.AccsessToken, Id);
+                    if (details != null && details.Data.Any())
                     {
 
-                    }
 
-                    AddRowtgvCuaHang();
+                        Products.DonViKhac = new List<ProductUnitDetailModel>();
+                        Products.DonViKhac.AddRange(details.Data);
+                        if (Products.DonViKhac.Any())
+                        {
+                            SetRowDonViTinh();
+                        }
+                    }
+                    dtgvCuaHang.Rows.Clear();
+                    foreach (var item in Products.GiaBan)
+                    {
+                        var donviHH = item.MaDonViHangHoa + " - " + item.TenDonViHangHoa;
+                        dtgvCuaHang.Rows.Add(item.TenCuaHang, donviHH, item.Gia, item.MaCuaHang, item.MaDonViHangHoa);
+                    }
                 }
 
             }
@@ -156,7 +171,55 @@ namespace Krypton_toolKitDemo
         {
 
         }
+        private void SetRowDonViTinh()
+        {
+            if (Products.DonViKhac != null && Products.DonViKhac.Any())
+            {
+                dtgvDonViTinh.Rows.Clear();
+                var maDonviTinhCoBan = cbbMaDonviCoBan.SelectedItem.ToString().Split(" - ").FirstOrDefault();
+                foreach (var item in Products.DonViKhac)
+                {
+                    if (item.MaDonViHangHoa != maDonviTinhCoBan)
+                    {
+                        dtgvDonViTinh.Rows.Add(PosManager.Properties.Resources.delete15, null, item.TyLeChuyenDoi, item.MaDonViHangHoa, item.MaDonViHangHoa, item.Id);
+                    }
+                }
+                foreach (DataGridViewRow item in dtgvDonViTinh.Rows)
+                {
+                    List<string> list = new List<string>();
+                    list.Clear();
+                    foreach (DataGridViewRow row in dtgvDonViTinh.Rows)
+                    {
+                        var cellValue = row.Cells["cTenDonViTinh"].Value?.ToString();
+                        if (!string.IsNullOrEmpty(cellValue))
+                        {
+                            var maDonviTinh = cellValue.ToString().Split(" - ").FirstOrDefault();
+                            var tenDonViTinh = cellValue.ToString().Split(" - ").Last();
+                            list.Add(maDonviTinh);
+                        }
+                    }
+                    int columnIndex = dtgvDonViTinh.Columns["cTenDonViTinh"].Index;
+                    var cMaDVT = item.Cells["cMaDVT"].Value?.ToString();
+                 DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)item.Cells[columnIndex];
+                    list.Add(maDonviTinhCoBan);
+                    foreach (var donViTinh in donViHangHoaModesl)
+                    {
+                        if (!list.Contains(donViTinh.MaDonViHangHoa))
+                        {
+                            var name = donViTinh.MaDonViHangHoa + " - " + donViTinh.TenDonViHangHoa;
+                         
+                            cell.Items.Add(name); // Thêm mục vào ComboBox
+                            if (cell.Items.Count > 0 && donViTinh.MaDonViHangHoa == cMaDVT)
+                            {
+                                cell.Value = name;
+                            }
+                        }
+                    }
 
+
+                }
+            }
+        }
         private void btnAddColumdtgvDonViTinh_Click(object sender, EventArgs e)
         {
             var maDonviTinhCoBan = cbbMaDonviCoBan.SelectedItem.ToString().Split(" - ").FirstOrDefault();
@@ -289,10 +352,19 @@ namespace Krypton_toolKitDemo
         }
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(cbbMaDonviCoBan.Text))
+            try
             {
-                AddRowtgvCuaHang();
+                if (!string.IsNullOrEmpty(cbbMaDonviCoBan.Text))
+                {
+                    AddRowtgvCuaHang();
+                }
             }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
         private void dtgvDonViTinh_EditModeChanged(object sender, EventArgs e)
         {

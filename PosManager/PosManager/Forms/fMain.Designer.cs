@@ -482,6 +482,8 @@
             KhoContainer.Name = "KhoContainer";
             KhoContainer.Size = new Size(287, 41);
             KhoContainer.TabIndex = 8;
+            KhoContainer.MouseEnter += Button_MouseEnter;
+            KhoContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel1
             // 
@@ -507,6 +509,8 @@
             btnQuanLyKho.TextAlign = ContentAlignment.MiddleLeft;
             btnQuanLyKho.UseVisualStyleBackColor = false;
             btnQuanLyKho.Click += btnQuanLyKho_Click;
+            btnQuanLyKho.MouseEnter += Button_MouseEnter;
+            btnQuanLyKho.MouseLeave += Button_MouseLeave;
             // 
             // panel19
             // 
@@ -531,6 +535,8 @@
             btnDonHangOnline.Text = "             Đơn Hàng Online";
             btnDonHangOnline.TextAlign = ContentAlignment.MiddleLeft;
             btnDonHangOnline.UseVisualStyleBackColor = false;
+            btnDonHangOnline.MouseEnter += Button_MouseEnter;
+            btnDonHangOnline.MouseLeave += Button_MouseLeave;
             // 
             // panel5
             // 
@@ -555,6 +561,8 @@
             btnKiemTraHoaDonNhap.Text = "             Kiểm Tra Hoá Đơn Nhập";
             btnKiemTraHoaDonNhap.TextAlign = ContentAlignment.MiddleLeft;
             btnKiemTraHoaDonNhap.UseVisualStyleBackColor = false;
+            btnKiemTraHoaDonNhap.MouseEnter += Button_MouseEnter;
+            btnKiemTraHoaDonNhap.MouseLeave += Button_MouseLeave;
             // 
             // panel29
             // 
@@ -579,6 +587,8 @@
             button13.Text = "             Kiểm Tra Giá Nhập";
             button13.TextAlign = ContentAlignment.MiddleLeft;
             button13.UseVisualStyleBackColor = false;
+            button13.MouseEnter += Button_MouseEnter;
+            button13.MouseLeave += Button_MouseLeave;
             // 
             // panel27
             // 
@@ -603,6 +613,8 @@
             btnLichSuPhieuNhap.Text = "             Lịch Sử Phiếu Nhập";
             btnLichSuPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
             btnLichSuPhieuNhap.UseVisualStyleBackColor = false;
+            btnLichSuPhieuNhap.MouseEnter += Button_MouseEnter;
+            btnLichSuPhieuNhap.MouseLeave += Button_MouseLeave;
             // 
             // panel20
             // 
@@ -627,6 +639,8 @@
             btnDonDatHangNCC.Text = "             Đơn Đặt Hàng NCC";
             btnDonDatHangNCC.TextAlign = ContentAlignment.MiddleLeft;
             btnDonDatHangNCC.UseVisualStyleBackColor = false;
+            btnDonDatHangNCC.MouseEnter += Button_MouseEnter;
+            btnDonDatHangNCC.MouseLeave += Button_MouseLeave;
             // 
             // panel28
             // 
@@ -651,6 +665,8 @@
             btnKiemPhieuNhap.Text = "             Kiểm Phiếu Nhập";
             btnKiemPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
             btnKiemPhieuNhap.UseVisualStyleBackColor = false;
+            btnKiemPhieuNhap.MouseEnter += Button_MouseEnter;
+            btnKiemPhieuNhap.MouseLeave += Button_MouseLeave;
             // 
             // panel21
             // 
@@ -675,6 +691,8 @@
             btnChuyenKho.Text = "             Chuyển Kho";
             btnChuyenKho.TextAlign = ContentAlignment.MiddleLeft;
             btnChuyenKho.UseVisualStyleBackColor = false;
+            btnChuyenKho.MouseEnter += Button_MouseEnter;
+            btnChuyenKho.MouseLeave += Button_MouseLeave;
             // 
             // panel22
             // 
@@ -699,6 +717,8 @@
             btnKiemKho.Text = "             Kiểm Kho";
             btnKiemKho.TextAlign = ContentAlignment.MiddleLeft;
             btnKiemKho.UseVisualStyleBackColor = false;
+            btnKiemKho.MouseEnter += Button_MouseEnter;
+            btnKiemKho.MouseLeave += Button_MouseLeave;
             // 
             // panel30
             // 
@@ -723,6 +743,8 @@
             btnQuanLyDate.Text = "             Quản Lý Date";
             btnQuanLyDate.TextAlign = ContentAlignment.MiddleLeft;
             btnQuanLyDate.UseVisualStyleBackColor = false;
+            btnQuanLyDate.MouseEnter += Button_MouseEnter;
+            btnQuanLyDate.MouseLeave += Button_MouseLeave;
             // 
             // panel23
             // 
@@ -747,6 +769,8 @@
             btnXuatKho.Text = "             Xuất Kho";
             btnXuatKho.TextAlign = ContentAlignment.MiddleLeft;
             btnXuatKho.UseVisualStyleBackColor = false;
+            btnXuatKho.MouseEnter += Button_MouseEnter;
+            btnXuatKho.MouseLeave += Button_MouseLeave;
             // 
             // panel24
             // 
@@ -771,6 +795,8 @@
             btnNhapKho.Text = "             Nhập Kho";
             btnNhapKho.TextAlign = ContentAlignment.MiddleLeft;
             btnNhapKho.UseVisualStyleBackColor = false;
+            btnNhapKho.MouseEnter += Button_MouseEnter;
+            btnNhapKho.MouseLeave += Button_MouseLeave;
             // 
             // panel25
             // 
@@ -797,6 +823,8 @@
             btnKho.TextAlign = ContentAlignment.MiddleLeft;
             btnKho.UseVisualStyleBackColor = false;
             btnKho.Click += btnKho_Click;
+            btnKho.MouseEnter += Button_MouseEnter;
+            btnKho.MouseLeave += Button_MouseLeave;
             // 
             // panel26
             // 
@@ -821,6 +849,8 @@
             btnTonKho.Text = "             Tồn Kho";
             btnTonKho.TextAlign = ContentAlignment.MiddleLeft;
             btnTonKho.UseVisualStyleBackColor = false;
+            btnTonKho.MouseEnter += Button_MouseEnter;
+            btnTonKho.MouseLeave += Button_MouseLeave;
             // 
             // CaiDatContainer
             // 
@@ -833,6 +863,8 @@
             CaiDatContainer.Name = "CaiDatContainer";
             CaiDatContainer.Size = new Size(287, 41);
             CaiDatContainer.TabIndex = 14;
+            CaiDatContainer.MouseEnter += Button_MouseEnter;
+            CaiDatContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel64
             // 
@@ -859,6 +891,8 @@
             btnCaiDat.TextAlign = ContentAlignment.MiddleLeft;
             btnCaiDat.UseVisualStyleBackColor = false;
             btnCaiDat.Click += btnCaiDat_Click;
+            btnCaiDat.MouseEnter += Button_MouseEnter;
+            btnCaiDat.MouseLeave += Button_MouseLeave;
             // 
             // ChiNhanhContainer
             // 
@@ -871,6 +905,8 @@
             ChiNhanhContainer.Name = "ChiNhanhContainer";
             ChiNhanhContainer.Size = new Size(287, 41);
             ChiNhanhContainer.TabIndex = 15;
+            ChiNhanhContainer.MouseEnter += Button_MouseEnter;
+            ChiNhanhContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel77
             // 
@@ -897,6 +933,8 @@
             btnChiNhanh.TextAlign = ContentAlignment.MiddleLeft;
             btnChiNhanh.UseVisualStyleBackColor = false;
             btnChiNhanh.Click += btnChiNhanh_Click;
+            btnChiNhanh.MouseEnter += Button_MouseEnter;
+            btnChiNhanh.MouseLeave += Button_MouseLeave;
             // 
             // NhanVienContainer
             // 
@@ -911,6 +949,8 @@
             NhanVienContainer.Name = "NhanVienContainer";
             NhanVienContainer.Size = new Size(287, 41);
             NhanVienContainer.TabIndex = 10;
+            NhanVienContainer.MouseEnter += Button_MouseEnter;
+            NhanVienContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel62
             // 
@@ -935,6 +975,8 @@
             btnPhanQuyen.Text = "             Phân Quyền";
             btnPhanQuyen.TextAlign = ContentAlignment.MiddleLeft;
             btnPhanQuyen.UseVisualStyleBackColor = false;
+            btnPhanQuyen.MouseEnter += Button_MouseEnter;
+            btnPhanQuyen.MouseLeave += Button_MouseLeave;
             // 
             // panel44
             // 
@@ -959,6 +1001,8 @@
             btnChamCong.Text = "             Chấm Công";
             btnChamCong.TextAlign = ContentAlignment.MiddleLeft;
             btnChamCong.UseVisualStyleBackColor = false;
+            btnChamCong.MouseEnter += Button_MouseEnter;
+            btnChamCong.MouseLeave += Button_MouseLeave;
             // 
             // panel45
             // 
@@ -985,6 +1029,8 @@
             btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
             btnNhanVien.UseVisualStyleBackColor = false;
             btnNhanVien.Click += btnNhanVien_Click;
+            btnNhanVien.MouseEnter += Button_MouseEnter;
+            btnNhanVien.MouseLeave += Button_MouseLeave;
             // 
             // panel46
             // 
@@ -1010,6 +1056,8 @@
             btnDanhSachNhanVien.TextAlign = ContentAlignment.MiddleLeft;
             btnDanhSachNhanVien.UseVisualStyleBackColor = false;
             btnDanhSachNhanVien.Click += btnDanhSachNhanVien_Click;
+            btnDanhSachNhanVien.MouseEnter += Button_MouseEnter;
+            btnDanhSachNhanVien.MouseLeave += Button_MouseLeave;
             // 
             // CongNoContainer
             // 
@@ -1028,6 +1076,8 @@
             CongNoContainer.Name = "CongNoContainer";
             CongNoContainer.Size = new Size(287, 41);
             CongNoContainer.TabIndex = 11;
+            CongNoContainer.MouseEnter += Button_MouseEnter;
+            CongNoContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel48
             // 
@@ -1052,6 +1102,8 @@
             btnDuyetPhieuChi.Text = "             Duyệt Phiếu Chi";
             btnDuyetPhieuChi.TextAlign = ContentAlignment.MiddleLeft;
             btnDuyetPhieuChi.UseVisualStyleBackColor = false;
+            btnDuyetPhieuChi.MouseEnter += Button_MouseEnter;
+            btnDuyetPhieuChi.MouseLeave += Button_MouseLeave;
             // 
             // panel49
             // 
@@ -1076,6 +1128,8 @@
             btnGhiChuCongNo.Text = "             Ghi Chú";
             btnGhiChuCongNo.TextAlign = ContentAlignment.MiddleLeft;
             btnGhiChuCongNo.UseVisualStyleBackColor = false;
+            btnGhiChuCongNo.MouseEnter += Button_MouseEnter;
+            btnGhiChuCongNo.MouseLeave += Button_MouseLeave;
             // 
             // panel50
             // 
@@ -1100,6 +1154,8 @@
             btnQuanLyMuonHang.Text = "             Quản Lý Mượn Hàng";
             btnQuanLyMuonHang.TextAlign = ContentAlignment.MiddleLeft;
             btnQuanLyMuonHang.UseVisualStyleBackColor = false;
+            btnQuanLyMuonHang.MouseEnter += Button_MouseEnter;
+            btnQuanLyMuonHang.MouseLeave += Button_MouseLeave;
             // 
             // panel38
             // 
@@ -1124,6 +1180,8 @@
             btnQuanLyDonHangNhapCongNo.Text = "             Đơn Hàng Nhập";
             btnQuanLyDonHangNhapCongNo.TextAlign = ContentAlignment.MiddleLeft;
             btnQuanLyDonHangNhapCongNo.UseVisualStyleBackColor = false;
+            btnQuanLyDonHangNhapCongNo.MouseEnter += Button_MouseEnter;
+            btnQuanLyDonHangNhapCongNo.MouseLeave += Button_MouseLeave;
             // 
             // panel43
             // 
@@ -1148,6 +1206,8 @@
             btnCongNoDauKy.Text = "             Công Nợ Đầu Kỳ";
             btnCongNoDauKy.TextAlign = ContentAlignment.MiddleLeft;
             btnCongNoDauKy.UseVisualStyleBackColor = false;
+            btnCongNoDauKy.MouseEnter += Button_MouseEnter;
+            btnCongNoDauKy.MouseLeave += Button_MouseLeave;
             // 
             // panel31
             // 
@@ -1172,6 +1232,8 @@
             btnCongNoPhaiTraChoNhaCungCap.Text = "             Trả Cho Nhà Cung Cấp";
             btnCongNoPhaiTraChoNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
             btnCongNoPhaiTraChoNhaCungCap.UseVisualStyleBackColor = false;
+            btnCongNoPhaiTraChoNhaCungCap.MouseEnter += Button_MouseEnter;
+            btnCongNoPhaiTraChoNhaCungCap.MouseLeave += Button_MouseLeave;
             // 
             // panel32
             // 
@@ -1198,6 +1260,8 @@
             btnCongNo.TextAlign = ContentAlignment.MiddleLeft;
             btnCongNo.UseVisualStyleBackColor = false;
             btnCongNo.Click += btnCongNo_Click;
+            btnCongNo.MouseEnter += Button_MouseEnter;
+            btnCongNo.MouseLeave += Button_MouseLeave;
             // 
             // panel35
             // 
@@ -1222,6 +1286,8 @@
             btnCongNoPhaiThuCuaKhachHang.Text = "             Thu Khách Hàng";
             btnCongNoPhaiThuCuaKhachHang.TextAlign = ContentAlignment.MiddleLeft;
             btnCongNoPhaiThuCuaKhachHang.UseVisualStyleBackColor = false;
+            btnCongNoPhaiThuCuaKhachHang.MouseEnter += Button_MouseEnter;
+            btnCongNoPhaiThuCuaKhachHang.MouseLeave += Button_MouseLeave;
             // 
             // HoaDonContainer
             // 
@@ -1241,6 +1307,8 @@
             HoaDonContainer.Name = "HoaDonContainer";
             HoaDonContainer.Size = new Size(287, 41);
             HoaDonContainer.TabIndex = 9;
+            HoaDonContainer.MouseEnter += Button_MouseEnter;
+            HoaDonContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel63
             // 
@@ -1265,6 +1333,8 @@
             btnCaiDatHoaDon.Text = "             Cài Đặt Hoá Đơn";
             btnCaiDatHoaDon.TextAlign = ContentAlignment.MiddleLeft;
             btnCaiDatHoaDon.UseVisualStyleBackColor = false;
+            btnCaiDatHoaDon.MouseEnter += Button_MouseEnter;
+            btnCaiDatHoaDon.MouseLeave += Button_MouseLeave;
             // 
             // panel3
             // 
@@ -1289,6 +1359,8 @@
             btnLichSuHoaDonTam.Text = "             Lịch Sử Hoá Đơn Tạm";
             btnLichSuHoaDonTam.TextAlign = ContentAlignment.MiddleLeft;
             btnLichSuHoaDonTam.UseVisualStyleBackColor = false;
+            btnLichSuHoaDonTam.MouseEnter += Button_MouseEnter;
+            btnLichSuHoaDonTam.MouseLeave += Button_MouseLeave;
             // 
             // panel33
             // 
@@ -1313,6 +1385,8 @@
             btnKiemPhieuXuatHang.Text = "             Kiểm Phiếu Xuất Hàng";
             btnKiemPhieuXuatHang.TextAlign = ContentAlignment.MiddleLeft;
             btnKiemPhieuXuatHang.UseVisualStyleBackColor = false;
+            btnKiemPhieuXuatHang.MouseEnter += Button_MouseEnter;
+            btnKiemPhieuXuatHang.MouseLeave += Button_MouseLeave;
             // 
             // panel36
             // 
@@ -1337,6 +1411,8 @@
             btnDonDatHangOnline.Text = "             Đơn Đặt Hàng Online";
             btnDonDatHangOnline.TextAlign = ContentAlignment.MiddleLeft;
             btnDonDatHangOnline.UseVisualStyleBackColor = false;
+            btnDonDatHangOnline.MouseEnter += Button_MouseEnter;
+            btnDonDatHangOnline.MouseLeave += Button_MouseLeave;
             // 
             // panel37
             // 
@@ -1361,6 +1437,8 @@
             btnKiemTraHoaDonTrung.Text = "             Kiểm Tra Hoá Đơn Trùng";
             btnKiemTraHoaDonTrung.TextAlign = ContentAlignment.MiddleLeft;
             btnKiemTraHoaDonTrung.UseVisualStyleBackColor = false;
+            btnKiemTraHoaDonTrung.MouseEnter += Button_MouseEnter;
+            btnKiemTraHoaDonTrung.MouseLeave += Button_MouseLeave;
             // 
             // panel39
             // 
@@ -1385,6 +1463,8 @@
             btnThongKeDonDatHang.Text = "             Thống Kê Đơn Đặt Hàng";
             btnThongKeDonDatHang.TextAlign = ContentAlignment.MiddleLeft;
             btnThongKeDonDatHang.UseVisualStyleBackColor = false;
+            btnThongKeDonDatHang.MouseEnter += Button_MouseEnter;
+            btnThongKeDonDatHang.MouseLeave += Button_MouseLeave;
             // 
             // panel40
             // 
@@ -1409,6 +1489,8 @@
             btnThongKeHoaDonVAT.Text = "             Thống Kê Hoá Đơn VAT";
             btnThongKeHoaDonVAT.TextAlign = ContentAlignment.MiddleLeft;
             btnThongKeHoaDonVAT.UseVisualStyleBackColor = false;
+            btnThongKeHoaDonVAT.MouseEnter += Button_MouseEnter;
+            btnThongKeHoaDonVAT.MouseLeave += Button_MouseLeave;
             // 
             // panel41
             // 
@@ -1435,6 +1517,8 @@
             btnHoaDon.TextAlign = ContentAlignment.MiddleLeft;
             btnHoaDon.UseVisualStyleBackColor = false;
             btnHoaDon.Click += btnHoaDon_Click;
+            btnHoaDon.MouseEnter += Button_MouseEnter;
+            btnHoaDon.MouseLeave += Button_MouseLeave;
             // 
             // panel42
             // 
@@ -1459,6 +1543,8 @@
             btnHoaDonVuaThanhToan.Text = "             Hoá Đơn Thanh Toán";
             btnHoaDonVuaThanhToan.TextAlign = ContentAlignment.MiddleLeft;
             btnHoaDonVuaThanhToan.UseVisualStyleBackColor = false;
+            btnHoaDonVuaThanhToan.MouseEnter += Button_MouseEnter;
+            btnHoaDonVuaThanhToan.MouseLeave += Button_MouseLeave;
             // 
             // PosContainer
             // 
@@ -1471,6 +1557,8 @@
             PosContainer.Name = "PosContainer";
             PosContainer.Size = new Size(287, 41);
             PosContainer.TabIndex = 16;
+            PosContainer.MouseEnter += Button_MouseEnter;
+            PosContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel65
             // 
@@ -1497,6 +1585,8 @@
             btnPos.TextAlign = ContentAlignment.MiddleLeft;
             btnPos.UseVisualStyleBackColor = false;
             btnPos.Click += btnPos_Click;
+            btnPos.MouseEnter += Button_MouseEnter;
+            btnPos.MouseLeave += Button_MouseLeave;
             // 
             // ThuChiContainer
             // 
@@ -1509,6 +1599,8 @@
             ThuChiContainer.Name = "ThuChiContainer";
             ThuChiContainer.Size = new Size(287, 41);
             ThuChiContainer.TabIndex = 13;
+            ThuChiContainer.MouseEnter += Button_MouseEnter;
+            ThuChiContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel73
             // 
@@ -1534,6 +1626,8 @@
             btnThuChi.Text = "             Thu Chi";
             btnThuChi.TextAlign = ContentAlignment.MiddleLeft;
             btnThuChi.UseVisualStyleBackColor = false;
+            btnThuChi.MouseEnter += Button_MouseEnter;
+            btnThuChi.MouseLeave += Button_MouseLeave;
             // 
             // BaoCaoContainer
             // 
@@ -1557,6 +1651,8 @@
             BaoCaoContainer.Name = "BaoCaoContainer";
             BaoCaoContainer.Size = new Size(287, 43);
             BaoCaoContainer.TabIndex = 12;
+            BaoCaoContainer.MouseEnter += Button_MouseEnter;
+            BaoCaoContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel57
             // 
@@ -1581,6 +1677,8 @@
             btnBaoCaoMaDuThuong.Text = "             Báo Cáo Mã Dự Thưởng";
             btnBaoCaoMaDuThuong.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoMaDuThuong.UseVisualStyleBackColor = false;
+            btnBaoCaoMaDuThuong.MouseEnter += Button_MouseEnter;
+            btnBaoCaoMaDuThuong.MouseLeave += Button_MouseLeave;
             // 
             // panel58
             // 
@@ -1605,6 +1703,8 @@
             btnBaoCaoTinNhanZalo.Text = "             Báo Cáo Tin Nhắn ZALO";
             btnBaoCaoTinNhanZalo.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoTinNhanZalo.UseVisualStyleBackColor = false;
+            btnBaoCaoTinNhanZalo.MouseEnter += Button_MouseEnter;
+            btnBaoCaoTinNhanZalo.MouseLeave += Button_MouseLeave;
             // 
             // panel59
             // 
@@ -1629,6 +1729,8 @@
             btnKHDatTopNam.Text = "             KH Đạt TOP Năm";
             btnKHDatTopNam.TextAlign = ContentAlignment.MiddleLeft;
             btnKHDatTopNam.UseVisualStyleBackColor = false;
+            btnKHDatTopNam.MouseEnter += Button_MouseEnter;
+            btnKHDatTopNam.MouseLeave += Button_MouseLeave;
             // 
             // panel60
             // 
@@ -1653,6 +1755,8 @@
             btnKHDatTopThang.Text = "             KH Đạt TOP Tháng";
             btnKHDatTopThang.TextAlign = ContentAlignment.MiddleLeft;
             btnKHDatTopThang.UseVisualStyleBackColor = false;
+            btnKHDatTopThang.MouseEnter += Button_MouseEnter;
+            btnKHDatTopThang.MouseLeave += Button_MouseLeave;
             // 
             // panel61
             // 
@@ -1677,6 +1781,8 @@
             btnSoQuyTienMat.Text = "             Sổ Quỹ Tiền Mặt";
             btnSoQuyTienMat.TextAlign = ContentAlignment.MiddleLeft;
             btnSoQuyTienMat.UseVisualStyleBackColor = false;
+            btnSoQuyTienMat.MouseEnter += Button_MouseEnter;
+            btnSoQuyTienMat.MouseLeave += Button_MouseLeave;
             // 
             // panel18
             // 
@@ -1701,6 +1807,8 @@
             btnKiemTraGiaBanThucTe.Text = "             Giá Bán Thực Tế\r\n";
             btnKiemTraGiaBanThucTe.TextAlign = ContentAlignment.MiddleLeft;
             btnKiemTraGiaBanThucTe.UseVisualStyleBackColor = false;
+            btnKiemTraGiaBanThucTe.MouseEnter += Button_MouseEnter;
+            btnKiemTraGiaBanThucTe.MouseLeave += Button_MouseLeave;
             // 
             // panel47
             // 
@@ -1725,6 +1833,8 @@
             btnLichSuSanPham.Text = "             Lịch Sử Sản Phẩm";
             btnLichSuSanPham.TextAlign = ContentAlignment.MiddleLeft;
             btnLichSuSanPham.UseVisualStyleBackColor = false;
+            btnLichSuSanPham.MouseEnter += Button_MouseEnter;
+            btnLichSuSanPham.MouseLeave += Button_MouseLeave;
             // 
             // panel51
             // 
@@ -1749,6 +1859,8 @@
             btnLichSuKhachHang.Text = "             Lịch Sử Khách Hàng";
             btnLichSuKhachHang.TextAlign = ContentAlignment.MiddleLeft;
             btnLichSuKhachHang.UseVisualStyleBackColor = false;
+            btnLichSuKhachHang.MouseEnter += Button_MouseEnter;
+            btnLichSuKhachHang.MouseLeave += Button_MouseLeave;
             // 
             // panel52
             // 
@@ -1773,6 +1885,8 @@
             btnBaoCaoTheoNhomHang.Text = "             Theo Nhóm Hàng";
             btnBaoCaoTheoNhomHang.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoTheoNhomHang.UseVisualStyleBackColor = false;
+            btnBaoCaoTheoNhomHang.MouseEnter += Button_MouseEnter;
+            btnBaoCaoTheoNhomHang.MouseLeave += Button_MouseLeave;
             // 
             // panel53
             // 
@@ -1797,6 +1911,8 @@
             btnBaoCaoSoTienTang.Text = "             Báo Cáo Số Tiền Tặng";
             btnBaoCaoSoTienTang.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoSoTienTang.UseVisualStyleBackColor = false;
+            btnBaoCaoSoTienTang.MouseEnter += Button_MouseEnter;
+            btnBaoCaoSoTienTang.MouseLeave += Button_MouseLeave;
             // 
             // panel54
             // 
@@ -1821,6 +1937,8 @@
             btnBaoCaoDiem.Text = "             Báo Cáo Điểm";
             btnBaoCaoDiem.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoDiem.UseVisualStyleBackColor = false;
+            btnBaoCaoDiem.MouseEnter += Button_MouseEnter;
+            btnBaoCaoDiem.MouseLeave += Button_MouseLeave;
             // 
             // panel55
             // 
@@ -1847,6 +1965,8 @@
             btnBaoCao.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCao.UseVisualStyleBackColor = false;
             btnBaoCao.Click += btnBaoCao_Click;
+            btnBaoCao.MouseEnter += Button_MouseEnter;
+            btnBaoCao.MouseLeave += Button_MouseLeave;
             // 
             // panel56
             // 
@@ -1871,6 +1991,8 @@
             btnBaoCaoBanHang.Text = "             Báo Cáo Bán Hàng";
             btnBaoCaoBanHang.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoCaoBanHang.UseVisualStyleBackColor = false;
+            btnBaoCaoBanHang.MouseEnter += Button_MouseEnter;
+            btnBaoCaoBanHang.MouseLeave += Button_MouseLeave;
             // 
             // HangHoaContainer
             // 
@@ -1891,6 +2013,8 @@
             HangHoaContainer.Size = new Size(287, 41);
             HangHoaContainer.TabIndex = 7;
             HangHoaContainer.Paint += HangHoaContainer_Paint;
+            HangHoaContainer.MouseEnter += Button_MouseEnter;
+            HangHoaContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel68
             // 
@@ -1916,6 +2040,8 @@
             btnLoaiSanPham.TextAlign = ContentAlignment.MiddleLeft;
             btnLoaiSanPham.UseVisualStyleBackColor = false;
             btnLoaiSanPham.Click += btnLoaiSanPham_Click;
+            btnLoaiSanPham.MouseEnter += Button_MouseEnter;
+            btnLoaiSanPham.MouseLeave += Button_MouseLeave;
             // 
             // panel17
             // 
@@ -1941,6 +2067,8 @@
             btnDonViHangHoa.TextAlign = ContentAlignment.MiddleLeft;
             btnDonViHangHoa.UseVisualStyleBackColor = false;
             btnDonViHangHoa.Click += btnDonViHangHoa_Click;
+            btnDonViHangHoa.MouseEnter += Button_MouseEnter;
+            btnDonViHangHoa.MouseLeave += Button_MouseLeave;
             // 
             // panel10
             // 
@@ -1965,6 +2093,8 @@
             btnTangGiaTheoNhom.Text = "             Tăng Giá Theo Nhóm";
             btnTangGiaTheoNhom.TextAlign = ContentAlignment.MiddleLeft;
             btnTangGiaTheoNhom.UseVisualStyleBackColor = false;
+            btnTangGiaTheoNhom.MouseEnter += Button_MouseEnter;
+            btnTangGiaTheoNhom.MouseLeave += Button_MouseLeave;
             // 
             // panel11
             // 
@@ -1989,6 +2119,8 @@
             btnBaoGiaHangHoa.Text = "             Báo Giá";
             btnBaoGiaHangHoa.TextAlign = ContentAlignment.MiddleLeft;
             btnBaoGiaHangHoa.UseVisualStyleBackColor = false;
+            btnBaoGiaHangHoa.MouseEnter += Button_MouseEnter;
+            btnBaoGiaHangHoa.MouseLeave += Button_MouseLeave;
             // 
             // panel12
             // 
@@ -2013,6 +2145,8 @@
             btnLichSuSanPhamDaBan.Text = "             Lịch Sử Đã Bán";
             btnLichSuSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
             btnLichSuSanPhamDaBan.UseVisualStyleBackColor = false;
+            btnLichSuSanPhamDaBan.MouseEnter += Button_MouseEnter;
+            btnLichSuSanPhamDaBan.MouseLeave += Button_MouseLeave;
             // 
             // panel13
             // 
@@ -2037,6 +2171,8 @@
             btnIntemMaVach.Text = "             In Mã Vạch";
             btnIntemMaVach.TextAlign = ContentAlignment.MiddleLeft;
             btnIntemMaVach.UseVisualStyleBackColor = false;
+            btnIntemMaVach.MouseEnter += Button_MouseEnter;
+            btnIntemMaVach.MouseLeave += Button_MouseLeave;
             // 
             // panel14
             // 
@@ -2061,6 +2197,8 @@
             btnDieuChinhGia.Text = "             Điều Chỉnh";
             btnDieuChinhGia.TextAlign = ContentAlignment.MiddleLeft;
             btnDieuChinhGia.UseVisualStyleBackColor = false;
+            btnDieuChinhGia.MouseEnter += Button_MouseEnter;
+            btnDieuChinhGia.MouseLeave += Button_MouseLeave;
             // 
             // panel15
             // 
@@ -2087,6 +2225,8 @@
             btnHangHoa.TextAlign = ContentAlignment.MiddleLeft;
             btnHangHoa.UseVisualStyleBackColor = false;
             btnHangHoa.Click += btnHangHoa_Click;
+            btnHangHoa.MouseEnter += Button_MouseEnter;
+            btnHangHoa.MouseLeave += Button_MouseLeave;
             // 
             // panel16
             // 
@@ -2112,6 +2252,8 @@
             btnDanhSachHangHoa.TextAlign = ContentAlignment.MiddleLeft;
             btnDanhSachHangHoa.UseVisualStyleBackColor = false;
             btnDanhSachHangHoa.Click += btnDanhSachHangHoa_Click;
+            btnDanhSachHangHoa.MouseEnter += Button_MouseEnter;
+            btnDanhSachHangHoa.MouseLeave += Button_MouseLeave;
             // 
             // flpMain
             // 
@@ -2168,6 +2310,8 @@
             KhachHangContainer.Name = "KhachHangContainer";
             KhachHangContainer.Size = new Size(287, 41);
             KhachHangContainer.TabIndex = 6;
+            KhachHangContainer.MouseEnter += Button_MouseEnter;
+            KhachHangContainer.MouseLeave += Button_MouseLeave;
             // 
             // panel9
             // 
@@ -2192,6 +2336,8 @@
             btnTiepNhanXuLyYeuCau.Text = "             Yêu Cầu";
             btnTiepNhanXuLyYeuCau.TextAlign = ContentAlignment.MiddleLeft;
             btnTiepNhanXuLyYeuCau.UseVisualStyleBackColor = false;
+            btnTiepNhanXuLyYeuCau.MouseEnter += Button_MouseEnter;
+            btnTiepNhanXuLyYeuCau.MouseLeave += Button_MouseLeave;
             // 
             // panel8
             // 
@@ -2216,6 +2362,8 @@
             btnSinhNhat.Text = "             Sinh Nhật";
             btnSinhNhat.TextAlign = ContentAlignment.MiddleLeft;
             btnSinhNhat.UseVisualStyleBackColor = false;
+            btnSinhNhat.MouseEnter += Button_MouseEnter;
+            btnSinhNhat.MouseLeave += Button_MouseLeave;
             // 
             // panel4
             // 
@@ -2240,6 +2388,8 @@
             btnCapBacKhachHang.Text = "             Cấp Bậc";
             btnCapBacKhachHang.TextAlign = ContentAlignment.MiddleLeft;
             btnCapBacKhachHang.UseVisualStyleBackColor = false;
+            btnCapBacKhachHang.MouseEnter += Button_MouseEnter;
+            btnCapBacKhachHang.MouseLeave += Button_MouseLeave;
             // 
             // panel7
             // 
@@ -2264,6 +2414,8 @@
             btnSMSZalo.Text = "             SMS";
             btnSMSZalo.TextAlign = ContentAlignment.MiddleLeft;
             btnSMSZalo.UseVisualStyleBackColor = false;
+            btnSMSZalo.MouseEnter += Button_MouseEnter;
+            btnSMSZalo.MouseLeave += Button_MouseLeave;
             // 
             // panel6
             // 
@@ -2289,6 +2441,8 @@
             btnNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
             btnNhaCungCap.UseVisualStyleBackColor = false;
             btnNhaCungCap.Click += btnNhaCungCap_Click;
+            btnNhaCungCap.MouseEnter += Button_MouseEnter;
+            btnNhaCungCap.MouseLeave += Button_MouseLeave;
             // 
             // panel2
             // 
@@ -2315,6 +2469,8 @@
             btnKhachHang.TextAlign = ContentAlignment.MiddleLeft;
             btnKhachHang.UseVisualStyleBackColor = false;
             btnKhachHang.Click += btnKhachHang_Click;
+            btnKhachHang.MouseEnter += Button_MouseEnter;
+            btnKhachHang.MouseLeave += Button_MouseLeave;
             // 
             // panel34
             // 
@@ -2339,6 +2495,8 @@
             btnQLKhachHang.Text = "             Danh Sách";
             btnQLKhachHang.TextAlign = ContentAlignment.MiddleLeft;
             btnQLKhachHang.UseVisualStyleBackColor = false;
+            btnQLKhachHang.MouseEnter += Button_MouseEnter;
+            btnQLKhachHang.MouseLeave += Button_MouseLeave;
             // 
             // HieuUngTimer
             // 

@@ -7,6 +7,7 @@ using PosManager.Forms.UserControls.NhanVien;
 using PosManager.Forms.UserControls.Post;
 using PosManager.Forms.UserControls.SanPham;
 using PosManager.Model;
+using System.Windows.Forms;
 
 namespace Krypton_toolKitDemo
 {
@@ -28,8 +29,25 @@ namespace Krypton_toolKitDemo
         public fMain()
         {
             InitializeComponent();
+
+        }
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.ForeColor = Color.Yellow; // Màu mới khi di chuột vào
+            }
+
         }
 
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.ForeColor = Color.White; // Màu mặc định
+            }
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             if (displayText.Length < 250)
@@ -317,7 +335,7 @@ namespace Krypton_toolKitDemo
         {
             foreach (var item in GlobalModel.UserInfo.Permissions)
             {
-                  switch (item.FunctionName)
+                switch (item.FunctionName)
                 {
                     case "ChiNhanhControl":
                         {

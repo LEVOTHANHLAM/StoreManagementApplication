@@ -141,7 +141,7 @@ namespace PosManager.Forms.UserControls.SanPham
                     return;
                 }
                 fLoading loading = new fLoading();
-                loading.StartLoading(); 
+                loading.StartLoading();
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                 fChiTietHangHoa update = new fChiTietHangHoa(id);
                 update.ShowDialog();

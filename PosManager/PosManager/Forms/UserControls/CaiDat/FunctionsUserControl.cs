@@ -133,7 +133,7 @@ namespace PosManager.Forms.UserControls.KhachHang
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                if(permissionModel != null && permissionModel.HasUpdate)
+                if (permissionModel != null && permissionModel.HasUpdate)
                 {
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
@@ -141,7 +141,7 @@ namespace PosManager.Forms.UserControls.KhachHang
                     themNhaCungCap.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }
-              
+
             }
         }
 

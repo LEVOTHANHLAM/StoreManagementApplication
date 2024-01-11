@@ -136,7 +136,7 @@ namespace PosManager.Forms.UserControls.NhanVien
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                if(permissionModel !=null && permissionModel.HasUpdate)
+                if (permissionModel != null && permissionModel.HasUpdate)
                 {
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fThemNhanVien edit = new fThemNhanVien(id);

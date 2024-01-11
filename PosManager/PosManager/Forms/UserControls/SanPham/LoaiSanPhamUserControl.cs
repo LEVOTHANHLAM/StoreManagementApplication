@@ -144,14 +144,14 @@ namespace PosManager.Forms.UserControls.SanPham
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
-                if(permissionModel != null && permissionModel.HasUpdate)
+                if (permissionModel != null && permissionModel.HasUpdate)
                 {
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fThemLoaiSanPham themNhaCungCap = new fThemLoaiSanPham(id);
                     themNhaCungCap.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }
-             
+
             }
         }
 
@@ -376,6 +376,11 @@ namespace PosManager.Forms.UserControls.SanPham
             {
                 MessageCommon.ShowMessageBox("Vui lòng chọn dữ liệu cần xóa", 4);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

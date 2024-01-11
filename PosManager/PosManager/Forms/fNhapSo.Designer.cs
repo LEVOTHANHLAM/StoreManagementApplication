@@ -379,7 +379,7 @@
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
-            // Frm_suagia
+            // fNhapSo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -406,7 +406,7 @@
             Margin = new Padding(4, 3, 4, 3);
             MaximumSize = new Size(532, 481);
             MinimumSize = new Size(532, 481);
-            Name = "Frm_suagia";
+            Name = "fNhapSo";
             StartPosition = FormStartPosition.CenterScreen;
             TopMost = true;
             Load += Frm_suagia_Load;
