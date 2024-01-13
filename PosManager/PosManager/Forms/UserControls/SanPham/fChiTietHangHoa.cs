@@ -111,8 +111,6 @@ namespace Krypton_toolKitDemo
                     var details = await _productUnitsController.GetDetailByProductId(GlobalModel.AccsessToken, Id);
                     if (details != null && details.Data.Any())
                     {
-
-
                         Products.DonViKhac = new List<ProductUnitDetailModel>();
                         Products.DonViKhac.AddRange(details.Data);
                         if (Products.DonViKhac.Any())
@@ -181,38 +179,22 @@ namespace Krypton_toolKitDemo
                 {
                     if (item.MaDonViHangHoa != maDonviTinhCoBan)
                     {
-                        dtgvDonViTinh.Rows.Add(PosManager.Properties.Resources.delete15, null, item.TyLeChuyenDoi, item.MaDonViHangHoa, item.MaDonViHangHoa, item.Id);
+                       
                     }
                 }
                 foreach (DataGridViewRow item in dtgvDonViTinh.Rows)
                 {
-                    List<string> list = new List<string>();
-                    list.Clear();
-                    foreach (DataGridViewRow row in dtgvDonViTinh.Rows)
-                    {
-                        var cellValue = row.Cells["cTenDonViTinh"].Value?.ToString();
-                        if (!string.IsNullOrEmpty(cellValue))
-                        {
-                            var maDonviTinh = cellValue.ToString().Split(" - ").FirstOrDefault();
-                            var tenDonViTinh = cellValue.ToString().Split(" - ").Last();
-                            list.Add(maDonviTinh);
-                        }
-                    }
                     int columnIndex = dtgvDonViTinh.Columns["cTenDonViTinh"].Index;
                     var cMaDVT = item.Cells["cMaDVT"].Value?.ToString();
-                 DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)item.Cells[columnIndex];
-                    list.Add(maDonviTinhCoBan);
+                    DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)item.Cells[columnIndex];
+
                     foreach (var donViTinh in donViHangHoaModesl)
                     {
-                        if (!list.Contains(donViTinh.MaDonViHangHoa))
+                        var name = donViTinh.MaDonViHangHoa + " - " + donViTinh.TenDonViHangHoa;
+                        cell.Items.Add(name); // Thêm mục vào ComboBox
+                        if (cell.Items.Count > 0 && donViTinh.MaDonViHangHoa == cMaDVT)
                         {
-                            var name = donViTinh.MaDonViHangHoa + " - " + donViTinh.TenDonViHangHoa;
-                         
-                            cell.Items.Add(name); // Thêm mục vào ComboBox
-                            if (cell.Items.Count > 0 && donViTinh.MaDonViHangHoa == cMaDVT)
-                            {
-                                cell.Value = name;
-                            }
+                            cell.Value = name;
                         }
                     }
 
@@ -222,39 +204,20 @@ namespace Krypton_toolKitDemo
         }
         private void btnAddColumdtgvDonViTinh_Click(object sender, EventArgs e)
         {
-            var maDonviTinhCoBan = cbbMaDonviCoBan.SelectedItem.ToString().Split(" - ").FirstOrDefault();
-            List<string> list = new List<string>();
-            list.Clear();
-            foreach (DataGridViewRow row in dtgvDonViTinh.Rows)
-            {
-                var cellValue = row.Cells["cTenDonViTinh"].Value?.ToString();
-                if (!string.IsNullOrEmpty(cellValue))
-                {
-                    var maDonviTinh = cellValue.ToString().Split(" - ").FirstOrDefault();
-                    var tenDonViTinh = cellValue.ToString().Split(" - ").Last();
-                    list.Add(maDonviTinh);
-                }
-
-            }
-            list.Add(maDonviTinhCoBan);
-            int rowIndex = dtgvDonViTinh.Rows.Add(PosManager.Properties.Resources.delete15, null, "0");
+            int rowIndex = dtgvDonViTinh.Rows.Add(PosManager.Properties.Resources.delete15, null, "0", null, null, null);
             foreach (var donViTinh in donViHangHoaModesl)
             {
-                if (!list.Contains(donViTinh.MaDonViHangHoa))
+                // Lấy index của ô ComboBox trong hàng vừa thêm
+                int columnIndex = dtgvDonViTinh.Columns["cTenDonViTinh"].Index;
+                var name = donViTinh.MaDonViHangHoa + " - " + donViTinh.TenDonViHangHoa;
+                // Thêm một mục vào ComboBox trong ô ComboBox tại hàng và cột đã xác định
+                DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)dtgvDonViTinh.Rows[rowIndex].Cells[columnIndex];
+                cell.Items.Add(name); // Thêm mục vào ComboBox
+                if (cell.Items.Count > 0)
                 {
-                    // Lấy index của ô ComboBox trong hàng vừa thêm
-                    int columnIndex = dtgvDonViTinh.Columns["cTenDonViTinh"].Index;
-                    var name = donViTinh.MaDonViHangHoa + " - " + donViTinh.TenDonViHangHoa;
-                    // Thêm một mục vào ComboBox trong ô ComboBox tại hàng và cột đã xác định
-                    DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)dtgvDonViTinh.Rows[rowIndex].Cells[columnIndex];
-                    cell.Items.Add(name); // Thêm mục vào ComboBox
-                    if (cell.Items.Count > 0)
-                    {
-                        cell.Value = cell.Items[0];
-                    }
+                    cell.Value = cell.Items[0];
                 }
             }
-            AddRowtgvCuaHang();
         }
 
         private void dtgvDonViTinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
