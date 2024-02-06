@@ -10,7 +10,7 @@ using Serilog;
 
 namespace Krypton_toolKitDemo
 {
-    public partial class fChiTietHangHoa : KryptonForm
+    public partial class fChiTietDVT_HangHoa : KryptonForm
     {
         private string Id;
         private ProductsModel Products;
@@ -21,14 +21,13 @@ namespace Krypton_toolKitDemo
         private List<StoreModel> storeModels = new List<StoreModel>();
         private List<DonViHangHoaModel> donViHangHoaModesl = new List<DonViHangHoaModel>();
         private List<CategoryModel> categoryModels = new List<CategoryModel>();
-        public fChiTietHangHoa(string id)
+        public fChiTietDVT_HangHoa(string id)
         {
             InitializeComponent();
             _storesController = new StoresController();
             _productUnitsController = new ProductUnitsController();
             _productsController = new ProductsController();
             _categoriesController = new CategoriesController();
-            txtVAT.Text = "0 %";
             Id = id;
         }
 
@@ -176,7 +175,7 @@ namespace Krypton_toolKitDemo
                 {
                     if (item.MaDonViHangHoa != maDonviTinhCoBan)
                     {
-
+                       
                     }
                 }
                 foreach (DataGridViewRow item in dtgvDonViTinh.Rows)
@@ -396,11 +395,6 @@ namespace Krypton_toolKitDemo
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnChiTietDVT_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

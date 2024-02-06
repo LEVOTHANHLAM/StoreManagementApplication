@@ -766,7 +766,7 @@ namespace PosManager.Forms.UserControls.SanPham
             cChon.FillWeight = 50F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 38;
+            cChon.Width = 50;
             // 
             // cSTT
             // 

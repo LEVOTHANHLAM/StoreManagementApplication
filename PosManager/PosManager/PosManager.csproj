@@ -44,6 +44,9 @@
     <Compile Update="Forms\UserControls\NhanVien\fThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\UserControls\SanPham\fChiTietDVT_HangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\UserControls\SanPham\fChiTietHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
