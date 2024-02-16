@@ -332,7 +332,7 @@
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(290, 0);
+            splitContainer1.Location = new Point(264, 0);
             splitContainer1.Name = "splitContainer1";
             splitContainer1.Orientation = Orientation.Horizontal;
             // 
@@ -345,8 +345,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pMain);
-            splitContainer1.Size = new Size(1334, 831);
-            splitContainer1.SplitterDistance = 45;
+            splitContainer1.Size = new Size(1212, 796);
+            splitContainer1.SplitterDistance = 43;
             splitContainer1.TabIndex = 3;
             // 
             // txtHieuUng
@@ -355,11 +355,11 @@
             txtHieuUng.Dock = DockStyle.Fill;
             txtHieuUng.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             txtHieuUng.ForeColor = Color.DeepSkyBlue;
-            txtHieuUng.Location = new Point(42, 0);
-            txtHieuUng.MinimumSize = new Size(971, 56);
+            txtHieuUng.Location = new Point(38, 0);
+            txtHieuUng.MinimumSize = new Size(883, 54);
             txtHieuUng.Multiline = true;
             txtHieuUng.Name = "txtHieuUng";
-            txtHieuUng.Size = new Size(1180, 56);
+            txtHieuUng.Size = new Size(1072, 54);
             txtHieuUng.TabIndex = 6;
             txtHieuUng.TextAlign = HorizontalAlignment.Center;
             // 
@@ -367,9 +367,9 @@
             // 
             pbProfile.Dock = DockStyle.Right;
             pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
-            pbProfile.Location = new Point(1222, 0);
+            pbProfile.Location = new Point(1110, 0);
             pbProfile.Name = "pbProfile";
-            pbProfile.Size = new Size(112, 45);
+            pbProfile.Size = new Size(102, 43);
             pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
             pbProfile.TabIndex = 6;
             pbProfile.TabStop = false;
@@ -381,7 +381,7 @@
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
             btnMenu.Location = new Point(0, 0);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(42, 45);
+            btnMenu.Size = new Size(38, 43);
             btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
             btnMenu.TabIndex = 6;
             btnMenu.TabStop = false;
@@ -393,7 +393,7 @@
             pMain.Dock = DockStyle.Fill;
             pMain.Location = new Point(0, 0);
             pMain.Name = "pMain";
-            pMain.Size = new Size(1334, 782);
+            pMain.Size = new Size(1212, 749);
             pMain.TabIndex = 16;
             // 
             // pProfile
@@ -401,20 +401,20 @@
             pProfile.BackColor = Color.LightBlue;
             pProfile.Controls.Add(panel67);
             pProfile.Controls.Add(panel66);
-            pProfile.Location = new Point(1222, 4);
-            pProfile.MaximumSize = new Size(112, 71);
-            pProfile.MinimumSize = new Size(112, 71);
+            pProfile.Location = new Point(1111, 4);
+            pProfile.MaximumSize = new Size(102, 68);
+            pProfile.MinimumSize = new Size(102, 68);
             pProfile.Name = "pProfile";
-            pProfile.Size = new Size(112, 71);
+            pProfile.Size = new Size(102, 68);
             pProfile.TabIndex = 15;
             pProfile.Visible = false;
             // 
             // panel67
             // 
             panel67.Controls.Add(btnDoiMatKhau);
-            panel67.Location = new Point(0, 35);
+            panel67.Location = new Point(0, 34);
             panel67.Name = "panel67";
-            panel67.Size = new Size(112, 26);
+            panel67.Size = new Size(102, 25);
             panel67.TabIndex = 6;
             // 
             // btnDoiMatKhau
@@ -424,10 +424,10 @@
             btnDoiMatKhau.ForeColor = Color.White;
             btnDoiMatKhau.Image = (Image)resources.GetObject("btnDoiMatKhau.Image");
             btnDoiMatKhau.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDoiMatKhau.Location = new Point(-20, -4);
+            btnDoiMatKhau.Location = new Point(-18, -4);
             btnDoiMatKhau.Name = "btnDoiMatKhau";
-            btnDoiMatKhau.Padding = new Padding(30, 0, 0, 0);
-            btnDoiMatKhau.Size = new Size(143, 40);
+            btnDoiMatKhau.Padding = new Padding(27, 0, 0, 0);
+            btnDoiMatKhau.Size = new Size(130, 38);
             btnDoiMatKhau.TabIndex = 3;
             btnDoiMatKhau.Text = "       Đổi Mật Khẩu";
             btnDoiMatKhau.TextAlign = ContentAlignment.MiddleLeft;
@@ -439,7 +439,7 @@
             panel66.Dock = DockStyle.Top;
             panel66.Location = new Point(0, 0);
             panel66.Name = "panel66";
-            panel66.Size = new Size(112, 26);
+            panel66.Size = new Size(102, 25);
             panel66.TabIndex = 5;
             // 
             // btnDangXuat
@@ -449,10 +449,10 @@
             btnDangXuat.ForeColor = Color.White;
             btnDangXuat.Image = (Image)resources.GetObject("btnDangXuat.Image");
             btnDangXuat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDangXuat.Location = new Point(-20, -4);
+            btnDangXuat.Location = new Point(-18, -4);
             btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Padding = new Padding(30, 0, 0, 0);
-            btnDangXuat.Size = new Size(143, 40);
+            btnDangXuat.Padding = new Padding(27, 0, 0, 0);
+            btnDangXuat.Size = new Size(130, 38);
             btnDangXuat.TabIndex = 3;
             btnDangXuat.Text = "       Đăng Xuất";
             btnDangXuat.TextAlign = ContentAlignment.MiddleLeft;
@@ -476,11 +476,11 @@
             KhoContainer.Controls.Add(panel24);
             KhoContainer.Controls.Add(panel25);
             KhoContainer.Controls.Add(panel26);
-            KhoContainer.Location = new Point(3, 152);
-            KhoContainer.MaximumSize = new Size(287, 612);
-            KhoContainer.MinimumSize = new Size(287, 41);
+            KhoContainer.Location = new Point(3, 146);
+            KhoContainer.MaximumSize = new Size(261, 586);
+            KhoContainer.MinimumSize = new Size(261, 39);
             KhoContainer.Name = "KhoContainer";
-            KhoContainer.Size = new Size(287, 41);
+            KhoContainer.Size = new Size(261, 39);
             KhoContainer.TabIndex = 8;
             KhoContainer.MouseEnter += Button_MouseEnter;
             KhoContainer.MouseLeave += Button_MouseLeave;
@@ -488,9 +488,9 @@
             // panel1
             // 
             panel1.Controls.Add(btnQuanLyKho);
-            panel1.Location = new Point(0, 40);
+            panel1.Location = new Point(0, 38);
             panel1.Name = "panel1";
-            panel1.Size = new Size(287, 36);
+            panel1.Size = new Size(261, 34);
             panel1.TabIndex = 17;
             // 
             // btnQuanLyKho
@@ -500,10 +500,10 @@
             btnQuanLyKho.ForeColor = Color.White;
             btnQuanLyKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyKho.Location = new Point(-15, -4);
+            btnQuanLyKho.Location = new Point(-14, -4);
             btnQuanLyKho.Name = "btnQuanLyKho";
-            btnQuanLyKho.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyKho.Size = new Size(338, 47);
+            btnQuanLyKho.Padding = new Padding(27, 0, 0, 0);
+            btnQuanLyKho.Size = new Size(307, 45);
             btnQuanLyKho.TabIndex = 3;
             btnQuanLyKho.Text = "             Quản Lý Kho";
             btnQuanLyKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -515,9 +515,9 @@
             // panel19
             // 
             panel19.Controls.Add(btnDonHangOnline);
-            panel19.Location = new Point(0, 342);
+            panel19.Location = new Point(0, 328);
             panel19.Name = "panel19";
-            panel19.Size = new Size(287, 36);
+            panel19.Size = new Size(261, 34);
             panel19.TabIndex = 11;
             // 
             // btnDonHangOnline
@@ -527,10 +527,10 @@
             btnDonHangOnline.ForeColor = Color.White;
             btnDonHangOnline.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonHangOnline.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDonHangOnline.Location = new Point(-15, -4);
+            btnDonHangOnline.Location = new Point(-14, -4);
             btnDonHangOnline.Name = "btnDonHangOnline";
-            btnDonHangOnline.Padding = new Padding(30, 0, 0, 0);
-            btnDonHangOnline.Size = new Size(338, 47);
+            btnDonHangOnline.Padding = new Padding(27, 0, 0, 0);
+            btnDonHangOnline.Size = new Size(307, 45);
             btnDonHangOnline.TabIndex = 3;
             btnDonHangOnline.Text = "             Đơn Hàng Online";
             btnDonHangOnline.TextAlign = ContentAlignment.MiddleLeft;
@@ -541,9 +541,9 @@
             // panel5
             // 
             panel5.Controls.Add(btnKiemTraHoaDonNhap);
-            panel5.Location = new Point(0, 573);
+            panel5.Location = new Point(0, 549);
             panel5.Name = "panel5";
-            panel5.Size = new Size(287, 36);
+            panel5.Size = new Size(261, 34);
             panel5.TabIndex = 16;
             // 
             // btnKiemTraHoaDonNhap
@@ -553,10 +553,10 @@
             btnKiemTraHoaDonNhap.ForeColor = Color.White;
             btnKiemTraHoaDonNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraHoaDonNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemTraHoaDonNhap.Location = new Point(-15, -4);
+            btnKiemTraHoaDonNhap.Location = new Point(-14, -4);
             btnKiemTraHoaDonNhap.Name = "btnKiemTraHoaDonNhap";
-            btnKiemTraHoaDonNhap.Padding = new Padding(30, 0, 0, 0);
-            btnKiemTraHoaDonNhap.Size = new Size(338, 47);
+            btnKiemTraHoaDonNhap.Padding = new Padding(27, 0, 0, 0);
+            btnKiemTraHoaDonNhap.Size = new Size(307, 45);
             btnKiemTraHoaDonNhap.TabIndex = 3;
             btnKiemTraHoaDonNhap.Text = "             Kiểm Tra Hoá Đơn Nhập";
             btnKiemTraHoaDonNhap.TextAlign = ContentAlignment.MiddleLeft;
@@ -567,9 +567,9 @@
             // panel29
             // 
             panel29.Controls.Add(button13);
-            panel29.Location = new Point(0, 531);
+            panel29.Location = new Point(0, 509);
             panel29.Name = "panel29";
-            panel29.Size = new Size(287, 36);
+            panel29.Size = new Size(261, 34);
             panel29.TabIndex = 12;
             // 
             // button13
@@ -579,10 +579,10 @@
             button13.ForeColor = Color.White;
             button13.Image = PosManager.Properties.Resources.icons8_circle_20;
             button13.ImageAlign = ContentAlignment.MiddleLeft;
-            button13.Location = new Point(-15, -4);
+            button13.Location = new Point(-14, -4);
             button13.Name = "button13";
-            button13.Padding = new Padding(30, 0, 0, 0);
-            button13.Size = new Size(338, 47);
+            button13.Padding = new Padding(27, 0, 0, 0);
+            button13.Size = new Size(307, 45);
             button13.TabIndex = 3;
             button13.Text = "             Kiểm Tra Giá Nhập";
             button13.TextAlign = ContentAlignment.MiddleLeft;
@@ -593,9 +593,9 @@
             // panel27
             // 
             panel27.Controls.Add(btnLichSuPhieuNhap);
-            panel27.Location = new Point(0, 482);
+            panel27.Location = new Point(0, 462);
             panel27.Name = "panel27";
-            panel27.Size = new Size(287, 36);
+            panel27.Size = new Size(261, 34);
             panel27.TabIndex = 15;
             // 
             // btnLichSuPhieuNhap
@@ -605,10 +605,10 @@
             btnLichSuPhieuNhap.ForeColor = Color.White;
             btnLichSuPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuPhieuNhap.Location = new Point(-15, -4);
+            btnLichSuPhieuNhap.Location = new Point(-14, -4);
             btnLichSuPhieuNhap.Name = "btnLichSuPhieuNhap";
-            btnLichSuPhieuNhap.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuPhieuNhap.Size = new Size(326, 47);
+            btnLichSuPhieuNhap.Padding = new Padding(27, 0, 0, 0);
+            btnLichSuPhieuNhap.Size = new Size(296, 45);
             btnLichSuPhieuNhap.TabIndex = 3;
             btnLichSuPhieuNhap.Text = "             Lịch Sử Phiếu Nhập";
             btnLichSuPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
@@ -619,9 +619,9 @@
             // panel20
             // 
             panel20.Controls.Add(btnDonDatHangNCC);
-            panel20.Location = new Point(0, 258);
+            panel20.Location = new Point(0, 247);
             panel20.Name = "panel20";
-            panel20.Size = new Size(287, 36);
+            panel20.Size = new Size(261, 34);
             panel20.TabIndex = 10;
             // 
             // btnDonDatHangNCC
@@ -631,10 +631,10 @@
             btnDonDatHangNCC.ForeColor = Color.White;
             btnDonDatHangNCC.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonDatHangNCC.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDonDatHangNCC.Location = new Point(-15, -4);
+            btnDonDatHangNCC.Location = new Point(-14, -4);
             btnDonDatHangNCC.Name = "btnDonDatHangNCC";
-            btnDonDatHangNCC.Padding = new Padding(30, 0, 0, 0);
-            btnDonDatHangNCC.Size = new Size(326, 47);
+            btnDonDatHangNCC.Padding = new Padding(27, 0, 0, 0);
+            btnDonDatHangNCC.Size = new Size(296, 45);
             btnDonDatHangNCC.TabIndex = 3;
             btnDonDatHangNCC.Text = "             Đơn Đặt Hàng NCC";
             btnDonDatHangNCC.TextAlign = ContentAlignment.MiddleLeft;
@@ -645,9 +645,9 @@
             // panel28
             // 
             panel28.Controls.Add(btnKiemPhieuNhap);
-            panel28.Location = new Point(3, 440);
+            panel28.Location = new Point(3, 422);
             panel28.Name = "panel28";
-            panel28.Size = new Size(287, 36);
+            panel28.Size = new Size(261, 34);
             panel28.TabIndex = 14;
             // 
             // btnKiemPhieuNhap
@@ -657,10 +657,10 @@
             btnKiemPhieuNhap.ForeColor = Color.White;
             btnKiemPhieuNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemPhieuNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemPhieuNhap.Location = new Point(-15, -4);
+            btnKiemPhieuNhap.Location = new Point(-14, -4);
             btnKiemPhieuNhap.Name = "btnKiemPhieuNhap";
-            btnKiemPhieuNhap.Padding = new Padding(30, 0, 0, 0);
-            btnKiemPhieuNhap.Size = new Size(326, 47);
+            btnKiemPhieuNhap.Padding = new Padding(27, 0, 0, 0);
+            btnKiemPhieuNhap.Size = new Size(296, 45);
             btnKiemPhieuNhap.TabIndex = 3;
             btnKiemPhieuNhap.Text = "             Kiểm Phiếu Nhập";
             btnKiemPhieuNhap.TextAlign = ContentAlignment.MiddleLeft;
@@ -671,9 +671,9 @@
             // panel21
             // 
             panel21.Controls.Add(btnChuyenKho);
-            panel21.Location = new Point(0, 209);
+            panel21.Location = new Point(0, 200);
             panel21.Name = "panel21";
-            panel21.Size = new Size(287, 36);
+            panel21.Size = new Size(261, 34);
             panel21.TabIndex = 9;
             // 
             // btnChuyenKho
@@ -683,10 +683,10 @@
             btnChuyenKho.ForeColor = Color.White;
             btnChuyenKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnChuyenKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChuyenKho.Location = new Point(-15, -4);
+            btnChuyenKho.Location = new Point(-14, -4);
             btnChuyenKho.Name = "btnChuyenKho";
-            btnChuyenKho.Padding = new Padding(30, 0, 0, 0);
-            btnChuyenKho.Size = new Size(326, 47);
+            btnChuyenKho.Padding = new Padding(27, 0, 0, 0);
+            btnChuyenKho.Size = new Size(296, 45);
             btnChuyenKho.TabIndex = 3;
             btnChuyenKho.Text = "             Chuyển Kho";
             btnChuyenKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -697,9 +697,9 @@
             // panel22
             // 
             panel22.Controls.Add(btnKiemKho);
-            panel22.Location = new Point(0, 300);
+            panel22.Location = new Point(0, 288);
             panel22.Name = "panel22";
-            panel22.Size = new Size(287, 36);
+            panel22.Size = new Size(261, 34);
             panel22.TabIndex = 5;
             // 
             // btnKiemKho
@@ -709,10 +709,10 @@
             btnKiemKho.ForeColor = Color.White;
             btnKiemKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemKho.Location = new Point(-15, -4);
+            btnKiemKho.Location = new Point(-14, -4);
             btnKiemKho.Name = "btnKiemKho";
-            btnKiemKho.Padding = new Padding(30, 0, 0, 0);
-            btnKiemKho.Size = new Size(338, 47);
+            btnKiemKho.Padding = new Padding(27, 0, 0, 0);
+            btnKiemKho.Size = new Size(307, 45);
             btnKiemKho.TabIndex = 3;
             btnKiemKho.Text = "             Kiểm Kho";
             btnKiemKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -723,9 +723,9 @@
             // panel30
             // 
             panel30.Controls.Add(btnQuanLyDate);
-            panel30.Location = new Point(3, 391);
+            panel30.Location = new Point(3, 375);
             panel30.Name = "panel30";
-            panel30.Size = new Size(287, 36);
+            panel30.Size = new Size(261, 34);
             panel30.TabIndex = 13;
             // 
             // btnQuanLyDate
@@ -735,10 +735,10 @@
             btnQuanLyDate.ForeColor = Color.White;
             btnQuanLyDate.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyDate.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyDate.Location = new Point(-15, -4);
+            btnQuanLyDate.Location = new Point(-14, -4);
             btnQuanLyDate.Name = "btnQuanLyDate";
-            btnQuanLyDate.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyDate.Size = new Size(326, 47);
+            btnQuanLyDate.Padding = new Padding(27, 0, 0, 0);
+            btnQuanLyDate.Size = new Size(296, 45);
             btnQuanLyDate.TabIndex = 3;
             btnQuanLyDate.Text = "             Quản Lý Date";
             btnQuanLyDate.TextAlign = ContentAlignment.MiddleLeft;
@@ -749,9 +749,9 @@
             // panel23
             // 
             panel23.Controls.Add(btnXuatKho);
-            panel23.Location = new Point(0, 167);
+            panel23.Location = new Point(0, 160);
             panel23.Name = "panel23";
-            panel23.Size = new Size(287, 36);
+            panel23.Size = new Size(261, 34);
             panel23.TabIndex = 8;
             // 
             // btnXuatKho
@@ -761,10 +761,10 @@
             btnXuatKho.ForeColor = Color.White;
             btnXuatKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnXuatKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnXuatKho.Location = new Point(-15, -4);
+            btnXuatKho.Location = new Point(-14, -4);
             btnXuatKho.Name = "btnXuatKho";
-            btnXuatKho.Padding = new Padding(30, 0, 0, 0);
-            btnXuatKho.Size = new Size(326, 47);
+            btnXuatKho.Padding = new Padding(27, 0, 0, 0);
+            btnXuatKho.Size = new Size(296, 45);
             btnXuatKho.TabIndex = 3;
             btnXuatKho.Text = "             Xuất Kho";
             btnXuatKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -775,9 +775,9 @@
             // panel24
             // 
             panel24.Controls.Add(btnNhapKho);
-            panel24.Location = new Point(0, 123);
+            panel24.Location = new Point(0, 118);
             panel24.Name = "panel24";
-            panel24.Size = new Size(287, 36);
+            panel24.Size = new Size(261, 34);
             panel24.TabIndex = 7;
             // 
             // btnNhapKho
@@ -787,10 +787,10 @@
             btnNhapKho.ForeColor = Color.White;
             btnNhapKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnNhapKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhapKho.Location = new Point(-15, -4);
+            btnNhapKho.Location = new Point(-14, -4);
             btnNhapKho.Name = "btnNhapKho";
-            btnNhapKho.Padding = new Padding(30, 0, 0, 0);
-            btnNhapKho.Size = new Size(341, 47);
+            btnNhapKho.Padding = new Padding(27, 0, 0, 0);
+            btnNhapKho.Size = new Size(310, 45);
             btnNhapKho.TabIndex = 3;
             btnNhapKho.Text = "             Nhập Kho";
             btnNhapKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -804,20 +804,20 @@
             panel25.Dock = DockStyle.Top;
             panel25.Location = new Point(0, 0);
             panel25.Name = "panel25";
-            panel25.Size = new Size(287, 46);
+            panel25.Size = new Size(261, 44);
             panel25.TabIndex = 5;
             // 
             // btnKho
             // 
-            btnKho.BackColor = Color.FromArgb(89, 149, 206);
-            btnKho.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKho.BackColor = Color.FromArgb(37, 152, 230);
+            btnKho.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKho.ForeColor = Color.White;
             btnKho.Image = (Image)resources.GetObject("btnKho.Image");
             btnKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKho.Location = new Point(-17, -6);
+            btnKho.Location = new Point(-15, -6);
             btnKho.Name = "btnKho";
-            btnKho.Padding = new Padding(30, 0, 0, 0);
-            btnKho.Size = new Size(319, 52);
+            btnKho.Padding = new Padding(27, 0, 0, 0);
+            btnKho.Size = new Size(290, 50);
             btnKho.TabIndex = 3;
             btnKho.Text = "             Kho";
             btnKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -829,9 +829,9 @@
             // panel26
             // 
             panel26.Controls.Add(btnTonKho);
-            panel26.Location = new Point(0, 81);
+            panel26.Location = new Point(0, 78);
             panel26.Name = "panel26";
-            panel26.Size = new Size(287, 36);
+            panel26.Size = new Size(261, 34);
             panel26.TabIndex = 4;
             // 
             // btnTonKho
@@ -841,10 +841,10 @@
             btnTonKho.ForeColor = Color.White;
             btnTonKho.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnTonKho.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTonKho.Location = new Point(-15, -4);
+            btnTonKho.Location = new Point(-14, -4);
             btnTonKho.Name = "btnTonKho";
-            btnTonKho.Padding = new Padding(30, 0, 0, 0);
-            btnTonKho.Size = new Size(326, 47);
+            btnTonKho.Padding = new Padding(27, 0, 0, 0);
+            btnTonKho.Size = new Size(296, 45);
             btnTonKho.TabIndex = 3;
             btnTonKho.Text = "             Tồn Kho";
             btnTonKho.TextAlign = ContentAlignment.MiddleLeft;
@@ -857,11 +857,11 @@
             CaiDatContainer.BackColor = Color.LightBlue;
             CaiDatContainer.Controls.Add(panel64);
             CaiDatContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            CaiDatContainer.Location = new Point(3, 530);
-            CaiDatContainer.MaximumSize = new Size(287, 41);
-            CaiDatContainer.MinimumSize = new Size(287, 41);
+            CaiDatContainer.Location = new Point(3, 508);
+            CaiDatContainer.MaximumSize = new Size(261, 39);
+            CaiDatContainer.MinimumSize = new Size(261, 39);
             CaiDatContainer.Name = "CaiDatContainer";
-            CaiDatContainer.Size = new Size(287, 41);
+            CaiDatContainer.Size = new Size(261, 39);
             CaiDatContainer.TabIndex = 14;
             CaiDatContainer.MouseEnter += Button_MouseEnter;
             CaiDatContainer.MouseLeave += Button_MouseLeave;
@@ -872,20 +872,20 @@
             panel64.Dock = DockStyle.Top;
             panel64.Location = new Point(0, 0);
             panel64.Name = "panel64";
-            panel64.Size = new Size(287, 39);
+            panel64.Size = new Size(261, 37);
             panel64.TabIndex = 5;
             // 
             // btnCaiDat
             // 
-            btnCaiDat.BackColor = Color.FromArgb(89, 149, 206);
-            btnCaiDat.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCaiDat.BackColor = Color.FromArgb(37, 152, 230);
+            btnCaiDat.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCaiDat.ForeColor = Color.White;
             btnCaiDat.Image = (Image)resources.GetObject("btnCaiDat.Image");
             btnCaiDat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCaiDat.Location = new Point(-17, -4);
+            btnCaiDat.Location = new Point(-15, -4);
             btnCaiDat.Name = "btnCaiDat";
-            btnCaiDat.Padding = new Padding(30, 0, 0, 0);
-            btnCaiDat.Size = new Size(328, 52);
+            btnCaiDat.Padding = new Padding(27, 0, 0, 0);
+            btnCaiDat.Size = new Size(298, 50);
             btnCaiDat.TabIndex = 3;
             btnCaiDat.Text = "             Cài Đặt";
             btnCaiDat.TextAlign = ContentAlignment.MiddleLeft;
@@ -899,11 +899,11 @@
             ChiNhanhContainer.BackColor = Color.LightBlue;
             ChiNhanhContainer.Controls.Add(panel77);
             ChiNhanhContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ChiNhanhContainer.Location = new Point(3, 483);
-            ChiNhanhContainer.MaximumSize = new Size(287, 41);
-            ChiNhanhContainer.MinimumSize = new Size(287, 41);
+            ChiNhanhContainer.Location = new Point(3, 463);
+            ChiNhanhContainer.MaximumSize = new Size(261, 39);
+            ChiNhanhContainer.MinimumSize = new Size(261, 39);
             ChiNhanhContainer.Name = "ChiNhanhContainer";
-            ChiNhanhContainer.Size = new Size(287, 41);
+            ChiNhanhContainer.Size = new Size(261, 39);
             ChiNhanhContainer.TabIndex = 15;
             ChiNhanhContainer.MouseEnter += Button_MouseEnter;
             ChiNhanhContainer.MouseLeave += Button_MouseLeave;
@@ -914,20 +914,20 @@
             panel77.Dock = DockStyle.Top;
             panel77.Location = new Point(0, 0);
             panel77.Name = "panel77";
-            panel77.Size = new Size(287, 39);
+            panel77.Size = new Size(261, 37);
             panel77.TabIndex = 5;
             // 
             // btnChiNhanh
             // 
-            btnChiNhanh.BackColor = Color.FromArgb(89, 149, 206);
-            btnChiNhanh.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChiNhanh.BackColor = Color.FromArgb(37, 152, 230);
+            btnChiNhanh.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnChiNhanh.ForeColor = Color.White;
             btnChiNhanh.Image = (Image)resources.GetObject("btnChiNhanh.Image");
             btnChiNhanh.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChiNhanh.Location = new Point(-15, -8);
+            btnChiNhanh.Location = new Point(-14, -8);
             btnChiNhanh.Name = "btnChiNhanh";
-            btnChiNhanh.Padding = new Padding(30, 0, 0, 0);
-            btnChiNhanh.Size = new Size(328, 52);
+            btnChiNhanh.Padding = new Padding(27, 0, 0, 0);
+            btnChiNhanh.Size = new Size(298, 50);
             btnChiNhanh.TabIndex = 3;
             btnChiNhanh.Text = "             Chi Nhánh";
             btnChiNhanh.TextAlign = ContentAlignment.MiddleLeft;
@@ -943,11 +943,11 @@
             NhanVienContainer.Controls.Add(panel44);
             NhanVienContainer.Controls.Add(panel45);
             NhanVienContainer.Controls.Add(panel46);
-            NhanVienContainer.Location = new Point(3, 342);
-            NhanVienContainer.MaximumSize = new Size(287, 167);
-            NhanVienContainer.MinimumSize = new Size(287, 41);
+            NhanVienContainer.Location = new Point(3, 328);
+            NhanVienContainer.MaximumSize = new Size(261, 160);
+            NhanVienContainer.MinimumSize = new Size(261, 39);
             NhanVienContainer.Name = "NhanVienContainer";
-            NhanVienContainer.Size = new Size(287, 41);
+            NhanVienContainer.Size = new Size(261, 39);
             NhanVienContainer.TabIndex = 10;
             NhanVienContainer.MouseEnter += Button_MouseEnter;
             NhanVienContainer.MouseLeave += Button_MouseLeave;
@@ -955,9 +955,9 @@
             // panel62
             // 
             panel62.Controls.Add(btnPhanQuyen);
-            panel62.Location = new Point(0, 127);
+            panel62.Location = new Point(0, 122);
             panel62.Name = "panel62";
-            panel62.Size = new Size(287, 36);
+            panel62.Size = new Size(261, 34);
             panel62.TabIndex = 8;
             // 
             // btnPhanQuyen
@@ -967,10 +967,10 @@
             btnPhanQuyen.ForeColor = Color.White;
             btnPhanQuyen.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnPhanQuyen.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPhanQuyen.Location = new Point(-15, -4);
+            btnPhanQuyen.Location = new Point(-14, -4);
             btnPhanQuyen.Name = "btnPhanQuyen";
-            btnPhanQuyen.Padding = new Padding(30, 0, 0, 0);
-            btnPhanQuyen.Size = new Size(341, 47);
+            btnPhanQuyen.Padding = new Padding(27, 0, 0, 0);
+            btnPhanQuyen.Size = new Size(310, 45);
             btnPhanQuyen.TabIndex = 3;
             btnPhanQuyen.Text = "             Phân Quyền";
             btnPhanQuyen.TextAlign = ContentAlignment.MiddleLeft;
@@ -981,9 +981,9 @@
             // panel44
             // 
             panel44.Controls.Add(btnChamCong);
-            panel44.Location = new Point(0, 87);
+            panel44.Location = new Point(0, 83);
             panel44.Name = "panel44";
-            panel44.Size = new Size(287, 36);
+            panel44.Size = new Size(261, 34);
             panel44.TabIndex = 7;
             // 
             // btnChamCong
@@ -993,10 +993,10 @@
             btnChamCong.ForeColor = Color.White;
             btnChamCong.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnChamCong.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChamCong.Location = new Point(-15, -4);
+            btnChamCong.Location = new Point(-14, -4);
             btnChamCong.Name = "btnChamCong";
-            btnChamCong.Padding = new Padding(30, 0, 0, 0);
-            btnChamCong.Size = new Size(341, 47);
+            btnChamCong.Padding = new Padding(27, 0, 0, 0);
+            btnChamCong.Size = new Size(310, 45);
             btnChamCong.TabIndex = 3;
             btnChamCong.Text = "             Chấm Công";
             btnChamCong.TextAlign = ContentAlignment.MiddleLeft;
@@ -1010,20 +1010,20 @@
             panel45.Dock = DockStyle.Top;
             panel45.Location = new Point(0, 0);
             panel45.Name = "panel45";
-            panel45.Size = new Size(287, 39);
+            panel45.Size = new Size(261, 37);
             panel45.TabIndex = 5;
             // 
             // btnNhanVien
             // 
-            btnNhanVien.BackColor = Color.FromArgb(89, 149, 206);
-            btnNhanVien.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNhanVien.BackColor = Color.FromArgb(37, 152, 230);
+            btnNhanVien.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnNhanVien.ForeColor = Color.White;
             btnNhanVien.Image = (Image)resources.GetObject("btnNhanVien.Image");
             btnNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhanVien.Location = new Point(-17, -4);
+            btnNhanVien.Location = new Point(-15, -4);
             btnNhanVien.Name = "btnNhanVien";
-            btnNhanVien.Padding = new Padding(30, 0, 0, 0);
-            btnNhanVien.Size = new Size(328, 52);
+            btnNhanVien.Padding = new Padding(27, 0, 0, 0);
+            btnNhanVien.Size = new Size(298, 50);
             btnNhanVien.TabIndex = 3;
             btnNhanVien.Text = "             Nhân Viên";
             btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
@@ -1035,9 +1035,9 @@
             // panel46
             // 
             panel46.Controls.Add(btnDanhSachNhanVien);
-            panel46.Location = new Point(0, 45);
+            panel46.Location = new Point(0, 43);
             panel46.Name = "panel46";
-            panel46.Size = new Size(287, 36);
+            panel46.Size = new Size(261, 34);
             panel46.TabIndex = 4;
             // 
             // btnDanhSachNhanVien
@@ -1047,10 +1047,10 @@
             btnDanhSachNhanVien.ForeColor = Color.White;
             btnDanhSachNhanVien.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDanhSachNhanVien.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDanhSachNhanVien.Location = new Point(-15, -4);
+            btnDanhSachNhanVien.Location = new Point(-14, -4);
             btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
-            btnDanhSachNhanVien.Padding = new Padding(30, 0, 0, 0);
-            btnDanhSachNhanVien.Size = new Size(326, 47);
+            btnDanhSachNhanVien.Padding = new Padding(27, 0, 0, 0);
+            btnDanhSachNhanVien.Size = new Size(296, 45);
             btnDanhSachNhanVien.TabIndex = 3;
             btnDanhSachNhanVien.Text = "             Danh Sách";
             btnDanhSachNhanVien.TextAlign = ContentAlignment.MiddleLeft;
@@ -1070,11 +1070,11 @@
             CongNoContainer.Controls.Add(panel31);
             CongNoContainer.Controls.Add(panel32);
             CongNoContainer.Controls.Add(panel35);
-            CongNoContainer.Location = new Point(3, 295);
-            CongNoContainer.MaximumSize = new Size(287, 337);
-            CongNoContainer.MinimumSize = new Size(287, 41);
+            CongNoContainer.Location = new Point(3, 283);
+            CongNoContainer.MaximumSize = new Size(261, 323);
+            CongNoContainer.MinimumSize = new Size(261, 39);
             CongNoContainer.Name = "CongNoContainer";
-            CongNoContainer.Size = new Size(287, 41);
+            CongNoContainer.Size = new Size(261, 39);
             CongNoContainer.TabIndex = 11;
             CongNoContainer.MouseEnter += Button_MouseEnter;
             CongNoContainer.MouseLeave += Button_MouseLeave;
@@ -1082,9 +1082,9 @@
             // panel48
             // 
             panel48.Controls.Add(btnDuyetPhieuChi);
-            panel48.Location = new Point(0, 297);
+            panel48.Location = new Point(0, 285);
             panel48.Name = "panel48";
-            panel48.Size = new Size(287, 36);
+            panel48.Size = new Size(261, 34);
             panel48.TabIndex = 12;
             // 
             // btnDuyetPhieuChi
@@ -1094,10 +1094,10 @@
             btnDuyetPhieuChi.ForeColor = Color.White;
             btnDuyetPhieuChi.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDuyetPhieuChi.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDuyetPhieuChi.Location = new Point(-15, -4);
+            btnDuyetPhieuChi.Location = new Point(-14, -4);
             btnDuyetPhieuChi.Name = "btnDuyetPhieuChi";
-            btnDuyetPhieuChi.Padding = new Padding(30, 0, 0, 0);
-            btnDuyetPhieuChi.Size = new Size(326, 47);
+            btnDuyetPhieuChi.Padding = new Padding(27, 0, 0, 0);
+            btnDuyetPhieuChi.Size = new Size(296, 45);
             btnDuyetPhieuChi.TabIndex = 3;
             btnDuyetPhieuChi.Text = "             Duyệt Phiếu Chi";
             btnDuyetPhieuChi.TextAlign = ContentAlignment.MiddleLeft;
@@ -1108,9 +1108,9 @@
             // panel49
             // 
             panel49.Controls.Add(btnGhiChuCongNo);
-            panel49.Location = new Point(0, 255);
+            panel49.Location = new Point(0, 244);
             panel49.Name = "panel49";
-            panel49.Size = new Size(287, 36);
+            panel49.Size = new Size(261, 34);
             panel49.TabIndex = 11;
             // 
             // btnGhiChuCongNo
@@ -1120,10 +1120,10 @@
             btnGhiChuCongNo.ForeColor = Color.White;
             btnGhiChuCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnGhiChuCongNo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGhiChuCongNo.Location = new Point(-15, -4);
+            btnGhiChuCongNo.Location = new Point(-14, -4);
             btnGhiChuCongNo.Name = "btnGhiChuCongNo";
-            btnGhiChuCongNo.Padding = new Padding(30, 0, 0, 0);
-            btnGhiChuCongNo.Size = new Size(341, 47);
+            btnGhiChuCongNo.Padding = new Padding(27, 0, 0, 0);
+            btnGhiChuCongNo.Size = new Size(310, 45);
             btnGhiChuCongNo.TabIndex = 3;
             btnGhiChuCongNo.Text = "             Ghi Chú";
             btnGhiChuCongNo.TextAlign = ContentAlignment.MiddleLeft;
@@ -1134,9 +1134,9 @@
             // panel50
             // 
             panel50.Controls.Add(btnQuanLyMuonHang);
-            panel50.Location = new Point(0, 213);
+            panel50.Location = new Point(0, 204);
             panel50.Name = "panel50";
-            panel50.Size = new Size(287, 36);
+            panel50.Size = new Size(261, 34);
             panel50.TabIndex = 10;
             // 
             // btnQuanLyMuonHang
@@ -1146,10 +1146,10 @@
             btnQuanLyMuonHang.ForeColor = Color.White;
             btnQuanLyMuonHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyMuonHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyMuonHang.Location = new Point(-15, -4);
+            btnQuanLyMuonHang.Location = new Point(-14, -4);
             btnQuanLyMuonHang.Name = "btnQuanLyMuonHang";
-            btnQuanLyMuonHang.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyMuonHang.Size = new Size(326, 47);
+            btnQuanLyMuonHang.Padding = new Padding(27, 0, 0, 0);
+            btnQuanLyMuonHang.Size = new Size(296, 45);
             btnQuanLyMuonHang.TabIndex = 3;
             btnQuanLyMuonHang.Text = "             Quản Lý Mượn Hàng";
             btnQuanLyMuonHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1160,9 +1160,9 @@
             // panel38
             // 
             panel38.Controls.Add(btnQuanLyDonHangNhapCongNo);
-            panel38.Location = new Point(0, 171);
+            panel38.Location = new Point(0, 164);
             panel38.Name = "panel38";
-            panel38.Size = new Size(287, 36);
+            panel38.Size = new Size(261, 34);
             panel38.TabIndex = 9;
             // 
             // btnQuanLyDonHangNhapCongNo
@@ -1172,10 +1172,10 @@
             btnQuanLyDonHangNhapCongNo.ForeColor = Color.White;
             btnQuanLyDonHangNhapCongNo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQuanLyDonHangNhapCongNo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQuanLyDonHangNhapCongNo.Location = new Point(-15, -4);
+            btnQuanLyDonHangNhapCongNo.Location = new Point(-14, -4);
             btnQuanLyDonHangNhapCongNo.Name = "btnQuanLyDonHangNhapCongNo";
-            btnQuanLyDonHangNhapCongNo.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLyDonHangNhapCongNo.Size = new Size(341, 47);
+            btnQuanLyDonHangNhapCongNo.Padding = new Padding(27, 0, 0, 0);
+            btnQuanLyDonHangNhapCongNo.Size = new Size(310, 45);
             btnQuanLyDonHangNhapCongNo.TabIndex = 3;
             btnQuanLyDonHangNhapCongNo.Text = "             Đơn Hàng Nhập";
             btnQuanLyDonHangNhapCongNo.TextAlign = ContentAlignment.MiddleLeft;
@@ -1186,9 +1186,9 @@
             // panel43
             // 
             panel43.Controls.Add(btnCongNoDauKy);
-            panel43.Location = new Point(0, 129);
+            panel43.Location = new Point(0, 124);
             panel43.Name = "panel43";
-            panel43.Size = new Size(287, 36);
+            panel43.Size = new Size(261, 34);
             panel43.TabIndex = 8;
             // 
             // btnCongNoDauKy
@@ -1198,10 +1198,10 @@
             btnCongNoDauKy.ForeColor = Color.White;
             btnCongNoDauKy.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCongNoDauKy.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNoDauKy.Location = new Point(-15, -4);
+            btnCongNoDauKy.Location = new Point(-14, -4);
             btnCongNoDauKy.Name = "btnCongNoDauKy";
-            btnCongNoDauKy.Padding = new Padding(30, 0, 0, 0);
-            btnCongNoDauKy.Size = new Size(326, 47);
+            btnCongNoDauKy.Padding = new Padding(27, 0, 0, 0);
+            btnCongNoDauKy.Size = new Size(296, 45);
             btnCongNoDauKy.TabIndex = 3;
             btnCongNoDauKy.Text = "             Công Nợ Đầu Kỳ";
             btnCongNoDauKy.TextAlign = ContentAlignment.MiddleLeft;
@@ -1212,9 +1212,9 @@
             // panel31
             // 
             panel31.Controls.Add(btnCongNoPhaiTraChoNhaCungCap);
-            panel31.Location = new Point(0, 87);
+            panel31.Location = new Point(0, 83);
             panel31.Name = "panel31";
-            panel31.Size = new Size(287, 36);
+            panel31.Size = new Size(261, 34);
             panel31.TabIndex = 7;
             // 
             // btnCongNoPhaiTraChoNhaCungCap
@@ -1224,10 +1224,10 @@
             btnCongNoPhaiTraChoNhaCungCap.ForeColor = Color.White;
             btnCongNoPhaiTraChoNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCongNoPhaiTraChoNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNoPhaiTraChoNhaCungCap.Location = new Point(-15, -4);
+            btnCongNoPhaiTraChoNhaCungCap.Location = new Point(-14, -4);
             btnCongNoPhaiTraChoNhaCungCap.Name = "btnCongNoPhaiTraChoNhaCungCap";
-            btnCongNoPhaiTraChoNhaCungCap.Padding = new Padding(30, 0, 0, 0);
-            btnCongNoPhaiTraChoNhaCungCap.Size = new Size(341, 47);
+            btnCongNoPhaiTraChoNhaCungCap.Padding = new Padding(27, 0, 0, 0);
+            btnCongNoPhaiTraChoNhaCungCap.Size = new Size(310, 45);
             btnCongNoPhaiTraChoNhaCungCap.TabIndex = 3;
             btnCongNoPhaiTraChoNhaCungCap.Text = "             Trả Cho Nhà Cung Cấp";
             btnCongNoPhaiTraChoNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
@@ -1241,20 +1241,20 @@
             panel32.Dock = DockStyle.Top;
             panel32.Location = new Point(0, 0);
             panel32.Name = "panel32";
-            panel32.Size = new Size(287, 39);
+            panel32.Size = new Size(261, 37);
             panel32.TabIndex = 5;
             // 
             // btnCongNo
             // 
-            btnCongNo.BackColor = Color.FromArgb(89, 149, 206);
-            btnCongNo.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCongNo.BackColor = Color.FromArgb(37, 152, 230);
+            btnCongNo.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnCongNo.ForeColor = Color.White;
             btnCongNo.Image = (Image)resources.GetObject("btnCongNo.Image");
             btnCongNo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNo.Location = new Point(-17, -4);
+            btnCongNo.Location = new Point(-15, -4);
             btnCongNo.Name = "btnCongNo";
-            btnCongNo.Padding = new Padding(30, 0, 0, 0);
-            btnCongNo.Size = new Size(328, 52);
+            btnCongNo.Padding = new Padding(27, 0, 0, 0);
+            btnCongNo.Size = new Size(298, 50);
             btnCongNo.TabIndex = 3;
             btnCongNo.Text = "             Công Nợ";
             btnCongNo.TextAlign = ContentAlignment.MiddleLeft;
@@ -1266,9 +1266,9 @@
             // panel35
             // 
             panel35.Controls.Add(btnCongNoPhaiThuCuaKhachHang);
-            panel35.Location = new Point(0, 45);
+            panel35.Location = new Point(0, 43);
             panel35.Name = "panel35";
-            panel35.Size = new Size(287, 36);
+            panel35.Size = new Size(261, 34);
             panel35.TabIndex = 4;
             // 
             // btnCongNoPhaiThuCuaKhachHang
@@ -1278,10 +1278,10 @@
             btnCongNoPhaiThuCuaKhachHang.ForeColor = Color.White;
             btnCongNoPhaiThuCuaKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCongNoPhaiThuCuaKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCongNoPhaiThuCuaKhachHang.Location = new Point(-15, -4);
+            btnCongNoPhaiThuCuaKhachHang.Location = new Point(-14, -4);
             btnCongNoPhaiThuCuaKhachHang.Name = "btnCongNoPhaiThuCuaKhachHang";
-            btnCongNoPhaiThuCuaKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnCongNoPhaiThuCuaKhachHang.Size = new Size(326, 47);
+            btnCongNoPhaiThuCuaKhachHang.Padding = new Padding(27, 0, 0, 0);
+            btnCongNoPhaiThuCuaKhachHang.Size = new Size(296, 45);
             btnCongNoPhaiThuCuaKhachHang.TabIndex = 3;
             btnCongNoPhaiThuCuaKhachHang.Text = "             Thu Khách Hàng";
             btnCongNoPhaiThuCuaKhachHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1301,11 +1301,11 @@
             HoaDonContainer.Controls.Add(panel40);
             HoaDonContainer.Controls.Add(panel41);
             HoaDonContainer.Controls.Add(panel42);
-            HoaDonContainer.Location = new Point(3, 248);
-            HoaDonContainer.MaximumSize = new Size(287, 379);
-            HoaDonContainer.MinimumSize = new Size(287, 41);
+            HoaDonContainer.Location = new Point(3, 238);
+            HoaDonContainer.MaximumSize = new Size(261, 363);
+            HoaDonContainer.MinimumSize = new Size(261, 39);
             HoaDonContainer.Name = "HoaDonContainer";
-            HoaDonContainer.Size = new Size(287, 41);
+            HoaDonContainer.Size = new Size(261, 39);
             HoaDonContainer.TabIndex = 9;
             HoaDonContainer.MouseEnter += Button_MouseEnter;
             HoaDonContainer.MouseLeave += Button_MouseLeave;
@@ -1313,9 +1313,9 @@
             // panel63
             // 
             panel63.Controls.Add(btnCaiDatHoaDon);
-            panel63.Location = new Point(0, 339);
+            panel63.Location = new Point(0, 325);
             panel63.Name = "panel63";
-            panel63.Size = new Size(287, 36);
+            panel63.Size = new Size(261, 34);
             panel63.TabIndex = 12;
             // 
             // btnCaiDatHoaDon
@@ -1325,10 +1325,10 @@
             btnCaiDatHoaDon.ForeColor = Color.White;
             btnCaiDatHoaDon.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCaiDatHoaDon.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCaiDatHoaDon.Location = new Point(-15, -4);
+            btnCaiDatHoaDon.Location = new Point(-14, -4);
             btnCaiDatHoaDon.Name = "btnCaiDatHoaDon";
-            btnCaiDatHoaDon.Padding = new Padding(30, 0, 0, 0);
-            btnCaiDatHoaDon.Size = new Size(338, 47);
+            btnCaiDatHoaDon.Padding = new Padding(27, 0, 0, 0);
+            btnCaiDatHoaDon.Size = new Size(307, 45);
             btnCaiDatHoaDon.TabIndex = 3;
             btnCaiDatHoaDon.Text = "             Cài Đặt Hoá Đơn";
             btnCaiDatHoaDon.TextAlign = ContentAlignment.MiddleLeft;
@@ -1339,9 +1339,9 @@
             // panel3
             // 
             panel3.Controls.Add(btnLichSuHoaDonTam);
-            panel3.Location = new Point(0, 298);
+            panel3.Location = new Point(0, 286);
             panel3.Name = "panel3";
-            panel3.Size = new Size(287, 36);
+            panel3.Size = new Size(261, 34);
             panel3.TabIndex = 11;
             // 
             // btnLichSuHoaDonTam
@@ -1351,10 +1351,10 @@
             btnLichSuHoaDonTam.ForeColor = Color.White;
             btnLichSuHoaDonTam.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuHoaDonTam.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuHoaDonTam.Location = new Point(-15, -4);
+            btnLichSuHoaDonTam.Location = new Point(-14, -4);
             btnLichSuHoaDonTam.Name = "btnLichSuHoaDonTam";
-            btnLichSuHoaDonTam.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuHoaDonTam.Size = new Size(338, 47);
+            btnLichSuHoaDonTam.Padding = new Padding(27, 0, 0, 0);
+            btnLichSuHoaDonTam.Size = new Size(307, 45);
             btnLichSuHoaDonTam.TabIndex = 3;
             btnLichSuHoaDonTam.Text = "             Lịch Sử Hoá Đơn Tạm";
             btnLichSuHoaDonTam.TextAlign = ContentAlignment.MiddleLeft;
@@ -1365,9 +1365,9 @@
             // panel33
             // 
             panel33.Controls.Add(btnKiemPhieuXuatHang);
-            panel33.Location = new Point(0, 214);
+            panel33.Location = new Point(0, 205);
             panel33.Name = "panel33";
-            panel33.Size = new Size(287, 36);
+            panel33.Size = new Size(261, 34);
             panel33.TabIndex = 10;
             // 
             // btnKiemPhieuXuatHang
@@ -1377,10 +1377,10 @@
             btnKiemPhieuXuatHang.ForeColor = Color.White;
             btnKiemPhieuXuatHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemPhieuXuatHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemPhieuXuatHang.Location = new Point(-15, -4);
+            btnKiemPhieuXuatHang.Location = new Point(-14, -4);
             btnKiemPhieuXuatHang.Name = "btnKiemPhieuXuatHang";
-            btnKiemPhieuXuatHang.Padding = new Padding(30, 0, 0, 0);
-            btnKiemPhieuXuatHang.Size = new Size(326, 47);
+            btnKiemPhieuXuatHang.Padding = new Padding(27, 0, 0, 0);
+            btnKiemPhieuXuatHang.Size = new Size(296, 45);
             btnKiemPhieuXuatHang.TabIndex = 3;
             btnKiemPhieuXuatHang.Text = "             Kiểm Phiếu Xuất Hàng";
             btnKiemPhieuXuatHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1391,9 +1391,9 @@
             // panel36
             // 
             panel36.Controls.Add(btnDonDatHangOnline);
-            panel36.Location = new Point(0, 173);
+            panel36.Location = new Point(0, 166);
             panel36.Name = "panel36";
-            panel36.Size = new Size(287, 36);
+            panel36.Size = new Size(261, 34);
             panel36.TabIndex = 9;
             // 
             // btnDonDatHangOnline
@@ -1403,10 +1403,10 @@
             btnDonDatHangOnline.ForeColor = Color.White;
             btnDonDatHangOnline.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonDatHangOnline.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDonDatHangOnline.Location = new Point(-15, -4);
+            btnDonDatHangOnline.Location = new Point(-14, -4);
             btnDonDatHangOnline.Name = "btnDonDatHangOnline";
-            btnDonDatHangOnline.Padding = new Padding(30, 0, 0, 0);
-            btnDonDatHangOnline.Size = new Size(326, 47);
+            btnDonDatHangOnline.Padding = new Padding(27, 0, 0, 0);
+            btnDonDatHangOnline.Size = new Size(296, 45);
             btnDonDatHangOnline.TabIndex = 3;
             btnDonDatHangOnline.Text = "             Đơn Đặt Hàng Online";
             btnDonDatHangOnline.TextAlign = ContentAlignment.MiddleLeft;
@@ -1417,9 +1417,9 @@
             // panel37
             // 
             panel37.Controls.Add(btnKiemTraHoaDonTrung);
-            panel37.Location = new Point(0, 256);
+            panel37.Location = new Point(0, 245);
             panel37.Name = "panel37";
-            panel37.Size = new Size(287, 36);
+            panel37.Size = new Size(261, 34);
             panel37.TabIndex = 5;
             // 
             // btnKiemTraHoaDonTrung
@@ -1429,10 +1429,10 @@
             btnKiemTraHoaDonTrung.ForeColor = Color.White;
             btnKiemTraHoaDonTrung.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraHoaDonTrung.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemTraHoaDonTrung.Location = new Point(-15, -4);
+            btnKiemTraHoaDonTrung.Location = new Point(-14, -4);
             btnKiemTraHoaDonTrung.Name = "btnKiemTraHoaDonTrung";
-            btnKiemTraHoaDonTrung.Padding = new Padding(30, 0, 0, 0);
-            btnKiemTraHoaDonTrung.Size = new Size(338, 47);
+            btnKiemTraHoaDonTrung.Padding = new Padding(27, 0, 0, 0);
+            btnKiemTraHoaDonTrung.Size = new Size(307, 45);
             btnKiemTraHoaDonTrung.TabIndex = 3;
             btnKiemTraHoaDonTrung.Text = "             Kiểm Tra Hoá Đơn Trùng";
             btnKiemTraHoaDonTrung.TextAlign = ContentAlignment.MiddleLeft;
@@ -1443,9 +1443,9 @@
             // panel39
             // 
             panel39.Controls.Add(btnThongKeDonDatHang);
-            panel39.Location = new Point(0, 131);
+            panel39.Location = new Point(0, 126);
             panel39.Name = "panel39";
-            panel39.Size = new Size(287, 36);
+            panel39.Size = new Size(261, 34);
             panel39.TabIndex = 8;
             // 
             // btnThongKeDonDatHang
@@ -1455,10 +1455,10 @@
             btnThongKeDonDatHang.ForeColor = Color.White;
             btnThongKeDonDatHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnThongKeDonDatHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThongKeDonDatHang.Location = new Point(-15, -4);
+            btnThongKeDonDatHang.Location = new Point(-14, -4);
             btnThongKeDonDatHang.Name = "btnThongKeDonDatHang";
-            btnThongKeDonDatHang.Padding = new Padding(30, 0, 0, 0);
-            btnThongKeDonDatHang.Size = new Size(326, 47);
+            btnThongKeDonDatHang.Padding = new Padding(27, 0, 0, 0);
+            btnThongKeDonDatHang.Size = new Size(296, 45);
             btnThongKeDonDatHang.TabIndex = 3;
             btnThongKeDonDatHang.Text = "             Thống Kê Đơn Đặt Hàng";
             btnThongKeDonDatHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1469,9 +1469,9 @@
             // panel40
             // 
             panel40.Controls.Add(btnThongKeHoaDonVAT);
-            panel40.Location = new Point(0, 87);
+            panel40.Location = new Point(0, 83);
             panel40.Name = "panel40";
-            panel40.Size = new Size(287, 36);
+            panel40.Size = new Size(261, 34);
             panel40.TabIndex = 7;
             // 
             // btnThongKeHoaDonVAT
@@ -1481,10 +1481,10 @@
             btnThongKeHoaDonVAT.ForeColor = Color.White;
             btnThongKeHoaDonVAT.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnThongKeHoaDonVAT.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThongKeHoaDonVAT.Location = new Point(-15, -4);
+            btnThongKeHoaDonVAT.Location = new Point(-14, -4);
             btnThongKeHoaDonVAT.Name = "btnThongKeHoaDonVAT";
-            btnThongKeHoaDonVAT.Padding = new Padding(30, 0, 0, 0);
-            btnThongKeHoaDonVAT.Size = new Size(341, 47);
+            btnThongKeHoaDonVAT.Padding = new Padding(27, 0, 0, 0);
+            btnThongKeHoaDonVAT.Size = new Size(310, 45);
             btnThongKeHoaDonVAT.TabIndex = 3;
             btnThongKeHoaDonVAT.Text = "             Thống Kê Hoá Đơn VAT";
             btnThongKeHoaDonVAT.TextAlign = ContentAlignment.MiddleLeft;
@@ -1498,20 +1498,20 @@
             panel41.Dock = DockStyle.Top;
             panel41.Location = new Point(0, 0);
             panel41.Name = "panel41";
-            panel41.Size = new Size(287, 39);
+            panel41.Size = new Size(261, 37);
             panel41.TabIndex = 5;
             // 
             // btnHoaDon
             // 
-            btnHoaDon.BackColor = Color.FromArgb(89, 149, 206);
-            btnHoaDon.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHoaDon.BackColor = Color.FromArgb(37, 152, 230);
+            btnHoaDon.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnHoaDon.ForeColor = Color.White;
             btnHoaDon.Image = (Image)resources.GetObject("btnHoaDon.Image");
             btnHoaDon.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHoaDon.Location = new Point(-17, -4);
+            btnHoaDon.Location = new Point(-15, -4);
             btnHoaDon.Name = "btnHoaDon";
-            btnHoaDon.Padding = new Padding(30, 0, 0, 0);
-            btnHoaDon.Size = new Size(328, 52);
+            btnHoaDon.Padding = new Padding(27, 0, 0, 0);
+            btnHoaDon.Size = new Size(298, 50);
             btnHoaDon.TabIndex = 3;
             btnHoaDon.Text = "             Hoá Đơn";
             btnHoaDon.TextAlign = ContentAlignment.MiddleLeft;
@@ -1523,9 +1523,9 @@
             // panel42
             // 
             panel42.Controls.Add(btnHoaDonVuaThanhToan);
-            panel42.Location = new Point(0, 45);
+            panel42.Location = new Point(0, 43);
             panel42.Name = "panel42";
-            panel42.Size = new Size(287, 36);
+            panel42.Size = new Size(261, 34);
             panel42.TabIndex = 4;
             // 
             // btnHoaDonVuaThanhToan
@@ -1535,10 +1535,10 @@
             btnHoaDonVuaThanhToan.ForeColor = Color.White;
             btnHoaDonVuaThanhToan.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnHoaDonVuaThanhToan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHoaDonVuaThanhToan.Location = new Point(-15, -4);
+            btnHoaDonVuaThanhToan.Location = new Point(-14, -4);
             btnHoaDonVuaThanhToan.Name = "btnHoaDonVuaThanhToan";
-            btnHoaDonVuaThanhToan.Padding = new Padding(30, 0, 0, 0);
-            btnHoaDonVuaThanhToan.Size = new Size(326, 47);
+            btnHoaDonVuaThanhToan.Padding = new Padding(27, 0, 0, 0);
+            btnHoaDonVuaThanhToan.Size = new Size(296, 45);
             btnHoaDonVuaThanhToan.TabIndex = 3;
             btnHoaDonVuaThanhToan.Text = "             Hoá Đơn Thanh Toán";
             btnHoaDonVuaThanhToan.TextAlign = ContentAlignment.MiddleLeft;
@@ -1551,11 +1551,11 @@
             PosContainer.BackColor = Color.LightBlue;
             PosContainer.Controls.Add(panel65);
             PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            PosContainer.Location = new Point(3, 436);
-            PosContainer.MaximumSize = new Size(287, 41);
-            PosContainer.MinimumSize = new Size(287, 41);
+            PosContainer.Location = new Point(3, 418);
+            PosContainer.MaximumSize = new Size(261, 39);
+            PosContainer.MinimumSize = new Size(261, 39);
             PosContainer.Name = "PosContainer";
-            PosContainer.Size = new Size(287, 41);
+            PosContainer.Size = new Size(261, 39);
             PosContainer.TabIndex = 16;
             PosContainer.MouseEnter += Button_MouseEnter;
             PosContainer.MouseLeave += Button_MouseLeave;
@@ -1566,20 +1566,20 @@
             panel65.Dock = DockStyle.Top;
             panel65.Location = new Point(0, 0);
             panel65.Name = "panel65";
-            panel65.Size = new Size(287, 39);
+            panel65.Size = new Size(261, 37);
             panel65.TabIndex = 5;
             // 
             // btnPos
             // 
-            btnPos.BackColor = Color.FromArgb(89, 149, 206);
-            btnPos.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPos.BackColor = Color.FromArgb(37, 152, 230);
+            btnPos.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnPos.ForeColor = Color.White;
             btnPos.Image = (Image)resources.GetObject("btnPos.Image");
             btnPos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPos.Location = new Point(-17, -4);
+            btnPos.Location = new Point(-15, -4);
             btnPos.Name = "btnPos";
-            btnPos.Padding = new Padding(30, 0, 0, 0);
-            btnPos.Size = new Size(328, 52);
+            btnPos.Padding = new Padding(27, 0, 0, 0);
+            btnPos.Size = new Size(298, 50);
             btnPos.TabIndex = 3;
             btnPos.Text = "             POS";
             btnPos.TextAlign = ContentAlignment.MiddleLeft;
@@ -1593,11 +1593,11 @@
             ThuChiContainer.BackColor = Color.LightBlue;
             ThuChiContainer.Controls.Add(panel73);
             ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ThuChiContainer.Location = new Point(3, 389);
-            ThuChiContainer.MaximumSize = new Size(287, 41);
-            ThuChiContainer.MinimumSize = new Size(287, 41);
+            ThuChiContainer.Location = new Point(3, 373);
+            ThuChiContainer.MaximumSize = new Size(261, 39);
+            ThuChiContainer.MinimumSize = new Size(261, 39);
             ThuChiContainer.Name = "ThuChiContainer";
-            ThuChiContainer.Size = new Size(287, 41);
+            ThuChiContainer.Size = new Size(261, 39);
             ThuChiContainer.TabIndex = 13;
             ThuChiContainer.MouseEnter += Button_MouseEnter;
             ThuChiContainer.MouseLeave += Button_MouseLeave;
@@ -1608,20 +1608,20 @@
             panel73.Dock = DockStyle.Top;
             panel73.Location = new Point(0, 0);
             panel73.Name = "panel73";
-            panel73.Size = new Size(287, 39);
+            panel73.Size = new Size(261, 37);
             panel73.TabIndex = 5;
             // 
             // btnThuChi
             // 
-            btnThuChi.BackColor = Color.FromArgb(89, 149, 206);
-            btnThuChi.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThuChi.BackColor = Color.FromArgb(37, 152, 230);
+            btnThuChi.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnThuChi.ForeColor = Color.White;
             btnThuChi.Image = (Image)resources.GetObject("btnThuChi.Image");
             btnThuChi.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThuChi.Location = new Point(-17, -4);
+            btnThuChi.Location = new Point(-15, -4);
             btnThuChi.Name = "btnThuChi";
-            btnThuChi.Padding = new Padding(30, 0, 0, 0);
-            btnThuChi.Size = new Size(328, 52);
+            btnThuChi.Padding = new Padding(27, 0, 0, 0);
+            btnThuChi.Size = new Size(298, 50);
             btnThuChi.TabIndex = 3;
             btnThuChi.Text = "             Thu Chi";
             btnThuChi.TextAlign = ContentAlignment.MiddleLeft;
@@ -1645,11 +1645,11 @@
             BaoCaoContainer.Controls.Add(panel54);
             BaoCaoContainer.Controls.Add(panel55);
             BaoCaoContainer.Controls.Add(panel56);
-            BaoCaoContainer.Location = new Point(3, 199);
-            BaoCaoContainer.MaximumSize = new Size(287, 549);
-            BaoCaoContainer.MinimumSize = new Size(287, 41);
+            BaoCaoContainer.Location = new Point(3, 191);
+            BaoCaoContainer.MaximumSize = new Size(261, 526);
+            BaoCaoContainer.MinimumSize = new Size(261, 39);
             BaoCaoContainer.Name = "BaoCaoContainer";
-            BaoCaoContainer.Size = new Size(287, 43);
+            BaoCaoContainer.Size = new Size(261, 41);
             BaoCaoContainer.TabIndex = 12;
             BaoCaoContainer.MouseEnter += Button_MouseEnter;
             BaoCaoContainer.MouseLeave += Button_MouseLeave;
@@ -1657,9 +1657,9 @@
             // panel57
             // 
             panel57.Controls.Add(btnBaoCaoMaDuThuong);
-            panel57.Location = new Point(-1, 511);
+            panel57.Location = new Point(-1, 490);
             panel57.Name = "panel57";
-            panel57.Size = new Size(287, 36);
+            panel57.Size = new Size(261, 34);
             panel57.TabIndex = 17;
             // 
             // btnBaoCaoMaDuThuong
@@ -1669,10 +1669,10 @@
             btnBaoCaoMaDuThuong.ForeColor = Color.White;
             btnBaoCaoMaDuThuong.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoMaDuThuong.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCaoMaDuThuong.Location = new Point(-15, -4);
+            btnBaoCaoMaDuThuong.Location = new Point(-14, -4);
             btnBaoCaoMaDuThuong.Name = "btnBaoCaoMaDuThuong";
-            btnBaoCaoMaDuThuong.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCaoMaDuThuong.Size = new Size(326, 47);
+            btnBaoCaoMaDuThuong.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCaoMaDuThuong.Size = new Size(296, 45);
             btnBaoCaoMaDuThuong.TabIndex = 3;
             btnBaoCaoMaDuThuong.Text = "             Báo Cáo Mã Dự Thưởng";
             btnBaoCaoMaDuThuong.TextAlign = ContentAlignment.MiddleLeft;
@@ -1683,9 +1683,9 @@
             // panel58
             // 
             panel58.Controls.Add(btnBaoCaoTinNhanZalo);
-            panel58.Location = new Point(-1, 469);
+            panel58.Location = new Point(-1, 449);
             panel58.Name = "panel58";
-            panel58.Size = new Size(287, 36);
+            panel58.Size = new Size(261, 34);
             panel58.TabIndex = 16;
             // 
             // btnBaoCaoTinNhanZalo
@@ -1695,10 +1695,10 @@
             btnBaoCaoTinNhanZalo.ForeColor = Color.White;
             btnBaoCaoTinNhanZalo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoTinNhanZalo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCaoTinNhanZalo.Location = new Point(-15, -4);
+            btnBaoCaoTinNhanZalo.Location = new Point(-14, -4);
             btnBaoCaoTinNhanZalo.Name = "btnBaoCaoTinNhanZalo";
-            btnBaoCaoTinNhanZalo.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCaoTinNhanZalo.Size = new Size(341, 47);
+            btnBaoCaoTinNhanZalo.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCaoTinNhanZalo.Size = new Size(310, 45);
             btnBaoCaoTinNhanZalo.TabIndex = 3;
             btnBaoCaoTinNhanZalo.Text = "             Báo Cáo Tin Nhắn ZALO";
             btnBaoCaoTinNhanZalo.TextAlign = ContentAlignment.MiddleLeft;
@@ -1709,9 +1709,9 @@
             // panel59
             // 
             panel59.Controls.Add(btnKHDatTopNam);
-            panel59.Location = new Point(-1, 427);
+            panel59.Location = new Point(-1, 409);
             panel59.Name = "panel59";
-            panel59.Size = new Size(287, 36);
+            panel59.Size = new Size(261, 34);
             panel59.TabIndex = 15;
             // 
             // btnKHDatTopNam
@@ -1721,10 +1721,10 @@
             btnKHDatTopNam.ForeColor = Color.White;
             btnKHDatTopNam.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKHDatTopNam.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKHDatTopNam.Location = new Point(-15, -4);
+            btnKHDatTopNam.Location = new Point(-14, -4);
             btnKHDatTopNam.Name = "btnKHDatTopNam";
-            btnKHDatTopNam.Padding = new Padding(30, 0, 0, 0);
-            btnKHDatTopNam.Size = new Size(326, 47);
+            btnKHDatTopNam.Padding = new Padding(27, 0, 0, 0);
+            btnKHDatTopNam.Size = new Size(296, 45);
             btnKHDatTopNam.TabIndex = 3;
             btnKHDatTopNam.Text = "             KH Đạt TOP Năm";
             btnKHDatTopNam.TextAlign = ContentAlignment.MiddleLeft;
@@ -1735,9 +1735,9 @@
             // panel60
             // 
             panel60.Controls.Add(btnKHDatTopThang);
-            panel60.Location = new Point(-1, 385);
+            panel60.Location = new Point(-1, 369);
             panel60.Name = "panel60";
-            panel60.Size = new Size(287, 36);
+            panel60.Size = new Size(261, 34);
             panel60.TabIndex = 14;
             // 
             // btnKHDatTopThang
@@ -1747,10 +1747,10 @@
             btnKHDatTopThang.ForeColor = Color.White;
             btnKHDatTopThang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKHDatTopThang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKHDatTopThang.Location = new Point(-15, -4);
+            btnKHDatTopThang.Location = new Point(-14, -4);
             btnKHDatTopThang.Name = "btnKHDatTopThang";
-            btnKHDatTopThang.Padding = new Padding(30, 0, 0, 0);
-            btnKHDatTopThang.Size = new Size(341, 47);
+            btnKHDatTopThang.Padding = new Padding(27, 0, 0, 0);
+            btnKHDatTopThang.Size = new Size(310, 45);
             btnKHDatTopThang.TabIndex = 3;
             btnKHDatTopThang.Text = "             KH Đạt TOP Tháng";
             btnKHDatTopThang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1761,9 +1761,9 @@
             // panel61
             // 
             panel61.Controls.Add(btnSoQuyTienMat);
-            panel61.Location = new Point(-1, 343);
+            panel61.Location = new Point(-1, 329);
             panel61.Name = "panel61";
-            panel61.Size = new Size(287, 36);
+            panel61.Size = new Size(261, 34);
             panel61.TabIndex = 13;
             // 
             // btnSoQuyTienMat
@@ -1773,10 +1773,10 @@
             btnSoQuyTienMat.ForeColor = Color.White;
             btnSoQuyTienMat.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnSoQuyTienMat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSoQuyTienMat.Location = new Point(-15, -4);
+            btnSoQuyTienMat.Location = new Point(-14, -4);
             btnSoQuyTienMat.Name = "btnSoQuyTienMat";
-            btnSoQuyTienMat.Padding = new Padding(30, 0, 0, 0);
-            btnSoQuyTienMat.Size = new Size(326, 47);
+            btnSoQuyTienMat.Padding = new Padding(27, 0, 0, 0);
+            btnSoQuyTienMat.Size = new Size(296, 45);
             btnSoQuyTienMat.TabIndex = 3;
             btnSoQuyTienMat.Text = "             Sổ Quỹ Tiền Mặt";
             btnSoQuyTienMat.TextAlign = ContentAlignment.MiddleLeft;
@@ -1787,9 +1787,9 @@
             // panel18
             // 
             panel18.Controls.Add(btnKiemTraGiaBanThucTe);
-            panel18.Location = new Point(0, 297);
+            panel18.Location = new Point(0, 285);
             panel18.Name = "panel18";
-            panel18.Size = new Size(287, 36);
+            panel18.Size = new Size(261, 34);
             panel18.TabIndex = 12;
             // 
             // btnKiemTraGiaBanThucTe
@@ -1799,10 +1799,10 @@
             btnKiemTraGiaBanThucTe.ForeColor = Color.White;
             btnKiemTraGiaBanThucTe.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraGiaBanThucTe.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemTraGiaBanThucTe.Location = new Point(-15, -4);
+            btnKiemTraGiaBanThucTe.Location = new Point(-14, -4);
             btnKiemTraGiaBanThucTe.Name = "btnKiemTraGiaBanThucTe";
-            btnKiemTraGiaBanThucTe.Padding = new Padding(30, 0, 0, 0);
-            btnKiemTraGiaBanThucTe.Size = new Size(326, 47);
+            btnKiemTraGiaBanThucTe.Padding = new Padding(27, 0, 0, 0);
+            btnKiemTraGiaBanThucTe.Size = new Size(296, 45);
             btnKiemTraGiaBanThucTe.TabIndex = 3;
             btnKiemTraGiaBanThucTe.Text = "             Giá Bán Thực Tế\r\n";
             btnKiemTraGiaBanThucTe.TextAlign = ContentAlignment.MiddleLeft;
@@ -1813,9 +1813,9 @@
             // panel47
             // 
             panel47.Controls.Add(btnLichSuSanPham);
-            panel47.Location = new Point(0, 255);
+            panel47.Location = new Point(0, 244);
             panel47.Name = "panel47";
-            panel47.Size = new Size(287, 36);
+            panel47.Size = new Size(261, 34);
             panel47.TabIndex = 11;
             // 
             // btnLichSuSanPham
@@ -1825,10 +1825,10 @@
             btnLichSuSanPham.ForeColor = Color.White;
             btnLichSuSanPham.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuSanPham.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuSanPham.Location = new Point(-15, -4);
+            btnLichSuSanPham.Location = new Point(-14, -4);
             btnLichSuSanPham.Name = "btnLichSuSanPham";
-            btnLichSuSanPham.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuSanPham.Size = new Size(341, 47);
+            btnLichSuSanPham.Padding = new Padding(27, 0, 0, 0);
+            btnLichSuSanPham.Size = new Size(310, 45);
             btnLichSuSanPham.TabIndex = 3;
             btnLichSuSanPham.Text = "             Lịch Sử Sản Phẩm";
             btnLichSuSanPham.TextAlign = ContentAlignment.MiddleLeft;
@@ -1839,9 +1839,9 @@
             // panel51
             // 
             panel51.Controls.Add(btnLichSuKhachHang);
-            panel51.Location = new Point(0, 213);
+            panel51.Location = new Point(0, 204);
             panel51.Name = "panel51";
-            panel51.Size = new Size(287, 36);
+            panel51.Size = new Size(261, 34);
             panel51.TabIndex = 10;
             // 
             // btnLichSuKhachHang
@@ -1851,10 +1851,10 @@
             btnLichSuKhachHang.ForeColor = Color.White;
             btnLichSuKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuKhachHang.Location = new Point(-15, -4);
+            btnLichSuKhachHang.Location = new Point(-14, -4);
             btnLichSuKhachHang.Name = "btnLichSuKhachHang";
-            btnLichSuKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuKhachHang.Size = new Size(326, 47);
+            btnLichSuKhachHang.Padding = new Padding(27, 0, 0, 0);
+            btnLichSuKhachHang.Size = new Size(296, 45);
             btnLichSuKhachHang.TabIndex = 3;
             btnLichSuKhachHang.Text = "             Lịch Sử Khách Hàng";
             btnLichSuKhachHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1865,9 +1865,9 @@
             // panel52
             // 
             panel52.Controls.Add(btnBaoCaoTheoNhomHang);
-            panel52.Location = new Point(0, 171);
+            panel52.Location = new Point(0, 164);
             panel52.Name = "panel52";
-            panel52.Size = new Size(287, 36);
+            panel52.Size = new Size(261, 34);
             panel52.TabIndex = 9;
             // 
             // btnBaoCaoTheoNhomHang
@@ -1877,10 +1877,10 @@
             btnBaoCaoTheoNhomHang.ForeColor = Color.White;
             btnBaoCaoTheoNhomHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoTheoNhomHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCaoTheoNhomHang.Location = new Point(-15, -4);
+            btnBaoCaoTheoNhomHang.Location = new Point(-14, -4);
             btnBaoCaoTheoNhomHang.Name = "btnBaoCaoTheoNhomHang";
-            btnBaoCaoTheoNhomHang.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCaoTheoNhomHang.Size = new Size(340, 47);
+            btnBaoCaoTheoNhomHang.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCaoTheoNhomHang.Size = new Size(309, 45);
             btnBaoCaoTheoNhomHang.TabIndex = 3;
             btnBaoCaoTheoNhomHang.Text = "             Theo Nhóm Hàng";
             btnBaoCaoTheoNhomHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1891,9 +1891,9 @@
             // panel53
             // 
             panel53.Controls.Add(btnBaoCaoSoTienTang);
-            panel53.Location = new Point(0, 129);
+            panel53.Location = new Point(0, 124);
             panel53.Name = "panel53";
-            panel53.Size = new Size(287, 36);
+            panel53.Size = new Size(261, 34);
             panel53.TabIndex = 8;
             // 
             // btnBaoCaoSoTienTang
@@ -1903,10 +1903,10 @@
             btnBaoCaoSoTienTang.ForeColor = Color.White;
             btnBaoCaoSoTienTang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoSoTienTang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCaoSoTienTang.Location = new Point(-15, -4);
+            btnBaoCaoSoTienTang.Location = new Point(-14, -4);
             btnBaoCaoSoTienTang.Name = "btnBaoCaoSoTienTang";
-            btnBaoCaoSoTienTang.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCaoSoTienTang.Size = new Size(326, 47);
+            btnBaoCaoSoTienTang.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCaoSoTienTang.Size = new Size(296, 45);
             btnBaoCaoSoTienTang.TabIndex = 3;
             btnBaoCaoSoTienTang.Text = "             Báo Cáo Số Tiền Tặng";
             btnBaoCaoSoTienTang.TextAlign = ContentAlignment.MiddleLeft;
@@ -1917,9 +1917,9 @@
             // panel54
             // 
             panel54.Controls.Add(btnBaoCaoDiem);
-            panel54.Location = new Point(0, 87);
+            panel54.Location = new Point(0, 83);
             panel54.Name = "panel54";
-            panel54.Size = new Size(287, 36);
+            panel54.Size = new Size(261, 34);
             panel54.TabIndex = 7;
             // 
             // btnBaoCaoDiem
@@ -1929,10 +1929,10 @@
             btnBaoCaoDiem.ForeColor = Color.White;
             btnBaoCaoDiem.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoDiem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCaoDiem.Location = new Point(-15, -4);
+            btnBaoCaoDiem.Location = new Point(-14, -4);
             btnBaoCaoDiem.Name = "btnBaoCaoDiem";
-            btnBaoCaoDiem.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCaoDiem.Size = new Size(341, 47);
+            btnBaoCaoDiem.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCaoDiem.Size = new Size(310, 45);
             btnBaoCaoDiem.TabIndex = 3;
             btnBaoCaoDiem.Text = "             Báo Cáo Điểm";
             btnBaoCaoDiem.TextAlign = ContentAlignment.MiddleLeft;
@@ -1946,20 +1946,20 @@
             panel55.Dock = DockStyle.Top;
             panel55.Location = new Point(0, 0);
             panel55.Name = "panel55";
-            panel55.Size = new Size(287, 41);
+            panel55.Size = new Size(261, 39);
             panel55.TabIndex = 5;
             // 
             // btnBaoCao
             // 
-            btnBaoCao.BackColor = Color.FromArgb(89, 149, 206);
-            btnBaoCao.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBaoCao.BackColor = Color.FromArgb(37, 152, 230);
+            btnBaoCao.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCao.ForeColor = Color.White;
             btnBaoCao.Image = (Image)resources.GetObject("btnBaoCao.Image");
             btnBaoCao.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCao.Location = new Point(-12, -4);
+            btnBaoCao.Location = new Point(-11, -4);
             btnBaoCao.Name = "btnBaoCao";
-            btnBaoCao.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCao.Size = new Size(319, 52);
+            btnBaoCao.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCao.Size = new Size(290, 50);
             btnBaoCao.TabIndex = 3;
             btnBaoCao.Text = "             Báo Cáo";
             btnBaoCao.TextAlign = ContentAlignment.MiddleLeft;
@@ -1971,9 +1971,9 @@
             // panel56
             // 
             panel56.Controls.Add(btnBaoCaoBanHang);
-            panel56.Location = new Point(0, 45);
+            panel56.Location = new Point(0, 43);
             panel56.Name = "panel56";
-            panel56.Size = new Size(287, 36);
+            panel56.Size = new Size(261, 34);
             panel56.TabIndex = 4;
             // 
             // btnBaoCaoBanHang
@@ -1983,10 +1983,10 @@
             btnBaoCaoBanHang.ForeColor = Color.White;
             btnBaoCaoBanHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoCaoBanHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoCaoBanHang.Location = new Point(-15, -4);
+            btnBaoCaoBanHang.Location = new Point(-14, -4);
             btnBaoCaoBanHang.Name = "btnBaoCaoBanHang";
-            btnBaoCaoBanHang.Padding = new Padding(30, 0, 0, 0);
-            btnBaoCaoBanHang.Size = new Size(326, 47);
+            btnBaoCaoBanHang.Padding = new Padding(27, 0, 0, 0);
+            btnBaoCaoBanHang.Size = new Size(296, 45);
             btnBaoCaoBanHang.TabIndex = 3;
             btnBaoCaoBanHang.Text = "             Báo Cáo Bán Hàng";
             btnBaoCaoBanHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -2006,11 +2006,11 @@
             HangHoaContainer.Controls.Add(panel14);
             HangHoaContainer.Controls.Add(panel15);
             HangHoaContainer.Controls.Add(panel16);
-            HangHoaContainer.Location = new Point(3, 105);
-            HangHoaContainer.MaximumSize = new Size(287, 373);
-            HangHoaContainer.MinimumSize = new Size(287, 41);
+            HangHoaContainer.Location = new Point(3, 101);
+            HangHoaContainer.MaximumSize = new Size(261, 357);
+            HangHoaContainer.MinimumSize = new Size(261, 39);
             HangHoaContainer.Name = "HangHoaContainer";
-            HangHoaContainer.Size = new Size(287, 41);
+            HangHoaContainer.Size = new Size(261, 39);
             HangHoaContainer.TabIndex = 7;
             HangHoaContainer.Paint += HangHoaContainer_Paint;
             HangHoaContainer.MouseEnter += Button_MouseEnter;
@@ -2019,9 +2019,9 @@
             // panel68
             // 
             panel68.Controls.Add(btnLoaiSanPham);
-            panel68.Location = new Point(3, 337);
+            panel68.Location = new Point(3, 323);
             panel68.Name = "panel68";
-            panel68.Size = new Size(285, 36);
+            panel68.Size = new Size(259, 34);
             panel68.TabIndex = 12;
             // 
             // btnLoaiSanPham
@@ -2031,10 +2031,10 @@
             btnLoaiSanPham.ForeColor = Color.White;
             btnLoaiSanPham.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLoaiSanPham.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLoaiSanPham.Location = new Point(-18, -5);
+            btnLoaiSanPham.Location = new Point(-16, -5);
             btnLoaiSanPham.Name = "btnLoaiSanPham";
-            btnLoaiSanPham.Padding = new Padding(30, 0, 0, 0);
-            btnLoaiSanPham.Size = new Size(338, 47);
+            btnLoaiSanPham.Padding = new Padding(27, 0, 0, 0);
+            btnLoaiSanPham.Size = new Size(307, 45);
             btnLoaiSanPham.TabIndex = 3;
             btnLoaiSanPham.Text = "             Nhóm Hàng Hoá";
             btnLoaiSanPham.TextAlign = ContentAlignment.MiddleLeft;
@@ -2046,9 +2046,9 @@
             // panel17
             // 
             panel17.Controls.Add(btnDonViHangHoa);
-            panel17.Location = new Point(2, 296);
+            panel17.Location = new Point(2, 284);
             panel17.Name = "panel17";
-            panel17.Size = new Size(285, 36);
+            panel17.Size = new Size(259, 34);
             panel17.TabIndex = 11;
             // 
             // btnDonViHangHoa
@@ -2058,10 +2058,10 @@
             btnDonViHangHoa.ForeColor = Color.White;
             btnDonViHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDonViHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDonViHangHoa.Location = new Point(-18, -5);
+            btnDonViHangHoa.Location = new Point(-16, -5);
             btnDonViHangHoa.Name = "btnDonViHangHoa";
-            btnDonViHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnDonViHangHoa.Size = new Size(338, 47);
+            btnDonViHangHoa.Padding = new Padding(27, 0, 0, 0);
+            btnDonViHangHoa.Size = new Size(307, 45);
             btnDonViHangHoa.TabIndex = 3;
             btnDonViHangHoa.Text = "             Đơn Vị Hàng Hoá";
             btnDonViHangHoa.TextAlign = ContentAlignment.MiddleLeft;
@@ -2073,9 +2073,9 @@
             // panel10
             // 
             panel10.Controls.Add(btnTangGiaTheoNhom);
-            panel10.Location = new Point(0, 213);
+            panel10.Location = new Point(0, 204);
             panel10.Name = "panel10";
-            panel10.Size = new Size(287, 36);
+            panel10.Size = new Size(261, 34);
             panel10.TabIndex = 10;
             // 
             // btnTangGiaTheoNhom
@@ -2085,10 +2085,10 @@
             btnTangGiaTheoNhom.ForeColor = Color.White;
             btnTangGiaTheoNhom.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnTangGiaTheoNhom.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTangGiaTheoNhom.Location = new Point(-15, -4);
+            btnTangGiaTheoNhom.Location = new Point(-14, -4);
             btnTangGiaTheoNhom.Name = "btnTangGiaTheoNhom";
-            btnTangGiaTheoNhom.Padding = new Padding(30, 0, 0, 0);
-            btnTangGiaTheoNhom.Size = new Size(326, 47);
+            btnTangGiaTheoNhom.Padding = new Padding(27, 0, 0, 0);
+            btnTangGiaTheoNhom.Size = new Size(296, 45);
             btnTangGiaTheoNhom.TabIndex = 3;
             btnTangGiaTheoNhom.Text = "             Tăng Giá Theo Nhóm";
             btnTangGiaTheoNhom.TextAlign = ContentAlignment.MiddleLeft;
@@ -2099,9 +2099,9 @@
             // panel11
             // 
             panel11.Controls.Add(btnBaoGiaHangHoa);
-            panel11.Location = new Point(0, 172);
+            panel11.Location = new Point(0, 165);
             panel11.Name = "panel11";
-            panel11.Size = new Size(287, 36);
+            panel11.Size = new Size(261, 34);
             panel11.TabIndex = 9;
             // 
             // btnBaoGiaHangHoa
@@ -2111,10 +2111,10 @@
             btnBaoGiaHangHoa.ForeColor = Color.White;
             btnBaoGiaHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnBaoGiaHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoGiaHangHoa.Location = new Point(-15, -4);
+            btnBaoGiaHangHoa.Location = new Point(-14, -4);
             btnBaoGiaHangHoa.Name = "btnBaoGiaHangHoa";
-            btnBaoGiaHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnBaoGiaHangHoa.Size = new Size(326, 47);
+            btnBaoGiaHangHoa.Padding = new Padding(27, 0, 0, 0);
+            btnBaoGiaHangHoa.Size = new Size(296, 45);
             btnBaoGiaHangHoa.TabIndex = 3;
             btnBaoGiaHangHoa.Text = "             Báo Giá";
             btnBaoGiaHangHoa.TextAlign = ContentAlignment.MiddleLeft;
@@ -2125,9 +2125,9 @@
             // panel12
             // 
             panel12.Controls.Add(btnLichSuSanPhamDaBan);
-            panel12.Location = new Point(0, 255);
+            panel12.Location = new Point(0, 244);
             panel12.Name = "panel12";
-            panel12.Size = new Size(287, 36);
+            panel12.Size = new Size(261, 34);
             panel12.TabIndex = 5;
             // 
             // btnLichSuSanPhamDaBan
@@ -2137,10 +2137,10 @@
             btnLichSuSanPhamDaBan.ForeColor = Color.White;
             btnLichSuSanPhamDaBan.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnLichSuSanPhamDaBan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLichSuSanPhamDaBan.Location = new Point(-15, -4);
+            btnLichSuSanPhamDaBan.Location = new Point(-14, -4);
             btnLichSuSanPhamDaBan.Name = "btnLichSuSanPhamDaBan";
-            btnLichSuSanPhamDaBan.Padding = new Padding(30, 0, 0, 0);
-            btnLichSuSanPhamDaBan.Size = new Size(338, 47);
+            btnLichSuSanPhamDaBan.Padding = new Padding(27, 0, 0, 0);
+            btnLichSuSanPhamDaBan.Size = new Size(307, 45);
             btnLichSuSanPhamDaBan.TabIndex = 3;
             btnLichSuSanPhamDaBan.Text = "             Lịch Sử Đã Bán";
             btnLichSuSanPhamDaBan.TextAlign = ContentAlignment.MiddleLeft;
@@ -2151,9 +2151,9 @@
             // panel13
             // 
             panel13.Controls.Add(btnIntemMaVach);
-            panel13.Location = new Point(0, 130);
+            panel13.Location = new Point(0, 125);
             panel13.Name = "panel13";
-            panel13.Size = new Size(287, 36);
+            panel13.Size = new Size(261, 34);
             panel13.TabIndex = 8;
             // 
             // btnIntemMaVach
@@ -2163,10 +2163,10 @@
             btnIntemMaVach.ForeColor = Color.White;
             btnIntemMaVach.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnIntemMaVach.ImageAlign = ContentAlignment.MiddleLeft;
-            btnIntemMaVach.Location = new Point(-15, -4);
+            btnIntemMaVach.Location = new Point(-14, -4);
             btnIntemMaVach.Name = "btnIntemMaVach";
-            btnIntemMaVach.Padding = new Padding(30, 0, 0, 0);
-            btnIntemMaVach.Size = new Size(326, 47);
+            btnIntemMaVach.Padding = new Padding(27, 0, 0, 0);
+            btnIntemMaVach.Size = new Size(296, 45);
             btnIntemMaVach.TabIndex = 3;
             btnIntemMaVach.Text = "             In Mã Vạch";
             btnIntemMaVach.TextAlign = ContentAlignment.MiddleLeft;
@@ -2177,9 +2177,9 @@
             // panel14
             // 
             panel14.Controls.Add(btnDieuChinhGia);
-            panel14.Location = new Point(0, 86);
+            panel14.Location = new Point(0, 82);
             panel14.Name = "panel14";
-            panel14.Size = new Size(287, 36);
+            panel14.Size = new Size(261, 34);
             panel14.TabIndex = 7;
             // 
             // btnDieuChinhGia
@@ -2189,10 +2189,10 @@
             btnDieuChinhGia.ForeColor = Color.White;
             btnDieuChinhGia.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDieuChinhGia.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDieuChinhGia.Location = new Point(-15, -4);
+            btnDieuChinhGia.Location = new Point(-14, -4);
             btnDieuChinhGia.Name = "btnDieuChinhGia";
-            btnDieuChinhGia.Padding = new Padding(30, 0, 0, 0);
-            btnDieuChinhGia.Size = new Size(341, 47);
+            btnDieuChinhGia.Padding = new Padding(27, 0, 0, 0);
+            btnDieuChinhGia.Size = new Size(310, 45);
             btnDieuChinhGia.TabIndex = 3;
             btnDieuChinhGia.Text = "             Điều Chỉnh";
             btnDieuChinhGia.TextAlign = ContentAlignment.MiddleLeft;
@@ -2206,20 +2206,20 @@
             panel15.Dock = DockStyle.Top;
             panel15.Location = new Point(0, 0);
             panel15.Name = "panel15";
-            panel15.Size = new Size(287, 39);
+            panel15.Size = new Size(261, 37);
             panel15.TabIndex = 5;
             // 
             // btnHangHoa
             // 
-            btnHangHoa.BackColor = Color.FromArgb(89, 149, 206);
-            btnHangHoa.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHangHoa.BackColor = Color.FromArgb(37, 152, 230);
+            btnHangHoa.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnHangHoa.ForeColor = Color.White;
             btnHangHoa.Image = (Image)resources.GetObject("btnHangHoa.Image");
             btnHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHangHoa.Location = new Point(-17, -4);
+            btnHangHoa.Location = new Point(-15, -4);
             btnHangHoa.Name = "btnHangHoa";
-            btnHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnHangHoa.Size = new Size(328, 53);
+            btnHangHoa.Padding = new Padding(27, 0, 0, 0);
+            btnHangHoa.Size = new Size(298, 51);
             btnHangHoa.TabIndex = 3;
             btnHangHoa.Text = "             Hàng Hoá";
             btnHangHoa.TextAlign = ContentAlignment.MiddleLeft;
@@ -2231,9 +2231,9 @@
             // panel16
             // 
             panel16.Controls.Add(btnDanhSachHangHoa);
-            panel16.Location = new Point(0, 44);
+            panel16.Location = new Point(0, 42);
             panel16.Name = "panel16";
-            panel16.Size = new Size(287, 36);
+            panel16.Size = new Size(261, 34);
             panel16.TabIndex = 4;
             // 
             // btnDanhSachHangHoa
@@ -2243,10 +2243,10 @@
             btnDanhSachHangHoa.ForeColor = Color.White;
             btnDanhSachHangHoa.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnDanhSachHangHoa.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDanhSachHangHoa.Location = new Point(-15, -4);
+            btnDanhSachHangHoa.Location = new Point(-14, -4);
             btnDanhSachHangHoa.Name = "btnDanhSachHangHoa";
-            btnDanhSachHangHoa.Padding = new Padding(30, 0, 0, 0);
-            btnDanhSachHangHoa.Size = new Size(326, 47);
+            btnDanhSachHangHoa.Padding = new Padding(27, 0, 0, 0);
+            btnDanhSachHangHoa.Size = new Size(296, 45);
             btnDanhSachHangHoa.TabIndex = 3;
             btnDanhSachHangHoa.Text = "             Danh Sách";
             btnDanhSachHangHoa.TextAlign = ContentAlignment.MiddleLeft;
@@ -2257,7 +2257,7 @@
             // 
             // flpMain
             // 
-            flpMain.BackColor = Color.FromArgb(89, 149, 206);
+            flpMain.BackColor = Color.FromArgb(37, 152, 230);
             flpMain.Controls.Add(pbLogoMeXiu);
             flpMain.Controls.Add(KhachHangContainer);
             flpMain.Controls.Add(HangHoaContainer);
@@ -2272,22 +2272,22 @@
             flpMain.Controls.Add(CaiDatContainer);
             flpMain.Dock = DockStyle.Left;
             flpMain.Location = new Point(0, 0);
-            flpMain.MaximumSize = new Size(290, 0);
-            flpMain.MinimumSize = new Size(75, 0);
+            flpMain.MaximumSize = new Size(264, 0);
+            flpMain.MinimumSize = new Size(68, 0);
             flpMain.Name = "flpMain";
-            flpMain.Size = new Size(290, 831);
+            flpMain.Size = new Size(264, 796);
             flpMain.TabIndex = 2;
             flpMain.Paint += flpMain_Paint;
             // 
             // pbLogoMeXiu
             // 
-            pbLogoMeXiu.BackColor = Color.FromArgb(89, 149, 206);
+            pbLogoMeXiu.BackColor = Color.FromArgb(37, 152, 230);
             pbLogoMeXiu.Image = PosManager.Properties.Resources._326559583_468268058851274_8797007794984294310_n;
             pbLogoMeXiu.Location = new Point(3, 3);
-            pbLogoMeXiu.MaximumSize = new Size(287, 49);
-            pbLogoMeXiu.MinimumSize = new Size(72, 49);
+            pbLogoMeXiu.MaximumSize = new Size(261, 47);
+            pbLogoMeXiu.MinimumSize = new Size(65, 47);
             pbLogoMeXiu.Name = "pbLogoMeXiu";
-            pbLogoMeXiu.Size = new Size(287, 49);
+            pbLogoMeXiu.Size = new Size(261, 47);
             pbLogoMeXiu.SizeMode = PictureBoxSizeMode.Zoom;
             pbLogoMeXiu.TabIndex = 0;
             pbLogoMeXiu.TabStop = false;
@@ -2304,11 +2304,11 @@
             KhachHangContainer.Controls.Add(panel2);
             KhachHangContainer.Controls.Add(panel34);
             KhachHangContainer.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            KhachHangContainer.Location = new Point(3, 58);
-            KhachHangContainer.MaximumSize = new Size(287, 302);
-            KhachHangContainer.MinimumSize = new Size(287, 41);
+            KhachHangContainer.Location = new Point(3, 56);
+            KhachHangContainer.MaximumSize = new Size(261, 289);
+            KhachHangContainer.MinimumSize = new Size(261, 39);
             KhachHangContainer.Name = "KhachHangContainer";
-            KhachHangContainer.Size = new Size(287, 41);
+            KhachHangContainer.Size = new Size(261, 39);
             KhachHangContainer.TabIndex = 6;
             KhachHangContainer.MouseEnter += Button_MouseEnter;
             KhachHangContainer.MouseLeave += Button_MouseLeave;
@@ -2316,9 +2316,9 @@
             // panel9
             // 
             panel9.Controls.Add(btnTiepNhanXuLyYeuCau);
-            panel9.Location = new Point(0, 222);
+            panel9.Location = new Point(0, 213);
             panel9.Name = "panel9";
-            panel9.Size = new Size(209, 36);
+            panel9.Size = new Size(190, 34);
             panel9.TabIndex = 10;
             // 
             // btnTiepNhanXuLyYeuCau
@@ -2328,10 +2328,10 @@
             btnTiepNhanXuLyYeuCau.ForeColor = Color.White;
             btnTiepNhanXuLyYeuCau.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnTiepNhanXuLyYeuCau.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTiepNhanXuLyYeuCau.Location = new Point(-15, -4);
+            btnTiepNhanXuLyYeuCau.Location = new Point(-14, -4);
             btnTiepNhanXuLyYeuCau.Name = "btnTiepNhanXuLyYeuCau";
-            btnTiepNhanXuLyYeuCau.Padding = new Padding(30, 0, 0, 0);
-            btnTiepNhanXuLyYeuCau.Size = new Size(340, 47);
+            btnTiepNhanXuLyYeuCau.Padding = new Padding(27, 0, 0, 0);
+            btnTiepNhanXuLyYeuCau.Size = new Size(309, 45);
             btnTiepNhanXuLyYeuCau.TabIndex = 3;
             btnTiepNhanXuLyYeuCau.Text = "             Yêu Cầu";
             btnTiepNhanXuLyYeuCau.TextAlign = ContentAlignment.MiddleLeft;
@@ -2342,9 +2342,9 @@
             // panel8
             // 
             panel8.Controls.Add(btnSinhNhat);
-            panel8.Location = new Point(0, 173);
+            panel8.Location = new Point(0, 166);
             panel8.Name = "panel8";
-            panel8.Size = new Size(209, 36);
+            panel8.Size = new Size(190, 34);
             panel8.TabIndex = 9;
             // 
             // btnSinhNhat
@@ -2354,10 +2354,10 @@
             btnSinhNhat.ForeColor = Color.White;
             btnSinhNhat.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnSinhNhat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSinhNhat.Location = new Point(-15, -4);
+            btnSinhNhat.Location = new Point(-14, -4);
             btnSinhNhat.Name = "btnSinhNhat";
-            btnSinhNhat.Padding = new Padding(30, 0, 0, 0);
-            btnSinhNhat.Size = new Size(325, 47);
+            btnSinhNhat.Padding = new Padding(27, 0, 0, 0);
+            btnSinhNhat.Size = new Size(295, 45);
             btnSinhNhat.TabIndex = 3;
             btnSinhNhat.Text = "             Sinh Nhật";
             btnSinhNhat.TextAlign = ContentAlignment.MiddleLeft;
@@ -2368,9 +2368,9 @@
             // panel4
             // 
             panel4.Controls.Add(btnCapBacKhachHang);
-            panel4.Location = new Point(0, 264);
+            panel4.Location = new Point(0, 253);
             panel4.Name = "panel4";
-            panel4.Size = new Size(209, 36);
+            panel4.Size = new Size(190, 34);
             panel4.TabIndex = 5;
             // 
             // btnCapBacKhachHang
@@ -2380,10 +2380,10 @@
             btnCapBacKhachHang.ForeColor = Color.White;
             btnCapBacKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnCapBacKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCapBacKhachHang.Location = new Point(-15, -4);
+            btnCapBacKhachHang.Location = new Point(-14, -4);
             btnCapBacKhachHang.Name = "btnCapBacKhachHang";
-            btnCapBacKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnCapBacKhachHang.Size = new Size(325, 47);
+            btnCapBacKhachHang.Padding = new Padding(27, 0, 0, 0);
+            btnCapBacKhachHang.Size = new Size(295, 45);
             btnCapBacKhachHang.TabIndex = 3;
             btnCapBacKhachHang.Text = "             Cấp Bậc";
             btnCapBacKhachHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -2394,9 +2394,9 @@
             // panel7
             // 
             panel7.Controls.Add(btnSMSZalo);
-            panel7.Location = new Point(0, 131);
+            panel7.Location = new Point(0, 126);
             panel7.Name = "panel7";
-            panel7.Size = new Size(209, 36);
+            panel7.Size = new Size(190, 34);
             panel7.TabIndex = 8;
             // 
             // btnSMSZalo
@@ -2406,10 +2406,10 @@
             btnSMSZalo.ForeColor = Color.White;
             btnSMSZalo.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnSMSZalo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSMSZalo.Location = new Point(-15, -4);
+            btnSMSZalo.Location = new Point(-14, -4);
             btnSMSZalo.Name = "btnSMSZalo";
-            btnSMSZalo.Padding = new Padding(30, 0, 0, 0);
-            btnSMSZalo.Size = new Size(317, 47);
+            btnSMSZalo.Padding = new Padding(27, 0, 0, 0);
+            btnSMSZalo.Size = new Size(288, 45);
             btnSMSZalo.TabIndex = 3;
             btnSMSZalo.Text = "             SMS";
             btnSMSZalo.TextAlign = ContentAlignment.MiddleLeft;
@@ -2420,9 +2420,9 @@
             // panel6
             // 
             panel6.Controls.Add(btnNhaCungCap);
-            panel6.Location = new Point(0, 87);
+            panel6.Location = new Point(0, 83);
             panel6.Name = "panel6";
-            panel6.Size = new Size(209, 36);
+            panel6.Size = new Size(190, 34);
             panel6.TabIndex = 7;
             // 
             // btnNhaCungCap
@@ -2432,10 +2432,10 @@
             btnNhaCungCap.ForeColor = Color.White;
             btnNhaCungCap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnNhaCungCap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNhaCungCap.Location = new Point(-15, -4);
+            btnNhaCungCap.Location = new Point(-14, -4);
             btnNhaCungCap.Name = "btnNhaCungCap";
-            btnNhaCungCap.Padding = new Padding(30, 0, 0, 0);
-            btnNhaCungCap.Size = new Size(325, 47);
+            btnNhaCungCap.Padding = new Padding(27, 0, 0, 0);
+            btnNhaCungCap.Size = new Size(295, 45);
             btnNhaCungCap.TabIndex = 3;
             btnNhaCungCap.Text = "             Nhà Cung Cấp";
             btnNhaCungCap.TextAlign = ContentAlignment.MiddleLeft;
@@ -2450,20 +2450,20 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(287, 39);
+            panel2.Size = new Size(261, 37);
             panel2.TabIndex = 5;
             // 
             // btnKhachHang
             // 
-            btnKhachHang.BackColor = Color.FromArgb(89, 149, 206);
-            btnKhachHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKhachHang.BackColor = Color.FromArgb(37, 152, 230);
+            btnKhachHang.Font = new Font("Tahoma", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnKhachHang.ForeColor = Color.White;
             btnKhachHang.Image = (Image)resources.GetObject("btnKhachHang.Image");
             btnKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKhachHang.Location = new Point(-17, -4);
+            btnKhachHang.Location = new Point(-15, -4);
             btnKhachHang.Name = "btnKhachHang";
-            btnKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnKhachHang.Size = new Size(319, 53);
+            btnKhachHang.Padding = new Padding(27, 0, 0, 0);
+            btnKhachHang.Size = new Size(290, 51);
             btnKhachHang.TabIndex = 3;
             btnKhachHang.Text = "             Khách Hàng";
             btnKhachHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -2475,9 +2475,9 @@
             // panel34
             // 
             panel34.Controls.Add(btnQLKhachHang);
-            panel34.Location = new Point(0, 45);
+            panel34.Location = new Point(0, 43);
             panel34.Name = "panel34";
-            panel34.Size = new Size(209, 36);
+            panel34.Size = new Size(190, 34);
             panel34.TabIndex = 4;
             // 
             // btnQLKhachHang
@@ -2487,10 +2487,10 @@
             btnQLKhachHang.ForeColor = Color.White;
             btnQLKhachHang.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnQLKhachHang.ImageAlign = ContentAlignment.MiddleLeft;
-            btnQLKhachHang.Location = new Point(-15, -4);
+            btnQLKhachHang.Location = new Point(-14, -4);
             btnQLKhachHang.Name = "btnQLKhachHang";
-            btnQLKhachHang.Padding = new Padding(30, 0, 0, 0);
-            btnQLKhachHang.Size = new Size(325, 47);
+            btnQLKhachHang.Padding = new Padding(27, 0, 0, 0);
+            btnQLKhachHang.Size = new Size(295, 45);
             btnQLKhachHang.TabIndex = 3;
             btnQLKhachHang.Text = "             Danh Sách";
             btnQLKhachHang.TextAlign = ContentAlignment.MiddleLeft;
@@ -2552,15 +2552,15 @@
             // 
             // fMain
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1624, 831);
+            ClientSize = new Size(1476, 796);
             Controls.Add(splitContainer1);
             Controls.Add(flpMain);
-            Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(6);
-            MinimumSize = new Size(1640, 870);
+            Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(5, 6, 5, 6);
+            MinimumSize = new Size(1492, 835);
             Name = "fMain";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
