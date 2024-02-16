@@ -112,6 +112,9 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>C:\Users\admin\Downloads\RashiCode Krypton_toolKitDemo\Krypton_toolKitDemo\bin\Debug\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="VietKeyInput">
+      <HintPath>LibKrypton\VietKeyInput.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

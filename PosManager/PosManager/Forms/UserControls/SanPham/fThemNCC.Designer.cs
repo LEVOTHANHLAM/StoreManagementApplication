@@ -88,9 +88,9 @@
             // 
             // txtMaNCC
             // 
-            txtMaNCC.Location = new Point(220, 12);
+            txtMaNCC.Location = new Point(131, 12);
             txtMaNCC.Name = "txtMaNCC";
-            txtMaNCC.Size = new Size(344, 31);
+            txtMaNCC.Size = new Size(344, 33);
             txtMaNCC.StateCommon.Back.Color1 = Color.White;
             txtMaNCC.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtMaNCC.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -98,25 +98,25 @@
             txtMaNCC.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtMaNCC.StateCommon.Border.Rounding = 18;
             txtMaNCC.StateCommon.Content.Color1 = Color.Black;
-            txtMaNCC.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMaNCC.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtMaNCC.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtMaNCC.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(64, 64, 64);
             label3.Location = new Point(-2, 19);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(99, 24);
+            label3.Size = new Size(75, 18);
             label3.TabIndex = 5;
             label3.Text = "Mã NCC :";
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(131, 225);
+            btnSave.Location = new Point(90, 209);
             btnSave.Name = "btnSave";
             btnSave.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnSave.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -142,7 +142,7 @@
             btnSave.StateCommon.Border.Width = 1;
             btnSave.StateCommon.Content.ShortText.Color1 = Color.White;
             btnSave.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnSave.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
             btnSave.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
             btnSave.StatePressed.Back.ColorAngle = 130F;
@@ -168,7 +168,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(340, 225);
+            btnCancel.Location = new Point(292, 209);
             btnCancel.Name = "btnCancel";
             btnCancel.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnCancel.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -194,7 +194,7 @@
             btnCancel.StateCommon.Border.Width = 1;
             btnCancel.StateCommon.Content.ShortText.Color1 = Color.White;
             btnCancel.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnCancel.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
             btnCancel.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
             btnCancel.StatePressed.Back.ColorAngle = 130F;
@@ -221,32 +221,32 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(64, 64, 64);
             label2.Location = new Point(-3, 112);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(89, 24);
+            label2.Size = new Size(71, 18);
             label2.TabIndex = 17;
             label2.Text = "Địa Chỉ :";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
             label8.Location = new Point(-2, 67);
             label8.Margin = new Padding(6, 0, 6, 0);
             label8.Name = "label8";
-            label8.Size = new Size(108, 24);
+            label8.Size = new Size(80, 18);
             label8.TabIndex = 25;
             label8.Text = "Tên NCC :";
             // 
             // txtTenNCC
             // 
-            txtTenNCC.Location = new Point(220, 60);
+            txtTenNCC.Location = new Point(131, 60);
             txtTenNCC.Name = "txtTenNCC";
-            txtTenNCC.Size = new Size(344, 31);
+            txtTenNCC.Size = new Size(344, 33);
             txtTenNCC.StateCommon.Back.Color1 = Color.White;
             txtTenNCC.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtTenNCC.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -254,15 +254,15 @@
             txtTenNCC.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtTenNCC.StateCommon.Border.Rounding = 18;
             txtTenNCC.StateCommon.Content.Color1 = Color.Black;
-            txtTenNCC.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTenNCC.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtTenNCC.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtTenNCC.TabIndex = 24;
             // 
             // txtDiaChi
             // 
-            txtDiaChi.Location = new Point(220, 105);
+            txtDiaChi.Location = new Point(131, 105);
             txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(344, 31);
+            txtDiaChi.Size = new Size(344, 33);
             txtDiaChi.StateCommon.Back.Color1 = Color.White;
             txtDiaChi.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtDiaChi.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -270,16 +270,16 @@
             txtDiaChi.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtDiaChi.StateCommon.Border.Rounding = 18;
             txtDiaChi.StateCommon.Content.Color1 = Color.Black;
-            txtDiaChi.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDiaChi.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtDiaChi.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtDiaChi.TabIndex = 26;
             txtDiaChi.TextChanged += kryptonTextBox1_TextChanged;
             // 
             // txtSDT
             // 
-            txtSDT.Location = new Point(220, 157);
+            txtSDT.Location = new Point(131, 157);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(344, 31);
+            txtSDT.Size = new Size(344, 33);
             txtSDT.StateCommon.Back.Color1 = Color.White;
             txtSDT.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtSDT.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -287,19 +287,19 @@
             txtSDT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtSDT.StateCommon.Border.Rounding = 18;
             txtSDT.StateCommon.Content.Color1 = Color.Black;
-            txtSDT.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSDT.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtSDT.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtSDT.TabIndex = 28;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
             label1.Location = new Point(-3, 164);
             label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(155, 24);
+            label1.Size = new Size(120, 18);
             label1.TabIndex = 27;
             label1.Text = "Số Điện Thoại :";
             // 
@@ -308,7 +308,7 @@
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(584, 272);
+            ClientSize = new Size(482, 250);
             Controls.Add(txtSDT);
             Controls.Add(label1);
             Controls.Add(txtDiaChi);
@@ -321,8 +321,8 @@
             Controls.Add(txtMaNCC);
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
-            MaximumSize = new Size(600, 311);
-            MinimumSize = new Size(600, 267);
+            MaximumSize = new Size(498, 289);
+            MinimumSize = new Size(498, 289);
             Name = "fThemNCC";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

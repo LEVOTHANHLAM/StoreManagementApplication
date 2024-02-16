@@ -113,15 +113,15 @@
             // 
             txtUsername.Location = new Point(427, 185);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(349, 31);
+            txtUsername.Size = new Size(349, 33);
             txtUsername.StateCommon.Back.Color1 = Color.White;
             txtUsername.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtUsername.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
             txtUsername.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             txtUsername.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtUsername.StateCommon.Border.Rounding = 18;
-            txtUsername.StateCommon.Content.Color1 = Color.Gray;
-            txtUsername.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUsername.StateCommon.Content.Color1 = Color.Black;
+            txtUsername.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtUsername.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtUsername.TabIndex = 2;
             // 
@@ -130,15 +130,15 @@
             txtPassword.Location = new Point(427, 258);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '●';
-            txtPassword.Size = new Size(349, 31);
+            txtPassword.Size = new Size(349, 33);
             txtPassword.StateCommon.Back.Color1 = Color.White;
             txtPassword.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtPassword.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
             txtPassword.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtPassword.StateCommon.Border.Rounding = 18;
-            txtPassword.StateCommon.Content.Color1 = Color.Gray;
-            txtPassword.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtPassword.StateCommon.Content.Color1 = Color.Black;
+            txtPassword.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtPassword.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtPassword.TabIndex = 3;
             txtPassword.UseSystemPasswordChar = true;

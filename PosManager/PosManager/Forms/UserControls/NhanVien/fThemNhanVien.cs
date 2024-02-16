@@ -8,6 +8,7 @@ using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
+using System.Runtime.InteropServices;
 
 namespace Krypton_toolKitDemo
 {
@@ -25,6 +26,7 @@ namespace Krypton_toolKitDemo
             _authenticateController = new AuthenticateController();
             cbbChucVu.SelectedIndex = 0;
             _storesController = new StoresController();
+
         }
 
         private async void Form1_Load(object sender, EventArgs e)

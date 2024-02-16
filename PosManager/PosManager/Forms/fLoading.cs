@@ -15,9 +15,9 @@ namespace PosManager.Forms
 
         private void InitializeForm()
         {
-            Size = new System.Drawing.Size(200, 200);
+            Size = new System.Drawing.Size(150, 150);
             FormBorderStyle = FormBorderStyle.None; // Loại bỏ các nút điều khiển form
-
+            this.BackColor = Color.White;
             pictureBox = new PictureBox
             {
                 Image = Properties.Resources.Loading, // Thay "LoadingGif" bằng tên của hình ảnh GIF trong resources của bạn

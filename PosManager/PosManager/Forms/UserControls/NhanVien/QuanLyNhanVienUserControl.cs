@@ -67,7 +67,7 @@ namespace PosManager.Forms.UserControls.NhanVien
                             {
                                 value = "Admin";
                             }
-                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, "Show", a.Id);
+                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, "Show", "Cấp Quyền", a.Id);
                             i++;
                         }
                         row = i;
@@ -140,6 +140,16 @@ namespace PosManager.Forms.UserControls.NhanVien
                 {
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fThemNhanVien edit = new fThemNhanVien(id);
+                    edit.ShowDialog();
+                    loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cCapQuyen"].Index)
+            {
+                if (permissionModel != null && permissionModel.HasUpdate)
+                {
+                    var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                    fPhanQuyen edit = new fPhanQuyen(id);
                     edit.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }

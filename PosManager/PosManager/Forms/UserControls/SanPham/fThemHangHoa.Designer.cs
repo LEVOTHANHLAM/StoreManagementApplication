@@ -30,10 +30,12 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThemHangHoa));
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             panel1 = new Panel();
             btnAddColumdtgvDonViTinh = new PictureBox();
@@ -152,6 +154,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtMaVach);
             panel1.Dock = DockStyle.Top;
+            panel1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1410, 182);
@@ -160,9 +163,9 @@
             // btnAddColumdtgvDonViTinh
             // 
             btnAddColumdtgvDonViTinh.Image = PosManager.Properties.Resources.icons8_add_40;
-            btnAddColumdtgvDonViTinh.Location = new Point(3, 142);
+            btnAddColumdtgvDonViTinh.Location = new Point(3, 144);
             btnAddColumdtgvDonViTinh.Name = "btnAddColumdtgvDonViTinh";
-            btnAddColumdtgvDonViTinh.Size = new Size(43, 37);
+            btnAddColumdtgvDonViTinh.Size = new Size(40, 35);
             btnAddColumdtgvDonViTinh.SizeMode = PictureBoxSizeMode.Zoom;
             btnAddColumdtgvDonViTinh.TabIndex = 45;
             btnAddColumdtgvDonViTinh.TabStop = false;
@@ -170,9 +173,11 @@
             // 
             // cbbMaDonviCoBan
             // 
+            cbbMaDonviCoBan.BackColor = Color.White;
             cbbMaDonviCoBan.DisplayMember = "DisplayText";
             cbbMaDonviCoBan.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbMaDonviCoBan.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbMaDonviCoBan.FlatStyle = FlatStyle.Flat;
+            cbbMaDonviCoBan.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             cbbMaDonviCoBan.FormattingEnabled = true;
             cbbMaDonviCoBan.Location = new Point(921, 86);
             cbbMaDonviCoBan.Name = "cbbMaDonviCoBan";
@@ -184,20 +189,22 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(64, 64, 64);
             label9.Location = new Point(690, 93);
             label9.Margin = new Padding(6, 0, 6, 0);
             label9.Name = "label9";
-            label9.Size = new Size(193, 24);
+            label9.Size = new Size(147, 18);
             label9.TabIndex = 43;
             label9.Text = "Mã Đơn Vị Cơ Bản :";
             // 
             // cbbMaNhomHang
             // 
+            cbbMaNhomHang.BackColor = Color.White;
             cbbMaNhomHang.DisplayMember = "DisplayText";
             cbbMaNhomHang.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbMaNhomHang.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbMaNhomHang.FlatStyle = FlatStyle.Flat;
+            cbbMaNhomHang.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             cbbMaNhomHang.FormattingEnabled = true;
             cbbMaNhomHang.Location = new Point(921, 127);
             cbbMaNhomHang.Name = "cbbMaNhomHang";
@@ -208,12 +215,12 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(64, 64, 64);
             label6.Location = new Point(690, 56);
             label6.Margin = new Padding(6, 0, 6, 0);
             label6.Name = "label6";
-            label6.Size = new Size(98, 24);
+            label6.Size = new Size(74, 18);
             label6.TabIndex = 37;
             label6.Text = "Ghi Chú :";
             // 
@@ -221,7 +228,7 @@
             // 
             txtGhiChu.Location = new Point(921, 49);
             txtGhiChu.Name = "txtGhiChu";
-            txtGhiChu.Size = new Size(299, 31);
+            txtGhiChu.Size = new Size(299, 33);
             txtGhiChu.StateCommon.Back.Color1 = Color.White;
             txtGhiChu.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtGhiChu.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -229,19 +236,19 @@
             txtGhiChu.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtGhiChu.StateCommon.Border.Rounding = 18;
             txtGhiChu.StateCommon.Content.Color1 = Color.Black;
-            txtGhiChu.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtGhiChu.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtGhiChu.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtGhiChu.TabIndex = 36;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(64, 64, 64);
             label7.Location = new Point(690, 19);
             label7.Margin = new Padding(6, 0, 6, 0);
             label7.Name = "label7";
-            label7.Size = new Size(63, 24);
+            label7.Size = new Size(46, 18);
             label7.TabIndex = 35;
             label7.Text = "VAT :";
             // 
@@ -249,7 +256,7 @@
             // 
             txtVAT.Location = new Point(921, 12);
             txtVAT.Name = "txtVAT";
-            txtVAT.Size = new Size(299, 31);
+            txtVAT.Size = new Size(299, 33);
             txtVAT.StateCommon.Back.Color1 = Color.White;
             txtVAT.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtVAT.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -257,7 +264,7 @@
             txtVAT.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtVAT.StateCommon.Border.Rounding = 18;
             txtVAT.StateCommon.Content.Color1 = Color.Black;
-            txtVAT.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtVAT.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtVAT.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtVAT.TabIndex = 34;
             txtVAT.TextChanged += txtVAT_TextChanged;
@@ -268,24 +275,24 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(64, 64, 64);
             label4.Location = new Point(690, 129);
             label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(168, 24);
+            label4.Size = new Size(128, 18);
             label4.TabIndex = 33;
             label4.Text = "Mã Nhóm Hàng :";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(64, 64, 64);
             label5.Location = new Point(38, 93);
             label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new Size(205, 24);
+            label5.Size = new Size(153, 18);
             label5.TabIndex = 31;
             label5.Text = "Tên HH Không Dấu :";
             // 
@@ -293,7 +300,7 @@
             // 
             txtTenHangHoaKhongDau.Location = new Point(260, 86);
             txtTenHangHoaKhongDau.Name = "txtTenHangHoaKhongDau";
-            txtTenHangHoaKhongDau.Size = new Size(300, 31);
+            txtTenHangHoaKhongDau.Size = new Size(300, 33);
             txtTenHangHoaKhongDau.StateCommon.Back.Color1 = Color.White;
             txtTenHangHoaKhongDau.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtTenHangHoaKhongDau.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -301,19 +308,19 @@
             txtTenHangHoaKhongDau.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtTenHangHoaKhongDau.StateCommon.Border.Rounding = 18;
             txtTenHangHoaKhongDau.StateCommon.Content.Color1 = Color.Black;
-            txtTenHangHoaKhongDau.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTenHangHoaKhongDau.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtTenHangHoaKhongDau.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtTenHangHoaKhongDau.TabIndex = 30;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
             label8.Location = new Point(38, 56);
             label8.Margin = new Padding(6, 0, 6, 0);
             label8.Name = "label8";
-            label8.Size = new Size(159, 24);
+            label8.Size = new Size(119, 18);
             label8.TabIndex = 29;
             label8.Text = "Tên Hàng Hóa :";
             // 
@@ -321,7 +328,7 @@
             // 
             txtTenHangHoa.Location = new Point(260, 49);
             txtTenHangHoa.Name = "txtTenHangHoa";
-            txtTenHangHoa.Size = new Size(300, 31);
+            txtTenHangHoa.Size = new Size(300, 33);
             txtTenHangHoa.StateCommon.Back.Color1 = Color.White;
             txtTenHangHoa.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtTenHangHoa.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -329,19 +336,19 @@
             txtTenHangHoa.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtTenHangHoa.StateCommon.Border.Rounding = 18;
             txtTenHangHoa.StateCommon.Content.Color1 = Color.Black;
-            txtTenHangHoa.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTenHangHoa.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtTenHangHoa.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtTenHangHoa.TabIndex = 28;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(64, 64, 64);
             label3.Location = new Point(38, 19);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(104, 24);
+            label3.Size = new Size(79, 18);
             label3.TabIndex = 27;
             label3.Text = "Mã Vạch :";
             // 
@@ -349,7 +356,7 @@
             // 
             txtMaVach.Location = new Point(260, 12);
             txtMaVach.Name = "txtMaVach";
-            txtMaVach.Size = new Size(300, 31);
+            txtMaVach.Size = new Size(300, 33);
             txtMaVach.StateCommon.Back.Color1 = Color.White;
             txtMaVach.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtMaVach.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -357,7 +364,7 @@
             txtMaVach.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtMaVach.StateCommon.Border.Rounding = 18;
             txtMaVach.StateCommon.Content.Color1 = Color.Black;
-            txtMaVach.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtMaVach.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtMaVach.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtMaVach.TabIndex = 26;
             // 
@@ -368,7 +375,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1410, 309);
+            panel2.Size = new Size(1410, 329);
             panel2.TabIndex = 1;
             // 
             // splitContainer1
@@ -386,7 +393,7 @@
             // 
             splitContainer1.Panel2.Controls.Add(panel7);
             splitContainer1.Panel2.Controls.Add(panel9);
-            splitContainer1.Size = new Size(1410, 309);
+            splitContainer1.Size = new Size(1410, 329);
             splitContainer1.SplitterDistance = 648;
             splitContainer1.TabIndex = 5;
             // 
@@ -394,9 +401,10 @@
             // 
             panel8.Controls.Add(dtgvDonViTinh);
             panel8.Dock = DockStyle.Fill;
+            panel8.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             panel8.Location = new Point(0, 28);
             panel8.Name = "panel8";
-            panel8.Size = new Size(648, 281);
+            panel8.Size = new Size(648, 301);
             panel8.TabIndex = 1;
             // 
             // dtgvDonViTinh
@@ -405,16 +413,24 @@
             dtgvDonViTinh.AllowUserToDeleteRows = false;
             dtgvDonViTinh.AllowUserToResizeRows = false;
             dtgvDonViTinh.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dtgvDonViTinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgvDonViTinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvDonViTinh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvDonViTinh.Columns.AddRange(new DataGridViewColumn[] { cDelete, cTenDonViTinh, cQuyDoi });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dtgvDonViTinh.DefaultCellStyle = dataGridViewCellStyle3;
             dtgvDonViTinh.Dock = DockStyle.Fill;
             dtgvDonViTinh.EditMode = DataGridViewEditMode.EditOnEnter;
             dtgvDonViTinh.Location = new Point(0, 0);
@@ -422,7 +438,7 @@
             dtgvDonViTinh.RowHeadersVisible = false;
             dtgvDonViTinh.RowTemplate.Height = 25;
             dtgvDonViTinh.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvDonViTinh.Size = new Size(648, 281);
+            dtgvDonViTinh.Size = new Size(648, 301);
             dtgvDonViTinh.TabIndex = 17;
             dtgvDonViTinh.EditModeChanged += dtgvDonViTinh_EditModeChanged;
             dtgvDonViTinh.CellClick += dtgvDonViTinh_CellClick;
@@ -442,9 +458,9 @@
             // cTenDonViTinh
             // 
             cTenDonViTinh.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cTenDonViTinh.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cTenDonViTinh.DefaultCellStyle = dataGridViewCellStyle2;
             cTenDonViTinh.HeaderText = "Tên Đơn Vị Tính";
             cTenDonViTinh.Name = "cTenDonViTinh";
             cTenDonViTinh.Resizable = DataGridViewTriState.True;
@@ -471,10 +487,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlText;
-            label2.Location = new Point(184, 2);
+            label2.Location = new Point(187, 5);
             label2.Name = "label2";
-            label2.Size = new Size(258, 24);
+            label2.Size = new Size(217, 18);
             label2.TabIndex = 0;
             label2.Text = "Bảng Nhập Đơn Vị Tính Khác";
             // 
@@ -482,9 +499,10 @@
             // 
             panel7.Controls.Add(dtgvCuaHang);
             panel7.Dock = DockStyle.Fill;
+            panel7.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             panel7.Location = new Point(0, 28);
             panel7.Name = "panel7";
-            panel7.Size = new Size(758, 281);
+            panel7.Size = new Size(758, 301);
             panel7.TabIndex = 18;
             // 
             // dtgvCuaHang
@@ -493,16 +511,24 @@
             dtgvCuaHang.AllowUserToDeleteRows = false;
             dtgvCuaHang.AllowUserToResizeRows = false;
             dtgvCuaHang.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dtgvCuaHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dtgvCuaHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dtgvCuaHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvCuaHang.Columns.AddRange(new DataGridViewColumn[] { cTenCuaHang, cDonViTinh, cGia, cMaCuaHang, cMaDonViTinh });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dtgvCuaHang.DefaultCellStyle = dataGridViewCellStyle6;
             dtgvCuaHang.Dock = DockStyle.Fill;
             dtgvCuaHang.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgvCuaHang.Location = new Point(0, 0);
@@ -511,7 +537,7 @@
             dtgvCuaHang.RowHeadersVisible = false;
             dtgvCuaHang.RowTemplate.Height = 25;
             dtgvCuaHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvCuaHang.Size = new Size(758, 281);
+            dtgvCuaHang.Size = new Size(758, 301);
             dtgvCuaHang.TabIndex = 16;
             dtgvCuaHang.CellClick += dtgvCuaHang_CellClick;
             dtgvCuaHang.CellContentClick += dtgvAccount_CellContentClick;
@@ -519,9 +545,9 @@
             // cTenCuaHang
             // 
             cTenCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cTenCuaHang.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cTenCuaHang.DefaultCellStyle = dataGridViewCellStyle5;
             cTenCuaHang.HeaderText = "Tên Cửa Hàng";
             cTenCuaHang.Name = "cTenCuaHang";
             cTenCuaHang.ReadOnly = true;
@@ -568,9 +594,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(245, 2);
+            label1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(245, 5);
             label1.Name = "label1";
-            label1.Size = new Size(278, 24);
+            label1.Size = new Size(233, 18);
             label1.TabIndex = 0;
             label1.Text = "Bảng Nhập Giá Từng Cửa Hàng";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -588,14 +615,14 @@
             panel5.Controls.Add(btnCancel);
             panel5.Controls.Add(btnSave);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 491);
+            panel5.Location = new Point(0, 511);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1410, 71);
+            panel5.Size = new Size(1410, 51);
             panel5.TabIndex = 3;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(748, 19);
+            btnCancel.Location = new Point(652, 4);
             btnCancel.Name = "btnCancel";
             btnCancel.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnCancel.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -621,7 +648,7 @@
             btnCancel.StateCommon.Border.Width = 1;
             btnCancel.StateCommon.Content.ShortText.Color1 = Color.White;
             btnCancel.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnCancel.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
             btnCancel.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
             btnCancel.StatePressed.Back.ColorAngle = 130F;
@@ -647,7 +674,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(539, 19);
+            btnSave.Location = new Point(513, 5);
             btnSave.Name = "btnSave";
             btnSave.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnSave.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -673,7 +700,7 @@
             btnSave.StateCommon.Border.Width = 1;
             btnSave.StateCommon.Content.ShortText.Color1 = Color.White;
             btnSave.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnSave.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
             btnSave.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
             btnSave.StatePressed.Back.ColorAngle = 130F;
@@ -703,7 +730,7 @@
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(0, 182);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1410, 309);
+            panel6.Size = new Size(1410, 329);
             panel6.TabIndex = 4;
             // 
             // fThemHangHoa

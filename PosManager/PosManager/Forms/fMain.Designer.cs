@@ -351,7 +351,7 @@
             // 
             // txtHieuUng
             // 
-            txtHieuUng.BackColor = SystemColors.Control;
+            txtHieuUng.BackColor = Color.White;
             txtHieuUng.Dock = DockStyle.Fill;
             txtHieuUng.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             txtHieuUng.ForeColor = Color.DeepSkyBlue;

@@ -14,7 +14,7 @@ namespace Krypton_toolKitDemo
     public partial class fMain : KryptonForm
     {
         private fLoading loading = new fLoading();
-        private fLogin _fLogin;
+        private readonly fLogin _fLogin;
         bool khachHangCollapse = true;
         bool hangHoaCollapse = true;
         bool khoCollapse = true;
@@ -26,8 +26,9 @@ namespace Krypton_toolKitDemo
 
         private int startPosition = 0;
         private string displayText = "Cảm Ơn Quý Khách Đã Tin Tưởng Chúng Tôi!";
-        public fMain()
+        public fMain(fLogin login)
         {
+            _fLogin = login;
             InitializeComponent();
 
         }
@@ -206,20 +207,14 @@ namespace Krypton_toolKitDemo
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-
-            _fLogin = new fLogin();
-            _fLogin.Show();
-            Close();
-
+            Application.Restart();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_fLogin == null)
-            {
-                Application.Exit();
-            }
-
+            this.Hide();
+            _fLogin.Show();
+          
         }
 
         private void btnChiNhanh_Click(object sender, EventArgs e)

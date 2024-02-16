@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPhanQuyen));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             dtgvAccount = new DataGridView();
@@ -95,7 +96,7 @@
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -103,14 +104,23 @@
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cTen, cView, cCreate, cUpdate, cDelete, cIdUser, cFunctionId });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dtgvAccount.DefaultCellStyle = dataGridViewCellStyle3;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgvAccount.Location = new Point(0, 0);
+            dtgvAccount.Margin = new Padding(2, 2, 2, 2);
             dtgvAccount.Name = "dtgvAccount";
             dtgvAccount.RowHeadersVisible = false;
             dtgvAccount.RowTemplate.Height = 25;
             dtgvAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvAccount.Size = new Size(1059, 576);
+            dtgvAccount.Size = new Size(866, 432);
             dtgvAccount.TabIndex = 16;
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             // 
@@ -175,15 +185,15 @@
             // 
             // fPhanQuyen
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1059, 576);
+            ClientSize = new Size(866, 432);
             Controls.Add(dtgvAccount);
-            Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(6);
-            MaximumSize = new Size(1075, 615);
-            MinimumSize = new Size(1075, 615);
+            Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Margin = new Padding(5, 4, 5, 4);
+            MaximumSize = new Size(882, 471);
+            MinimumSize = new Size(882, 471);
             Name = "fPhanQuyen";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

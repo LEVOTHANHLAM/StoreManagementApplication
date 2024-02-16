@@ -82,9 +82,9 @@
             // 
             // txtTen
             // 
-            txtTen.Location = new Point(110, 12);
+            txtTen.Location = new Point(51, 12);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(344, 31);
+            txtTen.Size = new Size(344, 33);
             txtTen.StateCommon.Back.Color1 = Color.White;
             txtTen.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtTen.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -92,25 +92,25 @@
             txtTen.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtTen.StateCommon.Border.Rounding = 18;
             txtTen.StateCommon.Content.Color1 = Color.Black;
-            txtTen.StateCommon.Content.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTen.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtTen.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtTen.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(64, 64, 64);
             label3.Location = new Point(-2, 19);
             label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(59, 24);
+            label3.Size = new Size(44, 18);
             label3.TabIndex = 5;
             label3.Text = "Tên :";
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(110, 81);
+            btnSave.Location = new Point(51, 74);
             btnSave.Name = "btnSave";
             btnSave.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnSave.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -136,7 +136,7 @@
             btnSave.StateCommon.Border.Width = 1;
             btnSave.StateCommon.Content.ShortText.Color1 = Color.White;
             btnSave.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnSave.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
             btnSave.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
             btnSave.StatePressed.Back.ColorAngle = 130F;
@@ -162,7 +162,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(319, 81);
+            btnCancel.Location = new Point(234, 74);
             btnCancel.Name = "btnCancel";
             btnCancel.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnCancel.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -188,7 +188,7 @@
             btnCancel.StateCommon.Border.Width = 1;
             btnCancel.StateCommon.Content.ShortText.Color1 = Color.White;
             btnCancel.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnCancel.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
             btnCancel.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
             btnCancel.StatePressed.Back.ColorAngle = 130F;
@@ -217,15 +217,15 @@
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(481, 144);
+            ClientSize = new Size(399, 119);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(label3);
             Controls.Add(txtTen);
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(6);
-            MaximumSize = new Size(497, 183);
-            MinimumSize = new Size(497, 183);
+            MaximumSize = new Size(415, 158);
+            MinimumSize = new Size(415, 158);
             Name = "fThemFunctions";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

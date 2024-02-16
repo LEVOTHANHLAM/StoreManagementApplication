@@ -34,6 +34,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhanVienUserControl));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             splitContainer1 = new SplitContainer();
@@ -58,6 +59,12 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
+            ctmsAcc = new ContextMenuStrip(components);
+            selectedToolStripMenuItem = new ToolStripMenuItem();
+            selectAllToolStripMenuItem = new ToolStripMenuItem();
+            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
+            deselectAllToolStripMenuItem = new ToolStripMenuItem();
+            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
             cTen = new DataGridViewTextBoxColumn();
@@ -70,13 +77,8 @@ namespace PosManager.Forms.UserControls.NhanVien
             cRole = new DataGridViewTextBoxColumn();
             cCuaHang = new DataGridViewTextBoxColumn();
             cEdit = new DataGridViewButtonColumn();
+            cCapQuyen = new DataGridViewButtonColumn();
             cId = new DataGridViewTextBoxColumn();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
-            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -312,6 +314,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             pDatagridView.Controls.Add(panel3);
             pDatagridView.Controls.Add(dtgvAccount);
             pDatagridView.Dock = DockStyle.Fill;
+            pDatagridView.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pDatagridView.Location = new Point(0, 0);
             pDatagridView.Name = "pDatagridView";
             pDatagridView.Size = new Size(1334, 681);
@@ -691,15 +694,23 @@ namespace PosManager.Forms.UserControls.NhanVien
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cCuaHang, cEdit, cId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cCuaHang, cEdit, cCapQuyen, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dtgvAccount.DefaultCellStyle = dataGridViewCellStyle4;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgvAccount.Location = new Point(0, 0);
@@ -712,6 +723,48 @@ namespace PosManager.Forms.UserControls.NhanVien
             dtgvAccount.CellClick += dtgvAccount_CellClick;
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
+            // 
+            // ctmsAcc
+            // 
+            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
+            ctmsAcc.Name = "contextMenuStrip1";
+            ctmsAcc.Size = new Size(134, 48);
+            // 
+            // selectedToolStripMenuItem
+            // 
+            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
+            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
+            selectedToolStripMenuItem.Size = new Size(133, 22);
+            selectedToolStripMenuItem.Text = "Selected";
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            selectAllToolStripMenuItem.Size = new Size(184, 22);
+            selectAllToolStripMenuItem.Text = "Select all";
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // selectAllHighlightedToolStripMenuItem
+            // 
+            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
+            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
+            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
+            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
+            // 
+            // deselectAllToolStripMenuItem
+            // 
+            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+            deselectAllToolStripMenuItem.Size = new Size(133, 22);
+            deselectAllToolStripMenuItem.Text = "Deselect all";
+            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
+            // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(0, 0);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(100, 23);
+            kryptonTextBox1.TabIndex = 0;
             // 
             // cChon
             // 
@@ -789,7 +842,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             cCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             cCuaHang.HeaderText = "Mã Cửa Hàng";
             cCuaHang.Name = "cCuaHang";
-            cCuaHang.Width = 131;
+            cCuaHang.Width = 130;
             // 
             // cEdit
             // 
@@ -798,6 +851,12 @@ namespace PosManager.Forms.UserControls.NhanVien
             cEdit.Name = "cEdit";
             cEdit.Resizable = DataGridViewTriState.True;
             // 
+            // cCapQuyen
+            // 
+            cCapQuyen.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cCapQuyen.HeaderText = "Cấp Quyền";
+            cCapQuyen.Name = "cCapQuyen";
+            // 
             // cId
             // 
             cId.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -805,48 +864,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             cId.Name = "cId";
             cId.ReadOnly = true;
             cId.Visible = false;
-            // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(0, 0);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(100, 23);
-            kryptonTextBox1.TabIndex = 0;
             // 
             // QuanLyNhanVienUserControl
             // 
@@ -918,6 +935,7 @@ namespace PosManager.Forms.UserControls.NhanVien
         private DataGridViewTextBoxColumn cRole;
         private DataGridViewTextBoxColumn cCuaHang;
         private DataGridViewButtonColumn cEdit;
+        private DataGridViewButtonColumn cCapQuyen;
         private DataGridViewTextBoxColumn cId;
     }
 }

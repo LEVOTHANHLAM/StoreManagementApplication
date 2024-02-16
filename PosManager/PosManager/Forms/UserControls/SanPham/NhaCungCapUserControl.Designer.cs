@@ -32,6 +32,8 @@ namespace PosManager.Forms.UserControls.SanPham
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             splitContainer1 = new SplitContainer();
@@ -361,6 +363,7 @@ namespace PosManager.Forms.UserControls.SanPham
             pDatagridView.Controls.Add(panel3);
             pDatagridView.Controls.Add(dtgvAccount);
             pDatagridView.Dock = DockStyle.Fill;
+            pDatagridView.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pDatagridView.Location = new Point(0, 0);
             pDatagridView.Name = "pDatagridView";
             pDatagridView.Size = new Size(1334, 681);
@@ -740,7 +743,7 @@ namespace PosManager.Forms.UserControls.SanPham
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -749,10 +752,26 @@ namespace PosManager.Forms.UserControls.SanPham
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMaNhaCungCap, cTenNhaCungCap, cDiaChi, cSoDienThoai, cEdit, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dtgvAccount.DefaultCellStyle = dataGridViewCellStyle4;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgvAccount.Location = new Point(0, 0);
             dtgvAccount.Name = "dtgvAccount";
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dtgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtgvAccount.RowHeadersVisible = false;
             dtgvAccount.RowTemplate.Height = 25;
             dtgvAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -768,7 +787,7 @@ namespace PosManager.Forms.UserControls.SanPham
             cChon.FillWeight = 50F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 38;
+            cChon.Width = 51;
             // 
             // cSTT
             // 

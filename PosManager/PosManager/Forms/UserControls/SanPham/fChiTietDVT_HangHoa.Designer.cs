@@ -31,14 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fChiTietDVT_HangHoa));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             panel1 = new Panel();
             btnAddColumdtgvDonViTinh = new PictureBox();
             cbbMaDonviCoBan = new ComboBox();
             label9 = new Label();
-            cbbMaNhomHang = new ComboBox();
-            label4 = new Label();
             panel2 = new Panel();
             panel11 = new Panel();
             dtgvDonViTinh = new DataGridView();
@@ -110,8 +109,6 @@
             panel1.Controls.Add(btnAddColumdtgvDonViTinh);
             panel1.Controls.Add(cbbMaDonviCoBan);
             panel1.Controls.Add(label9);
-            panel1.Controls.Add(cbbMaNhomHang);
-            panel1.Controls.Add(label4);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -135,52 +132,25 @@
             cbbMaDonviCoBan.DisplayMember = "DisplayText";
             cbbMaDonviCoBan.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbMaDonviCoBan.FlatStyle = FlatStyle.Flat;
-            cbbMaDonviCoBan.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cbbMaDonviCoBan.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             cbbMaDonviCoBan.FormattingEnabled = true;
             cbbMaDonviCoBan.Location = new Point(210, 10);
             cbbMaDonviCoBan.Name = "cbbMaDonviCoBan";
-            cbbMaDonviCoBan.Size = new Size(193, 27);
+            cbbMaDonviCoBan.Size = new Size(193, 26);
             cbbMaDonviCoBan.TabIndex = 44;
             cbbMaDonviCoBan.ValueMember = "Value";
-            cbbMaDonviCoBan.SelectedIndexChanged += cbbMaDonviCoBan_SelectedIndexChanged;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(64, 64, 64);
             label9.Location = new Point(52, 13);
             label9.Margin = new Padding(6, 0, 6, 0);
             label9.Name = "label9";
-            label9.Size = new Size(149, 19);
+            label9.Size = new Size(147, 18);
             label9.TabIndex = 43;
             label9.Text = "Mã Đơn Vị Cơ Bản :";
-            // 
-            // cbbMaNhomHang
-            // 
-            cbbMaNhomHang.BackColor = Color.White;
-            cbbMaNhomHang.DisplayMember = "DisplayText";
-            cbbMaNhomHang.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbMaNhomHang.FlatStyle = FlatStyle.Flat;
-            cbbMaNhomHang.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbbMaNhomHang.FormattingEnabled = true;
-            cbbMaNhomHang.Location = new Point(539, 10);
-            cbbMaNhomHang.Name = "cbbMaNhomHang";
-            cbbMaNhomHang.Size = new Size(193, 27);
-            cbbMaNhomHang.TabIndex = 42;
-            cbbMaNhomHang.ValueMember = "Value";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(64, 64, 64);
-            label4.Location = new Point(412, 14);
-            label4.Margin = new Padding(6, 0, 6, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 19);
-            label4.TabIndex = 33;
-            label4.Text = "Mã Nhóm Hàng :";
             // 
             // panel2
             // 
@@ -218,6 +188,14 @@
             dtgvDonViTinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvDonViTinh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvDonViTinh.Columns.AddRange(new DataGridViewColumn[] { cDelete, cTenDonViTinh, cQuyDoi, cMaDVT, cMaHangHoa, cId });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dtgvDonViTinh.DefaultCellStyle = dataGridViewCellStyle3;
             dtgvDonViTinh.Dock = DockStyle.Fill;
             dtgvDonViTinh.EditMode = DataGridViewEditMode.EditOnEnter;
             dtgvDonViTinh.Location = new Point(0, 0);
@@ -227,6 +205,7 @@
             dtgvDonViTinh.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtgvDonViTinh.Size = new Size(737, 272);
             dtgvDonViTinh.TabIndex = 18;
+            dtgvDonViTinh.CellClick += dtgvDonViTinh_CellClick_1;
             // 
             // cDelete
             // 
@@ -443,7 +422,6 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Label label4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private Panel panel1;
@@ -454,7 +432,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComboBox cbbMaDonviCoBan;
         private Label label9;
-        private ComboBox cbbMaNhomHang;
         private PictureBox btnAddColumdtgvDonViTinh;
         private Panel panel11;
         private Label lbHander;

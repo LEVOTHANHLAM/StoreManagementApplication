@@ -61,9 +61,10 @@ namespace Krypton_toolKitDemo
                         GlobalModel.UserInfo = GetUserInfoFromToken(user.Data.Token);
                         if (GlobalModel.UserInfo != null)
                         {
-                            fMain form1 = new fMain();
+                            fMain form1 = new fMain(this);
                             form1.Show();
                             loading.Close();
+                            btnLogin.Enabled = true;
                             this.Hide();
                         }
                     }

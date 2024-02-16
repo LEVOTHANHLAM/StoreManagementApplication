@@ -34,6 +34,7 @@ namespace PosManager.Forms.UserControls
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiNhanhUserControl));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             splitContainer1 = new SplitContainer();
@@ -363,6 +364,7 @@ namespace PosManager.Forms.UserControls
             pDatagridView.Controls.Add(panel3);
             pDatagridView.Controls.Add(dtgvAccount);
             pDatagridView.Dock = DockStyle.Fill;
+            pDatagridView.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pDatagridView.Location = new Point(0, 0);
             pDatagridView.Name = "pDatagridView";
             pDatagridView.Size = new Size(1334, 681);
@@ -742,7 +744,7 @@ namespace PosManager.Forms.UserControls
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -751,6 +753,14 @@ namespace PosManager.Forms.UserControls
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMaCuaHang, cTenCuaHang, cMaKho, cTenKho, cEdit, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dtgvAccount.DefaultCellStyle = dataGridViewCellStyle4;
             dtgvAccount.Dock = DockStyle.Fill;
             dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgvAccount.Location = new Point(0, 0);
@@ -770,7 +780,7 @@ namespace PosManager.Forms.UserControls
             cChon.FillWeight = 50F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 50;
+            cChon.Width = 51;
             // 
             // cSTT
             // 

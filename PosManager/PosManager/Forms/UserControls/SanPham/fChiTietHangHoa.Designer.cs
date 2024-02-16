@@ -30,10 +30,13 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fChiTietHangHoa));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             panel1 = new Panel();
+            label1 = new Label();
+            cbbMaNhomHang = new ComboBox();
             btnChiTietDVT = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             label6 = new Label();
             txtGhiChu = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -113,6 +116,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(cbbMaNhomHang);
             panel1.Controls.Add(btnChiTietDVT);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(txtGhiChu);
@@ -128,12 +133,38 @@
             panel1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1018, 140);
+            panel1.Size = new Size(1018, 182);
             panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(64, 64, 64);
+            label1.Location = new Point(527, 96);
+            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(128, 18);
+            label1.TabIndex = 48;
+            label1.Text = "Mã Nhóm Hàng :";
+            // 
+            // cbbMaNhomHang
+            // 
+            cbbMaNhomHang.BackColor = Color.White;
+            cbbMaNhomHang.DisplayMember = "DisplayText";
+            cbbMaNhomHang.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbMaNhomHang.FlatStyle = FlatStyle.Flat;
+            cbbMaNhomHang.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbMaNhomHang.FormattingEnabled = true;
+            cbbMaNhomHang.Location = new Point(683, 93);
+            cbbMaNhomHang.Name = "cbbMaNhomHang";
+            cbbMaNhomHang.Size = new Size(299, 26);
+            cbbMaNhomHang.TabIndex = 47;
+            cbbMaNhomHang.ValueMember = "Value";
             // 
             // btnChiTietDVT
             // 
-            btnChiTietDVT.Location = new Point(801, 93);
+            btnChiTietDVT.Location = new Point(801, 140);
             btnChiTietDVT.Name = "btnChiTietDVT";
             btnChiTietDVT.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnChiTietDVT.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -240,6 +271,7 @@
             txtVAT.TabIndex = 34;
             txtVAT.TextChanged += txtVAT_TextChanged;
             txtVAT.Click += txtVAT_Click;
+            txtVAT.MouseEnter += txtVAT_MouseEnter;
             // 
             // label5
             // 
@@ -335,7 +367,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1018, 209);
+            panel2.Size = new Size(1018, 243);
             panel2.TabIndex = 1;
             // 
             // panel11
@@ -345,7 +377,7 @@
             panel11.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             panel11.Location = new Point(0, 33);
             panel11.Name = "panel11";
-            panel11.Size = new Size(1018, 176);
+            panel11.Size = new Size(1018, 210);
             panel11.TabIndex = 84;
             // 
             // panel3
@@ -355,7 +387,7 @@
             panel3.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1018, 176);
+            panel3.Size = new Size(1018, 210);
             panel3.TabIndex = 84;
             // 
             // dtgvCuaHang
@@ -364,16 +396,24 @@
             dtgvCuaHang.AllowUserToDeleteRows = false;
             dtgvCuaHang.AllowUserToResizeRows = false;
             dtgvCuaHang.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dtgvCuaHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgvCuaHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvCuaHang.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvCuaHang.Columns.AddRange(new DataGridViewColumn[] { cTenCuaHang, cDonViTinh, cGia, cMaCuaHang, cMaDonViTinh });
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dtgvCuaHang.DefaultCellStyle = dataGridViewCellStyle3;
             dtgvCuaHang.Dock = DockStyle.Fill;
             dtgvCuaHang.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgvCuaHang.Location = new Point(0, 0);
@@ -382,7 +422,7 @@
             dtgvCuaHang.RowHeadersVisible = false;
             dtgvCuaHang.RowTemplate.Height = 25;
             dtgvCuaHang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvCuaHang.Size = new Size(1018, 176);
+            dtgvCuaHang.Size = new Size(1018, 210);
             dtgvCuaHang.TabIndex = 16;
             dtgvCuaHang.CellClick += dtgvCuaHang_CellClick;
             dtgvCuaHang.CellContentClick += dtgvAccount_CellContentClick;
@@ -390,9 +430,9 @@
             // cTenCuaHang
             // 
             cTenCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cTenCuaHang.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cTenCuaHang.DefaultCellStyle = dataGridViewCellStyle2;
             cTenCuaHang.HeaderText = "Tên Cửa Hàng";
             cTenCuaHang.Name = "cTenCuaHang";
             cTenCuaHang.ReadOnly = true;
@@ -446,7 +486,7 @@
             panel5.Controls.Add(btnCancel);
             panel5.Controls.Add(btnSave);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 349);
+            panel5.Location = new Point(0, 425);
             panel5.Name = "panel5";
             panel5.Size = new Size(1018, 49);
             panel5.TabIndex = 3;
@@ -559,9 +599,9 @@
             // 
             panel6.Controls.Add(panel2);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(0, 140);
+            panel6.Location = new Point(0, 182);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1018, 209);
+            panel6.Size = new Size(1018, 243);
             panel6.TabIndex = 4;
             // 
             // fChiTietHangHoa
@@ -569,7 +609,7 @@
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1018, 398);
+            ClientSize = new Size(1018, 474);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel1);
@@ -622,6 +662,8 @@
         private Label lbHander;
         private Panel panel11;
         private Panel panel3;
+        private Label label1;
+        private ComboBox cbbMaNhomHang;
     }
 }
 

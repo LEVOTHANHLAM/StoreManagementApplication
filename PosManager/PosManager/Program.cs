@@ -1,6 +1,7 @@
 ﻿using Krypton_toolKitDemo;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Net.SourceForge.Vietpad.InputMethod;
 using PosManager.Helper;
 using Serilog;
 using System.Runtime.InteropServices;
@@ -14,8 +15,10 @@ namespace PosManager
         /// </summary>
         private static readonly IHost _host = CreateHostBuilder();
         [STAThread]
+       
         static void Main()
         {
+           
             Log.Logger = new LoggerConfiguration()
                  .MinimumLevel.Debug()
                  .WriteTo.File("LOGSAPP/myapp.txt", rollingInterval: RollingInterval.Day)
@@ -24,6 +27,7 @@ namespace PosManager
             // see https://aka.ms/applicationconfiguration.
             try
             {
+               
                 _host.Start();
                 //Đoạn này mặc định của winform kệ nó thôi.
                 Application.SetHighDpiMode(HighDpiMode.SystemAware);
