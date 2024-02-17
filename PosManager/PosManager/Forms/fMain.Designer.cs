@@ -32,15 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(components);
             splitContainer1 = new SplitContainer();
-            txtHieuUng = new TextBox();
+            txtHieuUng = new Label();
             pbProfile = new PictureBox();
             btnMenu = new PictureBox();
-            pMain = new Panel();
-            pProfile = new Panel();
             panel67 = new Panel();
-            btnDoiMatKhau = new Button();
+            pMain = new Panel();
             panel66 = new Panel();
-            btnDangXuat = new Button();
+            btnClose = new Button();
+            lbHander = new Label();
             KhoContainer = new Panel();
             panel1 = new Panel();
             btnQuanLyKho = new Button();
@@ -199,8 +198,6 @@
             splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMenu).BeginInit();
-            pMain.SuspendLayout();
-            pProfile.SuspendLayout();
             panel67.SuspendLayout();
             panel66.SuspendLayout();
             KhoContainer.SuspendLayout();
@@ -344,32 +341,33 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(pMain);
-            splitContainer1.Size = new Size(1212, 796);
-            splitContainer1.SplitterDistance = 43;
+            splitContainer1.Panel2.Controls.Add(panel67);
+            splitContainer1.Size = new Size(1353, 823);
+            splitContainer1.SplitterDistance = 44;
             splitContainer1.TabIndex = 3;
             // 
             // txtHieuUng
             // 
             txtHieuUng.BackColor = Color.White;
+            txtHieuUng.Cursor = Cursors.SizeAll;
             txtHieuUng.Dock = DockStyle.Fill;
-            txtHieuUng.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtHieuUng.ForeColor = Color.DeepSkyBlue;
+            txtHieuUng.Font = new Font("Tahoma", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtHieuUng.ForeColor = Color.FromArgb(37, 152, 230);
             txtHieuUng.Location = new Point(38, 0);
-            txtHieuUng.MinimumSize = new Size(883, 54);
-            txtHieuUng.Multiline = true;
+            txtHieuUng.Margin = new Padding(4, 0, 4, 0);
             txtHieuUng.Name = "txtHieuUng";
-            txtHieuUng.Size = new Size(1072, 54);
-            txtHieuUng.TabIndex = 6;
-            txtHieuUng.TextAlign = HorizontalAlignment.Center;
+            txtHieuUng.Size = new Size(1213, 44);
+            txtHieuUng.TabIndex = 84;
+            txtHieuUng.Text = "sdsdas";
+            txtHieuUng.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pbProfile
             // 
             pbProfile.Dock = DockStyle.Right;
             pbProfile.Image = (Image)resources.GetObject("pbProfile.Image");
-            pbProfile.Location = new Point(1110, 0);
+            pbProfile.Location = new Point(1251, 0);
             pbProfile.Name = "pbProfile";
-            pbProfile.Size = new Size(102, 43);
+            pbProfile.Size = new Size(102, 44);
             pbProfile.SizeMode = PictureBoxSizeMode.Zoom;
             pbProfile.TabIndex = 6;
             pbProfile.TabStop = false;
@@ -381,83 +379,75 @@
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
             btnMenu.Location = new Point(0, 0);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(38, 43);
+            btnMenu.Size = new Size(38, 44);
             btnMenu.SizeMode = PictureBoxSizeMode.Zoom;
             btnMenu.TabIndex = 6;
             btnMenu.TabStop = false;
             btnMenu.Click += btnMenu_Click;
             // 
-            // pMain
-            // 
-            pMain.Controls.Add(pProfile);
-            pMain.Dock = DockStyle.Fill;
-            pMain.Location = new Point(0, 0);
-            pMain.Name = "pMain";
-            pMain.Size = new Size(1212, 749);
-            pMain.TabIndex = 16;
-            // 
-            // pProfile
-            // 
-            pProfile.BackColor = Color.LightBlue;
-            pProfile.Controls.Add(panel67);
-            pProfile.Controls.Add(panel66);
-            pProfile.Location = new Point(1111, 4);
-            pProfile.MaximumSize = new Size(102, 68);
-            pProfile.MinimumSize = new Size(102, 68);
-            pProfile.Name = "pProfile";
-            pProfile.Size = new Size(102, 68);
-            pProfile.TabIndex = 15;
-            pProfile.Visible = false;
-            // 
             // panel67
             // 
-            panel67.Controls.Add(btnDoiMatKhau);
-            panel67.Location = new Point(0, 34);
+            panel67.Controls.Add(pMain);
+            panel67.Controls.Add(panel66);
+            panel67.Dock = DockStyle.Fill;
+            panel67.Location = new Point(0, 0);
             panel67.Name = "panel67";
-            panel67.Size = new Size(102, 25);
-            panel67.TabIndex = 6;
+            panel67.Size = new Size(1353, 775);
+            panel67.TabIndex = 17;
             // 
-            // btnDoiMatKhau
+            // pMain
             // 
-            btnDoiMatKhau.BackColor = Color.FromArgb(89, 149, 206);
-            btnDoiMatKhau.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDoiMatKhau.ForeColor = Color.White;
-            btnDoiMatKhau.Image = (Image)resources.GetObject("btnDoiMatKhau.Image");
-            btnDoiMatKhau.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDoiMatKhau.Location = new Point(-18, -4);
-            btnDoiMatKhau.Name = "btnDoiMatKhau";
-            btnDoiMatKhau.Padding = new Padding(27, 0, 0, 0);
-            btnDoiMatKhau.Size = new Size(130, 38);
-            btnDoiMatKhau.TabIndex = 3;
-            btnDoiMatKhau.Text = "       Đổi Mật Khẩu";
-            btnDoiMatKhau.TextAlign = ContentAlignment.MiddleLeft;
-            btnDoiMatKhau.UseVisualStyleBackColor = false;
+            pMain.BackColor = Color.Transparent;
+            pMain.Dock = DockStyle.Fill;
+            pMain.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            pMain.Location = new Point(0, 0);
+            pMain.Name = "pMain";
+            pMain.Size = new Size(1353, 754);
+            pMain.TabIndex = 16;
             // 
             // panel66
             // 
-            panel66.Controls.Add(btnDangXuat);
-            panel66.Dock = DockStyle.Top;
-            panel66.Location = new Point(0, 0);
+            panel66.BackColor = Color.Black;
+            panel66.Controls.Add(btnClose);
+            panel66.Controls.Add(lbHander);
+            panel66.Dock = DockStyle.Bottom;
+            panel66.Location = new Point(0, 754);
             panel66.Name = "panel66";
-            panel66.Size = new Size(102, 25);
-            panel66.TabIndex = 5;
+            panel66.Size = new Size(1353, 21);
+            panel66.TabIndex = 17;
             // 
-            // btnDangXuat
+            // btnClose
             // 
-            btnDangXuat.BackColor = Color.FromArgb(89, 149, 206);
-            btnDangXuat.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDangXuat.ForeColor = Color.White;
-            btnDangXuat.Image = (Image)resources.GetObject("btnDangXuat.Image");
-            btnDangXuat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDangXuat.Location = new Point(-18, -4);
-            btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Padding = new Padding(27, 0, 0, 0);
-            btnDangXuat.Size = new Size(130, 38);
-            btnDangXuat.TabIndex = 3;
-            btnDangXuat.Text = "       Đăng Xuất";
-            btnDangXuat.TextAlign = ContentAlignment.MiddleLeft;
-            btnDangXuat.UseVisualStyleBackColor = false;
-            btnDangXuat.Click += btnDangXuat_Click;
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.BackColor = Color.CornflowerBlue;
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClose.ForeColor = Color.White;
+            btnClose.Image = (Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new Point(1509, 0);
+            btnClose.Margin = new Padding(4, 3, 4, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(35, 35);
+            btnClose.TabIndex = 79;
+            btnClose.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnClose.UseVisualStyleBackColor = false;
+            // 
+            // lbHander
+            // 
+            lbHander.BackColor = SystemColors.Window;
+            lbHander.Cursor = Cursors.SizeAll;
+            lbHander.Dock = DockStyle.Fill;
+            lbHander.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbHander.ForeColor = Color.Black;
+            lbHander.Location = new Point(0, 0);
+            lbHander.Margin = new Padding(4, 0, 4, 0);
+            lbHander.Name = "lbHander";
+            lbHander.Size = new Size(1353, 21);
+            lbHander.TabIndex = 83;
+            lbHander.Text = "sdsdas";
+            lbHander.TextAlign = ContentAlignment.MiddleRight;
             // 
             // KhoContainer
             // 
@@ -553,7 +543,7 @@
             btnKiemTraHoaDonNhap.ForeColor = Color.White;
             btnKiemTraHoaDonNhap.Image = PosManager.Properties.Resources.icons8_circle_20;
             btnKiemTraHoaDonNhap.ImageAlign = ContentAlignment.MiddleLeft;
-            btnKiemTraHoaDonNhap.Location = new Point(-14, -4);
+            btnKiemTraHoaDonNhap.Location = new Point(-13, -4);
             btnKiemTraHoaDonNhap.Name = "btnKiemTraHoaDonNhap";
             btnKiemTraHoaDonNhap.Padding = new Padding(27, 0, 0, 0);
             btnKiemTraHoaDonNhap.Size = new Size(307, 45);
@@ -943,7 +933,7 @@
             NhanVienContainer.Controls.Add(panel44);
             NhanVienContainer.Controls.Add(panel45);
             NhanVienContainer.Controls.Add(panel46);
-            NhanVienContainer.Location = new Point(3, 328);
+            NhanVienContainer.Location = new Point(3, 191);
             NhanVienContainer.MaximumSize = new Size(261, 160);
             NhanVienContainer.MinimumSize = new Size(261, 39);
             NhanVienContainer.Name = "NhanVienContainer";
@@ -1070,7 +1060,7 @@
             CongNoContainer.Controls.Add(panel31);
             CongNoContainer.Controls.Add(panel32);
             CongNoContainer.Controls.Add(panel35);
-            CongNoContainer.Location = new Point(3, 283);
+            CongNoContainer.Location = new Point(3, 236);
             CongNoContainer.MaximumSize = new Size(261, 323);
             CongNoContainer.MinimumSize = new Size(261, 39);
             CongNoContainer.Name = "CongNoContainer";
@@ -1301,7 +1291,7 @@
             HoaDonContainer.Controls.Add(panel40);
             HoaDonContainer.Controls.Add(panel41);
             HoaDonContainer.Controls.Add(panel42);
-            HoaDonContainer.Location = new Point(3, 238);
+            HoaDonContainer.Location = new Point(3, 326);
             HoaDonContainer.MaximumSize = new Size(261, 363);
             HoaDonContainer.MinimumSize = new Size(261, 39);
             HoaDonContainer.Name = "HoaDonContainer";
@@ -1551,7 +1541,7 @@
             PosContainer.BackColor = Color.LightBlue;
             PosContainer.Controls.Add(panel65);
             PosContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            PosContainer.Location = new Point(3, 418);
+            PosContainer.Location = new Point(3, 371);
             PosContainer.MaximumSize = new Size(261, 39);
             PosContainer.MinimumSize = new Size(261, 39);
             PosContainer.Name = "PosContainer";
@@ -1593,7 +1583,7 @@
             ThuChiContainer.BackColor = Color.LightBlue;
             ThuChiContainer.Controls.Add(panel73);
             ThuChiContainer.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ThuChiContainer.Location = new Point(3, 373);
+            ThuChiContainer.Location = new Point(3, 281);
             ThuChiContainer.MaximumSize = new Size(261, 39);
             ThuChiContainer.MinimumSize = new Size(261, 39);
             ThuChiContainer.Name = "ThuChiContainer";
@@ -1645,7 +1635,7 @@
             BaoCaoContainer.Controls.Add(panel54);
             BaoCaoContainer.Controls.Add(panel55);
             BaoCaoContainer.Controls.Add(panel56);
-            BaoCaoContainer.Location = new Point(3, 191);
+            BaoCaoContainer.Location = new Point(3, 416);
             BaoCaoContainer.MaximumSize = new Size(261, 526);
             BaoCaoContainer.MinimumSize = new Size(261, 39);
             BaoCaoContainer.Name = "BaoCaoContainer";
@@ -2262,12 +2252,12 @@
             flpMain.Controls.Add(KhachHangContainer);
             flpMain.Controls.Add(HangHoaContainer);
             flpMain.Controls.Add(KhoContainer);
-            flpMain.Controls.Add(BaoCaoContainer);
-            flpMain.Controls.Add(HoaDonContainer);
-            flpMain.Controls.Add(CongNoContainer);
             flpMain.Controls.Add(NhanVienContainer);
+            flpMain.Controls.Add(CongNoContainer);
             flpMain.Controls.Add(ThuChiContainer);
+            flpMain.Controls.Add(HoaDonContainer);
             flpMain.Controls.Add(PosContainer);
+            flpMain.Controls.Add(BaoCaoContainer);
             flpMain.Controls.Add(ChiNhanhContainer);
             flpMain.Controls.Add(CaiDatContainer);
             flpMain.Dock = DockStyle.Left;
@@ -2275,7 +2265,7 @@
             flpMain.MaximumSize = new Size(264, 0);
             flpMain.MinimumSize = new Size(68, 0);
             flpMain.Name = "flpMain";
-            flpMain.Size = new Size(264, 796);
+            flpMain.Size = new Size(264, 823);
             flpMain.TabIndex = 2;
             flpMain.Paint += flpMain_Paint;
             // 
@@ -2555,12 +2545,11 @@
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1476, 796);
+            ClientSize = new Size(1617, 823);
             Controls.Add(splitContainer1);
             Controls.Add(flpMain);
             Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(5, 6, 5, 6);
-            MinimumSize = new Size(1492, 835);
             Name = "fMain";
             Palette = kryptonPalette1;
             PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -2569,14 +2558,11 @@
             FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();
-            pMain.ResumeLayout(false);
-            pProfile.ResumeLayout(false);
             panel67.ResumeLayout(false);
             panel66.ResumeLayout(false);
             KhoContainer.ResumeLayout(false);
@@ -2667,15 +2653,9 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private SplitContainer splitContainer1;
-        private TextBox txtHieuUng;
         private PictureBox pbProfile;
         private PictureBox btnMenu;
         private Panel pMain;
-        private Panel pProfile;
-        private Panel panel67;
-        private Button btnDoiMatKhau;
-        private Panel panel66;
-        private Button btnDangXuat;
         private FlowLayoutPanel flpMain;
         private PictureBox pbLogoMeXiu;
         private Panel KhachHangContainer;
@@ -2828,6 +2808,11 @@
         private Button btnQuanLyKho;
         private Panel panel68;
         private Button btnLoaiSanPham;
+        private Panel panel66;
+        private Label lbHander;
+        private Button btnClose;
+        private Panel panel67;
+        private Label txtHieuUng;
     }
 }
 

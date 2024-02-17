@@ -40,7 +40,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
             panel4 = new Panel();
-            txtSearch = new PlaceholderTextBox();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel1 = new Panel();
             label2 = new Label();
@@ -59,12 +58,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
-            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
             cTen = new DataGridViewTextBoxColumn();
@@ -79,6 +72,12 @@ namespace PosManager.Forms.UserControls.NhanVien
             cEdit = new DataGridViewButtonColumn();
             cCapQuyen = new DataGridViewButtonColumn();
             cId = new DataGridViewTextBoxColumn();
+            ctmsAcc = new ContextMenuStrip(components);
+            selectedToolStripMenuItem = new ToolStripMenuItem();
+            selectAllToolStripMenuItem = new ToolStripMenuItem();
+            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
+            deselectAllToolStripMenuItem = new ToolStripMenuItem();
+            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -92,6 +91,13 @@ namespace PosManager.Forms.UserControls.NhanVien
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).BeginInit();
             ctmsAcc.SuspendLayout();
             SuspendLayout();
+            if (txtSearch == null)
+            {
+                txtSearch = new Helper.CustomControls.PlaceholderTextBox();
+                PlaceholderTextBox.CreatTextBox(txtSearch);
+                panel4.Controls.Add(txtSearch);
+                txtSearch.TextChanged += txtSearch_TextChanged;
+            }
             // 
             // splitContainer1
             // 
@@ -109,49 +115,27 @@ namespace PosManager.Forms.UserControls.NhanVien
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pDatagridView);
-            splitContainer1.Size = new Size(1334, 768);
-            splitContainer1.SplitterDistance = 83;
+            splitContainer1.Size = new Size(1353, 752);
+            splitContainer1.SplitterDistance = 81;
             splitContainer1.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(414, 0);
+            panel2.Location = new Point(433, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(920, 83);
+            panel2.Size = new Size(920, 81);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
             // 
             // panel4
             // 
-            panel4.Controls.Add(txtSearch);
             panel4.Controls.Add(btnExport);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
             panel4.TabIndex = 11;
-            // 
-            // txtSearch
-            // 
-            txtSearch.ForeColor = Color.Gray;
-            txtSearch.Location = new Point(3, 40);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderColor = Color.Gray;
-            txtSearch.PlaceholderText = "Tìm Kiếm";
-            txtSearch.Size = new Size(420, 36);
-            txtSearch.StateCommon.Back.Color1 = Color.White;
-            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtSearch.StateCommon.Border.Rounding = 18;
-            txtSearch.StateCommon.Content.Color1 = Color.Black;
-            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtSearch.TabIndex = 3;
-            txtSearch.Text = "Tìm Kiếm";
-            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnExport
             // 
@@ -217,7 +201,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(414, 83);
+            panel1.Size = new Size(414, 81);
             panel1.TabIndex = 1;
             // 
             // label2
@@ -317,7 +301,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             pDatagridView.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pDatagridView.Location = new Point(0, 0);
             pDatagridView.Name = "pDatagridView";
-            pDatagridView.Size = new Size(1334, 681);
+            pDatagridView.Size = new Size(1353, 667);
             pDatagridView.TabIndex = 0;
             // 
             // panel3
@@ -325,9 +309,9 @@ namespace PosManager.Forms.UserControls.NhanVien
             panel3.Controls.Add(flowLayoutPanel1);
             panel3.Controls.Add(lbThongBaoSoTrang);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 639);
+            panel3.Location = new Point(0, 625);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1334, 42);
+            panel3.Size = new Size(1353, 42);
             panel3.TabIndex = 16;
             panel3.Paint += panel3_Paint;
             // 
@@ -341,7 +325,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             flowLayoutPanel1.Controls.Add(btnTrangCuoi);
             flowLayoutPanel1.Controls.Add(btnTiepTucTrang);
             flowLayoutPanel1.Dock = DockStyle.Right;
-            flowLayoutPanel1.Location = new Point(967, 0);
+            flowLayoutPanel1.Location = new Point(986, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(367, 42);
             flowLayoutPanel1.TabIndex = 19;
@@ -718,53 +702,11 @@ namespace PosManager.Forms.UserControls.NhanVien
             dtgvAccount.RowHeadersVisible = false;
             dtgvAccount.RowTemplate.Height = 25;
             dtgvAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvAccount.Size = new Size(1334, 681);
+            dtgvAccount.Size = new Size(1353, 667);
             dtgvAccount.TabIndex = 15;
             dtgvAccount.CellClick += dtgvAccount_CellClick;
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
-            // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(0, 0);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(100, 23);
-            kryptonTextBox1.TabIndex = 0;
             // 
             // cChon
             // 
@@ -865,14 +807,55 @@ namespace PosManager.Forms.UserControls.NhanVien
             cId.ReadOnly = true;
             cId.Visible = false;
             // 
+            // ctmsAcc
+            // 
+            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
+            ctmsAcc.Name = "contextMenuStrip1";
+            ctmsAcc.Size = new Size(134, 48);
+            // 
+            // selectedToolStripMenuItem
+            // 
+            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
+            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
+            selectedToolStripMenuItem.Size = new Size(133, 22);
+            selectedToolStripMenuItem.Text = "Selected";
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            selectAllToolStripMenuItem.Size = new Size(184, 22);
+            selectAllToolStripMenuItem.Text = "Select all";
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // selectAllHighlightedToolStripMenuItem
+            // 
+            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
+            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
+            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
+            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
+            // 
+            // deselectAllToolStripMenuItem
+            // 
+            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+            deselectAllToolStripMenuItem.Size = new Size(133, 22);
+            deselectAllToolStripMenuItem.Text = "Deselect all";
+            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
+            // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(0, 0);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(100, 23);
+            kryptonTextBox1.TabIndex = 0;
+            // 
             // QuanLyNhanVienUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
-            MinimumSize = new Size(1334, 768);
             Name = "QuanLyNhanVienUserControl";
-            Size = new Size(1334, 768);
+            Size = new Size(1353, 752);
             Load += ChiNhanhUserControl_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
@@ -880,7 +863,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             splitContainer1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pDatagridView.ResumeLayout(false);

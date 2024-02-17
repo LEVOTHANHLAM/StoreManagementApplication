@@ -70,5 +70,28 @@ namespace PosManager.Helper.CustomControls
             base.OnLeave(e);
             ResetPlaceholder();
         }
+        public static void CreatTextBox(PlaceholderTextBox textBox)
+        {
+            // 
+            // txtSearch
+            // 
+            textBox.ForeColor = Color.Gray;
+            textBox.Location = new Point(3, 40);
+            textBox.Name = "txtSearch";
+            textBox.PlaceholderColor = Color.Gray;
+            textBox.PlaceholderText = "Tìm Kiếm";
+            textBox.Size = new Size(420, 36);
+            textBox.StateCommon.Back.Color1 = Color.White;
+            textBox.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            textBox.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            textBox.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            textBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            textBox.StateCommon.Border.Rounding = 18;
+            textBox.StateCommon.Content.Color1 = Color.Black;
+            textBox.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            textBox.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            textBox.TabIndex = 3;
+            textBox.Text = "Tìm Kiếm";
+        }
     }
 }

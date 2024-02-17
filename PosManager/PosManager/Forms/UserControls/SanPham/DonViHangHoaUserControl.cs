@@ -1,6 +1,7 @@
 ﻿using Krypton_toolKitDemo;
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
+using PosManager.Helper.CustomControls;
 using PosManager.Model;
 using PosManager.Model.User;
 using Serilog;
@@ -30,6 +31,13 @@ namespace PosManager.Forms.UserControls.SanPham
             InitializeComponent();
             _productUnitsController = new ProductUnitsController();
             cbbCuonTrang.SelectedIndex = 0;
+            if (txtSearch == null)
+            {
+                txtSearch = new Helper.CustomControls.PlaceholderTextBox();
+                PlaceholderTextBox.CreatTextBox(txtSearch);
+                panel4.Controls.Add(txtSearch);
+                txtSearch.TextChanged += txtSearch_TextChanged;
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

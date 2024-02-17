@@ -1,6 +1,7 @@
 ﻿using Krypton_toolKitDemo;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.Helper;
+using PosManager.Helper.CustomControls;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
@@ -22,7 +23,13 @@ namespace PosManager.Forms.UserControls
             InitializeComponent();
             _storesController = new StoresController();
             cbbCuonTrang.SelectedIndex = 0;
-
+            if (txtSearch == null)
+            {
+                txtSearch = new Helper.CustomControls.PlaceholderTextBox();
+                PlaceholderTextBox.CreatTextBox(txtSearch);
+                panel4.Controls.Add(txtSearch);
+                txtSearch.TextChanged += txtSearch_TextChanged;
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

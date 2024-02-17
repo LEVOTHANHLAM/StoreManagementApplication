@@ -40,7 +40,6 @@ namespace PosManager.Forms.UserControls
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
             panel4 = new Panel();
-            txtSearch = new PlaceholderTextBox();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel1 = new Panel();
@@ -104,49 +103,27 @@ namespace PosManager.Forms.UserControls
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pDatagridView);
-            splitContainer1.Size = new Size(1334, 768);
-            splitContainer1.SplitterDistance = 83;
+            splitContainer1.Size = new Size(1353, 752);
+            splitContainer1.SplitterDistance = 81;
             splitContainer1.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(414, 0);
+            panel2.Location = new Point(433, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(920, 83);
+            panel2.Size = new Size(920, 81);
             panel2.TabIndex = 0;
             // 
             // panel4
             // 
-            panel4.Controls.Add(txtSearch);
             panel4.Controls.Add(btnExport);
             panel4.Controls.Add(btnDelete);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
             panel4.TabIndex = 11;
-            // 
-            // txtSearch
-            // 
-            txtSearch.ForeColor = Color.Gray;
-            txtSearch.Location = new Point(3, 40);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderColor = Color.Gray;
-            txtSearch.PlaceholderText = "Tìm Kiếm";
-            txtSearch.Size = new Size(420, 36);
-            txtSearch.StateCommon.Back.Color1 = Color.White;
-            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtSearch.StateCommon.Border.Rounding = 18;
-            txtSearch.StateCommon.Content.Color1 = Color.Black;
-            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtSearch.TabIndex = 3;
-            txtSearch.Text = "Tìm Kiếm";
-            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnExport
             // 
@@ -267,7 +244,7 @@ namespace PosManager.Forms.UserControls
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(414, 83);
+            panel1.Size = new Size(414, 81);
             panel1.TabIndex = 1;
             // 
             // label2
@@ -367,7 +344,7 @@ namespace PosManager.Forms.UserControls
             pDatagridView.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             pDatagridView.Location = new Point(0, 0);
             pDatagridView.Name = "pDatagridView";
-            pDatagridView.Size = new Size(1334, 681);
+            pDatagridView.Size = new Size(1353, 667);
             pDatagridView.TabIndex = 0;
             // 
             // panel3
@@ -375,9 +352,9 @@ namespace PosManager.Forms.UserControls
             panel3.Controls.Add(flowLayoutPanel1);
             panel3.Controls.Add(lbThongBaoSoTrang);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 639);
+            panel3.Location = new Point(0, 625);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1334, 42);
+            panel3.Size = new Size(1353, 42);
             panel3.TabIndex = 16;
             panel3.Paint += panel3_Paint;
             // 
@@ -391,7 +368,7 @@ namespace PosManager.Forms.UserControls
             flowLayoutPanel1.Controls.Add(btnTrangCuoi);
             flowLayoutPanel1.Controls.Add(btnTiepTucTrang);
             flowLayoutPanel1.Dock = DockStyle.Right;
-            flowLayoutPanel1.Location = new Point(967, 0);
+            flowLayoutPanel1.Location = new Point(986, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(367, 42);
             flowLayoutPanel1.TabIndex = 19;
@@ -768,7 +745,7 @@ namespace PosManager.Forms.UserControls
             dtgvAccount.RowHeadersVisible = false;
             dtgvAccount.RowTemplate.Height = 25;
             dtgvAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvAccount.Size = new Size(1334, 681);
+            dtgvAccount.Size = new Size(1353, 667);
             dtgvAccount.TabIndex = 15;
             dtgvAccount.CellClick += dtgvAccount_CellClick;
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
@@ -882,9 +859,8 @@ namespace PosManager.Forms.UserControls
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
-            MinimumSize = new Size(1334, 768);
             Name = "ChiNhanhUserControl";
-            Size = new Size(1334, 768);
+            Size = new Size(1353, 752);
             Load += ChiNhanhUserControl_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
@@ -892,7 +868,6 @@ namespace PosManager.Forms.UserControls
             splitContainer1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pDatagridView.ResumeLayout(false);

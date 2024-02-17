@@ -64,6 +64,7 @@ namespace Krypton_toolKitDemo
             pOSUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(pOSUserControl);
             LoadFunction();
+            lbHander.Text = $"Chi Nhánh {GlobalModel.UserInfo.StoreCode}";
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -196,13 +197,7 @@ namespace Krypton_toolKitDemo
         }
         private void pbProfile_Click(object sender, EventArgs e)
         {
-            if (pbProfile.Visible)
-            {
-                Point newLocation = pProfile.Location;
-                newLocation.X = pbProfile.Location.X;
-                pProfile.Location = newLocation;
-            }
-            pProfile.Visible = !pProfile.Visible;
+           
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

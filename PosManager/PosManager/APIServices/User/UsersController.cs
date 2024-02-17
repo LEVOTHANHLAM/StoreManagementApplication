@@ -18,7 +18,7 @@ namespace PosManager.APIServices.User
                     // Thêm Authorization header
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                     // Tạo URL của API endpoint
-                    string apiUrl = $"{Constant.DomainAPI}/api/users?pageIndex={pageIndex}&pageSize={pageSize}&searchString={searchString}";
+                    string apiUrl = $"{Constant.DomainAPI}/api/Users?pageIndex={pageIndex}&pageSize={pageSize}&searchString={searchString}";
                     HttpResponseMessage response = await client.GetAsync(apiUrl);
                     var body = await response.Content.ReadAsStringAsync();
                     ApiResponse<ApiResult<List<UserModel>>> data = JsonConvert.DeserializeObject<ApiResponse<ApiResult<List<UserModel>>>>(body);
