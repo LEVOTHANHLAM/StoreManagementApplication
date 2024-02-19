@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PosManager.Forms.UserControls.Post
+﻿namespace PosManager.Forms.UserControls.Post
 {
     public partial class POSUserControl : UserControl
     {
         public POSUserControl()
         {
             InitializeComponent();
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            panel6.Controls.Clear();
+        }
+
+        private void btnThanhToan_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

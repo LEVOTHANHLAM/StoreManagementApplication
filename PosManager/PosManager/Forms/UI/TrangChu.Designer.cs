@@ -885,7 +885,7 @@ namespace PosManager.Forms.UI
             ptangqua.Controls.Add(button24);
             ptangqua.Controls.Add(txttangqua);
             ptangqua.Controls.Add(label1);
-            ptangqua.Location = new Point(1071, 186);
+            ptangqua.Location = new Point(723, 93);
             ptangqua.Name = "ptangqua";
             ptangqua.Size = new Size(468, 314);
             ptangqua.TabIndex = 10028;
@@ -1320,7 +1320,7 @@ namespace PosManager.Forms.UI
             ptlogo.BackColor = Color.FromArgb(192, 255, 192);
             ptlogo.BackgroundImageLayout = ImageLayout.None;
             ptlogo.BorderStyle = BorderStyle.FixedSingle;
-            ptlogo.Location = new Point(1296, 256);
+            ptlogo.Location = new Point(1225, 244);
             ptlogo.Name = "ptlogo";
             ptlogo.Size = new Size(279, 279);
             ptlogo.SizeMode = PictureBoxSizeMode.StretchImage;

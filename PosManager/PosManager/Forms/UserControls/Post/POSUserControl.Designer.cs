@@ -34,25 +34,27 @@ namespace PosManager.Forms.UserControls.Post
             txtSearchSanPham = new PlaceholderTextBox();
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
-            panel5 = new Panel();
             panel4 = new Panel();
             btnAddKhachHang = new PictureBox();
             txtSearchTenKhachHang = new PlaceholderTextBox();
             panel1 = new Panel();
             pDatagridView = new Panel();
-            dtgvAccount = new DataGridView();
-            cSTT = new DataGridViewTextBoxColumn();
-            cMa = new DataGridViewTextBoxColumn();
-            cTen = new DataGridViewTextBoxColumn();
-            cDVT = new DataGridViewTextBoxColumn();
-            cSoLuong = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDomainUpDownColumn();
-            cThanhTien = new DataGridViewTextBoxColumn();
-            cEdit = new DataGridViewImageColumn();
-            cId = new DataGridViewTextBoxColumn();
+            panel7 = new Panel();
+            PanelProducts = new FlowLayoutPanel();
+            panel6 = new Panel();
+            panel10 = new Panel();
+            panel8 = new Panel();
+            label5 = new Label();
+            label6 = new Label();
+            panel5 = new Panel();
+            label2 = new Label();
+            label4 = new Label();
+            panel9 = new Panel();
+            label1 = new Label();
+            label3 = new Label();
+            btnThanhToan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            PanelOrders = new Panel();
             panel3 = new Panel();
-            btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -63,18 +65,23 @@ namespace PosManager.Forms.UserControls.Post
             ((System.ComponentModel.ISupportInitialize)btnAddKhachHang).BeginInit();
             panel1.SuspendLayout();
             pDatagridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvAccount).BeginInit();
-            panel3.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel10.SuspendLayout();
+            panel8.SuspendLayout();
+            panel5.SuspendLayout();
+            panel9.SuspendLayout();
             SuspendLayout();
             // 
             // txtSearchSanPham
             // 
+            txtSearchSanPham.Dock = DockStyle.Fill;
             txtSearchSanPham.ForeColor = Color.Gray;
-            txtSearchSanPham.Location = new Point(3, 3);
+            txtSearchSanPham.Location = new Point(0, 0);
             txtSearchSanPham.Name = "txtSearchSanPham";
             txtSearchSanPham.PlaceholderColor = Color.Gray;
             txtSearchSanPham.PlaceholderText = "Tìm Kiếm Sản Phẩm";
-            txtSearchSanPham.Size = new Size(283, 36);
+            txtSearchSanPham.Size = new Size(828, 36);
             txtSearchSanPham.StateCommon.Back.Color1 = Color.White;
             txtSearchSanPham.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtSearchSanPham.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -98,61 +105,54 @@ namespace PosManager.Forms.UserControls.Post
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.Controls.Add(panel2);
-            splitContainer1.Panel1.Controls.Add(panel1);
             // 
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(pDatagridView);
-            splitContainer1.Size = new Size(1353, 752);
-            splitContainer1.SplitterDistance = 192;
+            splitContainer1.Size = new Size(1353, 754);
+            splitContainer1.SplitterDistance = 40;
             splitContainer1.TabIndex = 0;
             // 
             // panel2
             // 
-            panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel4);
+            panel2.Controls.Add(panel1);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(296, 0);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1057, 192);
+            panel2.Size = new Size(1353, 40);
             panel2.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(774, 192);
-            panel5.TabIndex = 13;
             // 
             // panel4
             // 
             panel4.Controls.Add(btnAddKhachHang);
             panel4.Controls.Add(txtSearchTenKhachHang);
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(774, 0);
+            panel4.Location = new Point(834, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(283, 192);
-            panel4.TabIndex = 12;
+            panel4.Size = new Size(519, 40);
+            panel4.TabIndex = 1;
             // 
             // btnAddKhachHang
             // 
+            btnAddKhachHang.Dock = DockStyle.Right;
             btnAddKhachHang.Image = (Image)resources.GetObject("btnAddKhachHang.Image");
-            btnAddKhachHang.Location = new Point(244, 7);
+            btnAddKhachHang.Location = new Point(486, 0);
             btnAddKhachHang.Name = "btnAddKhachHang";
-            btnAddKhachHang.Size = new Size(33, 34);
+            btnAddKhachHang.Size = new Size(33, 40);
             btnAddKhachHang.SizeMode = PictureBoxSizeMode.Zoom;
             btnAddKhachHang.TabIndex = 12;
             btnAddKhachHang.TabStop = false;
             // 
             // txtSearchTenKhachHang
             // 
+            txtSearchTenKhachHang.Dock = DockStyle.Fill;
             txtSearchTenKhachHang.ForeColor = Color.Gray;
-            txtSearchTenKhachHang.Location = new Point(3, 5);
+            txtSearchTenKhachHang.Location = new Point(0, 0);
             txtSearchTenKhachHang.Name = "txtSearchTenKhachHang";
             txtSearchTenKhachHang.PlaceholderColor = Color.Gray;
             txtSearchTenKhachHang.PlaceholderText = "Tìm Kiếm Khách Hàng";
-            txtSearchTenKhachHang.Size = new Size(235, 36);
+            txtSearchTenKhachHang.Size = new Size(519, 36);
             txtSearchTenKhachHang.StateCommon.Back.Color1 = Color.White;
             txtSearchTenKhachHang.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
             txtSearchTenKhachHang.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
@@ -171,258 +171,255 @@ namespace PosManager.Forms.UserControls.Post
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(296, 192);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(828, 40);
+            panel1.TabIndex = 0;
             // 
             // pDatagridView
             // 
-            pDatagridView.Controls.Add(dtgvAccount);
+            pDatagridView.Controls.Add(panel7);
+            pDatagridView.Controls.Add(panel6);
             pDatagridView.Controls.Add(panel3);
             pDatagridView.Dock = DockStyle.Fill;
             pDatagridView.Location = new Point(0, 0);
             pDatagridView.Name = "pDatagridView";
-            pDatagridView.Size = new Size(1353, 556);
+            pDatagridView.Size = new Size(1353, 710);
             pDatagridView.TabIndex = 0;
             // 
-            // dtgvAccount
+            // panel7
             // 
-            dtgvAccount.AllowUserToAddRows = false;
-            dtgvAccount.AllowUserToDeleteRows = false;
-            dtgvAccount.AllowUserToResizeRows = false;
-            dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
-            dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cSTT, cMa, cTen, cDVT, cSoLuong, cThanhTien, cEdit, cId });
-            dtgvAccount.Dock = DockStyle.Fill;
-            dtgvAccount.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dtgvAccount.Location = new Point(0, 0);
-            dtgvAccount.Name = "dtgvAccount";
-            dtgvAccount.RowHeadersVisible = false;
-            dtgvAccount.RowTemplate.Height = 25;
-            dtgvAccount.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvAccount.Size = new Size(1353, 415);
-            dtgvAccount.TabIndex = 15;
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            panel7.Controls.Add(PanelProducts);
+            panel7.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(834, 710);
+            panel7.TabIndex = 17;
             // 
-            // cSTT
+            // PanelProducts
             // 
-            cSTT.HeaderText = "STT";
-            cSTT.Name = "cSTT";
-            cSTT.ReadOnly = true;
-            cSTT.Width = 51;
+            PanelProducts.AutoSize = true;
+            PanelProducts.Dock = DockStyle.Top;
+            PanelProducts.Location = new Point(0, 0);
+            PanelProducts.MinimumSize = new Size(500, 0);
+            PanelProducts.Name = "PanelProducts";
+            PanelProducts.Size = new Size(834, 0);
+            PanelProducts.TabIndex = 0;
             // 
-            // cMa
+            // panel6
             // 
-            cMa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cMa.HeaderText = "Mã";
-            cMa.Name = "cMa";
-            cMa.ReadOnly = true;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel6.Controls.Add(panel10);
+            panel6.Controls.Add(PanelOrders);
+            panel6.Location = new Point(834, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(519, 710);
+            panel6.TabIndex = 16;
             // 
-            // cTen
+            // panel10
             // 
-            cTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cTen.HeaderText = "Tên Sản Phẩm";
-            cTen.Name = "cTen";
-            cTen.ReadOnly = true;
+            panel10.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel10.BackColor = Color.Transparent;
+            panel10.Controls.Add(panel8);
+            panel10.Controls.Add(panel5);
+            panel10.Controls.Add(panel9);
+            panel10.Controls.Add(btnThanhToan);
+            panel10.Dock = DockStyle.Bottom;
+            panel10.Location = new Point(0, 554);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(519, 156);
+            panel10.TabIndex = 89;
             // 
-            // cDVT
+            // panel8
             // 
-            cDVT.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cDVT.HeaderText = "Đơn Vị Tính";
-            cDVT.Name = "cDVT";
+            panel8.BackColor = Color.White;
+            panel8.Controls.Add(label5);
+            panel8.Controls.Add(label6);
+            panel8.Dock = DockStyle.Bottom;
+            panel8.Location = new Point(0, 5);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(519, 37);
+            panel8.TabIndex = 91;
             // 
-            // cSoLuong
+            // label5
             // 
-            cSoLuong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cSoLuong.HeaderText = "Số Lượng";
-            cSoLuong.Name = "cSoLuong";
-            cSoLuong.Resizable = DataGridViewTriState.True;
-            cSoLuong.SortMode = DataGridViewColumnSortMode.Automatic;
-            cSoLuong.Width = 236;
+            label5.BackColor = Color.White;
+            label5.Cursor = Cursors.SizeAll;
+            label5.Dock = DockStyle.Fill;
+            label5.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(118, 0);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(401, 37);
+            label5.TabIndex = 86;
+            label5.Text = "500.000";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // cThanhTien
+            // label6
             // 
-            cThanhTien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            cThanhTien.HeaderText = "Thành Tiền";
-            cThanhTien.Name = "cThanhTien";
-            cThanhTien.ReadOnly = true;
+            label6.AutoSize = true;
+            label6.BackColor = Color.White;
+            label6.Dock = DockStyle.Left;
+            label6.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(0, 0);
+            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(118, 23);
+            label6.TabIndex = 85;
+            label6.Text = "Tổng Tiền :";
             // 
-            // cEdit
+            // panel5
             // 
-            cEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            cEdit.HeaderText = "Xoá";
-            cEdit.Name = "cEdit";
-            cEdit.Resizable = DataGridViewTriState.True;
-            cEdit.Width = 120;
+            panel5.BackColor = Color.LightPink;
+            panel5.Controls.Add(label2);
+            panel5.Controls.Add(label4);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 42);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(519, 34);
+            panel5.TabIndex = 90;
             // 
-            // cId
+            // label2
             // 
-            cId.HeaderText = "cId";
-            cId.Name = "cId";
-            cId.ReadOnly = true;
-            cId.Visible = false;
+            label2.BackColor = Color.LightPink;
+            label2.Cursor = Cursors.SizeAll;
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(119, 0);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(400, 34);
+            label2.TabIndex = 86;
+            label2.Text = "-500.000";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.LightPink;
+            label4.Dock = DockStyle.Left;
+            label4.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(0, 0);
+            label4.Margin = new Padding(6, 0, 6, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(119, 23);
+            label4.TabIndex = 85;
+            label4.Text = "Tiền Giảm :";
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.Aquamarine;
+            panel9.Controls.Add(label1);
+            panel9.Controls.Add(label3);
+            panel9.Dock = DockStyle.Bottom;
+            panel9.Location = new Point(0, 76);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(519, 36);
+            panel9.TabIndex = 89;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.Aquamarine;
+            label1.Cursor = Cursors.SizeAll;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(125, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(394, 36);
+            label1.TabIndex = 86;
+            label1.Text = "0";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Aquamarine;
+            label3.Dock = DockStyle.Left;
+            label3.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(0, 0);
+            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(125, 23);
+            label3.TabIndex = 85;
+            label3.Text = "Thành tiền :";
+            // 
+            // btnThanhToan
+            // 
+            btnThanhToan.Dock = DockStyle.Bottom;
+            btnThanhToan.Location = new Point(0, 112);
+            btnThanhToan.Name = "btnThanhToan";
+            btnThanhToan.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
+            btnThanhToan.OverrideDefault.Back.ColorAngle = 45F;
+            btnThanhToan.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnThanhToan.OverrideDefault.Border.ColorAngle = 45F;
+            btnThanhToan.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            btnThanhToan.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            btnThanhToan.OverrideDefault.Border.Rounding = 18;
+            btnThanhToan.OverrideDefault.Border.Width = 1;
+            btnThanhToan.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            btnThanhToan.Size = new Size(519, 44);
+            btnThanhToan.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.StateCommon.Back.ColorAngle = 45F;
+            btnThanhToan.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnThanhToan.StateCommon.Border.ColorAngle = 45F;
+            btnThanhToan.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            btnThanhToan.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            btnThanhToan.StateCommon.Border.Rounding = 18;
+            btnThanhToan.StateCommon.Border.Width = 1;
+            btnThanhToan.StateCommon.Content.ShortText.Color1 = Color.White;
+            btnThanhToan.StateCommon.Content.ShortText.Color2 = Color.White;
+            btnThanhToan.StateCommon.Content.ShortText.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThanhToan.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
+            btnThanhToan.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
+            btnThanhToan.StatePressed.Back.ColorAngle = 130F;
+            btnThanhToan.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
+            btnThanhToan.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
+            btnThanhToan.StatePressed.Border.ColorAngle = 130F;
+            btnThanhToan.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            btnThanhToan.StatePressed.Border.Rounding = 18;
+            btnThanhToan.StatePressed.Border.Width = 1;
+            btnThanhToan.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.StateTracking.Back.ColorAngle = 45F;
+            btnThanhToan.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
+            btnThanhToan.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
+            btnThanhToan.StateTracking.Border.ColorAngle = 45F;
+            btnThanhToan.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            btnThanhToan.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            btnThanhToan.StateTracking.Border.Rounding = 18;
+            btnThanhToan.StateTracking.Border.Width = 1;
+            btnThanhToan.TabIndex = 88;
+            btnThanhToan.Values.Text = "Thanh Toán";
+            btnThanhToan.Click += btnThanhToan_Click_1;
+            // 
+            // PanelOrders
+            // 
+            PanelOrders.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            PanelOrders.BackColor = Color.Transparent;
+            PanelOrders.Dock = DockStyle.Top;
+            PanelOrders.Location = new Point(0, 0);
+            PanelOrders.Name = "PanelOrders";
+            PanelOrders.Size = new Size(519, 551);
+            PanelOrders.TabIndex = 88;
             // 
             // panel3
             // 
-            panel3.Controls.Add(btnDelete);
-            panel3.Controls.Add(btnAdd);
-            panel3.Controls.Add(btnExport);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 415);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1353, 141);
+            panel3.Size = new Size(1353, 710);
             panel3.TabIndex = 0;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(808, 41);
-            btnDelete.Name = "btnDelete";
-            btnDelete.OverrideDefault.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.OverrideDefault.Border.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.OverrideDefault.Border.Rounding = 18;
-            btnDelete.OverrideDefault.Border.Width = 1;
-            btnDelete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnDelete.Size = new Size(191, 35);
-            btnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateCommon.Border.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateCommon.Border.Rounding = 18;
-            btnDelete.StateCommon.Border.Width = 1;
-            btnDelete.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDelete.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
-            btnDelete.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
-            btnDelete.StatePressed.Back.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnDelete.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnDelete.StatePressed.Border.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StatePressed.Border.Rounding = 18;
-            btnDelete.StatePressed.Border.Width = 1;
-            btnDelete.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateTracking.Back.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateTracking.Border.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateTracking.Border.Rounding = 18;
-            btnDelete.StateTracking.Border.Width = 1;
-            btnDelete.TabIndex = 10;
-            btnDelete.Values.Text = "Xoá";
-            // 
-            // btnAdd
-            // 
-            btnAdd.Location = new Point(339, 41);
-            btnAdd.Name = "btnAdd";
-            btnAdd.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnAdd.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
-            btnAdd.OverrideDefault.Back.ColorAngle = 45F;
-            btnAdd.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnAdd.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnAdd.OverrideDefault.Border.ColorAngle = 45F;
-            btnAdd.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnAdd.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnAdd.OverrideDefault.Border.Rounding = 18;
-            btnAdd.OverrideDefault.Border.Width = 1;
-            btnAdd.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnAdd.Size = new Size(191, 35);
-            btnAdd.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnAdd.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnAdd.StateCommon.Back.ColorAngle = 45F;
-            btnAdd.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnAdd.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnAdd.StateCommon.Border.ColorAngle = 45F;
-            btnAdd.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnAdd.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnAdd.StateCommon.Border.Rounding = 18;
-            btnAdd.StateCommon.Border.Width = 1;
-            btnAdd.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnAdd.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnAdd.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
-            btnAdd.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
-            btnAdd.StatePressed.Back.ColorAngle = 130F;
-            btnAdd.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnAdd.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnAdd.StatePressed.Border.ColorAngle = 130F;
-            btnAdd.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnAdd.StatePressed.Border.Rounding = 18;
-            btnAdd.StatePressed.Border.Width = 1;
-            btnAdd.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnAdd.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnAdd.StateTracking.Back.ColorAngle = 45F;
-            btnAdd.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnAdd.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnAdd.StateTracking.Border.ColorAngle = 45F;
-            btnAdd.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnAdd.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnAdd.StateTracking.Border.Rounding = 18;
-            btnAdd.StateTracking.Border.Width = 1;
-            btnAdd.TabIndex = 8;
-            btnAdd.Values.Text = " Thêm Kho";
-            // 
-            // btnExport
-            // 
-            btnExport.Location = new Point(576, 41);
-            btnExport.Name = "btnExport";
-            btnExport.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.OverrideDefault.Back.ColorAngle = 45F;
-            btnExport.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.OverrideDefault.Border.ColorAngle = 45F;
-            btnExport.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnExport.OverrideDefault.Border.Rounding = 18;
-            btnExport.OverrideDefault.Border.Width = 1;
-            btnExport.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnExport.Size = new Size(191, 35);
-            btnExport.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnExport.StateCommon.Back.ColorAngle = 45F;
-            btnExport.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.StateCommon.Border.ColorAngle = 45F;
-            btnExport.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnExport.StateCommon.Border.Rounding = 18;
-            btnExport.StateCommon.Border.Width = 1;
-            btnExport.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnExport.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnExport.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExport.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
-            btnExport.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
-            btnExport.StatePressed.Back.ColorAngle = 130F;
-            btnExport.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnExport.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnExport.StatePressed.Border.ColorAngle = 130F;
-            btnExport.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.StatePressed.Border.Rounding = 18;
-            btnExport.StatePressed.Border.Width = 1;
-            btnExport.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnExport.StateTracking.Back.ColorAngle = 45F;
-            btnExport.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.StateTracking.Border.ColorAngle = 45F;
-            btnExport.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnExport.StateTracking.Border.Rounding = 18;
-            btnExport.StateTracking.Border.Width = 1;
-            btnExport.TabIndex = 9;
-            btnExport.Values.Text = "Xuất File";
             // 
             // kryptonTextBox1
             // 
@@ -436,9 +433,9 @@ namespace PosManager.Forms.UserControls.Post
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainer1);
-            MinimumSize = new Size(1353, 752);
+            MinimumSize = new Size(1353, 754);
             Name = "POSUserControl";
-            Size = new Size(1353, 752);
+            Size = new Size(1353, 754);
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
@@ -450,8 +447,16 @@ namespace PosManager.Forms.UserControls.Post
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pDatagridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dtgvAccount).EndInit();
-            panel3.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -459,26 +464,28 @@ namespace PosManager.Forms.UserControls.Post
 
         private SplitContainer splitContainer1;
         private Panel pDatagridView;
-        private Panel panel1;
         private PlaceholderTextBox txtSearchSanPham;
         private Panel panel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAdd;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnExport;
-        private DataGridView dtgvAccount;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Panel panel3;
-        private DataGridViewTextBoxColumn cSTT;
-        private DataGridViewTextBoxColumn cMa;
-        private DataGridViewTextBoxColumn cTen;
-        private DataGridViewTextBoxColumn cDVT;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDomainUpDownColumn cSoLuong;
-        private DataGridViewTextBoxColumn cThanhTien;
-        private DataGridViewImageColumn cEdit;
-        private DataGridViewTextBoxColumn cId;
-        private Panel panel4;
         private PlaceholderTextBox txtSearchTenKhachHang;
         private PictureBox btnAddKhachHang;
+        private Panel panel7;
+        private Panel panel6;
+        private Panel panel4;
+        private Panel panel1;
+        private FlowLayoutPanel PanelProducts;
+        private Panel PanelOrders;
+        private Panel panel10;
+        private Panel panel8;
+        private Label label5;
+        private Label label6;
         private Panel panel5;
+        private Label label2;
+        private Label label4;
+        private Panel panel9;
+        private Label label1;
+        private Label label3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThanhToan;
     }
 }

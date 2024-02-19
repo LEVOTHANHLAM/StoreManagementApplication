@@ -173,6 +173,16 @@ namespace PosManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_22 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_left_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-left-40", resourceCulture);
