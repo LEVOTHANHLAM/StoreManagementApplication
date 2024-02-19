@@ -17,13 +17,13 @@ namespace PosManager.Forms.UserControls.Post
             Dock = DockStyle.Top;
             _Order = order;
             this.Orders = Orders;
-           // LabelName.Text = order.GetProduct().Name;
+            // LabelName.Text = order.GetProduct().Name;
         }
 
         public void UpdateData()
         {
-         //   LabelQuantity.Text = _Order.Quantity.ToString();
-           // LabelSubtotal.Text = _Order.Subtotal.ToString() + "PHP";
+            //   LabelQuantity.Text = _Order.Quantity.ToString();
+            // LabelSubtotal.Text = _Order.Subtotal.ToString() + "PHP";
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)

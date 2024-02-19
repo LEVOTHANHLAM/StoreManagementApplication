@@ -40,8 +40,8 @@
             label1 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
-            label2 = new Label();
             label3 = new Label();
+            label2 = new Label();
             panel6.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -185,17 +185,6 @@
             panel3.Size = new Size(255, 41);
             panel3.TabIndex = 9;
             // 
-            // label2
-            // 
-            label2.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(255, 21);
-            label2.TabIndex = 4;
-            label2.Text = "5.000.000";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // label3
             // 
             label3.Dock = DockStyle.Bottom;
@@ -207,6 +196,17 @@
             label3.TabIndex = 5;
             label3.Text = "-1000.000";
             label3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DimGray;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(255, 21);
+            label2.TabIndex = 4;
+            label2.Text = "5.000.000";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // OrderItemComponent
             // 
@@ -235,14 +235,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LabelSubtotal;
-        private System.Windows.Forms.Panel panel6;
+        private Label LabelSubtotal;
+        private Panel panel6;
         private Button ButtonAdd;
         private Button ButtonMinus;
-        private System.Windows.Forms.Label LabelName;
-       // private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Label LabelName;
+        // private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Panel guna2Panel1;
-        private System.Windows.Forms.Label LabelQuantity;
+        private Label LabelQuantity;
         private PictureBox pictureBox1;
         private Panel panel1;
         private Label label1;

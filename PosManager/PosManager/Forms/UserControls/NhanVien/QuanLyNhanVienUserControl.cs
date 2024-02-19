@@ -20,10 +20,10 @@ namespace PosManager.Forms.UserControls.NhanVien
         public QuanLyNhanVienUserControl()
         {
             InitializeComponent();
-           
+
             _usersController = new UsersController();
             cbbCuonTrang.SelectedIndex = 0;
-           
+
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace PosManager.Forms.UserControls.NhanVien
 
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
         {
-          //  loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            //  loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             if (GlobalModel.UserInfo.Permissions != null)
             {
                 permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "QuanLyNhanVienUserControl");

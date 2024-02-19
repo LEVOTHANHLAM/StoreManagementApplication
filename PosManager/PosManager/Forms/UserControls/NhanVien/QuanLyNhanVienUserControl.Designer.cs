@@ -91,13 +91,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).BeginInit();
             ctmsAcc.SuspendLayout();
             SuspendLayout();
-            if (txtSearch == null)
-            {
-                txtSearch = new Helper.CustomControls.PlaceholderTextBox();
-                PlaceholderTextBox.CreatTextBox(txtSearch);
-                panel4.Controls.Add(txtSearch);
-                txtSearch.TextChanged += txtSearch_TextChanged;
-            }
             // 
             // splitContainer1
             // 

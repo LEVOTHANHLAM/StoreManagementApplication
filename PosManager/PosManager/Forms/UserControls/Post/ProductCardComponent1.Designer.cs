@@ -132,8 +132,8 @@
 
         private Panel guna2Panel1;
         private PictureBox PictureProductImage;
-        private System.Windows.Forms.Label LabelName;
-        private System.Windows.Forms.Label LabelPrice;
+        private Label LabelName;
+        private Label LabelPrice;
         private Button btnAddProduct;
         private Label LabelDonViTinh;
     }

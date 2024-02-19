@@ -4,6 +4,7 @@ using PosManager.Helper.CustomControls;
 using PosManager.Helper;
 using PosManager.Model.User;
 using PosManager.Model;
+using Serilog;
 
 namespace PosManager.Forms.UserControls.HoaDon
 {
@@ -44,7 +45,7 @@ namespace PosManager.Forms.UserControls.HoaDon
                 permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "NhapKhoUserControl");
                 if (permissionModel != null)
                 {
-                    btnAdd.Enabled = permissionModel.HasCreate;
+                   // btnAdd.Enabled = permissionModel.HasCreate;
                 }
             }
         }

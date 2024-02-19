@@ -31,13 +31,13 @@ namespace PosManager.Forms.UserControls.Post
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(POSUserControl));
-            txtSearchSanPham = new PlaceholderTextBox();
             splitContainer1 = new SplitContainer();
             panel2 = new Panel();
             panel4 = new Panel();
             btnAddKhachHang = new PictureBox();
             txtSearchTenKhachHang = new PlaceholderTextBox();
             panel1 = new Panel();
+            txtSearchSanPham = new PlaceholderTextBox();
             pDatagridView = new Panel();
             panel7 = new Panel();
             PanelProducts = new FlowLayoutPanel();
@@ -72,27 +72,6 @@ namespace PosManager.Forms.UserControls.Post
             panel5.SuspendLayout();
             panel9.SuspendLayout();
             SuspendLayout();
-            // 
-            // txtSearchSanPham
-            // 
-            txtSearchSanPham.Dock = DockStyle.Fill;
-            txtSearchSanPham.ForeColor = Color.Gray;
-            txtSearchSanPham.Location = new Point(0, 0);
-            txtSearchSanPham.Name = "txtSearchSanPham";
-            txtSearchSanPham.PlaceholderColor = Color.Gray;
-            txtSearchSanPham.PlaceholderText = "Tìm Kiếm Sản Phẩm";
-            txtSearchSanPham.Size = new Size(828, 36);
-            txtSearchSanPham.StateCommon.Back.Color1 = Color.White;
-            txtSearchSanPham.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtSearchSanPham.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtSearchSanPham.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtSearchSanPham.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtSearchSanPham.StateCommon.Border.Rounding = 18;
-            txtSearchSanPham.StateCommon.Content.Color1 = Color.Black;
-            txtSearchSanPham.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtSearchSanPham.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtSearchSanPham.TabIndex = 3;
-            txtSearchSanPham.Text = "Tìm Kiếm Sản Phẩm";
             // 
             // splitContainer1
             // 
@@ -173,6 +152,27 @@ namespace PosManager.Forms.UserControls.Post
             panel1.Name = "panel1";
             panel1.Size = new Size(828, 40);
             panel1.TabIndex = 0;
+            // 
+            // txtSearchSanPham
+            // 
+            txtSearchSanPham.Dock = DockStyle.Fill;
+            txtSearchSanPham.ForeColor = Color.Gray;
+            txtSearchSanPham.Location = new Point(0, 0);
+            txtSearchSanPham.Name = "txtSearchSanPham";
+            txtSearchSanPham.PlaceholderColor = Color.Gray;
+            txtSearchSanPham.PlaceholderText = "Tìm Kiếm Sản Phẩm";
+            txtSearchSanPham.Size = new Size(828, 36);
+            txtSearchSanPham.StateCommon.Back.Color1 = Color.White;
+            txtSearchSanPham.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtSearchSanPham.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtSearchSanPham.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtSearchSanPham.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtSearchSanPham.StateCommon.Border.Rounding = 18;
+            txtSearchSanPham.StateCommon.Content.Color1 = Color.Black;
+            txtSearchSanPham.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtSearchSanPham.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtSearchSanPham.TabIndex = 3;
+            txtSearchSanPham.Text = "Tìm Kiếm Sản Phẩm";
             // 
             // pDatagridView
             // 
