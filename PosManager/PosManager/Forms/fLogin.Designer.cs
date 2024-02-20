@@ -120,8 +120,8 @@
             txtUsername.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             txtUsername.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtUsername.StateCommon.Border.Rounding = 18;
-            txtUsername.StateCommon.Content.Color1 = Color.Black;
-            txtUsername.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUsername.StateCommon.Content.Color1 = Color.DimGray;
+            txtUsername.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             txtUsername.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtUsername.TabIndex = 2;
             // 
@@ -137,7 +137,7 @@
             txtPassword.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
             txtPassword.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             txtPassword.StateCommon.Border.Rounding = 18;
-            txtPassword.StateCommon.Content.Color1 = Color.Black;
+            txtPassword.StateCommon.Content.Color1 = Color.DimGray;
             txtPassword.StateCommon.Content.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtPassword.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtPassword.TabIndex = 3;

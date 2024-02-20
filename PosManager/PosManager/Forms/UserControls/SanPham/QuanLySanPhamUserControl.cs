@@ -1,4 +1,5 @@
-﻿using Krypton_toolKitDemo;
+﻿using DevExpress.XtraSplashScreen;
+using Krypton_toolKitDemo;
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
 using PosManager.Helper.CustomControls;
@@ -17,11 +18,13 @@ namespace PosManager.Forms.UserControls.SanPham
         private int Total = 1000;
         private int row = 0;
         private PermissionModel permissionModel;
-        public QuanLySanPhamUserControl()
+        private fHome _fHome;
+        public QuanLySanPhamUserControl(fHome fHome )
         {
             InitializeComponent();
             _productsController = new ProductsController();
             cbbCuonTrang.SelectedIndex = 0;
+            _fHome = fHome;
             if (txtSearch == null)
             {
                 txtSearch = new Helper.CustomControls.PlaceholderTextBox();
@@ -148,12 +151,11 @@ namespace PosManager.Forms.UserControls.SanPham
                     MessageCommon.ShowMessageBox("Bạn không có quyền  sửa", 2);
                     return;
                 }
-                fLoading loading = new fLoading();
-                loading.StartLoading();
+                SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                 fChiTietHangHoa update = new fChiTietHangHoa(id);
                 update.ShowDialog();
-                loading.Close();
+                SplashScreenManager.CloseForm(false);
                 loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             }
             else if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cDelete"].Index)
@@ -166,18 +168,17 @@ namespace PosManager.Forms.UserControls.SanPham
                 var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                 if (MessageCommon.ShowConfirmationBox("Bạn Có Chắc Chắn Muốn Xoá Sản Phẩm Này Không?") == DialogResult.Yes)
                 {
-                    fLoading loading = new fLoading();
-                    loading.StartLoading();
+                    SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                     var result = await _productsController.Delete(GlobalModel.AccsessToken, id);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                         loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                     }
                     else
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox("Đã gặp lỗi vui lòng thử lại!", 2);
                     }
                 }

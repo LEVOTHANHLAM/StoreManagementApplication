@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using Microsoft.VisualBasic.ApplicationServices;
 using PosManager.APIServices.CaiDat;
 using PosManager.APIServices.ChiNhanh;
@@ -84,8 +85,7 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            fLoading loading = new fLoading();
-            loading.StartLoading();
+           SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             try
             {
                 if (string.IsNullOrEmpty(_idUser))
@@ -108,22 +108,22 @@ namespace Krypton_toolKitDemo
                     var result = await _authenticateController.Create(GlobalModel.AccsessToken, user);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                     else
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
                     }
                 }
             }
             catch (Exception ex)
             {
-                loading.Close();
+                SplashScreenManager.CloseForm(false);
                 MessageCommon.ShowMessageBox(ex.Message);
             }
-            loading.Close();
+            SplashScreenManager.CloseForm(false);
         }
 
         private void cbbMaCuaHang_SelectedIndexChanged(object sender, EventArgs e)

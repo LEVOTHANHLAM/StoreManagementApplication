@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using PosManager.APIServices.CaiDat;
 using PosManager.Forms;
 using PosManager.Helper;
@@ -24,7 +25,7 @@ namespace Krypton_toolKitDemo
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            fLoading fLoading = new fLoading();
+            
             try
             {
                 if (string.IsNullOrEmpty(txtTen.Text.Trim()))
@@ -32,14 +33,14 @@ namespace Krypton_toolKitDemo
                     MessageCommon.ShowMessageBox("Vui Lòng Nhập thông tin!", 3);
                     return;
                 }
-                fLoading.StartLoading();
+                SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                 SystemFunctionsController systemFunctionsController = new SystemFunctionsController();
                 if (string.IsNullOrEmpty(Id))
                 {
                     var result = await systemFunctionsController.Add(GlobalModel.AccsessToken, txtTen.Text.Trim(), null);
                     if (result != null)
                     {
-                        fLoading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                 }
@@ -48,20 +49,20 @@ namespace Krypton_toolKitDemo
                     var result = await systemFunctionsController.Edit(GlobalModel.AccsessToken, Id, txtTen.Text.Trim(), null);
                     if (result != null)
                     {
-                        fLoading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                     else
                     {
-                        fLoading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(" Lỗi hệ thống vui lòng thử lại ", 3);
                     }
                 }
-                fLoading.Close();
+                SplashScreenManager.CloseForm(false);
             }
             catch (Exception ex)
             {
-                fLoading.Close();
+                SplashScreenManager.CloseForm(false);
                 Log.Error(ex, ex.Message);
                 MessageCommon.ShowMessageBox(ex.Message);
             }

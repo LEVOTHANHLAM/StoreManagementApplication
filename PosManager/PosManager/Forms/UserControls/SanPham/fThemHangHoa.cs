@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using PosManager.APIServices.ChiNhanh;
@@ -165,7 +166,7 @@ namespace Krypton_toolKitDemo
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            fLoading loading = new fLoading();
+          
             try
             {
                 bool checker = true;
@@ -174,8 +175,8 @@ namespace Krypton_toolKitDemo
                     MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                     return;
                 }
-               
-                loading.StartLoading();
+
+                SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                 try
                 {
                     ProductsModel products = new ProductsModel();
@@ -199,7 +200,7 @@ namespace Krypton_toolKitDemo
                     {
                         if (string.IsNullOrEmpty(row.Cells["cQuyDoi"].Value.ToString()))
                         {
-                            loading.Close();
+                            SplashScreenManager.CloseForm(false);
                             MessageCommon.ShowMessageBox("Chưa Nhập Số Lượng Quy Đổi");
                             checker = false;
                             break;
@@ -225,7 +226,7 @@ namespace Krypton_toolKitDemo
                         var result = await _productsController.Add(GlobalModel.AccsessToken, products);
                         if (result != null)
                         {
-                            loading.Close();
+                            SplashScreenManager.CloseForm(false);
                             MessageCommon.ShowMessageBox(result.Message);
                             if (result.StatusCode == 200)
                             {
@@ -234,14 +235,14 @@ namespace Krypton_toolKitDemo
                         }
                         else
                         {
-                            loading.Close();
+                            SplashScreenManager.CloseForm(false);
                             MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    loading.Close();
+                    SplashScreenManager.CloseForm(false);
                     Log.Error(ex, ex.Message);
                     MessageCommon.ShowMessageBox(ex.Message, 3);
                 }
@@ -249,7 +250,7 @@ namespace Krypton_toolKitDemo
             }
             catch (Exception ex)
             {
-                loading.Close();
+                SplashScreenManager.CloseForm(false);
                 Log.Error(ex, ex.Message);
                 MessageCommon.ShowMessageBox(ex.Message, 3);
             }

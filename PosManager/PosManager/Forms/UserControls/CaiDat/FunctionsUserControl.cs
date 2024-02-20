@@ -24,7 +24,10 @@ namespace PosManager.Forms.UserControls.KhachHang
             cbbCuonTrang.SelectedIndex = 0;
             if (txtSearch == null)
             {
+
+
                 txtSearch = new Helper.CustomControls.PlaceholderTextBox();
+               
                 PlaceholderTextBox.CreatTextBox(txtSearch);
                 panel4.Controls.Add(txtSearch);
                 txtSearch.TextChanged += txtSearch_TextChanged;

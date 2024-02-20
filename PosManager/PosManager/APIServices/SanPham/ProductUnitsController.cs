@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PosManager.Model.SanPham;
 using Serilog;
+using System.Net.Http;
 
 namespace PosManager.APIServices.SanPham
 {

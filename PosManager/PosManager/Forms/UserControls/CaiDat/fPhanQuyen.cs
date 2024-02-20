@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using DocumentFormat.OpenXml.Wordprocessing;
 using PosManager.APIServices.User;
 using PosManager.Forms;
@@ -73,11 +74,10 @@ namespace Krypton_toolKitDemo
                 updateModel.Command = "Delete";
                 updateModel.FunctionId = (Guid)dtgvAccount.Rows[e.RowIndex].Cells["cFunctionId"].Value;
             }
-            fLoading loading = new fLoading();
-            loading.StartLoading();
+            SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             await _usersController.UpdatePermissionsByIdUser(GlobalModel.AccsessToken, updateModel);
             await loadAccount();
-            loading.Close();
+            SplashScreenManager.CloseForm(false);
         }
     }
 }

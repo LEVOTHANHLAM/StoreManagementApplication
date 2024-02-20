@@ -97,7 +97,7 @@
             // btnThanhToan
             // 
             btnThanhToan.Dock = DockStyle.Bottom;
-            btnThanhToan.Location = new Point(0, 666);
+            btnThanhToan.Location = new Point(0, 456);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnThanhToan.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
@@ -110,7 +110,7 @@
             btnThanhToan.OverrideDefault.Border.Rounding = 18;
             btnThanhToan.OverrideDefault.Border.Width = 1;
             btnThanhToan.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnThanhToan.Size = new Size(519, 44);
+            btnThanhToan.Size = new Size(400, 44);
             btnThanhToan.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnThanhToan.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnThanhToan.StateCommon.Back.ColorAngle = 45F;
@@ -145,6 +145,7 @@
             btnThanhToan.StateTracking.Border.Width = 1;
             btnThanhToan.TabIndex = 89;
             btnThanhToan.Values.Text = "Thanh Toán";
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
             // label2
             // 
@@ -163,13 +164,15 @@
             // 
             // btnClose
             // 
+            btnClose.Dock = DockStyle.Right;
             btnClose.Image = Properties.Resources.icons8_close_30;
-            btnClose.Location = new Point(488, 0);
+            btnClose.Location = new Point(370, 0);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(31, 31);
-            btnClose.SizeMode = PictureBoxSizeMode.Zoom;
+            btnClose.Size = new Size(30, 30);
+            btnClose.SizeMode = PictureBoxSizeMode.AutoSize;
             btnClose.TabIndex = 91;
             btnClose.TabStop = false;
+            btnClose.Click += btnClose_Click;
             // 
             // panel1
             // 
@@ -178,7 +181,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(519, 30);
+            panel1.Size = new Size(400, 30);
             panel1.TabIndex = 92;
             // 
             // panel2
@@ -187,7 +190,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 30);
             panel2.Name = "panel2";
-            panel2.Size = new Size(519, 30);
+            panel2.Size = new Size(400, 30);
             panel2.TabIndex = 93;
             // 
             // panel3
@@ -198,7 +201,7 @@
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 60);
             panel3.Name = "panel3";
-            panel3.Size = new Size(519, 27);
+            panel3.Size = new Size(400, 27);
             panel3.TabIndex = 94;
             // 
             // lbTongSoTien
@@ -208,7 +211,7 @@
             lbTongSoTien.Dock = DockStyle.Right;
             lbTongSoTien.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbTongSoTien.ForeColor = Color.DimGray;
-            lbTongSoTien.Location = new Point(376, 0);
+            lbTongSoTien.Location = new Point(257, 0);
             lbTongSoTien.Margin = new Padding(6, 0, 6, 0);
             lbTongSoTien.Name = "lbTongSoTien";
             lbTongSoTien.Padding = new Padding(5);
@@ -240,7 +243,7 @@
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 87);
             panel4.Name = "panel4";
-            panel4.Size = new Size(519, 27);
+            panel4.Size = new Size(400, 27);
             panel4.TabIndex = 95;
             // 
             // lbTienGiamGia
@@ -250,7 +253,7 @@
             lbTienGiamGia.Dock = DockStyle.Right;
             lbTienGiamGia.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbTienGiamGia.ForeColor = Color.LightPink;
-            lbTienGiamGia.Location = new Point(456, 0);
+            lbTienGiamGia.Location = new Point(337, 0);
             lbTienGiamGia.Margin = new Padding(6, 0, 6, 0);
             lbTienGiamGia.Name = "lbTienGiamGia";
             lbTienGiamGia.Padding = new Padding(5);
@@ -281,7 +284,7 @@
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 114);
             panel5.Name = "panel5";
-            panel5.Size = new Size(519, 27);
+            panel5.Size = new Size(400, 27);
             panel5.TabIndex = 96;
             // 
             // lbKhachCanTra
@@ -291,7 +294,7 @@
             lbKhachCanTra.Dock = DockStyle.Right;
             lbKhachCanTra.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbKhachCanTra.ForeColor = Color.DodgerBlue;
-            lbKhachCanTra.Location = new Point(456, 0);
+            lbKhachCanTra.Location = new Point(337, 0);
             lbKhachCanTra.Margin = new Padding(6, 0, 6, 0);
             lbKhachCanTra.Name = "lbKhachCanTra";
             lbKhachCanTra.Padding = new Padding(5);
@@ -322,7 +325,7 @@
             panel6.Dock = DockStyle.Top;
             panel6.Location = new Point(0, 141);
             panel6.Name = "panel6";
-            panel6.Size = new Size(519, 27);
+            panel6.Size = new Size(400, 27);
             panel6.TabIndex = 97;
             // 
             // lbKhachThanhToan
@@ -332,7 +335,7 @@
             lbKhachThanhToan.Dock = DockStyle.Right;
             lbKhachThanhToan.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbKhachThanhToan.ForeColor = Color.Black;
-            lbKhachThanhToan.Location = new Point(456, 0);
+            lbKhachThanhToan.Location = new Point(337, 0);
             lbKhachThanhToan.Margin = new Padding(6, 0, 6, 0);
             lbKhachThanhToan.Name = "lbKhachThanhToan";
             lbKhachThanhToan.Padding = new Padding(5);
@@ -363,7 +366,7 @@
             panel7.Dock = DockStyle.Top;
             panel7.Location = new Point(0, 168);
             panel7.Name = "panel7";
-            panel7.Size = new Size(519, 31);
+            panel7.Size = new Size(400, 31);
             panel7.TabIndex = 98;
             // 
             // rdbChuyenKhoan
@@ -401,7 +404,7 @@
             panel8.Dock = DockStyle.Top;
             panel8.Location = new Point(0, 199);
             panel8.Name = "panel8";
-            panel8.Size = new Size(519, 27);
+            panel8.Size = new Size(400, 27);
             panel8.TabIndex = 99;
             // 
             // lbTienThua
@@ -411,7 +414,7 @@
             lbTienThua.Dock = DockStyle.Right;
             lbTienThua.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lbTienThua.ForeColor = Color.DimGray;
-            lbTienThua.Location = new Point(456, 0);
+            lbTienThua.Location = new Point(337, 0);
             lbTienThua.Margin = new Padding(6, 0, 6, 0);
             lbTienThua.Name = "lbTienThua";
             lbTienThua.Padding = new Padding(5);
@@ -439,6 +442,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(panel8);
             Controls.Add(panel7);
             Controls.Add(panel6);
@@ -449,7 +453,7 @@
             Controls.Add(panel1);
             Controls.Add(btnThanhToan);
             Name = "ThanhToanProduct";
-            Size = new Size(519, 710);
+            Size = new Size(400, 500);
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

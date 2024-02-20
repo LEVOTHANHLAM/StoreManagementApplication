@@ -106,6 +106,28 @@ namespace PosManager.Forms.UserControls.HoaDon
             splitContainer1.Size = new Size(1353, 752);
             splitContainer1.SplitterDistance = 81;
             splitContainer1.TabIndex = 0;
+            txtSearch = new Helper.CustomControls.PlaceholderTextBox();
+            // 
+            // txtSearch
+            // 
+            txtSearch.ForeColor = Color.Gray;
+            txtSearch.Location = new Point(3, 40);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderColor = Color.Gray;
+            txtSearch.PlaceholderText = "Tìm Kiếm";
+            txtSearch.Size = new Size(420, 36);
+            txtSearch.StateCommon.Back.Color1 = Color.White;
+            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
+            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
+            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            txtSearch.StateCommon.Border.Rounding = 18;
+            txtSearch.StateCommon.Content.Color1 = Color.Black;
+            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
+            txtSearch.TabIndex = 3;
+            txtSearch.Text = "Tìm Kiếm";
+            panel4.Controls.Add(txtSearch);
             // 
             // panel2
             // 

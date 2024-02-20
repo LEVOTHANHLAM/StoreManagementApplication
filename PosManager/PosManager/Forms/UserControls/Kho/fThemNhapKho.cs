@@ -105,19 +105,19 @@ namespace Krypton_toolKitDemo
             //        var result = await _authenticateController.Create(GlobalModel.AccsessToken, user);
             //        if (result != null)
             //        {
-            //            loading.Close();
+            //            SplashScreenManager.CloseForm(false);
             //            MessageCommon.ShowMessageBox(result.Message);
             //        }
             //        else
             //        {
-            //            loading.Close();
+            //            SplashScreenManager.CloseForm(false);
             //            MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
             //        }
             //    }
             //}
             //catch (Exception ex)
             //{
-            //    loading.Close();
+            //    SplashScreenManager.CloseForm(false);
             //    MessageCommon.ShowMessageBox(ex.Message);
             //}
             //loading.Close();

@@ -55,7 +55,7 @@
             LabelSubtotal.Dock = DockStyle.Right;
             LabelSubtotal.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             LabelSubtotal.ForeColor = Color.Black;
-            LabelSubtotal.Location = new Point(264, 64);
+            LabelSubtotal.Location = new Point(145, 64);
             LabelSubtotal.Name = "LabelSubtotal";
             LabelSubtotal.Size = new Size(255, 44);
             LabelSubtotal.TabIndex = 3;
@@ -68,7 +68,7 @@
             panel6.Controls.Add(ButtonAdd);
             panel6.Controls.Add(ButtonMinus);
             panel6.Dock = DockStyle.Right;
-            panel6.Location = new Point(401, 0);
+            panel6.Location = new Point(282, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(118, 38);
             panel6.TabIndex = 4;
@@ -129,7 +129,7 @@
             LabelName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             LabelName.Location = new Point(0, 0);
             LabelName.Name = "LabelName";
-            LabelName.Size = new Size(401, 38);
+            LabelName.Size = new Size(282, 38);
             LabelName.TabIndex = 5;
             LabelName.Text = "Tên Sản Phẩm";
             LabelName.TextAlign = ContentAlignment.MiddleLeft;
@@ -152,7 +152,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(519, 26);
+            panel1.Size = new Size(400, 26);
             panel1.TabIndex = 7;
             // 
             // label1
@@ -161,7 +161,7 @@
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(22, 0);
             label1.Name = "label1";
-            label1.Size = new Size(497, 26);
+            label1.Size = new Size(378, 26);
             label1.TabIndex = 7;
             label1.Text = "     Mã Sản phẩm";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -173,7 +173,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 26);
             panel2.Name = "panel2";
-            panel2.Size = new Size(519, 38);
+            panel2.Size = new Size(400, 38);
             panel2.TabIndex = 8;
             // 
             // panel3
@@ -219,10 +219,10 @@
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(0);
-            MaximumSize = new Size(519, 108);
-            MinimumSize = new Size(519, 108);
+            MaximumSize = new Size(400, 108);
+            MinimumSize = new Size(400, 108);
             Name = "OrderItemComponent";
-            Size = new Size(519, 108);
+            Size = new Size(400, 108);
             panel6.ResumeLayout(false);
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

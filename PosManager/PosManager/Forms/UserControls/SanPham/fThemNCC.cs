@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using PosManager.APIServices.SanPham;
 using PosManager.Forms;
 using PosManager.Helper;
@@ -45,10 +46,10 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            fLoading loading = new fLoading();
+          
             try
             {
-                loading.StartLoading();
+               SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                 SupplierModel supplierModel = new SupplierModel();
                 supplierModel.TenNhaCungCap = txtTenNCC.Text.Trim();
                 supplierModel.MaNhaCungCap = txtMaNCC.Text.Trim();
@@ -59,7 +60,7 @@ namespace Krypton_toolKitDemo
                     var result = await _suppliersController.Add(GlobalModel.AccsessToken, supplierModel);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                 }
@@ -69,7 +70,7 @@ namespace Krypton_toolKitDemo
                     var result = await _suppliersController.Edit(GlobalModel.AccsessToken, supplierModel);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                 }
@@ -83,7 +84,7 @@ namespace Krypton_toolKitDemo
                 Log.Error(ex, ex.Message);
                 MessageCommon.ShowMessageBox(ex.Message);
             }
-            loading.Close();
+            SplashScreenManager.CloseForm(false);
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)

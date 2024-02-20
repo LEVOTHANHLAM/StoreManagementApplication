@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using Newtonsoft.Json;
 using PosManager.APIServices.User;
 using PosManager.Forms;
@@ -27,7 +28,6 @@ namespace Krypton_toolKitDemo
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
-            fLoading loading = new fLoading();
             try
             {
                 btnLogin.Enabled = false;
@@ -42,15 +42,16 @@ namespace Krypton_toolKitDemo
                     btnLogin.Enabled = true;
                     return;
                 }
-              
-                loading.StartLoading();
+
+                SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                 AuthenticateController login = new AuthenticateController();
                 var user = await login.Login(username, password);
                 if (user == null)
                 {
+                    SplashScreenManager.CloseForm(false);
                     MessageCommon.ShowMessageBox("Lỗi Hệ Thống Vui Lòng Liên Hệ Admin!", 4);
                     btnLogin.Enabled = true;
-                    loading.Close();
+
                     return;
                 }
                 else
@@ -61,30 +62,31 @@ namespace Krypton_toolKitDemo
                         GlobalModel.UserInfo = GetUserInfoFromToken(user.Data.Token);
                         if (GlobalModel.UserInfo != null)
                         {
-                            fMain form1 = new fMain(this);
+                            fHome form1 = new fHome();
                             form1.Show();
-                            loading.Close();
+                            SplashScreenManager.CloseForm(false);
                             btnLogin.Enabled = true;
                             this.Hide();
                         }
                     }
                     else
                     {
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(user.Message, 4);
                         btnLogin.Enabled = true;
-                        loading.Close();
                         return;
                     }
                 }
             }
             catch (Exception ex)
             {
+                SplashScreenManager.CloseForm(false);
                 Log.Error($"{nameof(fLogin)}, params; {nameof(btnLogin_Click)}, Error; {ex.Message}, Exception; {ex}");
                 MessageCommon.ShowMessageBox(ex.Message, 4);
-                loading.StopLoading();
+
                 return;
             }
-            loading.Close();
+            SplashScreenManager.CloseForm(false);
         }
         public TokenInfo GetUserInfoFromToken(string jwtToken)
         {

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PosManager.Model.ChiNhanh;
 using Serilog;
+using System.Net.Http;
 
 namespace PosManager.APIServices.ChiNhanh
 {

@@ -14,10 +14,20 @@
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            panel6.Controls.Clear();
+            panel2.Controls.Clear();
         }
 
         private void btnThanhToan_Click_1(object sender, EventArgs e)
+        {
+            //panel10
+            //PanelOrders
+            ThanhToanProduct childForm = new ThanhToanProduct(splitContainer2.Panel2, pThanhToasn);
+            childForm.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Clear();
+            splitContainer2.Panel2.Controls.Add(childForm);
+        }
+
+        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

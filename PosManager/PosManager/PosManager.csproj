@@ -26,9 +26,6 @@
     <Compile Update="Forms\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\fMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\UserControls\CaiDat\fPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +90,7 @@
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.102.1" />
+    <PackageReference Include="DevExpress.Win.Design" Version="22.2.3" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -124,6 +122,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

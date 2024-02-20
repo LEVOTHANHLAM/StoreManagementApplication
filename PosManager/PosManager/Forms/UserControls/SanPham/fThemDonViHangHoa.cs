@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using PosManager.APIServices.SanPham;
 using PosManager.Forms;
 using PosManager.Helper;
@@ -44,8 +45,7 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập thông tin?");
                 return;
             }
-            fLoading loading = new fLoading();
-            loading.StartLoading();
+            SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             try
             {
                 DonViHangHoaModel donViHangHoaModel = new DonViHangHoaModel();
@@ -56,12 +56,12 @@ namespace Krypton_toolKitDemo
                     var result = await _productUnitsController.Add(GlobalModel.AccsessToken, donViHangHoaModel);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                     else
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
                     }
                 }
@@ -71,12 +71,12 @@ namespace Krypton_toolKitDemo
                     var result = await _productUnitsController.Edit(GlobalModel.AccsessToken, donViHangHoaModel);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                     else
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox("Vui Lòng Thử Lại!");
                     }
                 }
@@ -85,11 +85,11 @@ namespace Krypton_toolKitDemo
             }
             catch (Exception ex)
             {
-                loading.Close();
+                SplashScreenManager.CloseForm(false);
                 Log.Error(ex, ex.Message);
                 MessageCommon.ShowMessageBox(ex.Message, 3);
             }
-            loading.Close();
+            SplashScreenManager.CloseForm(false);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraSplashScreen;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using PosManager.APIServices.CaiDat;
 using PosManager.APIServices.Kho;
@@ -41,8 +42,7 @@ namespace Krypton_toolKitDemo
                 MessageCommon.ShowMessageBox("Vui lòng nhập đủ thông tin!");
                 return;
             }
-            fLoading loading = new fLoading();
-            loading.StartLoading();
+           SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             try
             {
                 _stocksController = new StocksController();
@@ -53,12 +53,12 @@ namespace Krypton_toolKitDemo
                     var result = await _stocksController.Edit(GlobalModel.AccsessToken, _stock);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                     else
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
                     }
                 }
@@ -70,19 +70,19 @@ namespace Krypton_toolKitDemo
                     var result = await _stocksController.Add(GlobalModel.AccsessToken, stock);
                     if (result != null)
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                     else
                     {
-                        loading.Close();
+                        SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox("Vui Lòng Thử Lại Sau!");
                     }
                 }
             }
             catch (Exception ex)
             {
-                loading.Close();
+                SplashScreenManager.CloseForm(false);
                 Log.Error(ex, ex.Message);
                 MessageCommon.ShowMessageBox(ex.Message, 3);
 

@@ -1,10 +1,9 @@
 ﻿using Krypton_toolKitDemo;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Net.SourceForge.Vietpad.InputMethod;
+using PosManager.Forms;
 using PosManager.Helper;
 using Serilog;
-using System.Runtime.InteropServices;
 
 namespace PosManager
 {
