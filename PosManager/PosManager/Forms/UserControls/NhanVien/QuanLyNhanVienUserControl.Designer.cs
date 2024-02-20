@@ -41,6 +41,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             panel2 = new Panel();
             panel4 = new Panel();
             btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            txtSearch = new PlaceholderTextBox();
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
@@ -71,6 +72,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             cCuaHang = new DataGridViewTextBoxColumn();
             cEdit = new DataGridViewButtonColumn();
             cCapQuyen = new DataGridViewButtonColumn();
+            cDelete = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
             ctmsAcc = new ContextMenuStrip(components);
             selectedToolStripMenuItem = new ToolStripMenuItem();
@@ -95,6 +97,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
             splitContainer1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             splitContainer1.Location = new Point(0, 0);
             splitContainer1.Name = "splitContainer1";
@@ -125,6 +128,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             // panel4
             // 
             panel4.Controls.Add(btnExport);
+            panel4.Controls.Add(txtSearch);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
@@ -184,7 +188,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             btnExport.Values.Image = (Image)resources.GetObject("btnExport.Values.Image");
             btnExport.Values.Text = "Xuất File";
             btnExport.Click += btnExport_Click;
-            txtSearch = new Helper.CustomControls.PlaceholderTextBox();
             // 
             // txtSearch
             // 
@@ -205,7 +208,6 @@ namespace PosManager.Forms.UserControls.NhanVien
             txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Tìm Kiếm";
-            panel4.Controls.Add(txtSearch);
             // 
             // panel1
             // 
@@ -223,7 +225,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(119, 64);
+            label2.Location = new Point(124, 61);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 25;
@@ -233,7 +235,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(0, 64);
+            label1.Location = new Point(5, 61);
             label1.Name = "label1";
             label1.Size = new Size(53, 15);
             label1.TabIndex = 17;
@@ -301,7 +303,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
             cbbCuonTrang.Items.AddRange(new object[] { "2", "20", "50", "100" });
-            cbbCuonTrang.Location = new Point(58, 56);
+            cbbCuonTrang.Location = new Point(63, 53);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
             cbbCuonTrang.TabIndex = 24;
@@ -693,14 +695,14 @@ namespace PosManager.Forms.UserControls.NhanVien
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cCuaHang, cEdit, cCapQuyen, cId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cTen, cEmail, cUserName, cCCCD, cPhoneNumber, cDiaChi, cNgaySinh, cRole, cCuaHang, cEdit, cCapQuyen, cDelete, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
@@ -796,10 +798,9 @@ namespace PosManager.Forms.UserControls.NhanVien
             // 
             // cCuaHang
             // 
-            cCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            cCuaHang.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cCuaHang.HeaderText = "Mã Cửa Hàng";
             cCuaHang.Name = "cCuaHang";
-            cCuaHang.Width = 130;
             // 
             // cEdit
             // 
@@ -813,6 +814,14 @@ namespace PosManager.Forms.UserControls.NhanVien
             cCapQuyen.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             cCapQuyen.HeaderText = "Cấp Quyền";
             cCapQuyen.Name = "cCapQuyen";
+            // 
+            // cDelete
+            // 
+            cDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cDelete.FillWeight = 60F;
+            cDelete.HeaderText = "Xóa";
+            cDelete.Name = "cDelete";
+            cDelete.Width = 60;
             // 
             // cId
             // 
@@ -878,6 +887,7 @@ namespace PosManager.Forms.UserControls.NhanVien
             splitContainer1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             pDatagridView.ResumeLayout(false);
@@ -933,6 +943,7 @@ namespace PosManager.Forms.UserControls.NhanVien
         private DataGridViewTextBoxColumn cCuaHang;
         private DataGridViewButtonColumn cEdit;
         private DataGridViewButtonColumn cCapQuyen;
+        private DataGridViewImageColumn cDelete;
         private DataGridViewTextBoxColumn cId;
     }
 }

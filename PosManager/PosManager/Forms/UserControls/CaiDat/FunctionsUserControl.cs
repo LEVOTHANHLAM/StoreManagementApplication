@@ -1,10 +1,12 @@
-﻿using Krypton_toolKitDemo;
+﻿using DevExpress.XtraSplashScreen;
+using Krypton_toolKitDemo;
 using PosManager.APIServices.CaiDat;
 using PosManager.Helper;
 using PosManager.Helper.CustomControls;
 using PosManager.Model;
 using PosManager.Model.User;
 using Serilog;
+using static DevExpress.Xpo.Helpers.AssociatedCollectionCriteriaHelper;
 
 namespace PosManager.Forms.UserControls.KhachHang
 {
@@ -17,17 +19,16 @@ namespace PosManager.Forms.UserControls.KhachHang
         private int Total = 1000;
         private int row = 0;
         private PermissionModel permissionModel;
-        public FunctionsUserControl()
+        private fHome _fHome;
+        public FunctionsUserControl(fHome fHome )
         {
             InitializeComponent();
+            _fHome = fHome;
             _systemFunctionsController = new SystemFunctionsController();
             cbbCuonTrang.SelectedIndex = 0;
             if (txtSearch == null)
             {
-
-
                 txtSearch = new Helper.CustomControls.PlaceholderTextBox();
-               
                 PlaceholderTextBox.CreatTextBox(txtSearch);
                 panel4.Controls.Add(txtSearch);
                 txtSearch.TextChanged += txtSearch_TextChanged;
@@ -45,11 +46,11 @@ namespace PosManager.Forms.UserControls.KhachHang
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
             if (GlobalModel.UserInfo.Permissions != null)
             {
-                permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "FunctionsUserControl");
+                permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "System Function");
                 if (permissionModel != null)
                 {
                     btnAdd.Enabled = permissionModel.HasCreate;
-                    btnDelete.Enabled = permissionModel.HasDelete;
+
                 }
             }
         }
@@ -75,7 +76,7 @@ namespace PosManager.Forms.UserControls.KhachHang
                         foreach (var a in accounts.Data.Result)
                         {
 
-                            dtgvAccount.Rows.Add(false, i, a.Name, Properties.Resources.Edit, a.Id);
+                            dtgvAccount.Rows.Add(i, a.Name, Properties.Resources.Edit, Properties.Resources.delete15, a.Id);
                             i++;
                         }
                         row = i;
@@ -140,17 +141,52 @@ namespace PosManager.Forms.UserControls.KhachHang
             }
         }
 
-        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
                 if (permissionModel != null && permissionModel.HasUpdate)
                 {
+                    SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     var name = dtgvAccount.Rows[e.RowIndex].Cells["cTen"].Value.ToString();
                     fThemFunctions themNhaCungCap = new fThemFunctions(id, name);
+                    SplashScreenManager.CloseForm(false);
                     themNhaCungCap.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+                }
+
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cDelete"].Index)
+            {
+                if (permissionModel != null && permissionModel.HasUpdate)
+                {
+                    var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                    try
+                    {
+                        SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
+                        var result = await _systemFunctionsController.Delete(GlobalModel.AccsessToken, id);
+                        SplashScreenManager.CloseForm(false);
+                        if (result != null)
+                        {
+                            MessageCommon.ShowMessageBox(result.Message);
+                        }
+                        loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                    }
+                    catch (Exception ex)
+                    {
+                        SplashScreenManager.CloseForm(false);
+                        MessageCommon.ShowMessageBox(ex.Message, 3);
+                        Log.Error(ex, ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
                 }
 
             }

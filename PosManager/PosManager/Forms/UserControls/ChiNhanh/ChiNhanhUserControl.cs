@@ -47,7 +47,7 @@ namespace PosManager.Forms.UserControls
                 if (permissionModel != null)
                 {
                     btnAdd.Enabled = permissionModel.HasCreate;
-                    btnDelete.Enabled = permissionModel.HasDelete;
+                   
                 }
             }
 
@@ -72,7 +72,7 @@ namespace PosManager.Forms.UserControls
                         int i = (currentPage - 1) * pageSize + 1;
                         foreach (var a in accounts.Data.Result)
                         {
-                            dtgvAccount.Rows.Add(false, i, a.MaCuaHang, a.TenCuaHang, a.MaKho, a.TenKho, Properties.Resources.Edit, a.Id);
+                            dtgvAccount.Rows.Add(i, a.MaCuaHang, a.TenCuaHang, a.MaKho, a.TenKho, Properties.Resources.Edit, a.Id);
                             i++;
                         }
                         row = i;

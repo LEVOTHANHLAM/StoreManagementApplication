@@ -58,7 +58,12 @@ namespace PosManager.Forms.UserControls.Kho
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
-            cChon = new DataGridViewCheckBoxColumn();
+            ctmsAcc = new ContextMenuStrip(components);
+            selectedToolStripMenuItem = new ToolStripMenuItem();
+            selectAllToolStripMenuItem = new ToolStripMenuItem();
+            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
+            deselectAllToolStripMenuItem = new ToolStripMenuItem();
+            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             cSTT = new DataGridViewTextBoxColumn();
             cMaHangHoa = new DataGridViewTextBoxColumn();
             cTenHangHoa = new DataGridViewTextBoxColumn();
@@ -72,12 +77,6 @@ namespace PosManager.Forms.UserControls.Kho
             cDelete = new DataGridViewImageColumn();
             cEdit = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
-            kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -95,6 +94,7 @@ namespace PosManager.Forms.UserControls.Kho
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
             splitContainer1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             splitContainer1.Location = new Point(0, 0);
             splitContainer1.Name = "splitContainer1";
@@ -195,7 +195,7 @@ namespace PosManager.Forms.UserControls.Kho
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(119, 64);
+            label2.Location = new Point(126, 60);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 25;
@@ -205,7 +205,7 @@ namespace PosManager.Forms.UserControls.Kho
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(0, 64);
+            label1.Location = new Point(7, 60);
             label1.Name = "label1";
             label1.Size = new Size(53, 15);
             label1.TabIndex = 17;
@@ -272,7 +272,7 @@ namespace PosManager.Forms.UserControls.Kho
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
             cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
-            cbbCuonTrang.Location = new Point(58, 56);
+            cbbCuonTrang.Location = new Point(65, 52);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
             cbbCuonTrang.TabIndex = 24;
@@ -664,14 +664,14 @@ namespace PosManager.Forms.UserControls.Kho
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMaHangHoa, cTenHangHoa, cMaKho, cTenKho, cSoLuongTon, cMaDonViHangHoa, cTenDonViHangHoa, cNgayNhap, cHanSuDung, cDelete, cEdit, cId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cSTT, cMaHangHoa, cTenHangHoa, cMaKho, cTenKho, cSoLuongTon, cMaDonViHangHoa, cTenDonViHangHoa, cNgayNhap, cHanSuDung, cDelete, cEdit, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
@@ -694,13 +694,47 @@ namespace PosManager.Forms.UserControls.Kho
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
             // 
-            // cChon
+            // ctmsAcc
             // 
-            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            cChon.FillWeight = 50F;
-            cChon.HeaderText = "Chọn";
-            cChon.Name = "cChon";
-            cChon.Width = 51;
+            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
+            ctmsAcc.Name = "contextMenuStrip1";
+            ctmsAcc.Size = new Size(134, 48);
+            // 
+            // selectedToolStripMenuItem
+            // 
+            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
+            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
+            selectedToolStripMenuItem.Size = new Size(133, 22);
+            selectedToolStripMenuItem.Text = "Selected";
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            selectAllToolStripMenuItem.Size = new Size(184, 22);
+            selectAllToolStripMenuItem.Text = "Select all";
+            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
+            // 
+            // selectAllHighlightedToolStripMenuItem
+            // 
+            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
+            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
+            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
+            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
+            // 
+            // deselectAllToolStripMenuItem
+            // 
+            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+            deselectAllToolStripMenuItem.Size = new Size(133, 22);
+            deselectAllToolStripMenuItem.Text = "Deselect all";
+            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
+            // 
+            // kryptonTextBox1
+            // 
+            kryptonTextBox1.Location = new Point(0, 0);
+            kryptonTextBox1.Name = "kryptonTextBox1";
+            kryptonTextBox1.Size = new Size(100, 23);
+            kryptonTextBox1.TabIndex = 0;
             // 
             // cSTT
             // 
@@ -768,7 +802,7 @@ namespace PosManager.Forms.UserControls.Kho
             cNgayNhap.Checked = false;
             cNgayNhap.HeaderText = "Ngày Nhập";
             cNgayNhap.Name = "cNgayNhap";
-            cNgayNhap.Width = 146;
+            cNgayNhap.Width = 153;
             // 
             // cHanSuDung
             // 
@@ -778,7 +812,7 @@ namespace PosManager.Forms.UserControls.Kho
             cHanSuDung.Name = "cHanSuDung";
             cHanSuDung.Resizable = DataGridViewTriState.True;
             cHanSuDung.SortMode = DataGridViewColumnSortMode.Automatic;
-            cHanSuDung.Width = 147;
+            cHanSuDung.Width = 153;
             // 
             // cDelete
             // 
@@ -804,48 +838,6 @@ namespace PosManager.Forms.UserControls.Kho
             cId.Name = "cId";
             cId.ReadOnly = true;
             cId.Visible = false;
-            // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
-            // kryptonTextBox1
-            // 
-            kryptonTextBox1.Location = new Point(0, 0);
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(100, 23);
-            kryptonTextBox1.TabIndex = 0;
             // 
             // TonKhoUserControl
             // 
@@ -904,7 +896,8 @@ namespace PosManager.Forms.UserControls.Kho
         private Label lbThongBaoSoTrang;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel4;
-        private DataGridViewCheckBoxColumn cChon;
+        private ComboBox cbbKho;
+        private Label label4;
         private DataGridViewTextBoxColumn cSTT;
         private DataGridViewTextBoxColumn cMaHangHoa;
         private DataGridViewTextBoxColumn cTenHangHoa;
@@ -918,7 +911,5 @@ namespace PosManager.Forms.UserControls.Kho
         private DataGridViewImageColumn cDelete;
         private DataGridViewImageColumn cEdit;
         private DataGridViewTextBoxColumn cId;
-        private ComboBox cbbKho;
-        private Label label4;
     }
 }

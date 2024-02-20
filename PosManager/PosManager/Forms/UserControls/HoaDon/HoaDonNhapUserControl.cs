@@ -70,7 +70,7 @@ namespace PosManager.Forms.UserControls.HoaDon
                         foreach (var a in accounts.Data.Result)
                         {
 
-                            dtgvAccount.Rows.Add(false, i, a.MaKho, a.TenKho, Properties.Resources.Edit, a.Id);
+                            dtgvAccount.Rows.Add(false, i, a.MaKho, a.TenKho, Properties.Resources.Edit, Properties.Resources.delete15, a.Id);
                             i++;
                         }
                         row = i;

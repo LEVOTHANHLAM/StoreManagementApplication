@@ -43,7 +43,7 @@
             accordionControlElement45 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement46 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            accordionControlElement38 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            btnDanhSachNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement39 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             btnQuanLyKho = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -197,17 +197,18 @@
             // 
             // accordionControlElement14
             // 
-            accordionControlElement14.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement38, accordionControlElement39 });
+            accordionControlElement14.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnDanhSachNhanVien, accordionControlElement39 });
             accordionControlElement14.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement14.ImageOptions.Image");
             accordionControlElement14.Name = "accordionControlElement14";
             accordionControlElement14.Text = "Nhân Viên";
             // 
-            // accordionControlElement38
+            // btnDanhSachNhanVien
             // 
-            accordionControlElement38.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement38.ImageOptions.Image");
-            accordionControlElement38.Name = "accordionControlElement38";
-            accordionControlElement38.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            accordionControlElement38.Text = "Danh Sách";
+            btnDanhSachNhanVien.ImageOptions.Image = (Image)resources.GetObject("btnDanhSachNhanVien.ImageOptions.Image");
+            btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
+            btnDanhSachNhanVien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            btnDanhSachNhanVien.Text = "Danh Sách";
+            btnDanhSachNhanVien.Click += btnDanhSachNhanVien_Click;
             // 
             // accordionControlElement39
             // 
@@ -638,6 +639,7 @@
             NavigationControl = accordionControl1;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "93 Tôn Đản";
+            FormClosing += fHome_FormClosing;
             ((System.ComponentModel.ISupportInitialize)fluentDesignFormControl1).EndInit();
             ((System.ComponentModel.ISupportInitialize)fluentFormDefaultManager1).EndInit();
             ((System.ComponentModel.ISupportInitialize)accordionControl1).EndInit();
@@ -688,7 +690,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement35;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement36;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement37;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement38;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDanhSachNhanVien;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement39;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement40;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement41;

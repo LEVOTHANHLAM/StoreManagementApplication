@@ -1,7 +1,9 @@
 ﻿using DevExpress.Drawing.Internal.Fonts.Interop;
+using Krypton_toolKitDemo;
 using PosManager.Forms.UserControls;
 using PosManager.Forms.UserControls.KhachHang;
 using PosManager.Forms.UserControls.Kho;
+using PosManager.Forms.UserControls.NhanVien;
 using PosManager.Forms.UserControls.Post;
 using PosManager.Forms.UserControls.SanPham;
 using PosManager.Model;
@@ -44,7 +46,7 @@ namespace PosManager.Forms
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            FunctionsUserControl functionsUser = new FunctionsUserControl();
+            FunctionsUserControl functionsUser = new FunctionsUserControl(this);
             functionsUser.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(functionsUser);
         }
@@ -89,52 +91,65 @@ namespace PosManager.Forms
                 {
                     case "ChiNhanhControl":
                         {
-                          //  btnChiNhanh.Enabled = item.HasView;
+                            //  btnChiNhanh.Enabled = item.HasView;
                             break;
                         }
                     case "DanhSachKhoUserControl":
                         {
-                          //  btnQuanLyKho.Enabled = item.HasView;
+                            //  btnQuanLyKho.Enabled = item.HasView;
                             break;
                         }
                     case "NhaCungCapUserControl":
                         {
-                          //  btnNhaCungCap.Enabled = item.HasView;
+                            //  btnNhaCungCap.Enabled = item.HasView;
                             break;
                         }
                     case "POSUserControl":
                         {
-                           // btnPos.Enabled = item.HasView;
+                            // btnPos.Enabled = item.HasView;
                             break;
                         }
                     case "FunctionsUserControl":
                         {
-                           // btnCaiDat.Enabled = item.HasView;
+                            // btnCaiDat.Enabled = item.HasView;
                             break;
                         }
                     case "QuanLyNhanVienUserControl":
                         {
-                           // btnDanhSachNhanVien.Enabled = item.HasView;
+                            // btnDanhSachNhanVien.Enabled = item.HasView;
                             break;
                         }
                     case "LoaiSanPhamUserControl":
                         {
-                           // btnLoaiSanPham.Enabled = item.HasView;
+                            // btnLoaiSanPham.Enabled = item.HasView;
                             break;
                         }
                     case "DonViHangHoaUserControl":
                         {
-                           // btnDonViHangHoa.Enabled = item.HasView;
+                            // btnDonViHangHoa.Enabled = item.HasView;
                             break;
                         }
                     case "QuanLySanPhamUserControl":
                         {
-                          //  btnDanhSachHangHoa.Enabled = item.HasView;
+                            //  btnDanhSachHangHoa.Enabled = item.HasView;
                             break;
                         }
 
                 }
             }
+        }
+
+        private void btnDanhSachNhanVien_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            QuanLyNhanVienUserControl quanLyNhanVienUserControl = new QuanLyNhanVienUserControl();
+            quanLyNhanVienUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(quanLyNhanVienUserControl);
+        }
+
+        private void fHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

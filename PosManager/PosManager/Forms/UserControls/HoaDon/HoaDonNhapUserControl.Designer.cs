@@ -90,6 +90,7 @@ namespace PosManager.Forms.UserControls.HoaDon
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
             splitContainer1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             splitContainer1.Location = new Point(0, 0);
             splitContainer1.Name = "splitContainer1";
@@ -106,28 +107,6 @@ namespace PosManager.Forms.UserControls.HoaDon
             splitContainer1.Size = new Size(1353, 752);
             splitContainer1.SplitterDistance = 81;
             splitContainer1.TabIndex = 0;
-            txtSearch = new Helper.CustomControls.PlaceholderTextBox();
-            // 
-            // txtSearch
-            // 
-            txtSearch.ForeColor = Color.Gray;
-            txtSearch.Location = new Point(3, 40);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderColor = Color.Gray;
-            txtSearch.PlaceholderText = "Tìm Kiếm";
-            txtSearch.Size = new Size(420, 36);
-            txtSearch.StateCommon.Back.Color1 = Color.White;
-            txtSearch.StateCommon.Border.Color1 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.Color2 = Color.FromArgb(224, 224, 224);
-            txtSearch.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtSearch.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            txtSearch.StateCommon.Border.Rounding = 18;
-            txtSearch.StateCommon.Content.Color1 = Color.Black;
-            txtSearch.StateCommon.Content.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
-            txtSearch.TabIndex = 3;
-            txtSearch.Text = "Tìm Kiếm";
-            panel4.Controls.Add(txtSearch);
             // 
             // panel2
             // 
@@ -182,7 +161,7 @@ namespace PosManager.Forms.UserControls.HoaDon
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(119, 64);
+            label2.Location = new Point(124, 61);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 25;
@@ -192,7 +171,7 @@ namespace PosManager.Forms.UserControls.HoaDon
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(0, 64);
+            label1.Location = new Point(5, 61);
             label1.Name = "label1";
             label1.Size = new Size(53, 15);
             label1.TabIndex = 17;
@@ -205,7 +184,7 @@ namespace PosManager.Forms.UserControls.HoaDon
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
             cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
-            cbbCuonTrang.Location = new Point(58, 56);
+            cbbCuonTrang.Location = new Point(63, 53);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
             cbbCuonTrang.TabIndex = 24;
@@ -597,7 +576,7 @@ namespace PosManager.Forms.UserControls.HoaDon
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -671,11 +650,11 @@ namespace PosManager.Forms.UserControls.HoaDon
             // 
             // cChon
             // 
-            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            cChon.FillWeight = 50F;
+            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            cChon.FillWeight = 60F;
             cChon.HeaderText = "Chọn";
             cChon.Name = "cChon";
-            cChon.Width = 51;
+            cChon.Width = 60;
             // 
             // cSTT
             // 

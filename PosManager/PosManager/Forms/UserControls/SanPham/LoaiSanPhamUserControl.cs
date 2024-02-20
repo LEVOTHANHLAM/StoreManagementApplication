@@ -47,7 +47,7 @@ namespace PosManager.Forms.UserControls.SanPham
                 if (permissionModel != null)
                 {
                     btnAdd.Enabled = permissionModel.HasCreate;
-                    btnDelete.Enabled = permissionModel.HasDelete;
+                  
                 }
             }
         }
@@ -82,7 +82,7 @@ namespace PosManager.Forms.UserControls.SanPham
                                 {
                                     a.ParentCode = "None";
                                 }
-                                dtgvAccount.Rows.Add(false, i, a.MaNhomHang, a.TenNhomHang, a.ParentCode, a.ParentName, Properties.Resources.Edit, a.Id, a.ParentId);
+                                dtgvAccount.Rows.Add(i, a.MaNhomHang, a.TenNhomHang, a.ParentCode, a.ParentName, Properties.Resources.Edit, Properties.Resources.delete15, a.Id, a.ParentId);
                                 i++;
                             }
                         }

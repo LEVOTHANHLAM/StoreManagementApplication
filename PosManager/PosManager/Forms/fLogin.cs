@@ -59,7 +59,7 @@ namespace Krypton_toolKitDemo
                     if (user.StatusCode == 200 && user.Message == "Success" && !string.IsNullOrEmpty(user.Data.Token))
                     {
                         GlobalModel.AccsessToken = user.Data.Token;
-                        GlobalModel.UserInfo = GetUserInfoFromToken(user.Data.Token);
+                        GlobalModel.UserInfo = await GetUserInfoFromToken(user.Data.Token);
                         if (GlobalModel.UserInfo != null)
                         {
                             fHome form1 = new fHome();
@@ -88,7 +88,7 @@ namespace Krypton_toolKitDemo
             }
             SplashScreenManager.CloseForm(false);
         }
-        public TokenInfo GetUserInfoFromToken(string jwtToken)
+        public async Task<TokenInfo> GetUserInfoFromToken(string jwtToken)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var jwtTokenObj = tokenHandler.ReadJwtToken(jwtToken);
@@ -99,9 +99,15 @@ namespace Krypton_toolKitDemo
             var userNameClaim = jwtTokenObj.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Name)?.Value;
 
             List<PermissionModel> permissions = new List<PermissionModel>();
-            if (!string.IsNullOrEmpty(permissionsClaim))
+            //if (!string.IsNullOrEmpty(permissionsClaim))
+            //{
+            //    permissions = JsonConvert.DeserializeObject<List<PermissionModel>>(permissionsClaim);
+            //}
+            UsersController usersController = new UsersController();
+            var result = await usersController.GetPermissionsByIdUser(jwtToken, userIdClaim);
+            if(result != null)
             {
-                permissions = JsonConvert.DeserializeObject<List<PermissionModel>>(permissionsClaim);
+                permissions.AddRange(result.Data);
             }
 
             string store = null;

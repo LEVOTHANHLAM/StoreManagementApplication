@@ -46,7 +46,7 @@ namespace PosManager.Forms.UserControls.SanPham
                 if (permissionModel != null)
                 {
                     btnAdd.Enabled = permissionModel.HasCreate;
-                    btnDelete.Enabled = permissionModel.HasDelete;
+                   
                 }
             }
         }
@@ -71,7 +71,7 @@ namespace PosManager.Forms.UserControls.SanPham
                         int i = 1;
                         foreach (var a in accounts.Data.Result)
                         {
-                            dtgvAccount.Rows.Add(false, i, a.MaNhaCungCap, a.TenNhaCungCap, a.DiaChi, a.SoDienThoai, Properties.Resources.Edit, a.Id);
+                            dtgvAccount.Rows.Add(i, a.MaNhaCungCap, a.TenNhaCungCap, a.DiaChi, a.SoDienThoai, Properties.Resources.Edit, Properties.Resources.delete15, a.Id);
                             i++;
                         }
                         row = i;

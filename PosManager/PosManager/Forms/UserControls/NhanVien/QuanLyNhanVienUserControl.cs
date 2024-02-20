@@ -70,7 +70,7 @@ namespace PosManager.Forms.UserControls.NhanVien
                             {
                                 value = "Admin";
                             }
-                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, "Show", "Cấp Quyền", a.Id);
+                            dtgvAccount.Rows.Add(false, i, a.FullName, a.Email, a.UserName, a.CCCD, a.PhoneNumber, a.Address, a.DateOfBirth, value, a.MaCuaHang, "Show", "Cấp Quyền",Properties.Resources.delete15 , a.Id);
                             i++;
                         }
                         row = i;

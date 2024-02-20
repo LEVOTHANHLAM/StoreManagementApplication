@@ -41,8 +41,6 @@ namespace PosManager.Forms.UserControls.Kho
             panel2 = new Panel();
             panel4 = new Panel();
             txtSearch = new PlaceholderTextBox();
-            btnExport = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
@@ -60,11 +58,11 @@ namespace PosManager.Forms.UserControls.Kho
             btnTiepTucTrang = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             lbThongBaoSoTrang = new Label();
             dtgvAccount = new DataGridView();
-            cChon = new DataGridViewCheckBoxColumn();
             cSTT = new DataGridViewTextBoxColumn();
             cMa = new DataGridViewTextBoxColumn();
             cTen = new DataGridViewTextBoxColumn();
             cEdit = new DataGridViewImageColumn();
+            cDelete = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
             ctmsAcc = new ContextMenuStrip(components);
             selectedToolStripMenuItem = new ToolStripMenuItem();
@@ -89,6 +87,7 @@ namespace PosManager.Forms.UserControls.Kho
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
             splitContainer1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             splitContainer1.Location = new Point(0, 0);
             splitContainer1.Name = "splitContainer1";
@@ -118,8 +117,6 @@ namespace PosManager.Forms.UserControls.Kho
             // panel4
             // 
             panel4.Controls.Add(txtSearch);
-            panel4.Controls.Add(btnExport);
-            panel4.Controls.Add(btnDelete);
             panel4.Location = new Point(488, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(429, 79);
@@ -146,116 +143,6 @@ namespace PosManager.Forms.UserControls.Kho
             txtSearch.Text = "Tìm Kiếm";
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
-            // btnExport
-            // 
-            btnExport.Location = new Point(65, 3);
-            btnExport.MaximumSize = new Size(133, 35);
-            btnExport.MinimumSize = new Size(133, 35);
-            btnExport.Name = "btnExport";
-            btnExport.OverrideDefault.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.OverrideDefault.Back.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.OverrideDefault.Back.ColorAngle = 45F;
-            btnExport.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.OverrideDefault.Border.ColorAngle = 45F;
-            btnExport.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnExport.OverrideDefault.Border.Rounding = 18;
-            btnExport.OverrideDefault.Border.Width = 1;
-            btnExport.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnExport.Size = new Size(133, 35);
-            btnExport.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnExport.StateCommon.Back.ColorAngle = 45F;
-            btnExport.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.StateCommon.Border.ColorAngle = 45F;
-            btnExport.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnExport.StateCommon.Border.Rounding = 18;
-            btnExport.StateCommon.Border.Width = 1;
-            btnExport.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnExport.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnExport.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExport.StatePressed.Back.Color1 = Color.FromArgb(21, 146, 197);
-            btnExport.StatePressed.Back.Color2 = Color.FromArgb(22, 122, 206);
-            btnExport.StatePressed.Back.ColorAngle = 130F;
-            btnExport.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnExport.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnExport.StatePressed.Border.ColorAngle = 130F;
-            btnExport.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.StatePressed.Border.Rounding = 18;
-            btnExport.StatePressed.Border.Width = 1;
-            btnExport.StateTracking.Back.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateTracking.Back.Color2 = Color.FromArgb(6, 174, 244);
-            btnExport.StateTracking.Back.ColorAngle = 45F;
-            btnExport.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnExport.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnExport.StateTracking.Border.ColorAngle = 45F;
-            btnExport.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnExport.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnExport.StateTracking.Border.Rounding = 18;
-            btnExport.StateTracking.Border.Width = 1;
-            btnExport.TabIndex = 9;
-            btnExport.Values.Image = (Image)resources.GetObject("btnExport.Values.Image");
-            btnExport.Values.Text = "Xuất File";
-            btnExport.Click += btnExport_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(236, 3);
-            btnDelete.MaximumSize = new Size(133, 35);
-            btnDelete.MinimumSize = new Size(133, 35);
-            btnDelete.Name = "btnDelete";
-            btnDelete.OverrideDefault.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.OverrideDefault.Back.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.OverrideDefault.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.OverrideDefault.Border.ColorAngle = 45F;
-            btnDelete.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.OverrideDefault.Border.Rounding = 18;
-            btnDelete.OverrideDefault.Border.Width = 1;
-            btnDelete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnDelete.Size = new Size(133, 35);
-            btnDelete.StateCommon.Back.Color1 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.Color2 = Color.FromArgb(255, 128, 128);
-            btnDelete.StateCommon.Back.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateCommon.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateCommon.Border.ColorAngle = 45F;
-            btnDelete.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateCommon.Border.Rounding = 18;
-            btnDelete.StateCommon.Border.Width = 1;
-            btnDelete.StateCommon.Content.ShortText.Color1 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Color2 = Color.White;
-            btnDelete.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDelete.StatePressed.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnDelete.StatePressed.Back.Color2 = Color.FromArgb(64, 64, 64);
-            btnDelete.StatePressed.Back.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.Color1 = Color.FromArgb(21, 146, 197);
-            btnDelete.StatePressed.Border.Color2 = Color.FromArgb(22, 122, 206);
-            btnDelete.StatePressed.Border.ColorAngle = 130F;
-            btnDelete.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StatePressed.Border.Rounding = 18;
-            btnDelete.StatePressed.Border.Width = 1;
-            btnDelete.StateTracking.Back.Color1 = Color.FromArgb(64, 64, 64);
-            btnDelete.StateTracking.Back.Color2 = Color.FromArgb(64, 64, 64);
-            btnDelete.StateTracking.Back.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.Color1 = Color.FromArgb(6, 174, 244);
-            btnDelete.StateTracking.Border.Color2 = Color.FromArgb(8, 142, 254);
-            btnDelete.StateTracking.Border.ColorAngle = 45F;
-            btnDelete.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right;
-            btnDelete.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            btnDelete.StateTracking.Border.Rounding = 18;
-            btnDelete.StateTracking.Border.Width = 1;
-            btnDelete.TabIndex = 10;
-            btnDelete.Values.Image = (Image)resources.GetObject("btnDelete.Values.Image");
-            btnDelete.Values.Text = "Xoá";
-            btnDelete.Click += btnDelete_Click;
-            // 
             // panel1
             // 
             panel1.Controls.Add(label2);
@@ -272,7 +159,7 @@ namespace PosManager.Forms.UserControls.Kho
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(119, 64);
+            label2.Location = new Point(125, 62);
             label2.Name = "label2";
             label2.Size = new Size(32, 15);
             label2.TabIndex = 25;
@@ -282,7 +169,7 @@ namespace PosManager.Forms.UserControls.Kho
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(0, 64);
+            label1.Location = new Point(6, 62);
             label1.Name = "label1";
             label1.Size = new Size(53, 15);
             label1.TabIndex = 17;
@@ -350,7 +237,7 @@ namespace PosManager.Forms.UserControls.Kho
             cbbCuonTrang.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cbbCuonTrang.FormattingEnabled = true;
             cbbCuonTrang.Items.AddRange(new object[] { "10", "20", "50", "100" });
-            cbbCuonTrang.Location = new Point(58, 56);
+            cbbCuonTrang.Location = new Point(64, 54);
             cbbCuonTrang.Name = "cbbCuonTrang";
             cbbCuonTrang.Size = new Size(54, 24);
             cbbCuonTrang.TabIndex = 24;
@@ -742,14 +629,14 @@ namespace PosManager.Forms.UserControls.Kho
             dtgvAccount.BackgroundColor = SystemColors.ButtonHighlight;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Tahoma", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cChon, cSTT, cMa, cTen, cEdit, cId });
+            dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cSTT, cMa, cTen, cEdit, cDelete, cId });
             dtgvAccount.ContextMenuStrip = ctmsAcc;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
@@ -771,14 +658,6 @@ namespace PosManager.Forms.UserControls.Kho
             dtgvAccount.CellClick += dtgvAccount_CellClick;
             dtgvAccount.CellContentClick += dtgvAccount_CellContentClick;
             dtgvAccount.CellDoubleClick += dtgvAccount_CellDoubleClick;
-            // 
-            // cChon
-            // 
-            cChon.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            cChon.FillWeight = 50F;
-            cChon.HeaderText = "Chọn";
-            cChon.Name = "cChon";
-            cChon.Width = 51;
             // 
             // cSTT
             // 
@@ -812,6 +691,13 @@ namespace PosManager.Forms.UserControls.Kho
             cEdit.Name = "cEdit";
             cEdit.Resizable = DataGridViewTriState.True;
             cEdit.Width = 120;
+            // 
+            // cDelete
+            // 
+            cDelete.HeaderText = "Xóa";
+            cDelete.Name = "cDelete";
+            cDelete.Resizable = DataGridViewTriState.True;
+            cDelete.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // cId
             // 
@@ -899,14 +785,12 @@ namespace PosManager.Forms.UserControls.Kho
         private PlaceholderTextBox txtSearch;
         private Panel panel2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAdd;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnExport;
         private DataGridView dtgvAccount;
         private ContextMenuStrip ctmsAcc;
         private ToolStripMenuItem selectedToolStripMenuItem;
         private ToolStripMenuItem selectAllToolStripMenuItem;
         private ToolStripMenuItem selectAllHighlightedToolStripMenuItem;
         private ToolStripMenuItem deselectAllToolStripMenuItem;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Panel panel3;
         private Label label1;
@@ -922,11 +806,11 @@ namespace PosManager.Forms.UserControls.Kho
         private Label lbThongBaoSoTrang;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel4;
-        private DataGridViewCheckBoxColumn cChon;
         private DataGridViewTextBoxColumn cSTT;
         private DataGridViewTextBoxColumn cMa;
         private DataGridViewTextBoxColumn cTen;
         private DataGridViewImageColumn cEdit;
+        private DataGridViewImageColumn cDelete;
         private DataGridViewTextBoxColumn cId;
     }
 }
