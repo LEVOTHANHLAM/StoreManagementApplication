@@ -52,11 +52,23 @@ namespace PosManager.Forms.UserControls.Kho
             List<AccordionControlElement> accordionControlElements = new List<AccordionControlElement>();
             foreach (var product in products)
             {
+                ///
+                DevExpress.XtraEditors.TextEdit text = new DevExpress.XtraEditors.TextEdit();
+                text.Enabled = false;
+                text.Location = new Point(374, 45);
+                text.MenuManager = fluentFormDefaultManager1;
+                text.Name = "textEdit1";
+                text.Size = new Size(117, 20);
+                text.TabIndex = 2;
+                text.Visible = false;
+                ///
                 AccordionControlElement accordionControlElement = new AccordionControlElement();
                 accordionControlElement.Name = product.id;
                 accordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
                 accordionControlElement.Text = $" {product.code}  -  {product.name}";
                 accordionControlElement.Click += accordionControlElement_Click;
+                //
+                //accordionControlElement.Controls.Add(text);
                 accordionControlElements.Add(accordionControlElement);
             }
             return accordionControlElements;
@@ -64,8 +76,23 @@ namespace PosManager.Forms.UserControls.Kho
 
         private void accordionControlElement_Click(object? sender, EventArgs e)
         {
-           
-            throw new NotImplementedException();
+            AccordionControlElement accordionControlElement = (AccordionControlElement)sender;
+            string name = accordionControlElement.Text.Split("  -  ").FirstOrDefault();
+            string id = accordionControlElement.Name;
+            var code = accordionControlElement.Text.Split("  -  ").Last();
+            List<string> list = new List<string>();
+            list.Add(name);
+            list.Add(id);
+            list.Add(code);
+
+            UserControl1 control1 = new UserControl1(name, id, code, list);
+            control1.Dock = DockStyle.Top;
+            flowLayoutPanel1.Controls.Add(control1);
+
+
+
+
+            // throw new NotImplementedException();
         }
 
         private void accordionControl1_Click(object sender, EventArgs e)
