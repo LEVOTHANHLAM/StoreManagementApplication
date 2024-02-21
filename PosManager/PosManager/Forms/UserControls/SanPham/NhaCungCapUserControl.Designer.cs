@@ -141,6 +141,7 @@ namespace PosManager.Forms.UserControls.SanPham
             txtSearch.StateCommon.Content.Padding = new Padding(10, 0, 10, 0);
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Tìm Kiếm";
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // panel1
             // 

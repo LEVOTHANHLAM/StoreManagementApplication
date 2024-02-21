@@ -263,12 +263,12 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Font = new Font("Tahoma", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(64, 64, 64);
             label8.Location = new Point(-3, 67);
             label8.Margin = new Padding(6, 0, 6, 0);
             label8.Name = "label8";
-            label8.Size = new Size(158, 24);
+            label8.Size = new Size(118, 18);
             label8.TabIndex = 25;
             label8.Text = "Tên Của Hàng :";
             // 
@@ -292,6 +292,7 @@
             // 
             cbbMaKho.DisplayMember = "DisplayText";
             cbbMaKho.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbMaKho.FlatStyle = FlatStyle.Flat;
             cbbMaKho.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cbbMaKho.FormattingEnabled = true;
             cbbMaKho.Items.AddRange(new object[] { "Admin", "Nhân Viên" });

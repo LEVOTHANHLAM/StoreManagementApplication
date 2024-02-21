@@ -1,4 +1,6 @@
-﻿using Krypton_toolKitDemo;
+﻿using DevExpress.XtraSplashScreen;
+using Krypton_toolKitDemo;
+using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.User;
 using PosManager.Helper;
 using PosManager.Helper.CustomControls;
@@ -17,10 +19,11 @@ namespace PosManager.Forms.UserControls.NhanVien
         private int Total = 1000;
         private int row = 0;
         private PermissionModel permissionModel;
-        public QuanLyNhanVienUserControl()
+        private fHome _fHome;
+        public QuanLyNhanVienUserControl(fHome home )
         {
+            _fHome = home;
             InitializeComponent();
-
             _usersController = new UsersController();
             cbbCuonTrang.SelectedIndex = 0;
 
@@ -49,6 +52,7 @@ namespace PosManager.Forms.UserControls.NhanVien
         {
             try
             {
+                SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                 if (searchString == "Tìm Kiếm")
                 {
                     searchString = "";
@@ -78,9 +82,11 @@ namespace PosManager.Forms.UserControls.NhanVien
 
                     DisplayDataOnCurrentPage();
                 }
+                SplashScreenManager.CloseForm(false);
             }
             catch (Exception ex)
             {
+                SplashScreenManager.CloseForm(false);
                 Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(loadAccount)}, Error; {ex.Message}, Exception; {ex}");
                 MessageCommon.ShowMessageBox(ex.Message, 4);
             }
@@ -135,28 +141,75 @@ namespace PosManager.Forms.UserControls.NhanVien
             }
         }
 
-        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
                 if (permissionModel != null && permissionModel.HasUpdate)
                 {
+                    SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fThemNhanVien edit = new fThemNhanVien(id);
+                    SplashScreenManager.CloseForm(false);
                     edit.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+                }
             }
+          
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cCapQuyen"].Index)
             {
                 if (permissionModel != null && permissionModel.HasUpdate)
                 {
+                    SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fPhanQuyen edit = new fPhanQuyen(id);
+                    SplashScreenManager.CloseForm(false);
                     edit.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+                }
             }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cDelete"].Index)
+            {
+                if (permissionModel != null && permissionModel.HasDelete)
+                {
+                    try
+                    {
+                        
+                        var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                        DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa dữ liệu này không?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
+                            var accounts = await _usersController.Delete(GlobalModel.AccsessToken, id);
+                            SplashScreenManager.CloseForm(false);
+                            if (accounts != null)
+                            {
+                                MessageCommon.ShowMessageBox(accounts.Message, 1);
+                            }
+                            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        SplashScreenManager.CloseForm(false);
+                        Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellContentClick)}, Error; {ex.Message}, Exception; {ex}");
+                        MessageCommon.ShowMessageBox(ex.Message, 4);
+                    }
+                }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+                }
+            }
+            
         }
 
         private void dtgvAccount_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -152,6 +152,7 @@
             accordionControlElement40.Name = "accordionControlElement40";
             accordionControlElement40.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement40.Text = "Thu Khách Hàng";
+            accordionControlElement40.Visible = false;
             // 
             // accordionControlElement41
             // 
@@ -159,6 +160,7 @@
             accordionControlElement41.Name = "accordionControlElement41";
             accordionControlElement41.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement41.Text = "Trả Cho Nhà Cung Cấp";
+            accordionControlElement41.Visible = false;
             // 
             // accordionControlElement42
             // 
@@ -166,6 +168,7 @@
             accordionControlElement42.Name = "accordionControlElement42";
             accordionControlElement42.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement42.Text = "Công Nợ Đầu Kỳ";
+            accordionControlElement42.Visible = false;
             // 
             // accordionControlElement43
             // 
@@ -173,6 +176,7 @@
             accordionControlElement43.Name = "accordionControlElement43";
             accordionControlElement43.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement43.Text = "Đơn Hàng Nhập";
+            accordionControlElement43.Visible = false;
             // 
             // accordionControlElement44
             // 
@@ -180,6 +184,7 @@
             accordionControlElement44.Name = "accordionControlElement44";
             accordionControlElement44.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement44.Text = "Quản Lý Mượn Hàng";
+            accordionControlElement44.Visible = false;
             // 
             // accordionControlElement45
             // 
@@ -187,6 +192,7 @@
             accordionControlElement45.Name = "accordionControlElement45";
             accordionControlElement45.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement45.Text = " Ghi Chú";
+            accordionControlElement45.Visible = false;
             // 
             // accordionControlElement46
             // 
@@ -194,6 +200,7 @@
             accordionControlElement46.Name = "accordionControlElement46";
             accordionControlElement46.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement46.Text = "Duyệt Phiếu Chi";
+            accordionControlElement46.Visible = false;
             // 
             // accordionControlElement14
             // 
@@ -216,6 +223,7 @@
             accordionControlElement39.Name = "accordionControlElement39";
             accordionControlElement39.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement39.Text = "Chấm Công";
+            accordionControlElement39.Visible = false;
             // 
             // accordionControlElement13
             // 
@@ -266,6 +274,7 @@
             accordionControlElement30.Name = "accordionControlElement30";
             accordionControlElement30.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement30.Text = "Đơn Đặt Hàng NCC";
+            accordionControlElement30.Visible = false;
             // 
             // accordionControlElement31
             // 
@@ -273,6 +282,7 @@
             accordionControlElement31.Name = "accordionControlElement31";
             accordionControlElement31.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement31.Text = "Kiểm Kho";
+            accordionControlElement31.Visible = false;
             // 
             // accordionControlElement32
             // 
@@ -280,6 +290,7 @@
             accordionControlElement32.Name = "accordionControlElement32";
             accordionControlElement32.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement32.Text = "Đơn Hàng Online";
+            accordionControlElement32.Visible = false;
             // 
             // accordionControlElement33
             // 
@@ -287,6 +298,7 @@
             accordionControlElement33.Name = "accordionControlElement33";
             accordionControlElement33.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement33.Text = "Quản Lý Date";
+            accordionControlElement33.Visible = false;
             // 
             // accordionControlElement34
             // 
@@ -294,6 +306,7 @@
             accordionControlElement34.Name = "accordionControlElement34";
             accordionControlElement34.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement34.Text = "Kiểm Phiếu Nhập";
+            accordionControlElement34.Visible = false;
             // 
             // accordionControlElement35
             // 
@@ -301,6 +314,7 @@
             accordionControlElement35.Name = "accordionControlElement35";
             accordionControlElement35.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement35.Text = "Lịch Sử Phiếu Nhập";
+            accordionControlElement35.Visible = false;
             // 
             // accordionControlElement36
             // 
@@ -308,6 +322,7 @@
             accordionControlElement36.Name = "accordionControlElement36";
             accordionControlElement36.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement36.Text = "Kiểm Tra Giá Nhập";
+            accordionControlElement36.Visible = false;
             // 
             // accordionControlElement37
             // 
@@ -315,6 +330,7 @@
             accordionControlElement37.Name = "accordionControlElement37";
             accordionControlElement37.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement37.Text = "Kiểm Tra Hoá Đơn Nhập";
+            accordionControlElement37.Visible = false;
             // 
             // accordionControlElement12
             // 
@@ -353,6 +369,7 @@
             accordionControlElement7.Name = "accordionControlElement7";
             accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement7.Text = "Điều Chỉnh";
+            accordionControlElement7.Visible = false;
             // 
             // accordionControlElement21
             // 
@@ -360,6 +377,7 @@
             accordionControlElement21.Name = "accordionControlElement21";
             accordionControlElement21.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement21.Text = " In Mã Vạch";
+            accordionControlElement21.Visible = false;
             // 
             // accordionControlElement22
             // 
@@ -367,6 +385,7 @@
             accordionControlElement22.Name = "accordionControlElement22";
             accordionControlElement22.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement22.Text = "Báo Giá";
+            accordionControlElement22.Visible = false;
             // 
             // accordionControlElement23
             // 
@@ -374,6 +393,7 @@
             accordionControlElement23.Name = "accordionControlElement23";
             accordionControlElement23.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement23.Text = "Tăng Giá Theo Nhóm";
+            accordionControlElement23.Visible = false;
             // 
             // accordionControlElement24
             // 
@@ -381,6 +401,7 @@
             accordionControlElement24.Name = "accordionControlElement24";
             accordionControlElement24.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement24.Text = "Lịch Sử Đã Bán";
+            accordionControlElement24.Visible = false;
             // 
             // accordionControlElement1
             // 
@@ -413,6 +434,7 @@
             accordionControlElement4.Name = "accordionControlElement4";
             accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement4.Text = "Zalo";
+            accordionControlElement4.Visible = false;
             // 
             // accordionControlElement5
             // 
@@ -420,6 +442,7 @@
             accordionControlElement5.Name = "accordionControlElement5";
             accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement5.Text = "Sinh Nhật";
+            accordionControlElement5.Visible = false;
             // 
             // accordionControlElement6
             // 
@@ -427,6 +450,7 @@
             accordionControlElement6.Name = "accordionControlElement6";
             accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement6.Text = "Yêu Cầu";
+            accordionControlElement6.Visible = false;
             // 
             // accordionControl1
             // 
@@ -447,6 +471,7 @@
             accordionControlElement8.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement8.ImageOptions.Image");
             accordionControlElement8.Name = "accordionControlElement8";
             accordionControlElement8.Text = "Thu Chi";
+            accordionControlElement8.Visible = false;
             // 
             // accordionControlElement9
             // 
@@ -468,6 +493,7 @@
             accordionControlElement48.Name = "accordionControlElement48";
             accordionControlElement48.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement48.Text = "Thống Kê Hoá Đơn VAT";
+            accordionControlElement48.Visible = false;
             // 
             // accordionControlElement49
             // 
@@ -475,6 +501,7 @@
             accordionControlElement49.Name = "accordionControlElement49";
             accordionControlElement49.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement49.Text = "Thống Kê Đơn Đặt Hàng";
+            accordionControlElement49.Visible = false;
             // 
             // accordionControlElement50
             // 
@@ -482,6 +509,7 @@
             accordionControlElement50.Name = "accordionControlElement50";
             accordionControlElement50.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement50.Text = "Đơn Đặt Hàng Online";
+            accordionControlElement50.Visible = false;
             // 
             // accordionControlElement51
             // 
@@ -489,6 +517,7 @@
             accordionControlElement51.Name = "accordionControlElement51";
             accordionControlElement51.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement51.Text = "Kiểm Phiếu Xuất Hàng";
+            accordionControlElement51.Visible = false;
             // 
             // accordionControlElement52
             // 
@@ -496,6 +525,7 @@
             accordionControlElement52.Name = "accordionControlElement52";
             accordionControlElement52.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement52.Text = "Kiểm Tra Hoá Đơn Trùng";
+            accordionControlElement52.Visible = false;
             // 
             // accordionControlElement53
             // 
@@ -503,6 +533,7 @@
             accordionControlElement53.Name = "accordionControlElement53";
             accordionControlElement53.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement53.Text = "Lịch Sử Hoá Đơn Tạm";
+            accordionControlElement53.Visible = false;
             // 
             // accordionControlElement54
             // 
@@ -510,6 +541,7 @@
             accordionControlElement54.Name = "accordionControlElement54";
             accordionControlElement54.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement54.Text = "Cài Đặt Hoá Đơn";
+            accordionControlElement54.Visible = false;
             // 
             // accordionControlElement10
             // 
@@ -546,6 +578,7 @@
             accordionControlElement56.Name = "accordionControlElement56";
             accordionControlElement56.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement56.Text = "Điểm";
+            accordionControlElement56.Visible = false;
             // 
             // accordionControlElement57
             // 
@@ -553,6 +586,7 @@
             accordionControlElement57.Name = "accordionControlElement57";
             accordionControlElement57.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement57.Text = "Tiền Tặng";
+            accordionControlElement57.Visible = false;
             // 
             // accordionControlElement58
             // 
@@ -560,6 +594,7 @@
             accordionControlElement58.Name = "accordionControlElement58";
             accordionControlElement58.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement58.Text = "Theo Nhóm Hàng";
+            accordionControlElement58.Visible = false;
             // 
             // accordionControlElement59
             // 
@@ -567,6 +602,7 @@
             accordionControlElement59.Name = "accordionControlElement59";
             accordionControlElement59.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement59.Text = "Lịch Sử Khách Hàng";
+            accordionControlElement59.Visible = false;
             // 
             // accordionControlElement60
             // 
@@ -574,6 +610,7 @@
             accordionControlElement60.Name = "accordionControlElement60";
             accordionControlElement60.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement60.Text = "Lịch Sử Sản Phẩm";
+            accordionControlElement60.Visible = false;
             // 
             // accordionControlElement61
             // 
@@ -581,10 +618,12 @@
             accordionControlElement61.Name = "accordionControlElement61";
             accordionControlElement61.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement61.Text = "Giá Bán Thực Tế";
+            accordionControlElement61.Visible = false;
             // 
             // accordionControlElement16
             // 
             accordionControlElement16.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnChiNhanh });
+            accordionControlElement16.Expanded = true;
             accordionControlElement16.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement16.ImageOptions.SvgImage");
             accordionControlElement16.Name = "accordionControlElement16";
             accordionControlElement16.Text = "Chi Nhánh";
@@ -600,6 +639,7 @@
             // accordionControlElement17
             // 
             accordionControlElement17.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnCaiDat });
+            accordionControlElement17.Expanded = true;
             accordionControlElement17.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement17.ImageOptions.Image");
             accordionControlElement17.Name = "accordionControlElement17";
             accordionControlElement17.Text = "Cài Đặt";

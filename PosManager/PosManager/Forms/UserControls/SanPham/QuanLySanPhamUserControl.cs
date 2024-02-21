@@ -56,6 +56,7 @@ namespace PosManager.Forms.UserControls.SanPham
         {
             try
             {
+                SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                 if (searchString == "Tìm Kiếm")
                 {
                     searchString = "";
@@ -85,9 +86,11 @@ namespace PosManager.Forms.UserControls.SanPham
 
                     DisplayDataOnCurrentPage();
                 }
+                SplashScreenManager.CloseForm(false);
             }
             catch (Exception ex)
             {
+                SplashScreenManager.CloseForm(false);
                 Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(loadAccount)}, Error; {ex.Message}, Exception; {ex}");
                 MessageCommon.ShowMessageBox(ex.Message, 4);
             }

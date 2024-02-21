@@ -1,4 +1,5 @@
-﻿using Krypton_toolKitDemo;
+﻿using DevExpress.XtraSplashScreen;
+using Krypton_toolKitDemo;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.Helper;
 using PosManager.Helper.CustomControls;
@@ -18,8 +19,10 @@ namespace PosManager.Forms.UserControls
         private int Total = 1000;
         private int row = 0;
         private PermissionModel permissionModel;
-        public ChiNhanhUserControl()
+        private fHome _fHome;
+        public ChiNhanhUserControl(fHome home )
         {
+            _fHome = home;
             InitializeComponent();
             _storesController = new StoresController();
             cbbCuonTrang.SelectedIndex = 0;
@@ -33,9 +36,17 @@ namespace PosManager.Forms.UserControls
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemChiNhanh them = new fThemChiNhanh(null);
-            them.ShowDialog();
-            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            if (permissionModel != null && permissionModel.HasCreate)
+            {
+                fThemChiNhanh them = new fThemChiNhanh(null);
+                them.ShowDialog();
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+            else
+            {
+                MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+            }
+
         }
 
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
@@ -44,11 +55,7 @@ namespace PosManager.Forms.UserControls
             if (GlobalModel.UserInfo.Permissions != null)
             {
                 permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "ChiNhanhControl");
-                if (permissionModel != null)
-                {
-                    btnAdd.Enabled = permissionModel.HasCreate;
-                   
-                }
+
             }
 
         }
@@ -56,6 +63,7 @@ namespace PosManager.Forms.UserControls
         {
             try
             {
+                SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                 if (searchString == "Tìm Kiếm")
                 {
                     searchString = "";
@@ -72,7 +80,7 @@ namespace PosManager.Forms.UserControls
                         int i = (currentPage - 1) * pageSize + 1;
                         foreach (var a in accounts.Data.Result)
                         {
-                            dtgvAccount.Rows.Add(i, a.MaCuaHang, a.TenCuaHang, a.MaKho, a.TenKho, Properties.Resources.Edit, a.Id);
+                            dtgvAccount.Rows.Add(i, a.MaCuaHang, a.TenCuaHang, a.MaKho, a.TenKho, Properties.Resources.Edit, Properties.Resources.delete15, a.Id);
                             i++;
                         }
                         row = i;
@@ -80,9 +88,11 @@ namespace PosManager.Forms.UserControls
 
                     DisplayDataOnCurrentPage();
                 }
+                SplashScreenManager.CloseForm(false);
             }
             catch (Exception ex)
             {
+                SplashScreenManager.CloseForm(false);
                 Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(loadAccount)}, Error; {ex.Message}, Exception; {ex}");
                 MessageCommon.ShowMessageBox(ex.Message, 4);
             }
@@ -123,21 +133,21 @@ namespace PosManager.Forms.UserControls
         }
         private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 && e.RowIndex > -1)
-            {
-                try
-                {
-                    dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellClick)}, Error; {ex.Message}, Exception; {ex}");
-                    MessageCommon.ShowMessageBox(ex.Message, 4);
-                }
-            }
+            //if (e.ColumnIndex == 0 && e.RowIndex > -1)
+            //{
+            //    try
+            //    {
+            //        dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellClick)}, Error; {ex.Message}, Exception; {ex}");
+            //        MessageCommon.ShowMessageBox(ex.Message, 4);
+            //    }
+            //}
         }
 
-        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
@@ -146,6 +156,7 @@ namespace PosManager.Forms.UserControls
                 {
                     try
                     {
+                        SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                         StoreModel store = new StoreModel();
                         store.Id = Guid.Parse(dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString());
                         store.MaCuaHang = dtgvAccount.Rows[e.RowIndex].Cells["cMaCuaHang"].Value.ToString();
@@ -153,6 +164,7 @@ namespace PosManager.Forms.UserControls
                         store.MaKho = dtgvAccount.Rows[e.RowIndex].Cells["cMaKho"].Value.ToString();
                         store.TenKho = dtgvAccount.Rows[e.RowIndex].Cells["cTenKho"].Value.ToString();
                         fThemChiNhanh sua = new fThemChiNhanh(store);
+                        SplashScreenManager.CloseForm(false);
                         sua.ShowDialog();
                         loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                     }
@@ -164,56 +176,88 @@ namespace PosManager.Forms.UserControls
                 }
 
             }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cDelete"].Index)
+            {
+                if (permissionModel != null && permissionModel.HasUpdate)
+                {
+                    try
+                    {
+                       
+                        var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                        var ma = dtgvAccount.Rows[e.RowIndex].Cells["cMaCuaHang"].Value.ToString();
+                        DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa {ma} dữ liệu này không?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
+                            var accounts = await _storesController.Delete(GlobalModel.AccsessToken, id);
+                            SplashScreenManager.CloseForm(false);
+                            if (accounts != null)
+                            {
+                                MessageCommon.ShowMessageBox(accounts.Message, 1);
+                            }
+                            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        SplashScreenManager.CloseForm(false);
+                        Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellContentClick)}, Error; {ex.Message}, Exception; {ex}");
+                        MessageCommon.ShowMessageBox(ex.Message, 4);
+                    }
+                }
+
+            }
+
         }
 
         private void dtgvAccount_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
-            {
-                try
-                {
-                    dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellDoubleClick)}, Error; {ex.Message}, Exception; {ex}");
-                    MessageCommon.ShowMessageBox(ex.Message, 4);
-                }
-            }
+            //if (e.RowIndex > -1)
+            //{
+            //    try
+            //    {
+            //        dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellDoubleClick)}, Error; {ex.Message}, Exception; {ex}");
+            //        MessageCommon.ShowMessageBox(ex.Message, 4);
+            //    }
+            //}
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerformAction("All");
+           // PerformAction("All");
         }
 
         private void selectAllHighlightedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerformAction("SelectHighline");
+           //PerformAction("SelectHighline");
         }
 
         private void deselectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerformAction("UnAll");
+          //  PerformAction("UnAll");
         }
         private List<string> GetListSelect()
         {
             List<string> list = new List<string>();
-            try
-            {
-                for (int i = 0; i < dtgvAccount.RowCount; i++)
-                {
-                    if (Convert.ToBoolean(dtgvAccount.Rows[i].Cells["cChon"].Value))
-                    {
-                        list.Add(dtgvAccount.Rows[i].Cells["cId"].Value.ToString());
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(GetListSelect)}, Error; {ex.Message}, Exception; {ex}");
-                MessageCommon.ShowMessageBox(ex.Message, 4);
-            }
+            //try
+            //{
+            //    for (int i = 0; i < dtgvAccount.RowCount; i++)
+            //    {
+            //        if (Convert.ToBoolean(dtgvAccount.Rows[i].Cells["cChon"].Value))
+            //        {
+            //            list.Add(dtgvAccount.Rows[i].Cells["cId"].Value.ToString());
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(GetListSelect)}, Error; {ex.Message}, Exception; {ex}");
+            //    MessageCommon.ShowMessageBox(ex.Message, 4);
+            //}
             return list;
         }
         private void PerformAction(string action)

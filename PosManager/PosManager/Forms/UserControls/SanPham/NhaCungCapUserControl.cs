@@ -1,4 +1,6 @@
-﻿using Krypton_toolKitDemo;
+﻿using DevExpress.XtraSplashScreen;
+using Krypton_toolKitDemo;
+using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
 using PosManager.Helper.CustomControls;
@@ -17,8 +19,10 @@ namespace PosManager.Forms.UserControls.SanPham
         private int Total = 1000;
         private int row = 0;
         private PermissionModel permissionModel;
-        public NhaCungCapUserControl()
+        private fHome _fHome;
+        public NhaCungCapUserControl(fHome home)
         {
+            _fHome = home;
             InitializeComponent();
             _suppliersController = new SuppliersController();
             cbbCuonTrang.SelectedIndex = 0;
@@ -32,9 +36,16 @@ namespace PosManager.Forms.UserControls.SanPham
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemNCC them = new fThemNCC(null);
-            them.ShowDialog();
-            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            if (permissionModel != null && permissionModel.HasCreate)
+            {
+                fThemNCC them = new fThemNCC(null);
+                them.ShowDialog();
+                loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+            }
+            else
+            {
+                MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+            }
         }
 
         private void ChiNhanhUserControl_Load(object sender, EventArgs e)
@@ -43,17 +54,14 @@ namespace PosManager.Forms.UserControls.SanPham
             if (GlobalModel.UserInfo.Permissions != null)
             {
                 permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "NhaCungCapUserControl");
-                if (permissionModel != null)
-                {
-                    btnAdd.Enabled = permissionModel.HasCreate;
-                   
-                }
+              
             }
         }
         private async void loadAccount(int pageIndex = 1, int pageSize = 1, string? searchString = "")
         {
             try
             {
+                SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                 if (searchString == "Tìm Kiếm")
                 {
                     searchString = "";
@@ -79,9 +87,11 @@ namespace PosManager.Forms.UserControls.SanPham
 
                     DisplayDataOnCurrentPage();
                 }
+                SplashScreenManager.CloseForm(false);
             }
             catch (Exception ex)
             {
+                SplashScreenManager.CloseForm(false);
                 Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(loadAccount)}, Error; {ex.Message}, Exception; {ex}");
                 MessageCommon.ShowMessageBox(ex.Message, 4);
             }
@@ -122,82 +132,118 @@ namespace PosManager.Forms.UserControls.SanPham
         }
         private void dtgvAccount_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 && e.RowIndex > -1)
-            {
-                try
-                {
-                    dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(dtgvAccount_CellClick)}, Error; {ex.Message}, Exception; {ex}");
-                    MessageCommon.ShowMessageBox(ex.Message, 4);
-                }
-            }
+            //if (e.ColumnIndex == 0 && e.RowIndex > -1)
+            //{
+            //    try
+            //    {
+            //        dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(dtgvAccount_CellClick)}, Error; {ex.Message}, Exception; {ex}");
+            //        MessageCommon.ShowMessageBox(ex.Message, 4);
+            //    }
+            //}
         }
 
-        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cEdit"].Index)
             {
                 if (permissionModel != null && permissionModel.HasUpdate)
                 {
+                    SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
                     var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
                     fThemNCC themNhaCungCap = new fThemNCC(id);
+                    SplashScreenManager.CloseForm(false);
                     themNhaCungCap.ShowDialog();
                     loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
                 }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Bạn Không Có Quyền! Vui lòng liên hệ Admin", 3);
+                }
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvAccount.Columns["cDelete"].Index)
+            {
+                if (permissionModel != null && permissionModel.HasUpdate)
+                {
+                    try
+                    {
+                        SplashScreenManager.ShowForm(_fHome, typeof(WaitForm1), true, true, false);
+                        var id = dtgvAccount.Rows[e.RowIndex].Cells["cId"].Value.ToString();
+                        var ma = dtgvAccount.Rows[e.RowIndex].Cells["cMaCuaHang"].Value.ToString();
+                        DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa {ma} dữ liệu này không?", "Thông báo", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            var accounts = await _suppliersController.Delete(GlobalModel.AccsessToken, id);
+                            SplashScreenManager.CloseForm(false);
+                            if (accounts != null)
+                            {
+                                MessageCommon.ShowMessageBox(accounts.Message, 1);
+                            }
+                            loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        SplashScreenManager.CloseForm(false);
+                        Log.Error($"{nameof(ChiNhanhUserControl)}, params; {nameof(dtgvAccount_CellContentClick)}, Error; {ex.Message}, Exception; {ex}");
+                        MessageCommon.ShowMessageBox(ex.Message, 4);
+                    }
+                }
+
             }
         }
 
         private void dtgvAccount_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
-            {
-                try
-                {
-                    dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
-                }
-                catch (Exception ex)
-                {
-                    Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(dtgvAccount_CellDoubleClick)}, Error; {ex.Message}, Exception; {ex}");
-                    MessageCommon.ShowMessageBox(ex.Message, 4);
-                }
-            }
+            //if (e.RowIndex > -1)
+            //{
+            //    try
+            //    {
+            //        dtgvAccount.CurrentRow.Cells["cChon"].Value = !Convert.ToBoolean(dtgvAccount.CurrentRow.Cells["cChon"].Value);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(dtgvAccount_CellDoubleClick)}, Error; {ex.Message}, Exception; {ex}");
+            //        MessageCommon.ShowMessageBox(ex.Message, 4);
+            //    }
+            //}
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerformAction("All");
+           // PerformAction("All");
         }
 
         private void selectAllHighlightedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerformAction("SelectHighline");
+          //  PerformAction("SelectHighline");
         }
 
         private void deselectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PerformAction("UnAll");
+           // PerformAction("UnAll");
         }
         private List<string> GetListSelect()
         {
             List<string> list = new List<string>();
-            try
-            {
-                for (int i = 0; i < dtgvAccount.RowCount; i++)
-                {
-                    if (Convert.ToBoolean(dtgvAccount.Rows[i].Cells["cChon"].Value))
-                    {
-                        list.Add(dtgvAccount.Rows[i].Cells["cId"].Value.ToString());
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(GetListSelect)}, Error; {ex.Message}, Exception; {ex}");
-                MessageCommon.ShowMessageBox(ex.Message, 4);
-            }
+            //try
+            //{
+            //    for (int i = 0; i < dtgvAccount.RowCount; i++)
+            //    {
+            //        if (Convert.ToBoolean(dtgvAccount.Rows[i].Cells["cChon"].Value))
+            //        {
+            //            list.Add(dtgvAccount.Rows[i].Cells["cId"].Value.ToString());
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Log.Error($"{nameof(NhaCungCapUserControl)}, params; {nameof(GetListSelect)}, Error; {ex.Message}, Exception; {ex}");
+            //    MessageCommon.ShowMessageBox(ex.Message, 4);
+            //}
             return list;
         }
         private void PerformAction(string action)

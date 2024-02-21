@@ -30,7 +30,6 @@ namespace PosManager.Forms.UserControls.KhachHang
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionsUserControl));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
@@ -63,11 +62,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             cEdit = new DataGridViewImageColumn();
             cDelete = new DataGridViewImageColumn();
             cId = new DataGridViewTextBoxColumn();
-            ctmsAcc = new ContextMenuStrip(components);
-            selectedToolStripMenuItem = new ToolStripMenuItem();
-            selectAllToolStripMenuItem = new ToolStripMenuItem();
-            selectAllHighlightedToolStripMenuItem = new ToolStripMenuItem();
-            deselectAllToolStripMenuItem = new ToolStripMenuItem();
             kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -81,7 +75,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             panel3.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).BeginInit();
-            ctmsAcc.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -645,7 +638,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             dtgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvAccount.Columns.AddRange(new DataGridViewColumn[] { cSTT, cTen, cEdit, cDelete, cId });
-            dtgvAccount.ContextMenuStrip = ctmsAcc;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.Window;
             dataGridViewCellStyle4.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -708,41 +700,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             cId.ReadOnly = true;
             cId.Visible = false;
             // 
-            // ctmsAcc
-            // 
-            ctmsAcc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ctmsAcc.Items.AddRange(new ToolStripItem[] { selectedToolStripMenuItem, deselectAllToolStripMenuItem });
-            ctmsAcc.Name = "contextMenuStrip1";
-            ctmsAcc.Size = new Size(134, 48);
-            // 
-            // selectedToolStripMenuItem
-            // 
-            selectedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { selectAllToolStripMenuItem, selectAllHighlightedToolStripMenuItem });
-            selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            selectedToolStripMenuItem.Size = new Size(133, 22);
-            selectedToolStripMenuItem.Text = "Selected";
-            // 
-            // selectAllToolStripMenuItem
-            // 
-            selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            selectAllToolStripMenuItem.Size = new Size(184, 22);
-            selectAllToolStripMenuItem.Text = "Select all";
-            selectAllToolStripMenuItem.Click += selectAllToolStripMenuItem_Click;
-            // 
-            // selectAllHighlightedToolStripMenuItem
-            // 
-            selectAllHighlightedToolStripMenuItem.Name = "selectAllHighlightedToolStripMenuItem";
-            selectAllHighlightedToolStripMenuItem.Size = new Size(184, 22);
-            selectAllHighlightedToolStripMenuItem.Text = "Select all highlighted";
-            selectAllHighlightedToolStripMenuItem.Click += selectAllHighlightedToolStripMenuItem_Click;
-            // 
-            // deselectAllToolStripMenuItem
-            // 
-            deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-            deselectAllToolStripMenuItem.Size = new Size(133, 22);
-            deselectAllToolStripMenuItem.Text = "Deselect all";
-            deselectAllToolStripMenuItem.Click += deselectAllToolStripMenuItem_Click;
-            // 
             // kryptonTextBox1
             // 
             kryptonTextBox1.Location = new Point(0, 0);
@@ -774,7 +731,6 @@ namespace PosManager.Forms.UserControls.KhachHang
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).EndInit();
-            ctmsAcc.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -787,11 +743,6 @@ namespace PosManager.Forms.UserControls.KhachHang
         private Panel panel2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAdd;
         private DataGridView dtgvAccount;
-        private ContextMenuStrip ctmsAcc;
-        private ToolStripMenuItem selectedToolStripMenuItem;
-        private ToolStripMenuItem selectAllToolStripMenuItem;
-        private ToolStripMenuItem selectAllHighlightedToolStripMenuItem;
-        private ToolStripMenuItem deselectAllToolStripMenuItem;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private Panel panel3;
         private Label label1;

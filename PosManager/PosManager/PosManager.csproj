@@ -101,6 +101,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>lib\ClosedXML.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
       <HintPath>C:\Users\admin\Downloads\RashiCode Krypton_toolKitDemo\Krypton_toolKitDemo\bin\Debug\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
@@ -115,6 +118,24 @@
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>C:\Users\admin\Downloads\RashiCode Krypton_toolKitDemo\Krypton_toolKitDemo\bin\Debug\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat">
+      <HintPath>lib\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>lib\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts">
+      <HintPath>lib\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms">
+      <HintPath>lib\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf">
+      <HintPath>lib\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="VietKeyInput">
       <HintPath>LibKrypton\VietKeyInput.dll</HintPath>

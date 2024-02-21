@@ -21,14 +21,14 @@ namespace PosManager.Forms.UserControls.Kho
         {
             InitializeComponent();
             _stocksController = new StocksController();
-            cbbCuonTrang.SelectedIndex = 0;
-            if (txtSearch == null)
-            {
-                txtSearch = new Helper.CustomControls.PlaceholderTextBox();
-                PlaceholderTextBox.CreatTextBox(txtSearch);
-                panel4.Controls.Add(txtSearch);
-                txtSearch.TextChanged += txtSearch_TextChanged;
-            }
+            //cbbCuonTrang.SelectedIndex = 0;
+            //if (txtSearch == null)
+            //{
+            //    txtSearch = new Helper.CustomControls.PlaceholderTextBox();
+            //    PlaceholderTextBox.CreatTextBox(txtSearch);
+            //    panel4.Controls.Add(txtSearch);
+            //    txtSearch.TextChanged += txtSearch_TextChanged;
+            //}
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -45,7 +45,7 @@ namespace PosManager.Forms.UserControls.Kho
                 permissionModel = GlobalModel.UserInfo.Permissions.FirstOrDefault(x => x.FunctionName == "NhapKhoUserControl");
                 if (permissionModel != null)
                 {
-                    btnAdd.Enabled = permissionModel.HasCreate;
+                    ///btnAdd.Enabled = permissionModel.HasCreate;
                 }
             }
         }
@@ -93,26 +93,26 @@ namespace PosManager.Forms.UserControls.Kho
                 int startItem = (currentPage - 1) * pageSize + 1; // Số thứ tự bắt đầu
                 int endItem = Math.Min(currentPage * pageSize, Total); // Số thứ tự kết thúc
 
-                lbThongBaoSoTrang.Text = $" Hiển thị từ {startItem} đến {endItem} trong tổng số {Total} mục";
-                // Disable nút Previous khi ở trang đầu tiên
-                btnQuayLaiTrang.Enabled = currentPage > 1;
-                // Disable nút Next khi ở trang cuối cùng
-                btnTiepTucTrang.Enabled = currentPage < totalPages;
-                // Tính toán và hiển thị các nút trang
-                // Ví dụ: Button 1 là trang trước đó của trang hiện tại
-                btnTrang1.Enabled = currentPage != 1;
-                // Button 2 là trang trước trang hiện tại
-                btnTrang2.Visible = totalPages > 1;
-                btnTrang2.Enabled = currentPage != 2;
+                //lbThongBaoSoTrang.Text = $" Hiển thị từ {startItem} đến {endItem} trong tổng số {Total} mục";
+                //// Disable nút Previous khi ở trang đầu tiên
+                //btnQuayLaiTrang.Enabled = currentPage > 1;
+                //// Disable nút Next khi ở trang cuối cùng
+                //btnTiepTucTrang.Enabled = currentPage < totalPages;
+                //// Tính toán và hiển thị các nút trang
+                //// Ví dụ: Button 1 là trang trước đó của trang hiện tại
+                //btnTrang1.Enabled = currentPage != 1;
+                //// Button 2 là trang trước trang hiện tại
+                //btnTrang2.Visible = totalPages > 1;
+                //btnTrang2.Enabled = currentPage != 2;
 
-                // Button 3 là trang sau trang hiện tại
-                btnTrang3.Visible = totalPages > 2;
-                btnTrang3.Enabled = currentPage != totalPages;
-                // Button 11 là trang sau trang tiếp theo của trang hiện tại
-                label3.Visible = totalPages > 4;
-                btnTrangCuoi.Visible = totalPages > 3;
-                btnTrangCuoi.Enabled = currentPage < totalPages;
-                btnTrangCuoi.Text = totalPages.ToString();
+                //// Button 3 là trang sau trang hiện tại
+                //btnTrang3.Visible = totalPages > 2;
+                //btnTrang3.Enabled = currentPage != totalPages;
+                //// Button 11 là trang sau trang tiếp theo của trang hiện tại
+                //label3.Visible = totalPages > 4;
+                //btnTrangCuoi.Visible = totalPages > 3;
+                //btnTrangCuoi.Enabled = currentPage < totalPages;
+                //btnTrangCuoi.Text = totalPages.ToString();
             }
             catch (Exception ex)
             {
@@ -283,7 +283,7 @@ namespace PosManager.Forms.UserControls.Kho
 
         private void cbbCuonTrang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pageSize = int.Parse(cbbCuonTrang.Text);
+           // pageSize = int.Parse(cbbCuonTrang.Text);
             currentPage = 1;
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }

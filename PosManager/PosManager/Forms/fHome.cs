@@ -29,7 +29,7 @@ namespace PosManager.Forms
         private void btnDonViHangHoa_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            DonViHangHoaUserControl donViTinhHangHoaUserControl = new DonViHangHoaUserControl();
+            DonViHangHoaUserControl donViTinhHangHoaUserControl = new DonViHangHoaUserControl(this);
             donViTinhHangHoaUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(donViTinhHangHoaUserControl);
 
@@ -38,7 +38,7 @@ namespace PosManager.Forms
         {
 
             pMain.Controls.Clear();
-            LoaiSanPhamUserControl loaiSanPhamUserControl = new LoaiSanPhamUserControl();
+            LoaiSanPhamUserControl loaiSanPhamUserControl = new LoaiSanPhamUserControl(this);
             loaiSanPhamUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(loaiSanPhamUserControl);
 
@@ -46,7 +46,8 @@ namespace PosManager.Forms
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            FunctionsUserControl functionsUser = new FunctionsUserControl(this);
+            //   FunctionsUserControl functionsUser = new FunctionsUserControl(this);
+            FluentDesignForm1 functionsUser = new FluentDesignForm1();
             functionsUser.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(functionsUser);
         }
@@ -62,7 +63,7 @@ namespace PosManager.Forms
         {
 
             pMain.Controls.Clear();
-            NhaCungCapUserControl nhaCungCapUserControl = new NhaCungCapUserControl();
+            NhaCungCapUserControl nhaCungCapUserControl = new NhaCungCapUserControl(this);
             nhaCungCapUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(nhaCungCapUserControl);
 
@@ -70,7 +71,7 @@ namespace PosManager.Forms
         private void btnQuanLyKho_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            DanhSachKhoUserControl danhSachKhoUserControl = new DanhSachKhoUserControl();
+            DanhSachKhoUserControl danhSachKhoUserControl = new DanhSachKhoUserControl(this);
             danhSachKhoUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(danhSachKhoUserControl);
 
@@ -78,7 +79,7 @@ namespace PosManager.Forms
         private void btnChiNhanh_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            ChiNhanhUserControl chiNhanhControl = new ChiNhanhUserControl();
+            ChiNhanhUserControl chiNhanhControl = new ChiNhanhUserControl(this);
             chiNhanhControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(chiNhanhControl);
 
@@ -142,7 +143,7 @@ namespace PosManager.Forms
         private void btnDanhSachNhanVien_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            QuanLyNhanVienUserControl quanLyNhanVienUserControl = new QuanLyNhanVienUserControl();
+            QuanLyNhanVienUserControl quanLyNhanVienUserControl = new QuanLyNhanVienUserControl(this);
             quanLyNhanVienUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(quanLyNhanVienUserControl);
         }
