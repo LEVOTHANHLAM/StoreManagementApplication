@@ -13,6 +13,7 @@ namespace Krypton_toolKitDemo
     {
         private SuppliersController _suppliersController;
         private string _id { get; set; }
+        public string Message { get; set; }
         public fThemNCC(string? id)
         {
             InitializeComponent();
@@ -60,6 +61,10 @@ namespace Krypton_toolKitDemo
                     var result = await _suppliersController.Add(GlobalModel.AccsessToken, supplierModel);
                     if (result != null)
                     {
+                        if(result.StatusCode == 200)
+                        {
+                            Message = txtSDT.Text.ToString();
+                        }
                         SplashScreenManager.CloseForm(false);
                         MessageCommon.ShowMessageBox(result.Message);
                     }
@@ -74,10 +79,7 @@ namespace Krypton_toolKitDemo
                         MessageCommon.ShowMessageBox(result.Message);
                     }
                 }
-                txtMaNCC.Text = "";
-                txtTenNCC.Text = "";
-                txtDiaChi.Text = "";
-                txtSDT.Text = "";
+                Close();
             }
             catch (Exception ex)
             {

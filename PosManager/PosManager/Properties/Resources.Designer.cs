@@ -183,6 +183,26 @@ namespace PosManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_import_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-import-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_input_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-input-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_left_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-left-40", resourceCulture);
@@ -196,6 +216,16 @@ namespace PosManager.Properties {
         internal static System.Drawing.Bitmap icons8_left_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-left-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_money_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-money-25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

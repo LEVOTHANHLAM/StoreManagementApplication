@@ -17,7 +17,7 @@ namespace PosManager.Forms.UserControls.Post
             Dock = DockStyle.Top;
             _Order = order;
             this.Orders = Orders;
-            // LabelName.Text = order.GetProduct().Name;
+            // LabelName.Text = order.GetAllProduct().Name;
         }
 
         public void UpdateData()

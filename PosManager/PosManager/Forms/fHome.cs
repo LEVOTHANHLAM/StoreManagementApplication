@@ -47,7 +47,7 @@ namespace PosManager.Forms
         {
             pMain.Controls.Clear();
             //   FunctionsUserControl functionsUser = new FunctionsUserControl(this);
-            FluentDesignForm1 functionsUser = new FluentDesignForm1();
+            fNhapKhoHangHoa functionsUser = new fNhapKhoHangHoa(this);
             functionsUser.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(functionsUser);
         }

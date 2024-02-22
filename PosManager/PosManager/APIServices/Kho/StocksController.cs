@@ -140,5 +140,32 @@ namespace PosManager.APIServices.Kho
                 return null;
             }
         }
+        public async Task<ApiResponse<List<StockModel>>> GetAll(string token)
+        {
+            try
+            {
+                Log.Information($"Start: {nameof(StocksController)}, params; {nameof(GetAll)}");
+
+                // Tạo HttpClient
+                using (HttpClient client = new HttpClient())
+                {
+                    // Thêm Authorization header
+                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                    // Tạo URL của API endpoint
+                    string apiUrl = $"{Constant.DomainAPI}/api/Stocks/all";
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    var body = await response.Content.ReadAsStringAsync();
+                    ApiResponse<List<StockModel>> data = JsonConvert.DeserializeObject<ApiResponse<List<StockModel>>>(body);
+
+                    Log.Information($"End: {nameof(StocksController)}, params; {nameof(GetAll)}");
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"{nameof(StocksController)}, params; {nameof(GetAll)},token; {token}, Error; {ex.Message}, Exception; {ex}");
+                return null;
+            }
+        }
     }
 }

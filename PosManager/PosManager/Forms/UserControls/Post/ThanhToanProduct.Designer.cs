@@ -165,7 +165,6 @@
             // btnClose
             // 
             btnClose.Dock = DockStyle.Right;
-            btnClose.Image = Properties.Resources.icons8_close_30;
             btnClose.Location = new Point(370, 0);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(30, 30);
