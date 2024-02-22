@@ -106,6 +106,7 @@
             accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
             accordionControl1.Size = new Size(470, 547);
             accordionControl1.TabIndex = 1;
+            accordionControl1.Click += accordionControl1_Click;
             // 
             // accordionControlElement1
             // 

@@ -1,14 +1,8 @@
-﻿using DevExpress.Diagram.Core.Shapes;
+﻿using PosManager.APIServices.ThanhToan;
 using PosManager.Forms.UI;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using PosManager.Model;
+using PosManager.Model.HoaDon;
+using PosManager.Model.ThanhToan;
 
 namespace PosManager.Forms.UserControls.Kho
 {
@@ -16,11 +10,19 @@ namespace PosManager.Forms.UserControls.Kho
     {
         private Panel _main;
         private Panel _panel;
-        public fUpdateHoaDonNhapKho(Panel main, Panel panel)
+        private HoaDonNhapModel _hoaDonNhap;
+        
+        public fUpdateHoaDonNhapKho(Panel main, Panel panel,HoaDonNhapModel model)
         {
             _main = main;
             _panel = panel;
+            _hoaDonNhap = model;
             InitializeComponent();
+            txtTongTien.Text = model.TongTien.ToString("#,##0");
+            txtThanhTien.Text = model.TongTien.ToString("#,##0");
+            txtTienGiam.Text = "0";
+            lbNguoiBan.Text = GlobalModel.UserInfo.Name;
+
         }
 
         private void txtTongTien_KeyPress(object sender, KeyPressEventArgs e)
@@ -62,7 +64,12 @@ namespace PosManager.Forms.UserControls.Kho
                 textBox.TextChanged -= TextChanged; // Tạm thời tắt sự kiện TextChanged để tránh lặp vô hạn
                 textBox.Text = value.ToString("#,##0");
                 textBox.SelectionStart = textBox.Text.Length; // Di chuyển con trỏ về cuối TextBox
+                if (textBox.Name == "txtTienGiam")
+                {
+                  txtThanhTien.Text =   (decimal.Parse(txtTongTien.Text) - value).ToString("#,##0");
+                }
                 textBox.TextChanged += TextChanged; // Bật lại sự kiện TextChanged
+               
             }
         }
         private void TextClick(object sender, EventArgs e)
@@ -75,20 +82,18 @@ namespace PosManager.Forms.UserControls.Kho
                 textBox.Text = nhapSo.SoLuong;
             }
         }
-        private void txtTienGiam_KeyPress(object sender, KeyPressEventArgs e)
+        private async void btnNhapKho_Click(object sender, EventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            decimal value;
-            if (decimal.TryParse(this.txtTienGiam.Text, out value))
-            {
-                this.txtTienGiam.Text = value.ToString("#,##0");
-                txtTienGiam.SelectionStart = txtTienGiam.Text.Length; // Di chuyển con trỏ về cuối TextBox
-            }
+            ThanhToanHoaDonController thanhToanHoaDonController = new ThanhToanHoaDonController();
+            ThanhToanHoaDonModel model = new ThanhToanHoaDonModel();
+            model.MaThamChieu = _hoaDonNhap.MaHoaDonNhap;
+            model.LoaiHoaDon = "HDN";
+            model.NoiDungThanhToan = "thanh toán hóa đơn nhập kho";
+            model.CachThucGiaoDich = "Tiền Mặt";
+            model.SoTienGiaoDich = 176231;
+            model.MaNhanVien = (string)PosManager.Properties.Settings.Default["username"];
+            //  model.MaNhanVien = GlobalModel.UserInfo.
+            var result = await thanhToanHoaDonController.Add(GlobalModel.AccsessToken, model);
         }
-
-    
     }
 }

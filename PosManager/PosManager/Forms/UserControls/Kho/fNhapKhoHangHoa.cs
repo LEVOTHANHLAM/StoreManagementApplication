@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraSplashScreen;
 using Krypton_toolKitDemo;
+using PosManager.APIServices.HoaDon;
 using PosManager.APIServices.Kho;
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
@@ -170,7 +171,7 @@ namespace PosManager.Forms.UserControls.Kho
 
         }
 
-        private void btnNhapKho_Click(object sender, EventArgs e)
+        private async void btnNhapKho_Click(object sender, EventArgs e)
         {
             if (MessageCommon.ShowConfirmationBox($"Bạn chắc chắn muốn nhập hàng hoá vào kho {cbbKho.SelectedItem.ToString()}!") == DialogResult.Yes)
             {
@@ -184,15 +185,35 @@ namespace PosManager.Forms.UserControls.Kho
                     ItemControlProductImportKho itemControl = control as ItemControlProductImportKho;
                     WarehouseDetailModel detailModel = new WarehouseDetailModel();
                     detailModel.MaHangHoa = itemControl.labelMaSanPham.Text.ToString();
-                    detailModel.MaDonViNhap = itemControl.cbbTenDonViTinh.SelectedItem.ToString();
+                    detailModel.MaDonViNhap = products.FirstOrDefault(x => x.MaHangHoa == detailModel.MaHangHoa).GiaBan.FirstOrDefault(x => x.TenDonViHangHoa == itemControl.cbbTenDonViTinh.SelectedItem.ToString()).MaDonViHangHoa;
                     detailModel.DonGiaNhap = decimal.Parse(itemControl.LabelSubtotal.Text.ToString());
-                  /  detailModel.SoLuongNhap = 
+                    detailModel.SoLuongNhap = float.Parse(itemControl.txtSoLuong.Text.ToString());
+                    detailModel.HanSuDung = itemControl.dateHSD.Value;
+                    model.Details.Add(detailModel);
+                }
+                var result = await warehouses.Add(GlobalModel.AccsessToken, model);
+                if (result != null && result.StatusCode == 200 && !string.IsNullOrEmpty(result.Data))
+                {
+                    HoaDonNhapController hoaDonNhapController = new HoaDonNhapController();
+                    var hoadonnhap = await hoaDonNhapController.GetById(GlobalModel.AccsessToken, result.Data);
+                    if (hoadonnhap != null && hoadonnhap.StatusCode == 200)
+                    {
+                        splitContainer1.Panel2.Controls.Clear();
+                        fUpdateHoaDonNhapKho fUpdateHoaDonNhapKho = new fUpdateHoaDonNhapKho(splitContainer1.Panel2, panel5, hoadonnhap.Data);
+                        fUpdateHoaDonNhapKho.Dock = DockStyle.Fill;
+                        splitContainer1.Panel2.Controls.Add(fUpdateHoaDonNhapKho);
+                    }
+                    else
+                    {
+                        MessageCommon.ShowMessageBox("Vui lòng thử lại!");
+                    }
+
+                }
+                else
+                {
+                    MessageCommon.ShowMessageBox("Vui lòng thử lại!");
                 }
 
-                splitContainer1.Panel2.Controls.Clear();
-                fUpdateHoaDonNhapKho fUpdateHoaDonNhapKho = new fUpdateHoaDonNhapKho(splitContainer1.Panel2, panel5);
-                fUpdateHoaDonNhapKho.Dock = DockStyle.Fill;
-                splitContainer1.Panel2.Controls.Add(fUpdateHoaDonNhapKho);
             }
 
         }
@@ -235,6 +256,11 @@ namespace PosManager.Forms.UserControls.Kho
                 }
                 cbbNCC.SelectedItem = $"{suppliers.Last().SoDienThoai} - {suppliers.Last().TenNhaCungCap}";
             }
+        }
+
+        private void accordionControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

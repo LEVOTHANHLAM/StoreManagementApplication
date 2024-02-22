@@ -17,7 +17,7 @@ namespace PosManager.Forms.UserControls.Kho
             labelMaSanPham.Text = model.MaHangHoa;
             foreach (var item in model.GiaBan)
             {
-                if (!cbbTenDonViTinh.Items.Contains(item.TenDonViHangHoa))
+                if (!string.IsNullOrEmpty(item.TenDonViHangHoa) && !cbbTenDonViTinh.Items.Contains(item.TenDonViHangHoa))
                 {
                     cbbTenDonViTinh.Items.Add(item.TenDonViHangHoa);
                 }

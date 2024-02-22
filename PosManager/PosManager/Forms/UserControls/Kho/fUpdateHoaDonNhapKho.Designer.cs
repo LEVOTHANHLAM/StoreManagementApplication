@@ -206,6 +206,7 @@
             btnNhapKho.TabIndex = 1;
             btnNhapKho.Text = "Thanh Toán";
             btnNhapKho.UseVisualStyleBackColor = false;
+            btnNhapKho.Click += btnNhapKho_Click;
             // 
             // panel6
             // 
