@@ -201,7 +201,7 @@ namespace PosManager.Forms.UserControls.Post
             splitContainer2.Panel2.Paint += splitContainer2_Panel2_Paint;
             splitContainer2.RightToLeft = RightToLeft.No;
             splitContainer2.Size = new Size(823, 545);
-            splitContainer2.SplitterDistance = 464;
+            splitContainer2.SplitterDistance = 462;
             splitContainer2.TabIndex = 90;
             // 
             // pThanhToasn
@@ -213,7 +213,7 @@ namespace PosManager.Forms.UserControls.Post
             pThanhToasn.Dock = DockStyle.Fill;
             pThanhToasn.Location = new Point(0, 0);
             pThanhToasn.Name = "pThanhToasn";
-            pThanhToasn.Size = new Size(355, 545);
+            pThanhToasn.Size = new Size(357, 545);
             pThanhToasn.TabIndex = 89;
             // 
             // PanelOrders
@@ -223,7 +223,7 @@ namespace PosManager.Forms.UserControls.Post
             PanelOrders.Dock = DockStyle.Top;
             PanelOrders.Location = new Point(0, 0);
             PanelOrders.Name = "PanelOrders";
-            PanelOrders.Size = new Size(355, 310);
+            PanelOrders.Size = new Size(357, 310);
             PanelOrders.TabIndex = 88;
             // 
             // panel10
@@ -237,7 +237,7 @@ namespace PosManager.Forms.UserControls.Post
             panel10.Dock = DockStyle.Bottom;
             panel10.Location = new Point(0, 391);
             panel10.Name = "panel10";
-            panel10.Size = new Size(355, 154);
+            panel10.Size = new Size(357, 154);
             panel10.TabIndex = 89;
             // 
             // panel8
@@ -248,7 +248,7 @@ namespace PosManager.Forms.UserControls.Post
             panel8.Dock = DockStyle.Bottom;
             panel8.Location = new Point(0, 3);
             panel8.Name = "panel8";
-            panel8.Size = new Size(355, 37);
+            panel8.Size = new Size(357, 37);
             panel8.TabIndex = 91;
             // 
             // label5
@@ -261,7 +261,7 @@ namespace PosManager.Forms.UserControls.Post
             label5.Location = new Point(118, 0);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(237, 37);
+            label5.Size = new Size(239, 37);
             label5.TabIndex = 86;
             label5.Text = "500.000";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -288,7 +288,7 @@ namespace PosManager.Forms.UserControls.Post
             panel5.Dock = DockStyle.Bottom;
             panel5.Location = new Point(0, 40);
             panel5.Name = "panel5";
-            panel5.Size = new Size(355, 34);
+            panel5.Size = new Size(357, 34);
             panel5.TabIndex = 90;
             // 
             // label2
@@ -301,7 +301,7 @@ namespace PosManager.Forms.UserControls.Post
             label2.Location = new Point(119, 0);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(236, 34);
+            label2.Size = new Size(238, 34);
             label2.TabIndex = 86;
             label2.Text = "-500.000";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -328,7 +328,7 @@ namespace PosManager.Forms.UserControls.Post
             panel9.Dock = DockStyle.Bottom;
             panel9.Location = new Point(0, 74);
             panel9.Name = "panel9";
-            panel9.Size = new Size(355, 36);
+            panel9.Size = new Size(357, 36);
             panel9.TabIndex = 89;
             // 
             // label1
@@ -341,7 +341,7 @@ namespace PosManager.Forms.UserControls.Post
             label1.Location = new Point(125, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(230, 36);
+            label1.Size = new Size(232, 36);
             label1.TabIndex = 86;
             label1.Text = "0";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -376,7 +376,7 @@ namespace PosManager.Forms.UserControls.Post
             btnThanhToan.OverrideDefault.Border.Rounding = 18;
             btnThanhToan.OverrideDefault.Border.Width = 1;
             btnThanhToan.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            btnThanhToan.Size = new Size(355, 44);
+            btnThanhToan.Size = new Size(357, 44);
             btnThanhToan.StateCommon.Back.Color1 = Color.FromArgb(6, 174, 244);
             btnThanhToan.StateCommon.Back.Color2 = Color.FromArgb(6, 174, 244);
             btnThanhToan.StateCommon.Back.ColorAngle = 45F;

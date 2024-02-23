@@ -22,7 +22,7 @@ namespace PosManager.Forms
         private void btnDanhSachHangHoa_Click(object sender, EventArgs e)
         {
             pMain.Controls.Clear();
-            QuanLySanPhamUserControl quanLySanPhamUserControl = new QuanLySanPhamUserControl(this);
+            DanhSachSanPham quanLySanPhamUserControl = new DanhSachSanPham(this);
             quanLySanPhamUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
             pMain.Controls.Add(quanLySanPhamUserControl);
         }

@@ -335,6 +335,7 @@
             // accordionControlElement12
             // 
             accordionControlElement12.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnDanhSachHangHoa, btnDonViHangHoa, btnLoaiSanPham, accordionControlElement7, accordionControlElement21, accordionControlElement22, accordionControlElement23, accordionControlElement24 });
+            accordionControlElement12.Expanded = true;
             accordionControlElement12.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement12.ImageOptions.Image");
             accordionControlElement12.Name = "accordionControlElement12";
             accordionControlElement12.Text = "Sản Phẩm";
