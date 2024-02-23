@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using DevExpress.XtraRichEdit.Model;
 using DevExpress.XtraSplashScreen;
 using Newtonsoft.Json;
 using PosManager.APIServices.User;
