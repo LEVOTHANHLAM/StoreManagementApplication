@@ -1,4 +1,4 @@
-﻿namespace Krypton_toolKitDemo
+﻿namespace PosManager
 {
     partial class fPhanQuyen
     {

@@ -11,7 +11,7 @@ using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
 using System.Runtime.InteropServices;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fTThanhToanHoaDon : KryptonForm
     {

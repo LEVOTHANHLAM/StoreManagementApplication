@@ -1,7 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using DevExpress.XtraSplashScreen;
-using Microsoft.VisualBasic.ApplicationServices;
-using PosManager.APIServices.CaiDat;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.User;
 using PosManager.Forms;
@@ -9,9 +7,8 @@ using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
-using System.Runtime.InteropServices;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fThemNhanVien : KryptonForm
     {

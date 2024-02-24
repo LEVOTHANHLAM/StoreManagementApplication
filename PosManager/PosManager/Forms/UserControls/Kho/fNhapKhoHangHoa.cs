@@ -1,6 +1,6 @@
 ﻿using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraSplashScreen;
-using Krypton_toolKitDemo;
+using PosManager;
 using PosManager.APIServices.HoaDon;
 using PosManager.APIServices.Kho;
 using PosManager.APIServices.SanPham;

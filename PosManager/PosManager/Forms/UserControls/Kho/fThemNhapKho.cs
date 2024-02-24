@@ -7,7 +7,7 @@ using PosManager.Model;
 using PosManager.Model.ChiNhanh;
 using PosManager.Model.User;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fThemNhapKho : KryptonForm
     {

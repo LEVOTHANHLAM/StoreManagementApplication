@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraSplashScreen;
-using Krypton_toolKitDemo;
+using PosManager;
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
 using PosManager.Model;
@@ -34,6 +34,10 @@ namespace PosManager.Forms.UserControls.SanPham
                 if (searchString == "Tìm Kiếm")
                 {
                     searchString = "";
+                }
+                else if (searchString.Contains("NGAYNHAP"))
+                {
+                    searchString = searchString.Split("NGAYNHAP").FirstOrDefault();
                 }
                 ProductsController productsController = new ProductsController();
                 var accounts = await productsController.Search(GlobalModel.AccsessToken, pageIndex.ToString(), pageSize.ToString(), searchString);

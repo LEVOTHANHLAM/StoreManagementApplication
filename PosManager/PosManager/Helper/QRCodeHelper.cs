@@ -8,25 +8,7 @@ namespace PosManager.Helper
 {
     public class QRCodeHelper
     {
-        //public static Bitmap GenerateQRCode(string content)
-        //{
-        //    // Set up QR code writer
-        //    BarcodeWriterPixelData writer = new BarcodeWriterPixelData
-        //    {
-        //        Format = BarcodeFormat.QR_CODE,
-        //        Options = new QrCodeEncodingOptions
-        //        {
-        //            Width = 300,
-        //            Height = 300
-        //        }
-        //    };
-
-        //    // Render QR code bitmap directly
-        //    Bitmap qrCodeImage = writer.Write(content).ToBitmap();
-
-        //    return qrCodeImage;
-        //}
-        public static Bitmap GenerateQRCodeWithLogo(string content, Bitmap logo)
+        public static Bitmap GenerateQRCodeWithLogo(string content, Bitmap logo, int bitxel = 5)
         {
             // Tạo QR Code
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -34,7 +16,7 @@ namespace PosManager.Helper
             QRCode qrCode = new QRCode(qrCodeData);
 
             // Tạo hình ảnh QR Code
-            Bitmap qrCodeImage = qrCode.GetGraphic(5);
+            Bitmap qrCodeImage = qrCode.GetGraphic(bitxel);
 
             // Kết hợp hình ảnh QR Code với hình ảnh nền
             // Tính toán vị trí và kích thước của logo

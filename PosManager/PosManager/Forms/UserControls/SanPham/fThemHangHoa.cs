@@ -15,7 +15,7 @@ using System.Drawing.Printing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fThemHangHoa : KryptonForm
     {

@@ -9,7 +9,7 @@ using PosManager.Model;
 using PosManager.Model.Kho;
 using Serilog;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fThemKho : KryptonForm
     {

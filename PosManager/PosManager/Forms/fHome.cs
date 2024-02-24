@@ -1,5 +1,5 @@
 ﻿using DevExpress.Drawing.Internal.Fonts.Interop;
-using Krypton_toolKitDemo;
+using PosManager;
 using PosManager.Forms.UserControls;
 using PosManager.Forms.UserControls.KhachHang;
 using PosManager.Forms.UserControls.Kho;

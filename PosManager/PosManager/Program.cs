@@ -1,4 +1,4 @@
-﻿using Krypton_toolKitDemo;
+﻿using PosManager;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PosManager.Forms;

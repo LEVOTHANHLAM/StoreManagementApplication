@@ -8,7 +8,7 @@ using PosManager.Model.ChiNhanh;
 using PosManager.Model.SanPham;
 using Serilog;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fChiTietHangHoa : KryptonForm
     {

@@ -1,4 +1,6 @@
-﻿using PosManager.APIServices.SanPham;
+﻿using PosManager.APIServices.Kho;
+using PosManager.APIServices.SanPham;
+using PosManager.Forms.UserControls.Kho;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.SanPham;
@@ -25,8 +27,25 @@ namespace PosManager.Forms.UserControls.SanPham
 
         private async void btnTonKho_Click(object sender, EventArgs e)
         {
-            
-           
+            TonKhoController tonKhoController = new TonKhoController();
+            var result = await tonKhoController.Search(GlobalModel.AccsessToken, "1", "9999999", "", "", _ProductsModel.MaHangHoa);
+            if (result != null && result.StatusCode == 200)
+            {
+                if (result.Data.Total > 0)
+                {
+                    fChiTietTonKho fChiTietTonKho = new fChiTietTonKho(result.Data.Result.FirstOrDefault());
+                    fChiTietTonKho.ShowDialog();
+                }
+                else
+                {
+                    MessageCommon.ShowMessageBox("trong kho chưa có sản phẩm này", 1);
+                }
+
+            }
+            else
+            {
+                MessageCommon.ShowMessageBox("Đã xảy ra lỗi vui lòng thử lại sau", 3);
+            }
         }
 
         private async void btnXoa_Click(object sender, EventArgs e)

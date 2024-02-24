@@ -6,7 +6,7 @@ using PosManager.Helper;
 using PosManager.Model;
 using Serilog;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fThemFunctions : KryptonForm
     {

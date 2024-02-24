@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraSplashScreen;
-using Krypton_toolKitDemo;
+using PosManager;
 using PosManager.APIServices.CaiDat;
 using PosManager.Helper;
 using PosManager.Helper.CustomControls;

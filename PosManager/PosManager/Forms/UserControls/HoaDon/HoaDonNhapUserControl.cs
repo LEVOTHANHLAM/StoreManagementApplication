@@ -1,4 +1,4 @@
-﻿using Krypton_toolKitDemo;
+﻿using PosManager;
 using PosManager.APIServices.Kho;
 using PosManager.Helper.CustomControls;
 using PosManager.Helper;

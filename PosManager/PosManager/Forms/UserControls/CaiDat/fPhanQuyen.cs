@@ -6,7 +6,7 @@ using PosManager.Forms;
 using PosManager.Model;
 using PosManager.Model.User;
 
-namespace Krypton_toolKitDemo
+namespace PosManager
 {
     public partial class fPhanQuyen : KryptonForm
     {

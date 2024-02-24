@@ -1,5 +1,5 @@
 ﻿using DevExpress.XtraSplashScreen;
-using Krypton_toolKitDemo;
+using PosManager;
 using PosManager.APIServices.ChiNhanh;
 using PosManager.APIServices.SanPham;
 using PosManager.Helper;
