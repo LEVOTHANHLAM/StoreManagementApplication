@@ -1,22 +1,24 @@
-﻿
-using MessagingToolkit.QRCode.Codec;
-using MessagingToolkit.QRCode.Codec.Data;
-using QRCoder;
+﻿using QRCoder;
 using Serilog;
+using ZXing;
+using ZXing.Common;
+using ZXing.QrCode;
+using ZXing.QrCode.Internal;
+using ZXing.Windows.Compatibility;
 
 namespace PosManager.Helper
 {
     public class QRCodeHelper
     {
-        public static Bitmap GenerateQRCodeWithLogo(string content, Bitmap logo, int bitxel = 5)
+        public static Bitmap GenerateQRCodeWithLogo(string content, Bitmap logo, int width = 500, int height = 500)
         {
             // Tạo QR Code
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
+            QRCoder.QRCodeGenerator qrGenerator = new QRCoder.QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(content, QRCoder.QRCodeGenerator.ECCLevel.Q);
+            QRCoder.QRCode qrCode = new QRCoder.QRCode(qrCodeData);
 
             // Tạo hình ảnh QR Code
-            Bitmap qrCodeImage = qrCode.GetGraphic(bitxel);
+            Bitmap qrCodeImage = qrCode.GetGraphic(10);
 
             // Kết hợp hình ảnh QR Code với hình ảnh nền
             // Tính toán vị trí và kích thước của logo
@@ -31,17 +33,26 @@ namespace PosManager.Helper
             }
 
             return qrCodeImage;
+
+         //   return qrCodeBitmap;
         }
         public static string ReadQRCode(Bitmap bitmap)
         {
-            QRCodeDecoder decoder = new QRCodeDecoder();
+           
             try
             {
-                // Đọc nội dung từ tập tin ảnh chứa mã QR
-                string decodedText = decoder.Decode(new QRCodeBitmapImage(bitmap));
-                if (!string.IsNullOrEmpty(decodedText))
+                BarcodeReader reader = new()
                 {
-                    return decodedText;
+                    Options = new DecodingOptions()
+                    {
+                        PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE },
+                        TryHarder = true
+                    }
+                };
+                Result qrCodeResult = reader.Decode(bitmap);
+                if(qrCodeResult != null && !string.IsNullOrEmpty(qrCodeResult.Text) )
+                {
+                    return qrCodeResult.Text;
                 }
                 return null;
             }

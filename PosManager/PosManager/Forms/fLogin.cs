@@ -1,21 +1,13 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
-using DevExpress.XtraRichEdit.Model;
 using DevExpress.XtraSplashScreen;
-using Newtonsoft.Json;
 using PosManager.APIServices.User;
 using PosManager.Forms;
 using PosManager.Helper;
 using PosManager.Model;
 using PosManager.Model.User;
 using Serilog;
-using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.IO;
 using System.Security.Claims;
-using ZXing;
-using ZXing.Common;
-using ZXing.QrCode;
-using ZXing.Windows.Compatibility;
 using static PosManager.Model.GlobalModel;
 
 namespace PosManager
@@ -37,21 +29,6 @@ namespace PosManager
         {
             try
             {
-                //var image  =  QRCodeHelper.GenerateQRCodeWithLogo("6972257f-f455-4b48-8b21-6024cef1dc37", Properties.Resources._326559583_468268058851274_8797007794984294310_n);
-                //image.Save("image.png");
-                //DecodingOptions readOptions = new()
-                //{
-                //    PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE },
-                //    TryHarder = true
-                //};
-
-                
-                //BarcodeReader reader = new()
-                //{
-                //    Options = readOptions
-                //};
-                //Result qrCodeResult = reader.Decode(image);
-
 
                 btnLogin.Enabled = false;
                 string password = txtPassword.Text.Trim();

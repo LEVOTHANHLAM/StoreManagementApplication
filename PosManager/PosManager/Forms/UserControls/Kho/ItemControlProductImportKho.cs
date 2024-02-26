@@ -15,6 +15,7 @@ namespace PosManager.Forms.UserControls.Kho
             InitializeComponent();
             Dock = DockStyle.Top;
             labelMaSanPham.Text = model.MaHangHoa;
+            cbbTenDonViTinh.Items.Add(model.TenDonViCoBan);
             foreach (var item in model.GiaBan)
             {
                 if (!string.IsNullOrEmpty(item.TenDonViHangHoa) && !cbbTenDonViTinh.Items.Contains(item.TenDonViHangHoa))

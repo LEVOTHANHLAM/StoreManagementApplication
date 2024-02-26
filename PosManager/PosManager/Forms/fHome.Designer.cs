@@ -69,7 +69,7 @@
             accordionControlElement23 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement24 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            btnDanhSachKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             btnNhaCungCap = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -335,7 +335,6 @@
             // accordionControlElement12
             // 
             accordionControlElement12.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnDanhSachHangHoa, btnDonViHangHoa, btnLoaiSanPham, accordionControlElement7, accordionControlElement21, accordionControlElement22, accordionControlElement23, accordionControlElement24 });
-            accordionControlElement12.Expanded = true;
             accordionControlElement12.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement12.ImageOptions.Image");
             accordionControlElement12.Name = "accordionControlElement12";
             accordionControlElement12.Text = "Sản Phẩm";
@@ -406,19 +405,21 @@
             // 
             // accordionControlElement1
             // 
-            accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement2, btnNhaCungCap, accordionControlElement4, accordionControlElement5, accordionControlElement6 });
+            accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnDanhSachKhachHang, btnNhaCungCap, accordionControlElement4, accordionControlElement5, accordionControlElement6 });
+            accordionControlElement1.Expanded = true;
             accordionControlElement1.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] { new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl) });
             accordionControlElement1.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement1.ImageOptions.Image");
             accordionControlElement1.Name = "accordionControlElement1";
             accordionControlElement1.Text = " Khách Hàng";
             // 
-            // accordionControlElement2
+            // btnDanhSachKhachHang
             // 
-            accordionControlElement2.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] { new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl) });
-            accordionControlElement2.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement2.ImageOptions.Image");
-            accordionControlElement2.Name = "accordionControlElement2";
-            accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            accordionControlElement2.Text = "Danh Sách";
+            btnDanhSachKhachHang.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] { new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons), new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl) });
+            btnDanhSachKhachHang.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement2.ImageOptions.Image");
+            btnDanhSachKhachHang.Name = "btnDanhSachKhachHang";
+            btnDanhSachKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            btnDanhSachKhachHang.Text = "Danh Sách";
+            btnDanhSachKhachHang.Click += btnDanhSachKhachHang_Click;
             // 
             // btnNhaCungCap
             // 
@@ -624,7 +625,6 @@
             // accordionControlElement16
             // 
             accordionControlElement16.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnChiNhanh });
-            accordionControlElement16.Expanded = true;
             accordionControlElement16.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement16.ImageOptions.SvgImage");
             accordionControlElement16.Name = "accordionControlElement16";
             accordionControlElement16.Text = "Chi Nhánh";
@@ -640,7 +640,6 @@
             // accordionControlElement17
             // 
             accordionControlElement17.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { btnCaiDat });
-            accordionControlElement17.Expanded = true;
             accordionControlElement17.ImageOptions.Image = (Image)resources.GetObject("accordionControlElement17.ImageOptions.Image");
             accordionControlElement17.Name = "accordionControlElement17";
             accordionControlElement17.Text = "Cài Đặt";
@@ -692,7 +691,7 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement btnDanhSachKhachHang;
         private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhaCungCap;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;

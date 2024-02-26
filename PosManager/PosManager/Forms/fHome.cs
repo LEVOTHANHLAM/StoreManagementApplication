@@ -152,5 +152,13 @@ namespace PosManager.Forms
         {
             Application.Exit();
         }
+
+        private void btnDanhSachKhachHang_Click(object sender, EventArgs e)
+        {
+            pMain.Controls.Clear();
+            KhachHangUserControl quanLyNhanVienUserControl = new KhachHangUserControl(this);
+            quanLyNhanVienUserControl.Dock = DockStyle.Fill; // Đặt DockStyle.Fill cho UserControl
+            pMain.Controls.Add(quanLyNhanVienUserControl);
+        }
     }
 }
