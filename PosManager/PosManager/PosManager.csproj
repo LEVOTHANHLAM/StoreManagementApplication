@@ -32,6 +32,9 @@
     <Compile Update="Forms\UserControls\HoaDon\fTThanhToanHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\UserControls\KhachHang\fThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\UserControls\Kho\fThemKho.cs">
       <SubType>Form</SubType>
     </Compile>

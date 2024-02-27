@@ -30,7 +30,7 @@ namespace PosManager.Forms.UserControls.KhachHang
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            fThemNhanVien them = new fThemNhanVien(null);
+            fThemKhachHang them = new fThemKhachHang(null);
             them.ShowDialog();
             loadAccount(currentPage, pageSize, txtSearch.Text.Trim());
         }
